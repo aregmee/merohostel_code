@@ -1,0 +1,222 @@
+body, html {
+	font-family: Georgia, sans-serif;
+	font-size: 16px;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	height: 100% !important;
+}
+div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+a:link, a:hover, a:visited {
+	color: red;
+	text-decoration: none;
+}
+#lnWrapper {
+	min-height: 100%;
+	position: relative;
+}
+
+#wrapper {
+	min-height: 100%;
+	position: relative;
+	top: 55px;
+}
+#header {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+}
+
+#content {
+	background-color: #7b756b;
+	padding-bottom: 50px; /* Height of the footer element */
+}
+#footer {
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+h2.subTitle {
+	text-align: center;
+	font-size: 30px;
+	color: #31302b;
+	letter-spacing: .04em;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 10px;
+}
+}
+
+h2. {
+color: #333 !important;
+font-size: 26px;
+line-height: 30px;
+font-weight: normal;
+margin: 0;
+}
+.address {
+	font-size: 11px;
+	margin-bottom: 12px;
+	margin-top: 7px;
+}
+.hostelImage img {
+	width: 100%;
+}
+h3#facilities {
+	border-bottom: 1px dotted #ccc;
+	margin-top: 20px;
+}
+h3#review {
+	border-bottom: 1px dotted #ccc;
+}
+.facilities {
+	margin-bottom: 20px;
+	width: 690px;
+}
+ul.facilitylist {
+	list-style: none;
+}
+.facilitylist li {
+	width: 190px;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 15px;
+	background: url(http://icd.hwstatic.com/static/images/1.32.7.0/HW-sprites-microsite.png) no-repeat;
+	background-position: 0 -226px;
+	padding-left: 20px;
+}
+
+#feedback a {
+	display: block;
+	position: fixed;
+	top: 200px;
+	left: -1px;
+}
+
+#mainCover {
+	background: url('../img/cover_desktop_2.jpg');
+	background-size: cover;
+	height: 90vh;
+	position: relative;
+}
+#mainMenu li a {
+	font-size: 16px;
+	color: #fff;
+	line-height: 25px;
+}
+#mainMenu li a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+#mainHeader {
+	padding-top: 20px;
+}
+#mainLogo {
+	display: inline-block;
+}
+div#mainTitle h1 {
+	font-size: 60px;
+	color: #FFF;
+	font-family: 'Raleway', sans-serif;;
+}
+div#mainTitle {
+	position: absolute;
+	top: 30%;
+	text-align: center;
+	left: 0;
+	right: 0;
+}
+#mainMenu {
+	display: inline-block;
+	float: right;
+}
+#mainMenu ul li {
+	list-style: none;
+	float: left;
+	margin-left: 10px;
+}
+#mainSearch {
+	background: #000;
+	background: rgba(0,0,0,0.6);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#mainSection {
+	background: #f7f3eb;
+	padding-top: 10px;
+}
+#featuredHostel {
+	background: #fff;
+	padding: 30px 0px;
+}
+.subSection {
+	padding: 10px 0px 20px 0px;
+	color: #676056;
+}
+.subSection h2 {
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+.subSection a, .subSection a:hover {
+	color: rgb(238, 142, 88);
+}
+.subSection img {
+	margin-top: 5px;
+}
+#mainFooter {
+	background: #31302b;
+	color: #fff;
+}
+#mainFooter ul li {
+	list-style: none;
+	float: left;
+	line-height: 50px;
+	margin-left: 25px;
+}
+div#fixedSearch {
+	background: #ef672f;
+	padding: 10px;
+	text-align: center;
+	width: 100%;
+}
+.ui.dropdown.selection {
+	border: 0;
+	border-radius: 0;
+}
+
+.hostelThumb {
+	display: inline-block;
+	width: 245px;
+	margin-left: 30px;
+	margin-bottom: 20px;
+}
+.extra.content a {
+	text-decoration: none;
+}
+div#pager {
+	text-align: center;
+}
+.pagination {
+	display: inline-block;
+	padding-left: 0px;
+	margin: 20px 0px;
+	border-radius: 4px;
+}
+a#hpName {
+	background: rgb(99, 210, 205);
+	color: #fff;
+	font-size: 18px;
+	font-family: cursive;
+}

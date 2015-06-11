@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Main - Mero Hostel</title>
+
+		<!-- Main Styslesheet -->
+		<link rel="stylesheet" href="css/main.css" />
+		<!-- Bootstrap CSS -->
+		<link href="bootstrap/bootstrap.css" rel="stylesheet">
+		<!-- Font-Awesome Icons -->
+		<link href="font_awesome/css/font-awesome.css" rel="stylesheet">
+		<!-- Semantic CSS -->
+		<link href="semantic/dist/semantic.min.css" type="text/css" rel="stylesheet"/>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.address.js"></script>
+		<!-- Semantic JS -->
+		<script src="semantic/dist/semantic.min.js" type="text/javascript" ></script>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="bootstrap/html5shiv.min.js"></script>
+		<script src="bootstrap/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		
+		<div id="wrapper">
+
+
+<div id="header">
+		<div id="fixedSearch">
+			<div class="container">
+				<div class="row">
+
+					<div style="
+					float: left;
+					">
+						<img src="img/mero-hostel-logo.png"/>
+					</div>
+					<div class="ui corner labeled input">
+						<div class="ui form">
+							<div class="field">
+								<select class="ui dropdown">
+									<option value="">Gender</option>
+									<option value="1">Male</option>
+									<option value="0">Female</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="ui corner labeled input">
+						<div class="ui local search">
+							<div class="ui left icon input">
+								<i class="world icon"></i>
+								<input  style="border-radius: 4px;" type="text" placeholder="Local search..." class="prompt">
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="ui submit button teal">
+						Search
+					</div>
+
+				</div><!--row -->
+			</div><!--container -->
+
+		</div><!-- fixedSearch -->
+</div> <!-- header -->
+
+
+<div id="content">
+		<div class="container">
+			<div class="row">
+
+				<div style="height:  500px; margin-top: 20px;" class="col-md-9">
+					<div style="min-height: 8rem;" class="ui stacked segment">
+						<a  id="hpName" class="ui ribbon label">A&O Amsterdam Zuidoost</a>
+
+						<div id="imageSlider" style="
+						width: 400px;
+						margin: 0;
+						padding: 0;
+						margin-top: 11px;
+						">
+							<div style="width: 400px;"><img style="width: 400px;"  src="img/thumbail.png"/>
+							</div>
+
+							<div id="thumbImage" style="
+
+							width: 400px;
+							display: inline-block;
+							margin-top: 10px;
+
+							">
+								<img style="width: 130px;" src="img/small_thumbail.png"/>
+								<img style="width: 130px;" src="img/small_thumbail.png"/>
+								<img style="width: 130px;" src="img/small_thumbail.png"/>
+							</div>
+						</div>
+
+						<div class="content" style="display: inline-block;	position: absolute;	right: 25%;top: 60px;">
+							<div>
+								<h3 style="
+								color: rgb(255, 120, 80);
+								font-family: cursive;
+								font-size: 20px;
+								">General Info</h3>
+								<p>
+									<i class="circular inverted teal  point icon"></i>Location
+								</p>
+								<p>
+									<i class="circular inverted teal  phone square icon"></i> Contact
+								</p>
+								<p>
+									<i class="circular inverted teal  mail  icon"></i>Email
+								</p>
+							</div>
+							<br>
+							<div>
+								<h3 style="
+								color: rgb(255, 120, 80);
+								font-family: cursive;
+								font-size: 20px;
+								">Rating</h3>
+								<table>
+									<tbody>
+										<tr>
+											<td> Value for money</td>
+											<td>&nbsp;&nbsp;<span class="ui teal label">75%</span></td>
+										</tr>
+										<tr>
+											<td> Security</td>
+											<td>&nbsp;&nbsp;<span class="ui teal label">82%</span></td>
+										</tr>
+										<tr>
+											<td> Location</td>
+											<td>&nbsp;&nbsp;<span class="ui teal label">87%</span></td>
+										</tr>
+										<tr>
+											<td> Staff</td>
+											<td>&nbsp;&nbsp;<span class="ui teal label">84%</span></td>
+										</tr>
+										<tr>
+											<td> Atmosphere</td>
+											<td>&nbsp;&nbsp;<span class="ui teal label">82%</span></td>
+										</tr>
+										<tr>
+											<td> Cleanliness</td>
+											<td>&nbsp;&nbsp;<span class="ui teal label">73%</span></td>
+										</tr>
+										<tr>
+											<td> Facilities</td>
+											<td>&nbsp;&nbsp;<span class="ui teal label">75%</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<br>
+							<div>
+								<b style="
+								color: rgb(255, 120, 80);
+								font-family: cursive;
+								font-size: 20px;
+								">Total Review </b><span>{{count}}</span>
+							</div>
+						</div>
+					</div><!-- first segment -->
+					
+					<div class="row ui stacked segment">
+						<h2 style="
+						color: rgb(255, 120, 80);
+						font-family: cursive;
+						font-size: 22px;
+						">Fee Structure</h2>
+						<hr>
+						<p><b>Adminssion Fee </b> <span>{{fee amount}}</span> </p>
+						<p><b>Monthly Fee</b></p>						
+						<table style="margin-left: 40px; margin-top: -10px;">
+							<tbody>
+								<tr>
+									<td>Three Bed</td>
+									<td>{{three bed amount}}</td>
+									
+								</tr>
+								<tr>
+									<td>Two Bed</td>
+									<td>{{two bed amount}}</td>
+									
+								</tr>
+								<tr>
+									<td>One Bed</td>
+									<td>{one bed amount}</td>
+									
+								</tr>
+							</tbody>
+						</table>
+					</div><!--row -->
+
+					<div class=" row ui stacked segment" style="
+					overflow: hidden;
+					">
+						<h2 style="
+						color: rgb(255, 120, 80);
+						font-family: cursive;
+						font-size: 22px;
+						"> Features</h2>
+						<hr>
+
+						<div class="col-md-6">
+							<p>
+								<i class="teal checkmark icon"></i>24 Hour Receptioin
+							</p>
+							<p>
+								<i class="teal checkmark icon"></i>Common Room
+							</p>
+							<p>
+								<i class="teal checkmark icon"></i>Free Internet Access
+							</p>
+							<p>
+								<i class="teal checkmark icon"></i>Outdoor Terrace
+							</p>
+							<p>
+								<i class="teal checkmark icon"></i>24 Hour Security
+							</p>
+							<p>
+								<i class="teal checkmark icon"></i>Lockers
+							</p>
+						</div>
+
+						<div class="col-md-6">
+							<p>
+								<i class="teal checkmark icon"></i>Cable TV
+							</p>
+							<p>
+								<i class="teal checkmark icon"></i>Breakfast Included
+							</p>
+							<p>
+								<i class="teal checkmark icon"></i>Tea/Coffee Making Facilities
+							</p>
+							<p>
+								<i class="teal checkmark icon"></i>House Keeping
+							</p>
+							<p>
+								<i class="teal checkmark icon"></i>Adaptors
+							</p>
+							<p>
+								<i class="teal remove icon"></i>Lockers
+							</p>
+						</div>
+
+					</div>
+
+					<div class="row ui stacked segment">
+						<h2 style="
+						color: rgb(255, 120, 80);
+						font-family: cursive;
+						font-size: 22px;
+						">Submit Review</h2>
+						<hr>
+						<div class="ui form">
+
+							<div class="field">
+								<label>Add New Review</label>
+								<textarea></textarea>
+							</div>
+
+							<div class="ui teal submit button">
+								Submit Review
+							</div>
+						</div>
+					</div><!--row -->
+
+					<br>
+				</div><!-- first column -->
+
+
+			<div class="col-lg-4">
+				<div style="height: 100px; background: white; margin-bottom: 20px; margin-top: 20px;border-radius: 5px;border: 1px solid #ccc;"  class="col-md-3">
+					<h1 style="
+					color: rgb(255, 120, 80);
+					font-family: cursive;
+					font-size: 24px;
+					">ADS</h1>
+				</div>
+</div>
+			</div><!--row -->
+		</div><!--container -->
+</div><!-- content -->
+
+
+
+<div id="footer">
+		<div id="mainFooter">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3">
+						<ul>
+							<li>
+								Company
+							</li>
+							<li>
+								Agreement
+							</li>
+							<li>
+								Privacy
+							</li>
+						</ul>
+					</div>
+					<div class="col-sm-4">
+						<ul>
+							<li>
+								<i class="fa fa-facebook-square"></i>
+								Facebook
+							</li>
+							<li>
+								<i class="fa fa-twitter-square"></i>
+								Twitter
+							</li>
+							<li>
+								<i class="fa fa-google-plus-square"></i>
+								Google Plus
+							</li>
+						</ul>
+					</div>
+					<div class="col-sm-5">
+						<ul>
+							<li>
+								Hosting Partner subisu
+							</li>
+							<li>
+								Copyright © 2015, Sodhpuch Pvt. Ltd.
+							</li>
+						</ul>
+					</div>
+
+				</div><!--row -->
+			</div><!--container -->
+		</div><!-- mainFooter -->
+</div><!-- footer -->
+
+		
+		
+	</div><!-- wrapper -->
+		
+		
+
+		<!-- Main Script -->
+		<script src="js/main.js"></script>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.js"></script>
+
+	</body>
+</html>
