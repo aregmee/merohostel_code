@@ -1,7 +1,7 @@
 body, html {
 	font-family: Georgia, sans-serif;
 	font-size: 16px;
-	color: #000;
+	color: #31302B ;
 	margin: 0;
 	padding: 0;
 	height: 100% !important;
@@ -31,7 +31,7 @@ a:link, a:hover, a:visited {
 }
 
 #content {
-	background-color: #7b756b;
+	background-color: #f7f3eb;
 	padding-bottom: 50px; /* Height of the footer element */
 }
 #footer {
@@ -49,8 +49,10 @@ h2.subTitle {
 	text-transform: uppercase;
 	margin: 0;
 	padding: 10px;
+	font-family: "Oswald",sans-serif;
+  font-weight: 200;
 }
-}
+
 
 h2. {
 color: #333 !important;
@@ -70,9 +72,13 @@ margin: 0;
 h3#facilities {
 	border-bottom: 1px dotted #ccc;
 	margin-top: 20px;
+	font-family: "Oswald",sans-serif;
+  font-weight: 200;
 }
 h3#review {
 	border-bottom: 1px dotted #ccc;
+	font-family: "Oswald",sans-serif;
+  font-weight: 200;
 }
 .facilities {
 	margin-bottom: 20px;
@@ -99,7 +105,7 @@ ul.facilitylist {
 }
 
 #mainCover {
-	background: url('../img/cover_desktop_2.jpg');
+	background: url('../img/kathmandu-city.jpg');
 	background-size: cover;
 	height: 90vh;
 	position: relative;
@@ -123,7 +129,6 @@ ul.facilitylist {
 div#mainTitle h1 {
 	font-size: 60px;
 	color: #FFF;
-	font-family: 'Raleway', sans-serif;;
 }
 div#mainTitle {
 	position: absolute;
@@ -170,7 +175,7 @@ div#mainTitle {
 	font-size: 20px;
 }
 .subSection a, .subSection a:hover {
-	color: rgb(238, 142, 88);
+	color: rgb(255, 112, 62);
 }
 .subSection img {
 	margin-top: 5px;
@@ -186,7 +191,7 @@ div#mainTitle {
 	margin-left: 25px;
 }
 div#fixedSearch {
-	background: #ef672f;
+	background: #7B756B;
 	padding: 10px;
 	text-align: center;
 	width: 100%;
@@ -244,6 +249,13 @@ div#result .show:first-child {
 
 */
 
-
+#deHosTtl {
+	  color: rgb(255, 110, 60);
+  margin-left: -15px;
+  word-spacing: 3px;
+  font-family: "Oswald",sans-serif;
+  font-weight: 200;
+  
+ }
 
 

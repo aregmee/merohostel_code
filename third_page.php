@@ -26,31 +26,33 @@
 		<script src="bootstrap/html5shiv.min.js"></script>
 		<script src="bootstrap/respond.min.js"></script>
 		<![endif]-->
+
+		<!-- Google Web Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 	</head>
 
 	<body>
-    <?php
-  		$id=$_GET["id"];
-        include 'DBConnection.php';
-   		$row=$conn->query("SELECT * from hostel where id='$id'");
-        list($id,$capacity,$contact, $gender, $location, $name, $email, $website, $additionalInfo, $ownerId, $mainPhotoUrl)=$row->fetch_row();
-        if(isset($_POST['SubmitReview'])){
-            $review = $_POST['review'];
-            $query = "INSERT INTO review(id,review) VALUES($id,'$review')";
-            if(mysqli_query($conn, $query)){
-                echo "<javascript></javascript>";
-            }
-            else{
-                echo "<javascript></javascript>";
-            }
-        }
-    ?>
+		<?php
+		$id = $_GET["id"];
+		include 'DBConnection.php';
+		$row = $conn -> query("SELECT * from hostel where id='$id'");
+		list($id, $capacity, $contact, $gender, $location, $name, $email, $website, $additionalInfo, $ownerId, $mainPhotoUrl) = $row -> fetch_row();
+		if (isset($_POST['SubmitReview'])) {
+			$review = $_POST['review'];
+			$query = "INSERT INTO review(id,review) VALUES($id,'$review')";
+			if (mysqli_query($conn, $query)) {
+				echo "<javascript></javascript>";
+			} else {
+				echo "<javascript></javascript>";
+			}
+		}
+		?>
 		<div id="header">
 			<div id="fixedSearch">
 				<div class="container">
 					<div class="row">
 
-						<div style="float: left;padding: 14px 14px;margin-top: -15px;background-color: #C14800;margin-bottom: -15px;">
+						<div style="float: left;padding: 14px 14px;margin-top: -15px;margin-bottom: -15px;">
 							<a href="first_page.php"> <img src="img/mero-hostel-logo.png"/> </a>
 						</div>
 						<!-- logo -->
@@ -62,14 +64,14 @@
 								Gender
 							</div>
 							<div class="menu" onchange="hideDiv()">
-                                <div class="item" data-value="boys" data-text="Male" value="boys">
-                                    <i class="male icon"></i>
-                                    Male
-                                </div>
-                                <div class="item" data-value="girls" data-text="Female" value="girls">
-                                    <i class="female icon"></i>
-                                    Female
-                                </div>
+								<div class="item" data-value="boys" data-text="Male" value="boys">
+									<i class="male icon"></i>
+									Male
+								</div>
+								<div class="item" data-value="girls" data-text="Female" value="girls">
+									<i class="female icon"></i>
+									Female
+								</div>
 							</div>
 						</div>
 						<!-- gender -->
@@ -111,7 +113,8 @@
 					<div class="row" style="padding: 20px;">
 
 						<div class="col-md-8">
-							<h2><?php echo $name ?></h2>
+							<h2 id="deHosTtl"><?php echo $name
+							?></h2>
 							<div class="row" style="
 							background-color: #f6f6f6;
 							padding: 10px 0px;
@@ -126,19 +129,27 @@
 
 									<h4>General Info</h4>
 									<p>
-										<?php if($location != NULL && $location != "NULL") echo "<i class=\"circular inverted orange  point icon\"></i>" . " " . $location ?>
+										<?php if($location != NULL && $location != "NULL") echo "<i class=\"circular inverted orange  point icon\"></i>" . " " . $location
+										?>
 									</p>
 									<p>
-                                        <?php if($contact != NULL && $contact != "NULL") echo "<i class=\"circular inverted orange  phone square icon\"></i>" . " " . $contact ?>
+										<?php if($contact != NULL && $contact != "NULL") echo "<i class=\"circular inverted orange  phone square icon\"></i>" . " " . $contact
+										?>
 									</p>
 									<p>
-                                        <?php if($email != NULL && $email != "NULL") echo "<i class=\"circular inverted orange  mail  icon\"></i>" . " " . $email ?>
+										<?php if($email != NULL && $email != "NULL") echo "<i class=\"circular inverted orange  mail  icon\"></i>" . " " . $email
+										?>
 									</p>
 
 								</div>
 
 							</div>
 							<!-- internal row 1 -->
+
+							<div style="margin-top: 10px;" class="row">
+								<h3 id="review"><a name="review" id="review"></a>Share it!</h3>
+								<!-- Go to www.addthis.com/dashboard to customize your tools --><div class="addthis_sharing_toolbox"></div>
+							</div><!-- internal row -->
 
 							<div class="row">
 								<h3 id="facilities"><a name="facilities" id="facilities"></a>Facilities</h3>
@@ -265,6 +276,8 @@
 			</div><!-- footer -->
 		</div>
 
+		<!-- Go to www.addthis.com/dashboard to customize your tools -->
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fbb182a18547812" async="async"></script>
 		<!-- Main Script -->
 		<script src="js/main.js"></script>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
