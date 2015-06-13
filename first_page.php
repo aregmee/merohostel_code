@@ -160,6 +160,7 @@
 								Hostels in Kathmandu</h1>
 							</div>
 
+
 							<div id="mainSearch">
 								<form method = "get" action="second_page.php" autocomplete="off">
 
@@ -220,6 +221,7 @@
 									</button>
 								</form>
 							</div>
+
 						</div><!--row -->
 					</div><!--container -->
 				</div><!-- mainCover -->

@@ -115,24 +115,32 @@
 
 	<body>
         <?php
+            if(!isset($_GET["gender"])){
+                $gender = "";
+            } else {
+                $gender = $_GET["gender"];
+            }
 
-     
-		if(!isset($_GET["gender"])){
-			$gender = "";
-		} else {	
-			$gender = $_GET["gender"];
-		}
-		
-		
-		
-		
-        $location = $_GET["location"];
-        include 'DBConnection.php';
-        if($gender == "" || $gender == null)
-            $sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' ORDER BY location";
-        else
-            $sql="SELECT * FROM hostel WHERE location LIKE '%$location%' and gender = '$gender' ORDER BY location";
-        $result =$conn->query($sql);
+            $location = $_GET["location"];
+            include 'DBConnection.php';
+
+            $per_page = 8;
+
+            if (isset($_GET["page"]))
+                $page = $_GET["page"];
+            else
+                $page=1;
+            // Page will start from 0 and Multiple by Per Page
+            $start_from = ($page-1) * $per_page;
+
+            if($gender == "" || $gender == null)
+                $sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' ORDER BY location";
+            else
+                $sql="SELECT * FROM hostel WHERE location LIKE '%$location%' and gender = '$gender' ORDER BY location";
+
+            //Selecting the data from table but with limit
+            $sql .= " LIMIT $start_from, $per_page";
+            $result =$conn->query($sql);
         ?>
 			<div id="header">
 				<div id="fixedSearch">
@@ -212,31 +220,41 @@
 								</div>
 							</div><!-- hostelThumb -->
                             <?php } ?>
-							<!--<div id="pager">
-								<ul class="pagination">
-									<li>
-										<a href="#">«</a>
-									</li>
-									<li>
-										<a href="#">1</a>
-									</li>
-									<li>
-										<a href="#">2</a>
-									</li>
-									<li>
-										<a href="#">3</a>
-									</li>
-									<li>
-										<a href="#">4</a>
-									</li>
-									<li>
-										<a href="#">5</a>
-									</li>
-									<li>
-										<a href="#">»</a>
-									</li>
+                            <div id="pager">
+                                <ul class="pagination">
+                                    <?php
+
+                                        if($gender == "" || $gender == null)
+                                            $sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' ORDER BY location";
+                                        else
+                                            $sql="SELECT * FROM hostel WHERE location LIKE '%$location%' and gender = '$gender' ORDER BY location";
+
+                                        $result =$conn->query($sql);
+
+                                        // Count the total records
+                                        $total_records = mysqli_num_rows($result);
+
+                                        //Using ceil function to divide the total records on per page
+                                        $total_pages = ceil($total_records / $per_page);
+
+                                    ?>
+                                        <li>
+                                    <?php
+                                        echo "<center><a href='second_page.php?page=1'>" . '«'."</a></li>";
+
+                                        for ($i=1; $i<=$total_pages; $i++) {
+                                            echo "<li>";
+                                            echo "<a href='second_page.php?page=".$i."'>".$i."</a> ";
+                                            echo "</li>";
+                                        };
+                                        // Going to last page
+                                    ?>
+                                    <li>
+                                    <?php
+                                        echo "<center><a href='second_page.php?page=$total_pages'>" . '»'."</a></li>";
+                                    ?>
 								</ul>
-							</div>--><!-- pager -->
+							</div><!-- pager -->
 
 						</div><!-- main column -->
 
