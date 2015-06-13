@@ -144,7 +144,7 @@
         ?>
 			<div id="header">
 				<div id="fixedSearch">
-                    <form method = "get" action="second_page.php">
+                    <form method = "get" action="hostelList.php">
 					<div class="container">
 						<div class="row">
 
@@ -209,7 +209,7 @@
 									</div>
 									<div class="extra content">
 										<a class="right floated created"><i class="circular inverted orange  user icon"></i><?php echo $row["gender"]; ?></a>
-										<a class="friends" href="second_page.php?location=<?php echo $row["location"]; ?>"><i class="circular inverted orange  point icon"></i><?php echo $row["location"]; ?></a>
+										<a class="friends" href="hostelList.php?location=<?php echo $row["location"]; ?>"><i class="circular inverted orange  point icon"></i><?php echo $row["location"]; ?></a>
 									</div>
 
 									<a  style="text-decoration: none;"  href="third_page.php?id=<?php echo $row["id"]; ?>">
@@ -242,17 +242,17 @@
                                         $prev_page = $page - 1;
                                         $next_page = $page + 1;
                                         if($page > 1)
-                                        echo "<li><a href='second_page.php?page=$prev_page'>" . '«'."</a></li>";
+                                        echo "<li><a href='hostelList.php?page=$prev_page'>" . '«'."</a></li>";
 
                                         for ($i=1; $i<=$total_pages; $i++) {
                                             echo "<li>";
-                                            echo "<a href='second_page.php?page=".$i."'>".$i."</a> ";
+                                            echo "<a href='hostelList.php?page=".$i."'>".$i."</a> ";
                                             echo "</li>";
                                         };
                                     ?>
                                     <?php
                                         if($page < $total_pages)
-                                        echo "<li><a href='second_page.php?page=$next_page'>" . '»'."</a></li>";
+                                        echo "<li><a href='hostelList.php?page=$next_page'>" . '»'."</a></li>";
                                     ?>
 								</ul>
 							</div><!-- pager -->

@@ -138,7 +138,7 @@
 								<div id="mainMenu">
 									<ul>
 										<li>
-											<a href="second_page.php">All Hostels</a>
+											<a href="hostelList.php">All Hostels</a>
 										</li>
 										<li>
 											<div class="column" style="
@@ -162,7 +162,7 @@
 
 
 							<div id="mainSearch">
-								<form method = "get" action="second_page.php" autocomplete="off">
+								<form method = "get" action="hostelList.php" autocomplete="off">
 
 									<div class="ui selection dropdown" style="
 									font-size: 16px;
@@ -239,7 +239,7 @@
 							<h2 class="subTitle"> <span style="color: rgb(255, 114, 65);">Featured</span> Hostels</h2>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h2><a href="second_page.php?location=Putalisadak">Putalisadak</a></h2>
+									<h2><a href="hostelList.php?location=Putalisadak">Putalisadak</a></h2>
 									<span><i class="fa fa-map-marker"></i> <?php
 									include 'DBConnection.php';
 									$sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE location LIKE '%Putalisadak%' ORDER BY location";
@@ -258,7 +258,7 @@
 							</div>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h2><a href="second_page.php?location=Buddhanagar">Buddhanagar</a></h2>
+									<h2><a href="hostelList.php?location=Buddhanagar">Buddhanagar</a></h2>
 									<span><i class="fa fa-map-marker"></i> <?php
 									include 'DBConnection.php';
 									$sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE location LIKE '%Buddhanagar%' ORDER BY location";
@@ -277,7 +277,7 @@
 							</div>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h2><a href="second_page.php?location=Baneshwor">Baneshwor</a></h2>
+									<h2><a href="hostelList.php?location=Baneshwor">Baneshwor</a></h2>
 									<span><i class="fa fa-map-marker"></i> <?php
 									include 'DBConnection.php';
 									$sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE location LIKE '%Baneshwor%' ORDER BY location";
@@ -296,7 +296,7 @@
 							</div>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h2><a href="second_page.php?location=Shantinagar">Shantinagar</a></h2>
+									<h2><a href="hostelList.php?location=Shantinagar">Shantinagar</a></h2>
 									<span><i class="fa fa-map-marker"></i> <?php
 									include 'DBConnection.php';
 									$sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE location LIKE '%Shantinagar%' ORDER BY location";
