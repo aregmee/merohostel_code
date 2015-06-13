@@ -25,95 +25,30 @@
 		<!-- Google Web Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
-		<script type="text/javascript">
-			function hideDiv() {
-				$("#result").hide();
-				$('.prompt').removeAttr('value');
-			}
+        <script type="text/javascript">
 
-			function showDiv() {
-				$("#result").show();
-			}
-
-			$(function() {
-				$(".prompt").keyup(function() {
-					var searchid = $(this).val();
-					var gender = $("#genderSelect").val();
-					var dataString = 'search=' + searchid + '&gender=' + gender;
-					if (searchid != '' && searchid.length > 1) {
-						$.ajax({
-							type : "POST",
-							url : "search.php",
-							data : dataString,
-							cache : false,
-							success : function(html) {
-								$("#result").html(html).show();
-							}
-						});
-					} else if (searchid == '') {
-
-						$("#result").hide();
-					}
-					return false;
-				});
-
-				jQuery("#result").live("click", function(e) {
-					var $clicked = $(e.target);
-					var $name = $clicked.find('.name').html();
-					var decoded = $("<div/>").html($name).text();
-					$('#searchid').val(decoded);
-				});
-				jQuery(document).live("click", function(e) {
-					var $clicked = $(e.target);
-					if (! $clicked.hasClass("prompt")) {
-						jQuery("#result").fadeOut();
-					}
-				});
-				$('#searchid').click(function() {
-					jQuery("#result").fadeIn();
-				});
-			});
-			$(function() {
-				$("#genderSelect").change(function() {
-					var searchid = $(this).val();
-					var gender = $("#genderSelect").val();
-					var dataString = 'search=' + searchid + '&gender=' + gender;
-					if (searchid != '' && searchid.length > 1) {
-						$.ajax({
-							type : "POST",
-							url : "search.php",
-							data : dataString,
-							cache : false,
-							success : function(html) {
-								$("#result").html(html).show();
-							}
-						});
-					} else if (searchid == '') {
-
-						$("#result").hide();
-					}
-					return false;
-				});
-
-				jQuery("#result").live("click", function(e) {
-					var $clicked = $(e.target);
-					var $name = $clicked.find('.name').html();
-					var decoded = $("<div/>").html($name).text();
-					$('#searchid').val(decoded);
-				});
-				jQuery(document).live("click", function(e) {
-					var $clicked = $(e.target);
-					if (! $clicked.hasClass("prompt")) {
-						jQuery("#result").fadeOut();
-					}
-				});
-				$('#searchid').click(function() {
-					jQuery("#result").fadeIn();
-				});
-			});
-
-		</script>
-
+            $(function(){
+                $('.search').on('change keyup', function(){
+                    var location = $(this).val();
+                    var gender=$( "#genderSelect" ).val();
+                    var dataString = 'location=' + location + '&gender='+gender;
+                    if(location!='') {
+                        $.ajax({
+                            type: "POST",
+                            url: "search.php",
+                            data: dataString,
+                            cache: false,
+                            success: function (html) {
+                                $("#searchid").html(html);
+                            }
+                        });
+                    }else if(location == ''){
+                        $("#searchid").html('');
+                    }
+                    return false;
+                });
+            });
+        </script>
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -175,7 +110,7 @@
 										<div class="default text">
 											Gender
 										</div>
-										<div class="menu" onchange="hideDiv()">
+										<div class="menu">
 											<div class="item" data-value="boys" data-text="Boys" value="boys">
 												<i class="male icon"></i>
 												Boys
@@ -200,15 +135,8 @@
 									</div> -->
 
 								<div style="display: inline-block;font-size: 16px;position: relative;top: 1.5px;">
-									<select class="ui search dropdown" >
-										<option value="">State</option>
-										<option value="AL">Alabama</option>
-										<option value="AL">Alabama</option>
-										<option value="AK">Alaska</option>
-										<option value="AZ">Arizona</option>
-										<option value="AR">Arkansas</option>
-										<option value="CA">California</option>
-										<option value="CO">Colorado</option>
+									<select class="ui search dropdown" id="searchid" name="location">
+										<option value="">Location</option>
 									</select>
 									</div>
 									<!-- location -->

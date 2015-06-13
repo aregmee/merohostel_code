@@ -235,7 +235,7 @@
                                         $total_records = mysqli_num_rows($result);
 
                                         //Using ceil function to divide the total records on per page
-                                        $total_pages = ceil($total_records / $per_page) - 1;
+                                        $total_pages = ceil($total_records / $per_page);
 
                                     ?>
                                     <?php

@@ -1,9 +1,12 @@
 <?php
 include 'DBConnection.php';
 if($_POST) {
-    $q = $_POST['search'];
-    $p = $_POST['gender'];
-    $query = "Select DISTINCT (location) from hostel where location like '$q%' AND gender='$p'";
+    $loc = $_POST['location'];
+    $gen = $_POST['gender'];
+    $query = "Select DISTINCT (location) from hostel where";
+    if(!empty($loc))
+        $query .= " location like '$loc%' and";
+    $query .=  " gender='$gen' ORDER BY location";
     $result = $conn->query($query);
     while ($row = $result->fetch_assoc()) {
         $location = $row['location'];
@@ -13,9 +16,9 @@ if($_POST) {
 
 
         ?>
-        <div class="item">
+        <option value="<?php echo $location ?>">
             <?php echo $location; ?>
-        </div>
+        </option>
         <?php
         }
     }
