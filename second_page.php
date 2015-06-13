@@ -121,7 +121,7 @@
 			$gender = "";
 		} else {	
 			$gender = $_GET["gender"];
-		} /* A
+		}
 		
 		
 		
