@@ -1,13 +1,15 @@
 <?php
-    include 'DBConnection.php';
-    if($_POST) {
-        $q = $_POST['search'];
-        $p = $_POST['gender'];
+include 'DBConnection.php';
+if($_POST) {
+    $q = $_POST['search'];
+    $location = $_POST['location'];
+    $p = $_POST['gender'];
 
-        if (empty($p) || empty($q)) {
+    if (empty($p) || empty($location)) {
 
 
-        } else {
+    } else {
+
 
             $query = "Select DISTINCT (location) from hostel where location like '$q%' AND gender='$p'";
             $result = $conn->query($query);
@@ -18,14 +20,14 @@
                 <?php
                 if ($location != 'NULL') {
 
-                    ?>
-                    <span class="name"><?php
-                        echo $location . '<br>';
-                        ?></span>
-                    </div>
-                <?php
-                }
+
+                ?>
+                <option><?php
+                    echo $location;
+                    ?></option>
+            <?php
             }
         }
     }
+}
 ?>
