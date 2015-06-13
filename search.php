@@ -2,9 +2,10 @@
     include 'DBConnection.php';
     if($_POST) {
         $q = $_POST['search'];
+        $location = $_POST['location'];
         $p = $_POST['gender'];
 
-        if (empty($p) || empty($q)) {
+        if (empty($p) || empty($location)) {
 
 
         } else {
@@ -13,17 +14,14 @@
             $result = $conn->query($query);
             while ($row = $result->fetch_assoc()) {
                 $location = $row['location'];
-                $hostelName = $row['name'];
                 ?>
-                <div class="show" align="left">
                 <?php
                 if ($location != 'NULL') {
 
                     ?>
-                    <span class="name"><?php
-                        echo $location . '<br>';
-                        ?></span>
-                    </div>
+                    <option><?php
+                        echo $location;
+                        ?></option>
                 <?php
                 }
             }
