@@ -227,6 +227,59 @@
 									</div>
 								</form>
 							</div><!-- internal row 2 -->
+							
+							<br>
+							
+							<div class="row">
+								<h3 id="review"><a name="review" id="review"></a>Latest Reviews</h3>
+
+								<div class="ui comments">
+								  <div class="comment">								   
+								    <div class="content">
+								      <span class="author">Joe Henderson</span>
+								      <div class="metadata">
+								        <div class="date">1 day ago</div>
+								      </div>
+								      <div class="text">
+								        <p>The hours, minutes and seconds stand as visible reminders 
+								        	that your effort put them all there. 
+								        	The hours, minutes and seconds stand as visible reminders 
+								        	that your effort put them all there. 
+								        	The hours, minutes and seconds stand as visible reminders 
+								        	that your effort put them all there. 
+								        	</p>
+								      </div>
+								      <div class="actions">
+								        <a class="report">Report</a>
+								      </div>
+								    </div>
+								  </div>								  
+    							</div><!-- comment-->
+    							
+    							<div class="ui comments">
+								  <div class="comment">								   
+								    <div class="content">
+								      <span class="author">Joe Henderson</span>
+								      <div class="metadata">
+								        <div class="date">1 day ago</div>
+								      </div>
+								      <div class="text">
+								        <p>The hours, minutes and seconds stand as visible reminders 
+								        	that your effort put them all there. 
+								        	The hours, minutes and seconds stand as visible reminders 
+								        	that your effort put them all there. 
+								        	The hours, minutes and seconds stand as visible reminders 
+								        	that your effort put them all there. 
+								        	</p>
+								      </div>
+								      <div class="actions">
+								        <a class="report">Report</a>
+								      </div>
+								    </div>
+								  </div>								  
+    							</div><!-- comment-->
+    							
+							</div><!-- row -->
 
 						</div><!-- main column -->
 
