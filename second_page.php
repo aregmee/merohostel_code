@@ -131,7 +131,7 @@
             else
                 $page=1;
             // Page will start from 0 and Multiple by Per Page
-            $start_from = ($page-1) * $per_page;
+            $start_from = ($page - 1) * $per_page;
 
             if($gender == "" || $gender == null)
                 $sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' ORDER BY location";
@@ -235,23 +235,24 @@
                                         $total_records = mysqli_num_rows($result);
 
                                         //Using ceil function to divide the total records on per page
-                                        $total_pages = ceil($total_records / $per_page);
+                                        $total_pages = ceil($total_records / $per_page) - 1;
 
                                     ?>
-                                        <li>
                                     <?php
-                                        echo "<center><a href='second_page.php?page=1'>" . '«'."</a></li>";
+                                        $prev_page = $page - 1;
+                                        $next_page = $page + 1;
+                                        if($page > 1)
+                                        echo "<li><a href='second_page.php?page=$prev_page'>" . '«'."</a></li>";
 
                                         for ($i=1; $i<=$total_pages; $i++) {
                                             echo "<li>";
                                             echo "<a href='second_page.php?page=".$i."'>".$i."</a> ";
                                             echo "</li>";
                                         };
-                                        // Going to last page
                                     ?>
-                                    <li>
                                     <?php
-                                        echo "<center><a href='second_page.php?page=$total_pages'>" . '»'."</a></li>";
+                                        if($page < $total_pages)
+                                        echo "<li><a href='second_page.php?page=$next_page'>" . '»'."</a></li>";
                                     ?>
 								</ul>
 							</div><!-- pager -->
