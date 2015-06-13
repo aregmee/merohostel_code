@@ -184,17 +184,14 @@
                                     </div>
                                     <!-- gender -->
 
-                                    <div class="ui corner labeled input">
-                                        <div class="ui local search">
-                                            <div class="ui left icon input">
-                                                <i class="world icon"></i>
-                                                <input  style="border-radius: 4px; font-size: 16px;" type="text" id="searchid" placeholder="Enter Location" class="prompt"  name="location">
-                                                <div id="result">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- location -->
+                                    <div  class="ui floating dropdown labeled search icon button">
+                                        <i class="world icon"></i>
+                                        <input  style="border-radius: 4px; font-size: 16px;" type="text" placeholder="Enter Location" class="prompt" id="searchid" name="location">
+                                        <div id = "result" class="menu">
 
+                                        </div>
+                                    </div>
+                                    <!-- location -->
                                     <button class="ui orange submit button" style="
 								font-size: 16px;
 								margin-left: 10px;
