@@ -209,7 +209,7 @@
 									</div>
 									<div class="extra content">
 										<a class="right floated created"><i class="circular inverted orange  user icon"></i><?php echo $row["gender"]; ?></a>
-										<a class="friends"><i class="circular inverted orange  point icon"></i><?php echo $row["location"]; ?></a>
+										<a class="friends" href="second_page.php?location=<?php echo $row["location"]; ?>"><i class="circular inverted orange  point icon"></i><?php echo $row["location"]; ?></a>
 									</div>
 
 									<a  style="text-decoration: none;"  href="third_page.php?id=<?php echo $row["id"]; ?>">

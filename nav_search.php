@@ -7,11 +7,11 @@
     <div class="menu" onchange="hideDiv()">
         <div class="item" data-value="boys" data-text="Male" value="boys">
             <i class="male icon"></i>
-            Male
+            Boys
         </div>
         <div class="item" data-value="girls" data-text="Female" value="girls">
             <i class="female icon"></i>
-            Female
+            Girls
         </div>
     </div>
 </div>

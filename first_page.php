@@ -138,7 +138,7 @@
 								<div id="mainMenu">
 									<ul>
 										<li>
-											<a href="#">All Hostel</a>
+											<a href="second_page.php">All Hostels</a>
 										</li>
 										<li>
 											<div class="column" style="
@@ -176,13 +176,13 @@
 											Gender
 										</div>
 										<div class="menu" onchange="hideDiv()">
-											<div class="item" data-value="boys" data-text="Male" value="boys">
+											<div class="item" data-value="boys" data-text="Boys" value="boys">
 												<i class="male icon"></i>
-												Male
+												Boys
 											</div>
-											<div class="item" data-value="girls" data-text="Female" value="girls">
+											<div class="item" data-value="girls" data-text="Girls" value="girls">
 												<i class="female icon"></i>
-												Female
+												Girls
 											</div>
 										</div>
 									</div>
@@ -198,7 +198,7 @@
 									</div>
 									</div>
 									</div> -->
-								
+
 								<div style="display: inline-block;font-size: 16px;position: relative;top: 1.5px;">
 									<select class="ui search dropdown" >
 										<option value="">State</option>
