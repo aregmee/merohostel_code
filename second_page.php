@@ -20,6 +20,91 @@
 		<script src="js/jquery.address.js"></script>
 		<!-- Semantic JS -->
 		<script src="semantic/dist/semantic.min.js" type="text/javascript" ></script>
+
+        <script type="text/javascript">
+            function hideDiv() {
+                $( "#result" ).hide();
+                $('.prompt').removeAttr('value');
+            }
+            function showDiv(){
+                $( "#result" ).show();
+            }
+            $(function(){
+                $(".prompt").keyup(function()
+                {
+                    var searchid = $(this).val();
+                    var gender=$( "#genderSelect" ).val();
+                    var dataString = 'search='+ searchid+'&gender='+gender;
+                    if(searchid!='') {
+                        $.ajax({
+                            type: "POST",
+                            url: "search.php",
+                            data: dataString,
+                            cache: false,
+                            success: function (html) {
+                                $("#result").html(html).show();
+                            }
+                        });
+                    }
+                    return false;
+                });
+
+                jQuery("#result").live("click",function(e){
+                    var $clicked = $(e.target);
+                    var $name = $clicked.find('.name').html();
+                    var decoded = $("<div/>").html($name).text();
+                    $('#searchid').val(decoded);
+                });
+                jQuery(document).live("click", function(e) {
+                    var $clicked = $(e.target);
+                    if (! $clicked.hasClass("prompt")){
+                        jQuery("#result").fadeOut();
+                    }
+                });
+                $('#searchid').click(function(){
+                    jQuery("#result").fadeIn();
+                });
+            });
+            $(function(){
+                $("#genderSelect").change(function()
+                {
+                    var searchid = $(this).val();
+                    var gender=$( "#genderSelect" ).val();
+                    var dataString = 'search='+ searchid+'&gender='+gender;
+                    if(searchid!='') {
+                        $.ajax({
+                            type: "POST",
+                            url: "search.php",
+                            data: dataString,
+                            cache: false,
+                            success: function (html) {
+                                $("#result").html(html).show();
+                            }
+                        });
+                    }
+                    return false;
+                });
+
+                jQuery("#result").live("click",function(e){
+                    var $clicked = $(e.target);
+                    var $name = $clicked.find('.name').html();
+                    var decoded = $("<div/>").html($name).text();
+                    $('#searchid').val(decoded);
+                });
+                jQuery(document).live("click", function(e) {
+                    var $clicked = $(e.target);
+                    if (! $clicked.hasClass("prompt")){
+                        jQuery("#result").fadeOut();
+                    }
+                });
+                $('#searchid').click(function(){
+                    jQuery("#result").fadeIn();
+                });
+            });
+
+
+        </script>
+
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -41,6 +126,7 @@
         ?>
 			<div id="header">
 				<div id="fixedSearch">
+                    <form method = "get" action="second_page.php">
 					<div class="container">
 						<div class="row">
 
@@ -49,46 +135,47 @@
 							</div>
 							<!-- logo -->
 
-							<div class="ui selection dropdown">
-								<input type="hidden" name="gender">
-								<i class="dropdown icon"></i>
-								<div class="default text">
-									Gender
-								</div>
-								<div class="menu">
-									<div class="item" data-value="male" data-text="Male">
-										<i class="male icon"></i>
-										Male
-									</div>
-									<div class="item" data-value="female" data-text="Female">
-										<i class="female icon"></i>
-										Female
-									</div>
-								</div>
-							</div>
-							<!-- gender -->
+                            <div class="ui selection dropdown">
+                                <input type="hidden" id="genderSelect" name="gender">
+                                <i class="dropdown icon"></i>
+                                <div class="default text">
+                                    Gender
+                                </div>
+                                <div class="menu" onchange="hideDiv()">
+                                    <div class="item" data-value="boys" data-text="Male" value="boys">
+                                        <i class="male icon"></i>
+                                        Male
+                                    </div>
+                                    <div class="item" data-value="girls" data-text="Female" value="girls">
+                                        <i class="female icon"></i>
+                                        Female
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- gender -->
 
-							<div class="ui corner labeled input" style="margin-left: 3px;">
-								<div class="ui local search">
-									<div class="ui left icon input">
-										<i class="world icon"></i>
-										<input  style="border-radius: 4px;" type="text" placeholder="Enter Location" class="prompt">
-									</div>
-								</div>
-							</div>
+                            <div class="ui corner labeled input">
+                                <div class="ui local search">
+                                    <div class="ui left icon input">
+                                        <i class="world icon"></i>
+                                        <input  style="border-radius: 4px;" type="text" placeholder="Enter Location" class="prompt" name="location">
+                                        <div id="result">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 							<!-- location -->
 
-							<div class="ui submit button" style="
-							background-color: white;
-							color: rgb(239, 103, 47);
-							margin-left: 8px;
-							" >
-								<i class="search icon"></i> Search
-							</div>
+                            <button class="ui orange submit button" style="
+								font-size: 16px;
+								margin-left: 10px;
+								">
+                                <i class="search icon"></i>Search
+                            </button>
 
 						</div><!--row -->
 					</div><!--container -->
-
+                    </form>
 				</div><!-- fixedSearch -->
 			</div><!-- header-->
 
