@@ -132,7 +132,7 @@
 						<div class="row" style="height: 90vh;">
 							<div id="mainHeader">
 								<div id="mainLogo">
-									<a href="first_page.php"> <img src="img/mero-hostel-logo.png" /> </a>
+									<a href="index.php"> <img src="img/mero-hostel-logo.png" /> </a>
 								</div>
 								<!-- mainLogo -->
 								<div id="mainMenu">
