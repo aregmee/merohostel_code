@@ -35,7 +35,7 @@
                     var searchid = $(this).val();
                     var gender=$( "#genderSelect" ).val();
                     var dataString = 'search='+ searchid+'&gender='+gender;
-                    if(searchid!='') {
+                    if(searchid!='' && searchid.length > 1) {
                         $.ajax({
                             type: "POST",
                             url: "search.php",
@@ -45,6 +45,9 @@
                                 $("#result").html(html).show();
                             }
                         });
+                    }else if(searchid == ''){
+
+                        $( "#result" ).hide();
                     }
                     return false;
                 });
@@ -71,7 +74,7 @@
                     var searchid = $(this).val();
                     var gender=$( "#genderSelect" ).val();
                     var dataString = 'search='+ searchid+'&gender='+gender;
-                    if(searchid!='') {
+                    if(searchid!='' && searchid.length > 1) {
                         $.ajax({
                             type: "POST",
                             url: "search.php",
@@ -81,6 +84,9 @@
                                 $("#result").html(html).show();
                             }
                         });
+                    }else if(searchid == ''){
+
+                        $( "#result" ).hide();
                     }
                     return false;
                 });
@@ -151,52 +157,52 @@
 								Hostels in Kathmandu</h1>
 							</div>
 
-							<div id="mainSearch">
-                                <form method = "get" action="second_page.php">
+                            <div id="mainSearch">
+                                <form method = "get" action="second_page.php" autocomplete="off">
 
-								<div class="ui selection dropdown" style="
+                                    <div class="ui selection dropdown" style="
 								font-size: 16px;
 								position: relative;
 								top: 1px;
 								right: 5px;
 								">
-									<input type="hidden" id="genderSelect" name="gender">
-									<i class="dropdown icon"></i>
-									<div class="default text">
-										Gender
-									</div>
-									<div class="menu" onchange="hideDiv()">
-										<div class="item" data-value="boys" data-text="Male" value="boys">
-											<i class="male icon"></i>
-											Male
-										</div>
-										<div class="item" data-value="girls" data-text="Female" value="girls">
-											<i class="female icon"></i>
-											Female
-										</div>
-									</div>
-								</div>
-								<!-- gender -->
-
-								<div class="ui corner labeled input">
-									<div class="ui local search">
-										<div class="ui left icon input">
-											<i class="world icon"></i>
-											<input  style="border-radius: 4px; font-size: 16px;" type="text" id="searchid" placeholder="Enter Location" class="prompt"  name="location">
-                                            <div id="result">
+                                        <input type="hidden" id="genderSelect" name="gender">
+                                        <i class="dropdown icon"></i>
+                                        <div class="default text">
+                                            Gender
+                                        </div>
+                                        <div class="menu" onchange="hideDiv()">
+                                            <div class="item" data-value="boys" data-text="Male" value="boys">
+                                                <i class="male icon"></i>
+                                                Male
                                             </div>
-										</div>
-									</div>
-								</div><!-- location -->
+                                            <div class="item" data-value="girls" data-text="Female" value="girls">
+                                                <i class="female icon"></i>
+                                                Female
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- gender -->
 
-								<button class="ui orange submit button" style="
+                                    <div class="ui corner labeled input">
+                                        <div class="ui local search">
+                                            <div class="ui left icon input">
+                                                <i class="world icon"></i>
+                                                <input  style="border-radius: 4px; font-size: 16px;" type="text" id="searchid" placeholder="Enter Location" class="prompt"  name="location">
+                                                <div id="result">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- location -->
+
+                                    <button class="ui orange submit button" style="
 								font-size: 16px;
 								margin-left: 10px;
 								">
-									<i class="search icon"></i>Search
-								</button>
+                                        <i class="search icon"></i>Search
+                                    </button>
                                 </form>
-							</div>
+                            </div>
 						</div><!--row -->
 					</div><!--container -->
 				</div><!-- mainCover -->
@@ -214,8 +220,19 @@
 							<h2 class="subTitle">Featured Hostels</h2>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h2><a href="#">Barcelona</a></h2>
-									<span><i class="fa fa-map-marker"></i> 97 Hostels</span>
+									<h2><a href="second_page.php?location=Putalisadak">Putalisadak</a></h2>
+                                    <span><i class="fa fa-map-marker"></i>
+                                        <?php
+                                        include 'DBConnection.php';
+                                        $sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE location LIKE '%Putalisadak%' ORDER BY location";
+                                        $result =$conn->query($sql);
+
+                                        while($row = $result->fetch_assoc()) {
+
+                                            echo $row["no_of_hostels"] . " hostels";
+                                        }
+                                        ?>
+                                    </span>
 									<a href="#"> <img src="img/barcelona.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
 									<p>
 										Find pretty places to stay in Barcelona close to Las Ramblas, La Sagrada Familia and more.
@@ -224,8 +241,19 @@
 							</div>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h2><a href="#">Barcelona</a></h2>
-									<span><i class="fa fa-map-marker"></i> 97 Hostels</span>
+									<h2><a href="second_page.php?location=Baneshwor">Baneshwor</a></h2>
+									<span><i class="fa fa-map-marker"></i>
+                                        <?php
+                                        include 'DBConnection.php';
+                                        $sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE location LIKE '%Baneshwor%' ORDER BY location";
+                                        $result =$conn->query($sql);
+
+                                        while($row = $result->fetch_assoc()) {
+
+                                            echo $row["no_of_hostels"] . " hostels";
+                                        }
+                                        ?>
+                                    </span>
 									<a href="#"> <img src="img/barcelona.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
 									<p>
 										Find pretty places to stay in Barcelona close to Las Ramblas, La Sagrada Familia and more.
@@ -234,8 +262,19 @@
 							</div>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h2><a href="#">Barcelona</a></h2>
-									<span><i class="fa fa-map-marker"></i> 97 Hostels</span>
+                                    <h2><a href="second_page.php?location=Baneshwor">Baneshwor</a></h2>
+									<span><i class="fa fa-map-marker"></i>
+                                        <?php
+                                        include 'DBConnection.php';
+                                        $sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE location LIKE '%Baneshwor%' ORDER BY location";
+                                        $result =$conn->query($sql);
+
+                                        while($row = $result->fetch_assoc()) {
+
+                                            echo $row["no_of_hostels"] . " hostels";
+                                        }
+                                        ?>
+                                    </span>
 									<a href="#"> <img src="img/barcelona.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
 									<p>
 										Find pretty places to stay in Barcelona close to Las Ramblas, La Sagrada Familia and more.
@@ -244,8 +283,19 @@
 							</div>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h2><a href="#">Barcelona</a></h2>
-									<span><i class="fa fa-map-marker"></i> 97 Hostels</span>
+                                    <h2><a href="second_page.php?location=Shantinagar">Shantinagar</a></h2>
+									<span><i class="fa fa-map-marker"></i>
+                                        <?php
+                                        include 'DBConnection.php';
+                                        $sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE location LIKE '%Shantinagar%' ORDER BY location";
+                                        $result =$conn->query($sql);
+
+                                        while($row = $result->fetch_assoc()) {
+
+                                            echo $row["no_of_hostels"] . " hostels";
+                                        }
+                                        ?>
+                                    </span>
 									<a href="#"> <img src="img/barcelona.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
 									<p>
 										Find pretty places to stay in Barcelona close to Las Ramblas, La Sagrada Familia and more.

@@ -119,7 +119,10 @@
         $gender = $_GET["gender"];
         $location = $_GET["location"];
         include 'DBConnection.php';
-        $sql="SELECT * FROM hostel WHERE location LIKE '%$location%' and gender = '$gender' ORDER BY location";
+        if($gender == "" || $gender == null)
+            $sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' ORDER BY location";
+        else
+            $sql="SELECT * FROM hostel WHERE location LIKE '%$location%' and gender = '$gender' ORDER BY location";
         $result =$conn->query($sql);
         ?>
 			<div id="header">
@@ -133,43 +136,7 @@
 							</div>
 							<!-- logo -->
 
-                            <div class="ui selection dropdown">
-                                <input type="hidden" id="genderSelect" name="gender">
-                                <i class="dropdown icon"></i>
-                                <div class="default text">
-                                    Gender
-                                </div>
-                                <div class="menu" onchange="hideDiv()">
-                                    <div class="item" data-value="boys" data-text="Male" value="boys">
-                                        <i class="male icon"></i>
-                                        Male
-                                    </div>
-                                    <div class="item" data-value="girls" data-text="Female" value="girls">
-                                        <i class="female icon"></i>
-                                        Female
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- gender -->
-
-                            <div class="ui corner labeled input">
-                                <div class="ui local search">
-                                    <div class="ui left icon input">
-                                        <i class="world icon"></i>
-                                        <input  style="border-radius: 4px;" type="text" placeholder="Enter Location" class="prompt" name="location">
-                                        <div id="result">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-							<!-- location -->
-
-                            <button class="ui orange submit button" style="
-								font-size: 16px;
-								margin-left: 10px;
-								">
-                                <i class="search icon"></i>Search
-                            </button>
+                            <?php include 'nav_search.php'?>
 
 						</div><!--row -->
 					</div><!--container -->
@@ -231,7 +198,7 @@
 								</div>
 							</div><!-- hostelThumb -->
                             <?php } ?>
-							<div id="pager">
+							<!--<div id="pager">
 								<ul class="pagination">
 									<li>
 										<a href="#">«</a>
@@ -255,7 +222,7 @@
 										<a href="#">»</a>
 									</li>
 								</ul>
-							</div><!-- pager -->
+							</div>--><!-- pager -->
 
 						</div><!-- main column -->
 
