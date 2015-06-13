@@ -115,18 +115,21 @@
 
 	<body>
         <?php
-            $num_rec_per_page=10;
-            if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };
-            $start_from = ($page) * $num_rec_per_page;
-            $gender = $_GET["gender"];
-            $location = $_GET["location"];
-            include 'DBConnection.php';
-            if($gender == "" || $gender == null)
-                $sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' ORDER BY location ";
-            else
-                $sql="SELECT * FROM hostel WHERE location LIKE '%$location%' and gender = '$gender' ORDER BY location ";
-            $sql .= "LIMIT $start_from, $num_rec_per_page";
-            $result =$conn->query($sql);
+
+     
+		if(!isset($_GET["gender"])){
+			$gender = "";
+		} else {	
+			$gender = $_GET["gender"];
+		}
+		
+        $location = $_GET["location"];
+        include 'DBConnection.php';
+        if($gender == "" || $gender == null)
+            $sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' ORDER BY location";
+        else
+            $sql="SELECT * FROM hostel WHERE location LIKE '%$location%' and gender = '$gender' ORDER BY location";
+        $result =$conn->query($sql);
         ?>
 			<div id="header">
 				<div id="fixedSearch">
@@ -206,21 +209,6 @@
 								</div>
 							</div><!-- hostelThumb -->
                             <?php } ?>
-
-                            <?php
-                                $sql = "SELECT * FROM student";
-                                $rs_result = mysql_query($sql); //run the query
-                                $total_records = mysql_num_rows($rs_result);  //count number of records
-                                $total_pages = ceil($total_records / $num_rec_per_page);
-
-                                echo "<a href='pagination.php?page=1'>".'|<'."</a> "; // Goto 1st page
-
-                                for ($i=1; $i<=$total_pages; $i++) {
-                                echo "<a href='pagination.php?page=".$i."'>".$i."</a> ";
-                                };
-                                echo "<a href='pagination.php?page=$total_pages'>".'>|'."</a> "; // Goto last page
-                            ?>
-
 							<!--<div id="pager">
 								<ul class="pagination">
 									<li>

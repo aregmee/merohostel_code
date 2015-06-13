@@ -220,3 +220,28 @@ a#hpName {
 	font-size: 18px;
 	font-family: cursive;
 }
+ 
+ div#result {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #eee;
+  z-index: 999;
+  cursor: pointer;
+}
+div#result .show {
+  padding: 7px 15px;
+  border-bottom: 1px solid #ddd;
+}
+div#result .show:last-child {
+  border: none;
+}
+div#result .show:first-child {
+ 
+}
+
+
+
+
+
