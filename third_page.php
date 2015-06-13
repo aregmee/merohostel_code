@@ -31,8 +31,7 @@
 	<body>
     <?php
   		$id=$_GET["id"];
-		$conn=new mysqli("localhost","root","iam@@$#!M","merohost_el");
-
+        include 'DBConnection.php';
    		$row=$conn->query("SELECT * from hostel where id='$id'");
         list($id,$capacity,$contact, $gender, $location, $name, $email, $website, $additionalInfo, $ownerId, $mainPhotoUrl)=$row->fetch_row();
         if(isset($_POST['SubmitReview'])){

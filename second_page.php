@@ -118,9 +118,7 @@
 
         $gender = $_GET["gender"];
         $location = $_GET["location"];
-        /*    $offset = $_GET["offset"];
-            $max = $_GET["max"];*/
-        $conn=mysqli_connect('localhost','root','iam@@$#!M','merohost_el');
+        include 'DBConnection.php';
         $sql="SELECT * FROM hostel WHERE location LIKE '%$location%' and gender = '$gender' ORDER BY location";
         $result =$conn->query($sql);
         ?>

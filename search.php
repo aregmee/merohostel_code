@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect('localhost','root','iam@@$#!M','merohost_el');
+include 'DBConnection.php';
 if($_POST)
 {
     $q=$_POST['search'];
