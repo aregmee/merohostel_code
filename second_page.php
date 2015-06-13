@@ -116,7 +116,13 @@
 	<body>
         <?php
 
-        $gender = $_GET["gender"];
+     
+		if(!isset($_GET["gender"])){
+			$gender = "";
+		} else {	
+			$gender = $_GET["gender"];
+		}
+		
         $location = $_GET["location"];
         include 'DBConnection.php';
         if($gender == "" || $gender == null)

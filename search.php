@@ -13,7 +13,7 @@
             $result = $conn->query($query);
             while ($row = $result->fetch_assoc()) {
                 $location = $row['location'];
-                $hostelName = $row['name'];
+               
                 ?>
                 <div class="show" align="left">
                 <?php
