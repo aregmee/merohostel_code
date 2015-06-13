@@ -156,10 +156,8 @@
 
 					<div class="row" style="padding-top: 20px; padding-bottom: 20px;">
 						
-					<a href="http://www.google.com" class="tsc_awb_large tsc_flat">Visit Google</a>
-
 						<div class="col-md-12">
-							<h2>{Male} Hostel nearby {Naxal}</h2>
+							<h2><?php echo ucfirst($gender) ?> hostel nearby <?php echo $location ?></h2>
                             <?php while($row = $result->fetch_assoc()) { ?>
 							<div class="hostelThumb">
 								<div class="ui card">
@@ -178,11 +176,18 @@
 
 									<div class="content">
 										<div class="header">
-											<?php echo $row["name"]; ?>
+											<?php $name = $row["name"];
+                                                /*$name = stripslashes($name);*/
+                                                if(strlen($name) > 24)
+                                                    echo substr($name, 0, 22) . "...";
+                                                else
+                                                    echo $name;
+
+                                            ?>
 										</div>
 
 										<div class="description">
-											Hans Brinker Budget Hotel is near Leidseplein, the Vondelpark, the Rijksmuseum and the Van Gogh Museum.
+
 										</div>
 									</div>
 									<div class="extra content">
