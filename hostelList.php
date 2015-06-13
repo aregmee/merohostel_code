@@ -212,7 +212,7 @@
 										<a class="friends" href="hostelList.php?location=<?php echo $row["location"]; ?>"><i class="circular inverted orange  point icon"></i><?php echo $row["location"]; ?></a>
 									</div>
 
-									<a  style="text-decoration: none;"  href="third_page.php?id=<?php echo $row["id"]; ?>">
+									<a  style="text-decoration: none;"  href="hostelDetail.php?id=<?php echo $row["id"]; ?>">
 									<div style="display: block;	border-radius: 0; margin: 0;" class="ui orange button">
 										View Details
 									</div> </a>
