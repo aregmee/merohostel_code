@@ -239,20 +239,25 @@
 
                                     ?>
                                     <?php
-                                        $prev_page = $page - 1;
-                                        $next_page = $page + 1;
-                                        if($page > 1)
-                                        echo "<li><a href='hostelList.php?page=$prev_page'>" . '«'."</a></li>";
 
-                                        for ($i=1; $i<=$total_pages; $i++) {
-                                            echo "<li>";
-                                            echo "<a href='hostelList.php?page=".$i."'>".$i."</a> ";
-                                            echo "</li>";
-                                        };
-                                    ?>
-                                    <?php
-                                        if($page < $total_pages)
-                                        echo "<li><a href='hostelList.php?page=$next_page'>" . '»'."</a></li>";
+                                        if($total_pages > 1){
+
+                                            $prev_page = $page - 1;
+                                            $next_page = $page + 1;
+                                            $url = "hostelList.php?";
+                                            if(!empty($location))
+                                                $url .= "location=" . $location;
+                                            if($page > 1)
+                                            echo "<li><a href= '$url&page=$prev_page'>" . '«'."</a></li>";
+
+                                            for ($i=1; $i<=$total_pages; $i++) {
+                                                echo "<li>";
+                                                echo "<a href='$url&page=".$i."'>".$i."</a> ";
+                                                echo "</li>";
+                                            };
+                                            if($page < $total_pages)
+                                                echo "<li><a href='$url&page=$next_page'>" . '»'."</a></li>";
+                                        }
                                     ?>
 								</ul>
 							</div><!-- pager -->
