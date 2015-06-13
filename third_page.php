@@ -206,6 +206,21 @@
 										<label>Add New Review</label>
 										<textarea name="review" rows="5" cols="40"></textarea>
 									</div>
+									
+									<div class="two fields">
+									    <div class="field">
+									      <label>First name</label>
+									      <input placeholder="First Name" type="text">
+									    </div>
+									    <div class="field">
+									      <label>Last name</label>
+									      <input placeholder="Middle Name" type="text">
+									    </div>									   
+  									</div>
+								   <div class="field">
+								      <label>Email Address</label>
+								      <input placeholder="Last Name" type="text">
+								    </div>
 
 									<div>
 										<input class="ui orange submit button" type = "submit" value = "Submit Review" name = "SubmitReview"/>
