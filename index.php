@@ -132,13 +132,13 @@
 						<div class="row" style="height: 90vh;">
 							<div id="mainHeader">
 								<div id="mainLogo">
-									<a href="first_page.php"> <img src="img/mero-hostel-logo.png" /> </a>
+									<a href="index.php"> <img src="img/mero-hostel-logo.png" /> </a>
 								</div>
 								<!-- mainLogo -->
 								<div id="mainMenu">
 									<ul>
 										<li>
-											<a href="#">All Hostel</a>
+											<a href="hostelList.php">All Hostels</a>
 										</li>
 										<li>
 											<div class="column" style="
@@ -162,7 +162,7 @@
 
 
 							<div id="mainSearch">
-								<form method = "get" action="second_page.php" autocomplete="off">
+								<form method = "get" action="hostelList.php" autocomplete="off">
 
 									<div class="ui selection dropdown" style="
 									font-size: 16px;
@@ -176,13 +176,13 @@
 											Gender
 										</div>
 										<div class="menu" onchange="hideDiv()">
-											<div class="item" data-value="boys" data-text="Male" value="boys">
+											<div class="item" data-value="boys" data-text="Boys" value="boys">
 												<i class="male icon"></i>
-												Male
+												Boys
 											</div>
-											<div class="item" data-value="girls" data-text="Female" value="girls">
+											<div class="item" data-value="girls" data-text="Girls" value="girls">
 												<i class="female icon"></i>
-												Female
+												Girls
 											</div>
 										</div>
 									</div>
@@ -198,7 +198,7 @@
 									</div>
 									</div>
 									</div> -->
-								
+
 								<div style="display: inline-block;font-size: 16px;position: relative;top: 1.5px;">
 									<select class="ui search dropdown" >
 										<option value="">State</option>
@@ -239,7 +239,7 @@
 							<h2 class="subTitle"> <span style="color: rgb(255, 114, 65);">Featured</span> Hostels</h2>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h2><a href="second_page.php?location=Putalisadak">Putalisadak</a></h2>
+									<h2><a href="hostelList.php?location=Putalisadak">Putalisadak</a></h2>
 									<span><i class="fa fa-map-marker"></i> <?php
 									include 'DBConnection.php';
 									$sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE location LIKE '%Putalisadak%' ORDER BY location";
@@ -258,7 +258,7 @@
 							</div>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h2><a href="second_page.php?location=Buddhanagar">Buddhanagar</a></h2>
+									<h2><a href="hostelList.php?location=Buddhanagar">Buddhanagar</a></h2>
 									<span><i class="fa fa-map-marker"></i> <?php
 									include 'DBConnection.php';
 									$sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE location LIKE '%Buddhanagar%' ORDER BY location";
@@ -277,7 +277,7 @@
 							</div>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h2><a href="second_page.php?location=Baneshwor">Baneshwor</a></h2>
+									<h2><a href="hostelList.php?location=Baneshwor">Baneshwor</a></h2>
 									<span><i class="fa fa-map-marker"></i> <?php
 									include 'DBConnection.php';
 									$sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE location LIKE '%Baneshwor%' ORDER BY location";
@@ -296,7 +296,7 @@
 							</div>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h2><a href="second_page.php?location=Shantinagar">Shantinagar</a></h2>
+									<h2><a href="hostelList.php?location=Shantinagar">Shantinagar</a></h2>
 									<span><i class="fa fa-map-marker"></i> <?php
 									include 'DBConnection.php';
 									$sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE location LIKE '%Shantinagar%' ORDER BY location";
@@ -363,56 +363,8 @@
 			</div>
 			<!-- content -->
 
-			<div id="footer">
-
-				<div id="mainFooter">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-3">
-								<ul>
-									<li>
-										Company
-									</li>
-									<li>
-										Agreement
-									</li>
-									<li>
-										Privacy
-									</li>
-								</ul>
-							</div>
-							<div class="col-sm-4">
-								<ul>
-									<li>
-										<i class="fa fa-facebook-square"></i>
-										Facebook
-									</li>
-									<li>
-										<i class="fa fa-twitter-square"></i>
-										Twitter
-									</li>
-									<li>
-										<i class="fa fa-google-plus-square"></i>
-										Google Plus
-									</li>
-								</ul>
-							</div>
-							<div class="col-sm-5">
-								<ul>
-									<li>
-										Hosting Partner subisu
-									</li>
-									<li>
-										Copyright © 2015, Sodhpuch Pvt. Ltd.
-									</li>
-								</ul>
-							</div>
-
-						</div><!--row -->
-					</div><!--container -->
-				</div><!-- mainFooter -->
-
-			</div><!-- footer -->
+            <?php include "footer.php";?>
+			<!-- footer -->
 		</div>
 
 		<!-- Main Script -->

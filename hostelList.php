@@ -144,12 +144,12 @@
         ?>
 			<div id="header">
 				<div id="fixedSearch">
-                    <form method = "get" action="second_page.php">
+                    <form method = "get" action="hostelList.php">
 					<div class="container">
 						<div class="row">
 
 							<div style="float: left;padding: 14px 14px;margin-top: -15px;margin-bottom: -15px;">
-								<a href="first_page.php"> <img src="img/mero-hostel-logo.png"/> </a>
+								<a href="index.php"> <img src="img/mero-hostel-logo.png"/> </a>
 							</div>
 							<!-- logo -->
 
@@ -209,10 +209,10 @@
 									</div>
 									<div class="extra content">
 										<a class="right floated created"><i class="circular inverted orange  user icon"></i><?php echo $row["gender"]; ?></a>
-										<a class="friends"><i class="circular inverted orange  point icon"></i><?php echo $row["location"]; ?></a>
+										<a class="friends" href="hostelList.php?location=<?php echo $row["location"]; ?>"><i class="circular inverted orange  point icon"></i><?php echo $row["location"]; ?></a>
 									</div>
 
-									<a  style="text-decoration: none;"  href="third_page.php?id=<?php echo $row["id"]; ?>">
+									<a  style="text-decoration: none;"  href="hostelDetail.php?id=<?php echo $row["id"]; ?>">
 									<div style="display: block;	border-radius: 0; margin: 0;" class="ui orange button">
 										View Details
 									</div> </a>
@@ -242,17 +242,17 @@
                                         $prev_page = $page - 1;
                                         $next_page = $page + 1;
                                         if($page > 1)
-                                        echo "<li><a href='second_page.php?page=$prev_page'>" . '«'."</a></li>";
+                                        echo "<li><a href='hostelList.php?page=$prev_page'>" . '«'."</a></li>";
 
                                         for ($i=1; $i<=$total_pages; $i++) {
                                             echo "<li>";
-                                            echo "<a href='second_page.php?page=".$i."'>".$i."</a> ";
+                                            echo "<a href='hostelList.php?page=".$i."'>".$i."</a> ";
                                             echo "</li>";
                                         };
                                     ?>
                                     <?php
                                         if($page < $total_pages)
-                                        echo "<li><a href='second_page.php?page=$next_page'>" . '»'."</a></li>";
+                                        echo "<li><a href='hostelList.php?page=$next_page'>" . '»'."</a></li>";
                                     ?>
 								</ul>
 							</div><!-- pager -->
@@ -266,54 +266,7 @@
 			</div>
 			<!-- content -->
 
-			<div id="footer">
-
-				<div id="mainFooter">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-3">
-								<ul>
-									<li>
-										Company
-									</li>
-									<li>
-										Agreement
-									</li>
-									<li>
-										Privacy
-									</li>
-								</ul>
-							</div>
-							<div class="col-sm-4">
-								<ul>
-									<li>
-										<i class="fa fa-facebook-square"></i>
-										Facebook
-									</li>
-									<li>
-										<i class="fa fa-twitter-square"></i>
-										Twitter
-									</li>
-									<li>
-										<i class="fa fa-google-plus-square"></i>
-										Google Plus
-									</li>
-								</ul>
-							</div>
-							<div class="col-sm-5">
-								<ul>
-									<li>
-										Hosting Partner subisu
-									</li>
-									<li>
-										Copyright © 2015, Sodhpuch Pvt. Ltd.
-									</li>
-								</ul>
-							</div>
-
-						</div><!--row -->
-					</div><!--container -->
-				</div><!-- mainFooter -->
+            <?php include "footer.php";?>
 
 			</div><!-- footer -->
 		</div>
