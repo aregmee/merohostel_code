@@ -35,7 +35,7 @@
                 <div class="col-sm-5">
                     <ul>
                         <li>
-                            Hosting Partner subisu
+                            Verified By Hostel Association
                         </li>
                         <li>
                             Copyright © 2015, Sodhpuch Pvt. Ltd.
