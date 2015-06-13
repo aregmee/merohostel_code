@@ -12,8 +12,7 @@
             $query = "Select DISTINCT (location) from hostel where location like '$q%' AND gender='$p'";
             $result = $conn->query($query);
             while ($row = $result->fetch_assoc()) {
-                $location = $row['location'];
-               
+                $location = $row['location'];               
                 ?>
                 <div class="show" align="left">
                 <?php

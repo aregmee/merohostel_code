@@ -121,7 +121,10 @@
 			$gender = "";
 		} else {	
 			$gender = $_GET["gender"];
-		}
+		} /* A
+		
+		
+		
 		
         $location = $_GET["location"];
         include 'DBConnection.php';
