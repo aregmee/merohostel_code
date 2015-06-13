@@ -241,11 +241,11 @@
 							</div>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h2><a href="second_page.php?location=Baneshwor">Baneshwor</a></h2>
+									<h2><a href="second_page.php?location=Buddhanagar">Buddhanagar</a></h2>
 									<span><i class="fa fa-map-marker"></i>
                                         <?php
                                         include 'DBConnection.php';
-                                        $sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE location LIKE '%Baneshwor%' ORDER BY location";
+                                        $sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE location LIKE '%Buddhanagar%' ORDER BY location";
                                         $result =$conn->query($sql);
 
                                         while($row = $result->fetch_assoc()) {
