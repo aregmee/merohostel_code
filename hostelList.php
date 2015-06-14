@@ -221,45 +221,43 @@
 							</div><!-- hostelThumb -->
                             <?php } ?>
                             <div id="pager">
-                                <ul class="pagination">
+                                <div class="ui pagination menu">
                                     <?php
 
-                                        if($gender == "" || $gender == null)
-                                            $sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' ORDER BY location";
-                                        else
-                                            $sql="SELECT * FROM hostel WHERE location LIKE '%$location%' and gender = '$gender' ORDER BY location";
+                                    if($gender == "" || $gender == null)
+                                        $sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' ORDER BY location";
+                                    else
+                                        $sql="SELECT * FROM hostel WHERE location LIKE '%$location%' and gender = '$gender' ORDER BY location";
 
-                                        $result =$conn->query($sql);
+                                    $result =$conn->query($sql);
 
-                                        // Count the total records
-                                        $total_records = mysqli_num_rows($result);
+                                    // Count the total records
+                                    $total_records = mysqli_num_rows($result);
 
-                                        //Using ceil function to divide the total records on per page
-                                        $total_pages = ceil($total_records / $per_page);
+                                    //Using ceil function to divide the total records on per page
+                                    $total_pages = ceil($total_records / $per_page);
 
-                                    ?>
-                                    <?php
+                                    if($total_pages > 1){
 
-                                        if($total_pages > 1){
+                                        $prev_page = $page - 1;
+                                        $next_page = $page + 1;
+                                        $url = "hostelList.php?";
+                                        if(!empty($location))
+                                            $url .= "location=" . $location;
+                                        if($page > 1)
+                                            echo "<a class = \"icon item\" href= '$url&page=$prev_page'>" . '<i class="left arrow icon"></i>'."</a>";
 
-                                            $prev_page = $page - 1;
-                                            $next_page = $page + 1;
-                                            $url = "hostelList.php?";
-                                            if(!empty($location))
-                                                $url .= "location=" . $location;
-                                            if($page > 1)
-                                            echo "<li><a href= '$url&page=$prev_page'>" . '«'."</a></li>";
-
-                                            for ($i=1; $i<=$total_pages; $i++) {
-                                                echo "<li>";
-                                                echo "<a href='$url&page=".$i."'>".$i."</a> ";
-                                                echo "</li>";
-                                            };
-                                            if($page < $total_pages)
-                                                echo "<li><a href='$url&page=$next_page'>" . '»'."</a></li>";
+                                        for ($i=1; $i<=$total_pages; $i++) {
+                                            if($page == $i)
+                                                echo "<a class = \"active item\" href='$url&page=" . $i . "'>" . $i . "</a>";
+                                            else
+                                                echo "<a class = \"item\" href='$url&page=" . $i . "'>" . $i . "</a>";
                                         }
+                                        if($page < $total_pages)
+                                            echo "<a class = \"icon item\"href='$url&page=$next_page'>" . '<i class="right arrow icon"></i>'."</a>";
+                                    }
                                     ?>
-								</ul>
+                                </div>
 							</div><!-- pager -->
 
 						</div><!-- main column -->

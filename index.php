@@ -135,7 +135,7 @@
 									</div> -->
 
                                     <div class="ui search" style="display: inline-block;font-size: 16px;position: relative;top: 1.5px;">
-                                        <input class="prompt" placeholder="Common passwords..." type="text">
+                                        <input class="prompt" placeholder="Location" type="text" name="location">
                                         <div class="results"></div>
                                     </div>
 									<!-- location -->

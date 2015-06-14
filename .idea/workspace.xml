@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1f0672a-8076-4cae-a676-2ee64d43c782" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hostelDetail.php" afterPath="$PROJECT_DIR$/hostelDetail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hostelList.php" afterPath="$PROJECT_DIR$/hostelList.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="97c1566f-f5a9-495e-b107-7dd6122a5903" name="Failed commit: Default" comment="Contact Us made" />
@@ -30,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="hostelDetail.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hostelDetail.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hostelDetail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5432937" vertical-offset="4555" max-vertical-offset="5295">
-              <caret line="325" column="30" selection-start-line="325" selection-start-column="30" selection-end-line="325" selection-end-column="30" />
+            <state vertical-scroll-proportion="-17.041666" vertical-offset="3536" max-vertical-offset="5295">
+              <caret line="263" column="0" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -46,9 +47,23 @@
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#br#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1434272564437" expanded="true" signature="1401:1436" placeholder="SELECT * fro..hostel..." />
-                <marker date="1434272564437" expanded="true" signature="1896:1985" placeholder="INSERT INTO ..." />
-                <marker date="1434272564437" expanded="true" signature="9920:9944" placeholder="..." />
+                <marker date="1434274711585" expanded="true" signature="1401:1436" placeholder="SELECT * fro..hostel..." />
+                <marker date="1434274711585" expanded="true" signature="1896:1985" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hostelList.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hostelList.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6434635" vertical-offset="3386" max-vertical-offset="4350">
+              <caret line="251" column="54" selection-start-line="251" selection-start-column="54" selection-end-line="251" selection-end-column="54" />
+              <folding>
+                <marker date="1434274067185" expanded="true" signature="4989:5061" placeholder="SELECT * FRO..hostel..." />
+                <marker date="1434274067185" expanded="true" signature="5103:5198" placeholder="SELECT * FRO..hostel..." />
+                <marker date="1434274067185" expanded="true" signature="8335:8407" placeholder="SELECT * FRO..hostel..." />
+                <marker date="1434274067185" expanded="true" signature="8497:8592" placeholder="SELECT * FRO..hostel..." />
               </folding>
             </state>
           </provider>
@@ -81,10 +96,10 @@
         <option value="$PROJECT_DIR$/third_page.php" />
         <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/hostelList.php" />
         <option value="$PROJECT_DIR$/search.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/addReview.php" />
+        <option value="$PROJECT_DIR$/hostelList.php" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/hostelDetail.php" />
       </list>
     </option>
@@ -393,7 +408,13 @@
       <option name="project" value="LOCAL" />
       <updated>1434272045446</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="removed advertisement and moved share it">
+      <created>1434272808308</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1434272808308</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -407,7 +428,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27190334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27190334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2159265" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -468,7 +489,8 @@
     <MESSAGE value="Pagination issue fixed for locations and single page" />
     <MESSAGE value="Index page search made, but not working for single character and arrow selection" />
     <MESSAGE value="review made" />
-    <option name="LAST_COMMIT_MESSAGE" value="review made" />
+    <MESSAGE value="removed advertisement and moved share it" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed advertisement and moved share it" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -492,9 +514,8 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#br#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1434272564437" expanded="true" signature="1401:1436" placeholder="SELECT * fro..hostel..." />
-            <marker date="1434272564437" expanded="true" signature="1896:1985" placeholder="INSERT INTO ..." />
-            <marker date="1434272564437" expanded="true" signature="9920:9944" placeholder="..." />
+            <marker date="1434274711585" expanded="true" signature="1401:1436" placeholder="SELECT * fro..hostel..." />
+            <marker date="1434274711585" expanded="true" signature="1896:1985" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -503,6 +524,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4500">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -524,6 +554,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3194" max-vertical-offset="4380">
           <caret line="115" column="4" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="4" />
+          <folding>
+            <marker date="1434274067185" expanded="true" signature="4989:5061" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="5103:5198" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="8335:8407" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="8497:8592" placeholder="SELECT * FRO..hostel..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -542,9 +578,8 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#br#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1434272564437" expanded="true" signature="1401:1436" placeholder="SELECT * fro..hostel..." />
-            <marker date="1434272564437" expanded="true" signature="1896:1985" placeholder="INSERT INTO ..." />
-            <marker date="1434272564437" expanded="true" signature="9920:9944" placeholder="..." />
+            <marker date="1434274711585" expanded="true" signature="1401:1436" placeholder="SELECT * fro..hostel..." />
+            <marker date="1434274711585" expanded="true" signature="1896:1985" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -553,6 +588,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4500">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -574,6 +618,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3194" max-vertical-offset="4380">
           <caret line="115" column="4" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="4" />
+          <folding>
+            <marker date="1434274067185" expanded="true" signature="4989:5061" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="5103:5198" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="8335:8407" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="8497:8592" placeholder="SELECT * FRO..hostel..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -592,9 +642,8 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#br#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1434272564437" expanded="true" signature="1401:1436" placeholder="SELECT * fro..hostel..." />
-            <marker date="1434272564437" expanded="true" signature="1896:1985" placeholder="INSERT INTO ..." />
-            <marker date="1434272564437" expanded="true" signature="9920:9944" placeholder="..." />
+            <marker date="1434274711585" expanded="true" signature="1401:1436" placeholder="SELECT * fro..hostel..." />
+            <marker date="1434274711585" expanded="true" signature="1896:1985" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -603,6 +652,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2265" max-vertical-offset="6135">
           <caret line="154" column="42" selection-start-line="154" selection-start-column="42" selection-end-line="154" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -624,6 +682,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="438" max-vertical-offset="4680">
           <caret line="150" column="32" selection-start-line="150" selection-start-column="32" selection-end-line="150" selection-end-column="32" />
+          <folding>
+            <marker date="1434274067185" expanded="true" signature="4989:5061" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="5103:5198" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="8335:8407" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="8497:8592" placeholder="SELECT * FRO..hostel..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -639,6 +703,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2640" max-vertical-offset="5385">
           <caret line="184" column="122" selection-start-line="184" selection-start-column="109" selection-end-line="184" selection-end-column="122" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -646,6 +719,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4995">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1434274067185" expanded="true" signature="4989:5061" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="5103:5198" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="8335:8407" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="8497:8592" placeholder="SELECT * FRO..hostel..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -675,6 +754,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="4410">
           <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+          <folding>
+            <marker date="1434274067185" expanded="true" signature="4989:5061" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="5103:5198" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="8335:8407" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="8497:8592" placeholder="SELECT * FRO..hostel..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -682,6 +767,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5652">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -689,6 +783,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7488">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1434274067185" expanded="true" signature="4989:5061" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="5103:5198" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="8335:8407" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="8497:8592" placeholder="SELECT * FRO..hostel..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -703,6 +803,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="5508">
           <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -710,6 +819,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7488">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1434274067185" expanded="true" signature="4989:5061" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="5103:5198" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="8335:8407" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="8497:8592" placeholder="SELECT * FRO..hostel..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -776,37 +891,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4824281" vertical-offset="2548" max-vertical-offset="4140">
-          <caret line="190" column="22" selection-start-line="190" selection-start-column="22" selection-end-line="190" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="223" max-vertical-offset="825">
           <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semantic/dist/semantic.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24469821" vertical-offset="0" max-vertical-offset="613">
-          <caret line="10" column="372186" selection-start-line="10" selection-start-column="372186" selection-end-line="10" selection-end-column="372186" />
-          <folding>
-            <element signature="e#169973#175816#1" expanded="false" />
-            <element signature="e#175836#179329#1" expanded="false" />
-            <element signature="e#296700#298194#1" expanded="false" />
-            <element signature="e#298214#299867#1" expanded="false" />
-            <element signature="e#308125#313967#1" expanded="false" />
-            <element signature="e#313987#317480#1" expanded="false" />
-            <element signature="e#334219#335933#1" expanded="false" />
-            <element signature="e#335953#337862#1" expanded="false" />
-            <element signature="e#355727#363261#1" expanded="false" />
-            <element signature="e#363281#371214#1" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -831,24 +919,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75" vertical-offset="1755" max-vertical-offset="4530">
-          <caret line="139" column="42" selection-start-line="139" selection-start-column="42" selection-end-line="139" selection-end-column="42" />
+        <state vertical-scroll-proportion="-0.701278" vertical-offset="3289" max-vertical-offset="4140">
+          <caret line="190" column="22" selection-start-line="190" selection-start-column="22" selection-end-line="190" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hostelList.php">
+    <entry file="file://$PROJECT_DIR$/semantic/dist/semantic.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.103565365" vertical-offset="1664" max-vertical-offset="4380">
-          <caret line="115" column="4" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.24469821" vertical-offset="0" max-vertical-offset="613">
+          <caret line="10" column="81844" selection-start-line="10" selection-start-column="81844" selection-end-line="10" selection-end-column="81844" />
+          <folding>
+            <element signature="e#169973#175816#1" expanded="true" />
+            <element signature="e#175836#179329#1" expanded="true" />
+            <element signature="e#296700#298194#1" expanded="true" />
+            <element signature="e#298214#299867#1" expanded="true" />
+            <element signature="e#308125#313967#1" expanded="true" />
+            <element signature="e#313987#317480#1" expanded="true" />
+            <element signature="e#334219#335933#1" expanded="true" />
+            <element signature="e#335953#337862#1" expanded="true" />
+            <element signature="e#355727#363261#1" expanded="true" />
+            <element signature="e#363281#371214#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327674" vertical-offset="1889" max-vertical-offset="4605">
+          <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+            <marker date="1434274637661" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hostelDetail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5432937" vertical-offset="4555" max-vertical-offset="5295">
-          <caret line="325" column="30" selection-start-line="325" selection-start-column="30" selection-end-line="325" selection-end-column="30" />
+        <state vertical-scroll-proportion="-17.041666" vertical-offset="3536" max-vertical-offset="5295">
+          <caret line="263" column="0" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -860,9 +977,21 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#br#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1434272564437" expanded="true" signature="1401:1436" placeholder="SELECT * fro..hostel..." />
-            <marker date="1434272564437" expanded="true" signature="1896:1985" placeholder="INSERT INTO ..." />
-            <marker date="1434272564437" expanded="true" signature="9920:9944" placeholder="..." />
+            <marker date="1434274711585" expanded="true" signature="1401:1436" placeholder="SELECT * fro..hostel..." />
+            <marker date="1434274711585" expanded="true" signature="1896:1985" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hostelList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6434635" vertical-offset="3386" max-vertical-offset="4350">
+          <caret line="251" column="54" selection-start-line="251" selection-start-column="54" selection-end-line="251" selection-end-column="54" />
+          <folding>
+            <marker date="1434274067185" expanded="true" signature="4989:5061" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="5103:5198" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="8335:8407" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434274067185" expanded="true" signature="8497:8592" placeholder="SELECT * FRO..hostel..." />
           </folding>
         </state>
       </provider>
