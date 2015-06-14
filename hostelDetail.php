@@ -150,11 +150,6 @@
 							</div>
 							<!-- internal row 1 -->
 
-							<div style="margin-top: 10px;" class="row">
-								<h3 id="review"><a name="review" id="review"></a>Share it!</h3>
-								<!-- Go to www.addthis.com/dashboard to customize your tools --><div class="addthis_sharing_toolbox"></div>
-							</div><!-- internal row -->
-
 							<div class="row">
 								<h3 id="facilities"><a name="facilities" id="facilities"></a>Facilities</h3>
 
@@ -323,7 +318,11 @@
 						</div><!-- main column -->
 
 						<div class="col-md-4">
-							<h2>Advertisement</h2>
+						    <div style="margin-top: 10px;" class="row">
+								<h3 id="review"><a name="review" id="review"></a>Share it!</h3>
+								<!-- Go to www.addthis.com/dashboard to customize your tools --><div class="addthis_sharing_toolbox"></div>
+                            </div><!-- internal row -->
+    <!--                        <h2>Advertisement</h2>-->
 						</div><!-- sidebar -->
 
 					</div><!-- content -->
