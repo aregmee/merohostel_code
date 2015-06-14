@@ -37,9 +37,12 @@
 		include 'DBConnection.php';
 		$row = $conn -> query("SELECT * from hostel where id='$id'");
 		list($id, $capacity, $contact, $gender, $location, $name, $email, $website, $additionalInfo, $ownerId, $mainPhotoUrl) = $row -> fetch_row();
-		if (isset($_POST['SubmitReview'])) {
+		if (isset($_POST['review']) && isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['review_email'])) {
 			$review = $_POST['review'];
-			$query = "INSERT INTO review(id,review) VALUES($id,'$review')";
+            $first_name = $_POST["firstName"];
+            $last_name = $_POST["lastName"];
+            $review_email = $_POST["review_email"];
+			$query = "INSERT INTO review VALUES($id,'$review', '$first_name', '$last_name', '$review_email', 0)";
 			if (mysqli_query($conn, $query)) {
 				echo "<javascript></javascript>";
 			} else {
@@ -200,26 +203,25 @@
 							<div class="row">
 								<h3 id="review"><a name="review" id="review"></a>Submit Review</h3>
 
-								<form class="ui form" method="post">
-
+								<form class="ui form segment" method="post" action="hostelDetail.php?id=<?php echo $_GET["id"]?>">
 									<div class="field">
 										<label>Add New Review</label>
-										<textarea name="review" rows="5" cols="40"></textarea>
+										<textarea name="review" rows="5" cols="40" required="true"></textarea>
 									</div>
 									
 									<div class="two fields">
 									    <div class="field">
 									      <label>First name</label>
-									      <input placeholder="First Name" type="text">
+									      <input placeholder="First Name" type="text" name="firstName" required="true">
 									    </div>
 									    <div class="field">
 									      <label>Last name</label>
-									      <input placeholder="Middle Name" type="text">
+									      <input placeholder="Last Name" type="text" name="lastName" required="true">
 									    </div>									   
   									</div>
 								   <div class="field">
 								      <label>Email Address</label>
-								      <input placeholder="Last Name" type="text">
+								      <input placeholder="Email" type="text" name="review_email" required="true">
 								    </div>
 
 									<div>
