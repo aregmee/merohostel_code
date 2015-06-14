@@ -33,6 +33,7 @@
 
 	<body>
 		<?php
+        $submitted = "noidea";
 		$id = $_GET["id"];
 		include 'DBConnection.php';
 		$row = $conn -> query("SELECT * from hostel where id='$id'");
@@ -44,9 +45,9 @@
             $review_email = $_POST["review_email"];
 			$query = "INSERT INTO review VALUES($id,'$review', '$first_name', '$last_name', '$review_email', 0)";
 			if (mysqli_query($conn, $query)) {
-				echo "<javascript></javascript>";
+				$submitted = "true";
 			} else {
-				echo "<javascript></javascript>";
+				$submitted = "false";
 			}
 		}
 		?>
@@ -201,29 +202,65 @@
 							</div><!-- row 2 -->
 
 							<div class="row">
-								<h3 id="review"><a name="review" id="review"></a>Submit Review</h3>
-
-								<form class="ui form segment" method="post" action="hostelDetail.php?id=<?php echo $_GET["id"]?>">
-									<div class="field">
-										<label>Add New Review</label>
-										<textarea name="review" rows="5" cols="40" required="true"></textarea>
-									</div>
-									
-									<div class="two fields">
-									    <div class="field">
-									      <label>First name</label>
-									      <input placeholder="First Name" type="text" name="firstName" required="true">
-									    </div>
-									    <div class="field">
-									      <label>Last name</label>
-									      <input placeholder="Last Name" type="text" name="lastName" required="true">
-									    </div>									   
-  									</div>
-								   <div class="field">
-								      <label>Email Address</label>
-								      <input placeholder="Email" type="text" name="review_email" required="true">
-								    </div>
-
+                                <?php if($submitted == "noidea"){?>
+                                    <div class="ui attached message">
+                                        <div class="header">
+                                            Submit Review
+                                        </div>
+                                        <p>Please fill out the form below to submit a review for this hostel.</p>
+                                    </div>
+                                <?php }else if($submitted == "true"){ ?>
+                                    <div class="ui positive message">
+                                        <div class="header">
+                                            Thanks. Review has been successfully submitted!
+                                        </div>
+                                    </div>
+                                <?php } else{ ?>
+                                    <div class="ui negative message">
+                                        <div class="header">
+                                            Sorry! We are having trouble. Please try again.
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                                <form class="ui form attached fluid segment" method="post" action="hostelDetail.php?id=<?php echo $_GET["id"]?>">
+                                    <div class="two fields">
+                                        <div class="field">
+                                            <label>First name</label>
+                                            <div class="ui corner labeled input">
+                                                <input placeholder="First Name" type="text" name="firstName" required="true">
+                                                <div class="ui corner label">
+                                                    <i class="asterisk icon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label>Last name</label>
+                                            <div class="ui corner labeled input">
+                                                <input placeholder="Last Name" type="text" name="lastName" required="true">
+                                                <div class="ui corner label">
+                                                    <i class="asterisk icon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label>Email Address</label>
+                                        <div class="ui corner labeled input">
+                                            <input placeholder="Email" type="text" name="review_email" required="true">
+                                            <div class="ui corner label">
+                                                <i class="asterisk icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label>Add New Review</label>
+                                        <div class="ui corner labeled input">
+                                            <textarea name="review" rows="5" cols="40" required="true"></textarea>
+                                            <div class="ui corner label">
+                                                <i class="asterisk icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
 									<div>
 										<input class="ui orange submit button" type = "submit" value = "Submit Review" name = "SubmitReview"/>
 									</div>
@@ -232,8 +269,8 @@
 							
 							<br>
 							
-							<div class="row">
-								<h3 id="review"><a name="review" id="review"></a>Latest Reviews</h3>
+							<!--<div class="row">-->
+								<!--<h3 id="review"><a name="review" id="review"></a>Latest Reviews</h3>
 
 								<div class="ui comments">
 								  <div class="comment">								   
@@ -256,9 +293,9 @@
 								      </div>
 								    </div>
 								  </div>								  
-    							</div><!-- comment-->
+    							</div>--><!-- comment-->
     							
-    							<div class="ui comments">
+    							<!--<div class="ui comments">
 								  <div class="comment">								   
 								    <div class="content">
 								      <span class="author">Joe Henderson</span>
@@ -279,9 +316,9 @@
 								      </div>
 								    </div>
 								  </div>								  
-    							</div><!-- comment-->
+    							</div>--><!-- comment-->
     							
-							</div><!-- row -->
+							<!--</div>--><!-- row -->
 
 						</div><!-- main column -->
 
