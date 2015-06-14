@@ -20,7 +20,7 @@
 		<script src="js/jquery.address.js"></script>
 		<!-- Semantic JS -->
 		<script src="semantic/dist/semantic.min.js" type="text/javascript" ></script>
-		
+
 		
 		<!-- Google Web Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
@@ -28,7 +28,7 @@
         <script type="text/javascript">
 
             $(function(){
-                $('.search').on('change keyup', function(){
+                $('.prompt').on('change keyup', function(){
                     var location = $(this).val();
                     var gender=$( "#genderSelect" ).val();
                     var dataString = 'location=' + location + '&gender='+gender;
@@ -39,7 +39,7 @@
                             data: dataString,
                             cache: false,
                             success: function (html) {
-                                $("#searchid").html(html);
+                                $(".results").html(html).show();
                             }
                         });
                     }else if(location == ''){
@@ -134,11 +134,10 @@
 									</div>
 									</div> -->
 
-								    <div style="display: inline-block;font-size: 16px;position: relative;top: 1.5px;">
-                                        <select class="ui search dropdown" id="searchid" name="location">
-                                            <option value="">Location</option>
-                                        </select>
-									</div>
+                                    <div class="ui search" style="display: inline-block;font-size: 16px;position: relative;top: 1.5px;">
+                                        <input class="prompt" placeholder="Common passwords..." type="text">
+                                        <div class="results"></div>
+                                    </div>
 									<!-- location -->
 
 									<button class="ui orange submit button" style="

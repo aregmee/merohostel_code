@@ -16,9 +16,13 @@ if($_POST) {
 
 
         ?>
-        <option value="<?php echo $location ?>">
-            <?php echo $location; ?>
-        </option>
+        <a class="result">
+            <div class="content">
+                <div class="title">
+                    <?php echo $location;?>
+                </div>
+            </div>
+        </a>
         <?php
         }
     }
