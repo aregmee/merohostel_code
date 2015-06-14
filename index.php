@@ -134,10 +134,10 @@
 									</div>
 									</div> -->
 
-								<div style="display: inline-block;font-size: 16px;position: relative;top: 1.5px;">
-									<select class="ui search dropdown" id="searchid" name="location">
-										<option value="">Location</option>
-									</select>
+								    <div style="display: inline-block;font-size: 16px;position: relative;top: 1.5px;">
+                                        <select class="ui search dropdown" id="searchid" name="location">
+                                            <option value="">Location</option>
+                                        </select>
 									</div>
 									<!-- location -->
 
