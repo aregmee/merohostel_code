@@ -226,6 +226,13 @@ a#hpName {
 	font-family: cursive;
 }
  
+ 
+input {
+  padding: 8px;
+  background-color: #fff;
+}
+
+
 /*
  div#result {
   position: absolute;
