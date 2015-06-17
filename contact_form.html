@@ -1,0 +1,125 @@
+<script type="text/javascript">
+    function mailIt() {
+
+        var first_name = document.getElementById("first_name").value;
+        var last_name = document.getElementById("last_name").value;
+        var email = document.getElementById("email").value;
+        var telephone = document.getElementById("telephone").value;
+        var comments = document.getElementById("comments").value;
+
+        var http = new XMLHttpRequest();
+        var url = "send_form_email.php";
+        var params = "first_name=" + first_name + "&last_name=" + last_name + "&email=" + email + "&telephone=" + telephone + "&comments=" + comments;
+        http.open("POST", url, true);
+
+        http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        http.setRequestHeader("Content-length", params.length);
+        http.setRequestHeader("Connection", "close");
+
+        http.onreadystatechange = function () {//Call a function when the state changes.
+            if (http.readyState == 4 && http.status == 200) {
+                alert(http.responseText);
+            }
+        };
+        http.send(params);
+
+        return true;
+    }
+</script>
+<form name="contactform" method="post" onsubmit="return mailIt();">
+
+    <table width="450px">
+
+        <tr>
+
+            <td valign="top">
+
+                <label for="first_name">First Name *</label>
+
+            </td>
+
+            <td valign="top">
+
+                <input  type="text" id="first_name" name="first_name" maxlength="50" size="30">
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td valign="top">
+
+            <label for="last_name">Last Name *</label>
+
+            </td>
+
+            <td valign="top">
+
+                <input  type="text" id ="last_name" name="last_name" maxlength="50" size="30">
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td valign="top">
+
+                <label for="email">Email Address *</label>
+
+            </td>
+
+            <td valign="top">
+
+                <input  type="text" id = "email" name="email" maxlength="80" size="30">
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td valign="top">
+
+                <label for="telephone">Telephone Number</label>
+
+            </td>
+
+            <td valign="top">
+
+                <input  type="text" id = "telephone" name="telephone" maxlength="30" size="30">
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td valign="top">
+
+                <label for="comments">Comments *</label>
+
+            </td>
+
+            <td valign="top">
+
+                <textarea  name="comments" id = "comments" maxlength="1000" cols="25" rows="6"></textarea>
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td colspan="2" style="text-align:center">
+
+                <input type="submit" value="Submit">
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</form>
