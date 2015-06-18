@@ -25,30 +25,6 @@
 		<!-- Google Web Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
-        <script type="text/javascript">
-
-            $(function(){
-                $('.prompt').on('change keyup', function(){
-                    var location = $(this).val();
-                    var gender=$( "#genderSelect" ).val();
-                    var dataString = 'location=' + location + '&gender='+gender;
-                    if(location!='') {
-                        $.ajax({
-                            type: "POST",
-                            url: "search.php",
-                            data: dataString,
-                            cache: false,
-                            success: function (html) {
-                                $(".results").html(html).show();
-                            }
-                        });
-                    }else if(location == ''){
-                        $("#searchid").html('');
-                    }
-                    return false;
-                });
-            });
-        </script>
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -134,9 +110,14 @@
 									</div>
 									</div> -->
 
-                                    <div class="ui search" style="display: inline-block;font-size: 16px;position: relative;top: 1.5px;">
-                                        <input class="prompt" placeholder="Location" type="text" name="location">
-                                        <div class="results"></div>
+                                    <!--<div style="display: inline-block;font-size: 16px;position: relative;top: 1.5px;">
+                                        <select class="ui search dropdown prompt" name="location" id="prompt">
+
+                                        </select>
+                                    </div>-->
+                                    <div class="ui search icon input">
+                                        <i class="search icon"></i>
+                                        <input class="search" type="text">
                                     </div>
 									<!-- location -->
 
