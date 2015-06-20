@@ -101,9 +101,9 @@
                                 <?php
 								if ($gender != null || $gender != '')
 									echo ucfirst($gender) . " hostels ";
-								$test_result = $conn -> query("SELECT * FROM hostel where location = " . $location);
+								$test_result = $conn -> query("SELECT * FROM hostel where location = '" . $location . "'");
 
-								if ($test_result -> num_rows ) {
+								if (mysqli_num_rows($test_result) > 0 ) {
 									if (($location != null || $location != '') && ($gender == null || $gender == ''))
 										echo "Hostels nearby " . $location;
 									else if (($location != null || $location != '') && ($gender != null || $gender != ''))

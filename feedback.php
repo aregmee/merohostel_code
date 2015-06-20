@@ -68,18 +68,24 @@
 													<label>Student</label>
 												</div>
 											</div>
-											<div class="field">
-												<div class="ui radio checkbox">
-													<input type="radio" name="uare">
-													<label>Affiliate</label>
-												</div>
-											</div>
-											<div class="field">
-												<div class="ui radio checkbox">
-													<input type="radio" name="uare">
-													<label>Hostel</label>
-												</div>
-											</div>
+                                            <div class="field">
+                                                <div class="ui radio checkbox">
+                                                    <input type="radio" name="uare">
+                                                    <label>Hostel</label>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <div class="ui radio checkbox">
+                                                    <input type="radio" name="uare">
+                                                    <label>Advertiser</label>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <div class="ui radio checkbox">
+                                                    <input type="radio" name="uare">
+                                                    <label>Worker</label>
+                                                </div>
+                                            </div>
 										</div>
 										<div class="field">
 											<label>Any other comments</label>

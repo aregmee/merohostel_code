@@ -136,7 +136,10 @@
 
 							</div>
 							<!-- internal row 1 -->
-
+                            <div  class="row">
+                                <h3 id="review"><a name="review"></a>Share it!</h3>
+                                <!-- Go to www.addthis.com/dashboard to customize your tools --><div class="addthis_sharing_toolbox"></div>
+                            </div><!-- internal row -->
 							<div class="row">
 								<h3 id="facilities"><a name="facilities" id="facilities"></a>Facilities</h3>
 
@@ -306,12 +309,7 @@
 						
 						
 						<div class="col-md-4">
-							<div  class="row">
-								<div style="padding: 0px 10px;">
-									<h3 id="review"><a name="review" id="review"></a>Share it!</h3>
-									<!-- Go to www.addthis.com/dashboard to customize your tools --><div class="addthis_sharing_toolbox"></div>
-								</div>
-							</div><!-- internal row -->
+
 						</div><!-- sidebar -->
 						
 						

@@ -178,7 +178,7 @@
 									}
 								?>
 									</span>
-									<a href="#"> <img src="img/barcelona.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
+									<a href="#"> <img src="photos_4/putalisadak-orbit%20institute.png" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
 									<p>
 										Find pretty places to stay in Barcelona close to Las Ramblas, La Sagrada Familia and more.
 									</p>
@@ -218,7 +218,7 @@
 									}
 								?>
 									</span>
-									<a href="#"> <img src="img/barcelona.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
+									<a href="#"> <img src="photos_4/baneshwor-hotelnepal.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
 									<p>
 										Find pretty places to stay in Barcelona close to Las Ramblas, La Sagrada Familia and more.
 									</p>
@@ -238,7 +238,7 @@
 									}
 								?>
 									</span>
-									<a href="#"> <img src="img/barcelona.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
+									<a href="#"> <img src="photos_4/shantinagar-futsal.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
 									<p>
 										Find pretty places to stay in Barcelona close to Las Ramblas, La Sagrada Familia and more.
 									</p>
