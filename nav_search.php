@@ -19,8 +19,18 @@
             return false;
         });
     });
+
+    function validateForm(){
+        if($("#genderSelect").val()!='' && $("#result").val()!=''){
+            return true;
+        }else{
+            alert("Please enter the required values");
+            return false
+        }
+    }
+
 </script>
-<form method = "get" action="hostelList.php" autocomplete="off">
+<form method = "get" action="hostelList.php" autocomplete="off" onsubmit="return validateForm()">
     <div class="ui selection dropdown">
         <input type="hidden" id="genderSelect" name="gender">
         <i class="dropdown icon"></i>
