@@ -32,6 +32,7 @@ a:link, a:hover, a:visited {
 
 #content {
 	background-color: #f7f3eb;
+	/*background: #fff url(../img/bg-tile.png) repeat-x top left;*/
 	padding-bottom: 50px; /* Height of the footer element */
 }
 #footer {
@@ -126,8 +127,9 @@ ul.facilitylist {
 	display: inline-block;
 }
 div#mainTitle h1 {
-	font-size: 60px;
+	font-size: 70px;
 	color: #FFF;
+	font-family: 'Gloria Hallelujah', cursive;
 }
 div#mainTitle {
 	position: absolute;
@@ -296,4 +298,12 @@ h4#myModalLabel {
 }
 .modal-dialog.modal-lg {
   padding-top: 3%;
+}
+div#atstbx a:hover {
+  opacity: 0.5;
+}
+#contactDetails p {
+	font-size: 15px;
+	word-spacing: 3px;
+	margin: 8px 0px;
 }

@@ -118,14 +118,14 @@
 
 						<div class="col-md-8">
 							<h2 id="deHosTtl">Contact</h2>
-							<div id="frameContent" class="row">
-                                <div class="ui success message" id="submitted">
+							<div id="frameContent" class="row">                                
+								<form class="ui form" style="width: 97%;" name="contactform" method="post" onsubmit="return mailIt();">
+										<div class="ui success message" id="submitted">
                                     <div class="header">
                                         Thank you for contacting us. You will reply as soon as possible.
                                     </div>
                                 </div>
-								<form class="ui form" style="width: 97%;" name="contactform" method="post" onsubmit="return mailIt();">
-
+                                
 										<div class="two fields">
 											<div class="field">
 												<label>First name</label>
@@ -183,11 +183,16 @@
 
 						</div><!-- main column -->
 
+						
 						<div class="col-md-4">
-							<div style="margin-top: 10px;" class="row">
-								<div style="padding: 10px;">
-									<h3 id="review"><a name="review" id="review"></a>Share it!</h3>
-									<!-- Go to www.addthis.com/dashboard to customize your tools --><div class="addthis_sharing_toolbox"></div>
+							<div  class="row">
+								<div style="padding: 0px 10px;">
+									<h3 id="review"><a name="review" id="review"></a>Contact Details</h3>
+									<div id="contactDetails">
+									<p><i class="circular inverted orange  marker  icon"></i> Sifal, Kathmandu</p>
+									<p><i class="circular inverted orange  call  icon"></i> 9849789069, 9860096847</p>
+									<p><i class="circular inverted orange  mail icon"></i> merohostel@gmail.com </p>
+									<div>
 								</div>
 							</div><!-- internal row -->
 						</div><!-- sidebar -->

@@ -29,6 +29,7 @@
 
 		<!-- Google Web Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		
         <script type="text/javascript">
             $(function(){
                 $(".search").keyup(function()
@@ -303,9 +304,10 @@
 
 						</div><!-- main column -->
 						
+						
 						<div class="col-md-4">
-							<div style="margin-top: 10px;" class="row">
-								<div style="padding: 10px;">
+							<div  class="row">
+								<div style="padding: 0px 10px;">
 									<h3 id="review"><a name="review" id="review"></a>Share it!</h3>
 									<!-- Go to www.addthis.com/dashboard to customize your tools --><div class="addthis_sharing_toolbox"></div>
 								</div>

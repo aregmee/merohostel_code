@@ -1,5 +1,5 @@
-	<div style="cursor: pointer;" data-toggle="modal" data-target="#myModal" id="feedback">
-					<a href"#"><img src="img/feedback.png" /></a>
+<div style="cursor: pointer; z-index: 1; position: relative;" data-toggle="modal" data-target="#myModal" id="feedback">
+					<a href"#"=""><img src="img/feedback.png"></a>
 				</div>
 
 				<!-- Modal -->

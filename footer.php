@@ -8,14 +8,14 @@
                     	<a href="about.php"> <li>
                             About
                         </li>
+                        </a>                        
+                       <a href="toc.php"> <li>
+                            Terms & Conditions
+                        </li>
                         </a>
                         <a href="contact_form.php"><li>
                             Contact
-                        </li></a>
-                       <a href="toc.php"> <li>
-                            TOC
-                        </li>
-                        </a>                       
+                        </li></a>                       
                     </ul>
                 </div>
                 <div class="col-sm-4">

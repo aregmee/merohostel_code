@@ -42,44 +42,7 @@
 							<a href="index.php"> <img src="img/mero-hostel-logo.png"/> </a>
 						</div>
 						<!-- logo -->
-
-						<div class="ui selection dropdown">
-							<input type="hidden" id="genderSelect" name="gender">
-							<i class="dropdown icon"></i>
-							<div class="default text">
-								Gender
-							</div>
-							<div class="menu" onchange="hideDiv()">
-								<div class="item" data-value="boys" data-text="Male" value="boys">
-									<i class="male icon"></i>
-									Male
-								</div>
-								<div class="item" data-value="girls" data-text="Female" value="girls">
-									<i class="female icon"></i>
-									Female
-								</div>
-							</div>
-						</div>
-						<!-- gender -->
-
-						<div class="ui corner labeled input" style="margin-left: 3px;">
-							<div class="ui local search">
-								<div class="ui left icon input">
-									<i class="world icon"></i>
-									<input  style="border-radius: 4px;" type="text" id="searchid" placeholder="Enter Location" class="prompt">
-								</div>
-							</div>
-						</div>
-						<!-- location -->
-
-						<div class="ui submit button" style="
-						background-color: white;
-						color: rgb(239, 103, 47);
-						margin-left: 8px;
-						" >
-							<i class="search icon"></i> Search
-						</div>
-
+						<?php include 'nav_search.php'?>
 					</div><!--row -->
 				</div><!--container -->
 
@@ -89,9 +52,9 @@
 		<div id="wrapper">
 
 			<div id="content">
-<?php
-	include "feedback.php";
-	?>
+				<?php
+				include "feedback.php";
+				?>
 
 				<div style="background: #fff;" class="container">
 
@@ -120,8 +83,8 @@
 						</div><!-- main column -->
 
 						<div class="col-md-4">
-							<div style="margin-top: 10px;" class="row">
-								<div style="padding: 10px;">
+							<div  class="row">
+								<div style="padding: 0px 10px;">
 									<h3 id="review"><a name="review" id="review"></a>Share it!</h3>
 									<!-- Go to www.addthis.com/dashboard to customize your tools --><div class="addthis_sharing_toolbox"></div>
 								</div>
@@ -147,7 +110,7 @@
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.js"></script>
+		<script src="bootstrap/bootstrap.js"></script>
 
 	</body>
 </html>
