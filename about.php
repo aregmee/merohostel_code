@@ -89,10 +89,9 @@
 		<div id="wrapper">
 
 			<div id="content">
-
-				<div id="feedback">
-					<a href"#"><img src="img/feedback.png" /></a>
-				</div>
+<?php
+	include "feedback.php";
+	?>
 
 				<div style="background: #fff;" class="container">
 
