@@ -65,7 +65,7 @@
 											<div class="field">
 												<div class="ui radio checkbox">
 													<input type="radio" name="uare" checked="">
-													<label>Students</label>
+													<label>Student</label>
 												</div>
 											</div>
 											<div class="field">

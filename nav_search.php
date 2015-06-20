@@ -28,11 +28,11 @@
             Gender
         </div>
         <div class="menu" onchange="hideDiv()">
-            <div class="item" data-value="boys" data-text="Male" value="boys">
+            <div class="item" data-value="boys" data-text="Boys" value="boys">
                 <i class="male icon"></i>
                 Boys
             </div>
-            <div class="item" data-value="girls" data-text="Female" value="girls">
+            <div class="item" data-value="girls" data-text="Girls" value="girls">
                 <i class="female icon"></i>
                 Girls
             </div>
