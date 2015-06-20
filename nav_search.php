@@ -31,7 +31,7 @@
     }
 
 </script>
-<form method = "get" action="hostelList.php" autocomplete="off" onsubmit="return validateForm()">
+<form method = "get" action="hostelList.php" autocomplete="off">
     <div class="ui selection dropdown">
         <input type="hidden" id="genderSelect" name="gender">
         <i class="dropdown icon"></i>
@@ -59,7 +59,7 @@
     <button class="ui orange submit button" style="
                                     font-size: 16px;
                                     margin-left: 10px;
-                                    ">
+                                    " onclick="return validateForm();">
         <i class="search icon"></i>Search
     </button>
 </form>

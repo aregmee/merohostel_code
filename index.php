@@ -198,7 +198,7 @@
 									}
 								?>
 									</span>
-									<a href="#"> <img src="img/barcelona.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
+									<a href="#"> <img src="photos_4/alpha%20beta-buddhanagar.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
 									<p>
 										Find pretty places to stay in Barcelona close to Las Ramblas, La Sagrada Familia and more.
 									</p>
