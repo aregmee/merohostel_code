@@ -46,7 +46,7 @@
     <!-- location -->
 
     <button class="ui orange submit button" style="
-                                    font-size: 16px;
+                                    font-size: 15px;
                                     margin-left: 10px;
                                     ">
         <i class="search icon"></i>Search

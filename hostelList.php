@@ -26,40 +26,44 @@
 		<script src="bootstrap/html5shiv.min.js"></script>
 		<script src="bootstrap/respond.min.js"></script>
 		<![endif]-->
+		
+		<!-- Google Web Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		
 	</head>
 
 	<body>
         <?php
-            if(!isset($_GET["gender"])){
-                $gender = "";
-            } else {
-                $gender = $_GET["gender"];
-            }
+		if (!isset($_GET["gender"])) {
+			$gender = "";
+		} else {
+			$gender = $_GET["gender"];
+		}
 
-            if(isset($_GET["location"])) {
-                $location = $_GET["location"];
-            } else{
-                $location = "";
-            }
-            include 'DBConnection.php';
+		if (isset($_GET["location"])) {
+			$location = $_GET["location"];
+		} else {
+			$location = "";
+		}
+		include 'DBConnection.php';
 
-            $per_page = 8;
+		$per_page = 8;
 
-            if (isset($_GET["page"]))
-                $page = $_GET["page"];
-            else
-                $page=1;
-            // Page will start from 0 and Multiple by Per Page
-            $start_from = ($page - 1) * $per_page;
+		if (isset($_GET["page"]))
+			$page = $_GET["page"];
+		else
+			$page = 1;
+		// Page will start from 0 and Multiple by Per Page
+		$start_from = ($page - 1) * $per_page;
 
-            if($gender == "" || $gender == null)
-                $sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' ORDER BY location";
-            else
-                $sql="SELECT * FROM hostel WHERE location LIKE '%$location%' and gender = '$gender' ORDER BY location";
+		if ($gender == "" || $gender == null)
+			$sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' ORDER BY location";
+		else
+			$sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' and gender = '$gender' ORDER BY location";
 
-            //Selecting the data from table but with limit
-            $sql .= " LIMIT $start_from, $per_page";
-            $result =$conn->query($sql);
+		//Selecting the data from table but with limit
+		$sql .= " LIMIT $start_from, $per_page";
+		$result = $conn -> query($sql);
         ?>
 			<div id="header">
 				<div id="fixedSearch">
@@ -86,14 +90,15 @@
 
 				<?php
 	include "feedback.php";
-	?>
+ ?>
 
 				<div style="background: #fff;" class="container">
 
 					<div class="row"  id="frameContent" style="padding-top: 20px; padding-bottom: 20px;">
 						
 						<div class="col-md-12">
-							<h2><?php echo ucfirst($gender) ?> hostel nearby <?php echo $location ?></h2>
+							<h2 style="  color: rgb(255, 110, 60); word-spacing: 3px; font-family: 'Oswald', sans-serif; font-weight: 200;
+}"><?php echo ucfirst($gender) ?> hostel nearby <?php echo $location ?></h2>
                             <?php while($row = $result->fetch_assoc()) { ?>
 							<div class="hostelThumb">
 								<div class="ui card">
@@ -113,12 +118,11 @@
 									<div class="content">
 										<div class="header">
 											<?php $name = $row["name"];
-                                                /*$name = stripslashes($name);*/
-                                                if(strlen($name) > 24)
-                                                    echo substr($name, 0, 22) . "...";
-                                                else
-                                                    echo $name;
-
+											/*$name = stripslashes($name);*/
+											if (strlen($name) > 24)
+												echo substr($name, 0, 22) . "...";
+											else
+												echo $name;
                                             ?>
 										</div>
 
@@ -142,39 +146,38 @@
                             <div id="pager">
                                 <div class="ui pagination menu">
                                     <?php
+									if ($gender == "" || $gender == null)
+										$sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' ORDER BY location";
+									else
+										$sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' and gender = '$gender' ORDER BY location";
 
-                                    if($gender == "" || $gender == null)
-                                        $sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' ORDER BY location";
-                                    else
-                                        $sql="SELECT * FROM hostel WHERE location LIKE '%$location%' and gender = '$gender' ORDER BY location";
+									$result = $conn -> query($sql);
 
-                                    $result =$conn->query($sql);
+									// Count the total records
+									$total_records = mysqli_num_rows($result);
 
-                                    // Count the total records
-                                    $total_records = mysqli_num_rows($result);
+									//Using ceil function to divide the total records on per page
+									$total_pages = ceil($total_records / $per_page);
 
-                                    //Using ceil function to divide the total records on per page
-                                    $total_pages = ceil($total_records / $per_page);
+									if ($total_pages > 1) {
 
-                                    if($total_pages > 1){
+										$prev_page = $page - 1;
+										$next_page = $page + 1;
+										$url = "hostelList.php?";
+										if (!empty($location))
+											$url .= "location=" . $location;
+										if ($page > 1)
+											echo "<a class = \"icon item\" href= '$url&page=$prev_page'>" . '<i class="left arrow icon"></i>' . "</a>";
 
-                                        $prev_page = $page - 1;
-                                        $next_page = $page + 1;
-                                        $url = "hostelList.php?";
-                                        if(!empty($location))
-                                            $url .= "location=" . $location;
-                                        if($page > 1)
-                                            echo "<a class = \"icon item\" href= '$url&page=$prev_page'>" . '<i class="left arrow icon"></i>'."</a>";
-
-                                        for ($i=1; $i<=$total_pages; $i++) {
-                                            if($page == $i)
-                                                echo "<a class = \"active item\" href='$url&page=" . $i . "'>" . $i . "</a>";
-                                            else
-                                                echo "<a class = \"item\" href='$url&page=" . $i . "'>" . $i . "</a>";
-                                        }
-                                        if($page < $total_pages)
-                                            echo "<a class = \"icon item\"href='$url&page=$next_page'>" . '<i class="right arrow icon"></i>'."</a>";
-                                    }
+										for ($i = 1; $i <= $total_pages; $i++) {
+											if ($page == $i)
+												echo "<a class = \"active item\" href='$url&page=" . $i . "'>" . $i . "</a>";
+											else
+												echo "<a class = \"item\" href='$url&page=" . $i . "'>" . $i . "</a>";
+										}
+										if ($page < $total_pages)
+											echo "<a class = \"icon item\"href='$url&page=$next_page'>" . '<i class="right arrow icon"></i>' . "</a>";
+									}
                                     ?>
                                 </div>
 							</div><!-- pager -->
@@ -188,7 +191,9 @@
 			</div>
 			<!-- content -->
 
-            <?php include "footer.php";?>
+            <?php
+			include "footer.php";
+		?>
 
 			</div><!-- footer -->
 		</div>

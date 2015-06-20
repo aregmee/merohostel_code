@@ -144,14 +144,12 @@
 			</div>
 
 			<div id="content">
-
-				
-				<?php
-	include "feedback.php";
-	?>
-
-				<div id="mainSection">
+				<div id="mainSection">					
 					<div class="container">
+						
+						
+								<?php include "feedback.php"; ?>
+	
 						<div class="row">
 							<h2 class="subTitle"><span style="color: rgb(255, 114, 65);">Featured</span> Hostels</h2>
 							<div class="col-sm-3">
@@ -295,7 +293,7 @@
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.js"></script>
+		<script src="bootstrap/bootstrap.js"></script>
 
 	</body>
 </html>

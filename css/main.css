@@ -297,3 +297,6 @@ h4#myModalLabel {
 .modal-dialog.modal-lg {
   padding-top: 3%;
 }
+div#atstbx a:hover {
+  opacity: 0.5;
+}
