@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1f0672a-8076-4cae-a676-2ee64d43c782" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBConnection.php" afterPath="$PROJECT_DIR$/DBConnection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contact_form.php" afterPath="$PROJECT_DIR$/contact_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hostelDetail.php" afterPath="$PROJECT_DIR$/hostelDetail.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hostelList.php" afterPath="$PROJECT_DIR$/hostelList.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nav_search.php" afterPath="$PROJECT_DIR$/nav_search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_form_email.php" afterPath="$PROJECT_DIR$/send_form_email.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="97c1566f-f5a9-495e-b107-7dd6122a5903" name="Failed commit: Default" comment="Contact Us made" />
@@ -58,16 +51,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hostelList.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="hostelList.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hostelList.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.875" vertical-offset="765" max-vertical-offset="3075">
-              <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.50933784" vertical-offset="315" max-vertical-offset="3135">
+              <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
               <folding>
-                <marker date="1434807732899" expanded="true" signature="1745:1817" placeholder="SELECT * FRO..hostel..." />
-                <marker date="1434807732899" expanded="true" signature="1859:1954" placeholder="SELECT * FRO..hostel..." />
-                <marker date="1434807732899" expanded="true" signature="5063:5135" placeholder="SELECT * FRO..hostel..." />
-                <marker date="1434807732899" expanded="true" signature="5225:5320" placeholder="SELECT * FRO..hostel..." />
+                <marker date="1434809093747" expanded="true" signature="1859:1931" placeholder="SELECT * FRO..hostel..." />
+                <marker date="1434809093747" expanded="true" signature="1973:2068" placeholder="SELECT * FRO..hostel..." />
+                <marker date="1434809093747" expanded="true" signature="5177:5249" placeholder="SELECT * FRO..hostel..." />
+                <marker date="1434809093747" expanded="true" signature="5339:5434" placeholder="SELECT * FRO..hostel..." />
               </folding>
             </state>
           </provider>
@@ -103,10 +96,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nav_search.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nav_search.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nav_search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6523179" vertical-offset="221" max-vertical-offset="885">
+            <state vertical-scroll-proportion="-16.416666" vertical-offset="221" max-vertical-offset="885">
               <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#form#0;n#!!top" expanded="true" />
@@ -169,10 +162,10 @@
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/send_form_email.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/hostelList.php" />
         <option value="$PROJECT_DIR$/hostelDetail.php" />
         <option value="$PROJECT_DIR$/contact_form.php" />
         <option value="$PROJECT_DIR$/nav_search.php" />
+        <option value="$PROJECT_DIR$/hostelList.php" />
       </list>
     </option>
   </component>
@@ -223,20 +216,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="merohostel_code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="merohostel_view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="merohostel_code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -508,13 +487,20 @@
       <option name="project" value="LOCAL" />
       <updated>1434274726877</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="re-integrated">
+      <created>1434808833774</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1434808833774</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48851454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -530,7 +516,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -585,7 +570,8 @@
     <MESSAGE value="review made" />
     <MESSAGE value="removed advertisement and moved share it" />
     <MESSAGE value="pagination design changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="pagination design changed" />
+    <MESSAGE value="re-integrated" />
+    <option name="LAST_COMMIT_MESSAGE" value="re-integrated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1040,19 +1026,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hostelList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875" vertical-offset="765" max-vertical-offset="3075">
-          <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="60" />
-          <folding>
-            <marker date="1434807732899" expanded="true" signature="1745:1817" placeholder="SELECT * FRO..hostel..." />
-            <marker date="1434807732899" expanded="true" signature="1859:1954" placeholder="SELECT * FRO..hostel..." />
-            <marker date="1434807732899" expanded="true" signature="5063:5135" placeholder="SELECT * FRO..hostel..." />
-            <marker date="1434807732899" expanded="true" signature="5225:5320" placeholder="SELECT * FRO..hostel..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hostelDetail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.875" vertical-offset="1215" max-vertical-offset="5085">
@@ -1066,10 +1039,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nav_search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6523179" vertical-offset="221" max-vertical-offset="885">
+        <state vertical-scroll-proportion="-16.416666" vertical-offset="221" max-vertical-offset="885">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#button#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hostelList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50933784" vertical-offset="315" max-vertical-offset="3135">
+          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+          <folding>
+            <marker date="1434809093747" expanded="true" signature="1859:1931" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434809093747" expanded="true" signature="1973:2068" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434809093747" expanded="true" signature="5177:5249" placeholder="SELECT * FRO..hostel..." />
+            <marker date="1434809093747" expanded="true" signature="5339:5434" placeholder="SELECT * FRO..hostel..." />
           </folding>
         </state>
       </provider>

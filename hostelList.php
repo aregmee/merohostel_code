@@ -36,7 +36,11 @@
                 $gender = $_GET["gender"];
             }
 
-            $location = $_GET["location"];
+            if(!isset($_GET["location"])) {
+                $location = $_GET["location"];
+            } else{
+                $location = "";
+            }
             include 'DBConnection.php';
 
             $per_page = 8;
