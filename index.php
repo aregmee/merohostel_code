@@ -55,6 +55,17 @@
 					return false;
 				});
 			});
+
+            function validateForm(){
+                if($("#genderSelect").val()!='' && $("#result").val()!=''){
+                    return true;
+                }else{
+                    alert("Please enter the required values");
+                    return false
+                }
+
+
+            }
 		</script>
 	</head>
 
@@ -96,7 +107,7 @@
 							</div>
 
 							<div id="mainSearch">
-								<form method = "get" action="hostelList.php" autocomplete="off">
+								<form method = "get" action="hostelList.php" autocomplete="off" onsubmit="return validateForm()">
 
 									<div class="ui selection dropdown" style="
 									font-size: 16px;
