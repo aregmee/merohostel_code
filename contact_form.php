@@ -34,7 +34,11 @@
 	<body>
 
 		<script type="text/javascript">
-			function mailIt() {
+            $( document ).ready(function() {
+                $('#submitted').hide();
+            });
+
+            function mailIt() {
 
 				var first_name = document.getElementById("first_name").value;
 				var last_name = document.getElementById("last_name").value;
@@ -53,13 +57,33 @@
 
 				http.onreadystatechange = function() {//Call a function when the state changes.
 					if (http.readyState == 4 && http.status == 200) {
-						alert(http.responseText);
+						//alert(http.responseText);
 					}
 				};
 				http.send(params);
-
-				return true;
+                $('#submitted').show();
+				return false;
 			}
+            $(function(){
+                $(".search").keyup(function()
+                {
+                    var searchid = $(this).val();
+                    var gender=$( "#genderSelect" ).val();
+                    var dataString = 'search='+ searchid+'&gender='+gender;
+                    if(searchid!='') {
+                        $.ajax({
+                            type: "POST",
+                            url: "search.php",
+                            data: dataString,
+                            cache: false,
+                            success: function (html) {
+                                $("#result").html(html).show();
+                            }
+                        });
+                    }
+                    return false;
+                });
+            });
 		</script>
 
 		<div id="header">
@@ -72,42 +96,7 @@
 						</div>
 						<!-- logo -->
 
-						<div class="ui selection dropdown">
-							<input type="hidden" id="genderSelect" name="gender">
-							<i class="dropdown icon"></i>
-							<div class="default text">
-								Gender
-							</div>
-							<div class="menu" onchange="hideDiv()">
-								<div class="item" data-value="boys" data-text="Male" value="boys">
-									<i class="male icon"></i>
-									Male
-								</div>
-								<div class="item" data-value="girls" data-text="Female" value="girls">
-									<i class="female icon"></i>
-									Female
-								</div>
-							</div>
-						</div>
-						<!-- gender -->
-
-						<div class="ui corner labeled input" style="margin-left: 3px;">
-							<div class="ui local search">
-								<div class="ui left icon input">
-									<i class="world icon"></i>
-									<input  style="border-radius: 4px;" type="text" id="searchid" placeholder="Enter Location" class="prompt">
-								</div>
-							</div>
-						</div>
-						<!-- location -->
-
-						<div class="ui submit button" style="
-						background-color: white;
-						color: rgb(239, 103, 47);
-						margin-left: 8px;
-						" >
-							<i class="search icon"></i> Search
-						</div>
+                        <?php include 'nav_search.php'?>
 
 					</div><!--row -->
 				</div><!--container -->
@@ -130,6 +119,11 @@
 						<div class="col-md-8">
 							<h2 id="deHosTtl">Contact</h2>
 							<div id="frameContent" class="row">
+                                <div class="ui success message" id="submitted">
+                                    <div class="header">
+                                        Thank you for contacting us. You will reply as soon as possible.
+                                    </div>
+                                </div>
 								<form class="ui form" style="width: 97%;" name="contactform" method="post" onsubmit="return mailIt();">
 
 										<div class="two fields">
@@ -182,67 +176,6 @@
 										<div>
 											<input class="ui orange submit button" type = "submit" value = "Submit" name = "submit"/>
 										</div>
-
-										<!--
-										<table width="450px">
-
-										<tr>
-
-										<td valign="top"><label for="first_name">First Name *</label></td>
-
-										<td valign="top">
-										<input  type="text" id="first_name" name="first_name" maxlength="50" size="30">
-										</td>
-
-										</tr>
-
-										<tr>
-
-										<td valign="top"><label for="last_name">Last Name *</label></td>
-
-										<td valign="top">
-										<input  type="text" id ="last_name" name="last_name" maxlength="50" size="30">
-										</td>
-
-										</tr>
-
-										<tr>
-
-										<td valign="top"><label for="email">Email Address *</label></td>
-
-										<td valign="top">
-										<input  type="text" id = "email" name="email" maxlength="80" size="30">
-										</td>
-
-										</tr>
-
-										<tr>
-
-										<td valign="top"><label for="telephone">Telephone Number</label></td>
-
-										<td valign="top">
-										<input  type="text" id = "telephone" name="telephone" maxlength="30" size="30">
-										</td>
-
-										</tr>
-
-										<tr>
-
-										<td valign="top"><label for="comments">Comments *</label></td>
-
-										<td valign="top">					<textarea  name="comments" id = "comments" maxlength="1000" cols="25" rows="6"></textarea></td>
-
-										</tr>
-
-										<tr>
-
-										<td colspan="2" style="text-align:center">
-										<input type="submit" value="Submit">
-										</td>
-
-										</tr>
-
-										</table>-->
 
 									</form>
 							</div>
