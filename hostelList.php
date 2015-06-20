@@ -128,7 +128,14 @@
 									</div>
 									<div class="extra content">
 										<a class="right floated created"><i class="circular inverted orange  user icon"></i><?php echo $row["gender"]; ?></a>
-										<a class="friends" href="hostelList.php?location=<?php echo $row["location"]; ?>"><i class="circular inverted orange  point icon"></i><?php echo $row["location"]; ?></a>
+                                        <a class="friends" href="hostelList.php?location=<?php echo $row["location"]; ?>"><i class="circular inverted orange  point icon"></i>
+                                            <?php $location = $row["location"];
+                                            if(strlen($location) > 15)
+                                                echo substr($location, 0, 13) . "...";
+                                            else
+                                                echo $location;
+
+                                            ?>
 									</div>
 
 									<a  style="text-decoration: none;"  href="hostelDetail.php?id=<?php echo $row["id"]; ?>">
