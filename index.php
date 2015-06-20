@@ -56,6 +56,7 @@
 				});
 			});
 
+
             function validateForm(){
                 if($("#genderSelect").val()!='' && $("#result").val()!=''){
                     return true;
