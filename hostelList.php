@@ -36,7 +36,7 @@
                 $gender = $_GET["gender"];
             }
 
-            if(!isset($_GET["location"])) {
+            if(isset($_GET["location"])) {
                 $location = $_GET["location"];
             } else{
                 $location = "";
