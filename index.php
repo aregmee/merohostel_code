@@ -28,6 +28,7 @@
 		<script src="semantic/dist/semantic.js"></script>
 		<!-- Google Web Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -102,6 +103,7 @@
 									font-size: 16px;
 									position: relative;
 									right: 5px;
+									min-width: 160px;
 									">
 										<input type="hidden" name="gender" id = "genderSelect">
 										<i class="dropdown icon"></i>
@@ -119,7 +121,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="ui search dropdown selection" style="font-size: 16px;">
+									<div class="ui search dropdown selection" style="font-size: 16px; min-width: ">
 										<select id="result" name="location">
 											<option value="">Location</option>
 										</select><i class="dropdown icon"></i>

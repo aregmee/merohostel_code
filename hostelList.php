@@ -89,7 +89,7 @@
 			<div id="content">
 
 				<?php
-	include "feedback.php";
+				include "feedback.php";
  ?>
 
 				<div style="background: #fff;" class="container">
@@ -97,9 +97,25 @@
 					<div class="row"  id="frameContent" style="padding-top: 20px; padding-bottom: 20px;">
 						
 						<div class="col-md-12">
-							<h2 style="  color: rgb(255, 110, 60); word-spacing: 3px; font-family: 'Oswald', sans-serif; font-weight: 200;
-}"><?php echo ucfirst($gender) ?> hostel nearby <?php echo $location ?></h2>
-                            <?php while($row = $result->fetch_assoc()) { ?>
+	<h2 style="  color: rgb(255, 110, 60); word-spacing: 3px; font-family: 'Oswald', sans-serif; font-weight: 200;">
+                                <?php
+								if ($gender != null || $gender != '')
+									echo ucfirst($gender) . " hostels ";
+								$test_result = $conn -> query("SELECT * FROM hostel where location = " . $location);
+
+								if ($test_result -> num_rows ) {
+									if (($location != null || $location != '') && ($gender == null || $gender == ''))
+										echo "Hostels nearby " . $location;
+									else if (($location != null || $location != '') && ($gender != null || $gender != ''))
+										echo " nearby " . $location;
+								}
+								if (($gender == null || $gender == '') && ($location == null || $location == ''))
+									echo "All Hostels in Kathmandu";
+                                ?>
+                            </h2>
+                                <?php while($row = $result->fetch_assoc()) { ?>
+
+
 							<div class="hostelThumb">
 								<div class="ui card">
 									<div class="image">
@@ -131,8 +147,14 @@
 										</div>
 									</div>
 									<div class="extra content">
-										<a class="right floated created"><i class="circular inverted orange  user icon"></i><?php echo $row["gender"]; ?></a>
-										<a class="friends" href="hostelList.php?location=<?php echo $row["location"]; ?>"><i class="circular inverted orange  point icon"></i><?php echo $row["location"]; ?></a>
+										<a class="right floated created" href="hostelList.php?gender=<?php echo $row["gender"]; ?>"><i class="circular inverted orange  user icon"></i><?php echo $row["gender"]; ?></a>
+                                        <a class="friends" href="hostelList.php?location=<?php echo $row["location"]; ?>"><i class="circular inverted orange  point icon"></i>
+                                            <?php $loc = $row["location"];
+											if (strlen($loc) > 15)
+												echo substr($loc, 0, 13) . "...";
+											else
+												echo $loc;
+                                            ?>
 									</div>
 
 									<a  style="text-decoration: none;"  href="hostelDetail.php?id=<?php echo $row["id"]; ?>">
