@@ -32,17 +32,16 @@
 	</head>
 
 	<body>
-		<?php
-        $submitted = "noidea";
+		<?php $submitted = "noidea";
 		$id = $_GET["id"];
 		include 'DBConnection.php';
 		$row = $conn -> query("SELECT * from hostel where id='$id'");
 		list($id, $capacity, $contact, $gender, $location, $name, $email, $website, $additionalInfo, $ownerId, $mainPhotoUrl) = $row -> fetch_row();
 		if (isset($_POST['review']) && isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['review_email'])) {
 			$review = $_POST['review'];
-            $first_name = $_POST["firstName"];
-            $last_name = $_POST["lastName"];
-            $review_email = $_POST["review_email"];
+			$first_name = $_POST["firstName"];
+			$last_name = $_POST["lastName"];
+			$review_email = $_POST["review_email"];
 			$query = "INSERT INTO review VALUES($id,'$review', '$first_name', '$last_name', '$review_email', 0)";
 			if (mysqli_query($conn, $query)) {
 				$submitted = "true";
@@ -316,21 +315,25 @@
 							<!--</div>--><!-- row -->
 
 						</div><!-- main column -->
-
+						
 						<div class="col-md-4">
-						    <div style="margin-top: 10px;" class="row">
-								<h3 id="review"><a name="review" id="review"></a>Share it!</h3>
-								<!-- Go to www.addthis.com/dashboard to customize your tools --><div class="addthis_sharing_toolbox"></div>
-                            </div><!-- internal row -->
-    <!--                        <h2>Advertisement</h2>-->
+							<div style="margin-top: 10px;" class="row">
+								<div style="padding: 10px;">
+									<h3 id="review"><a name="review" id="review"></a>Share it!</h3>
+									<!-- Go to www.addthis.com/dashboard to customize your tools --><div class="addthis_sharing_toolbox"></div>
+								</div>
+							</div><!-- internal row -->
 						</div><!-- sidebar -->
-
+						
+						
 					</div><!-- content -->
 				</div><!-- container -->
 			</div>
 			<!-- content -->
 
-            <?php include "footer.php";?>
+            <?php
+	include "footer.php";
+?>
 
 			</div><!-- footer -->
 		</div>

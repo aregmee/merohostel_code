@@ -171,7 +171,7 @@
 
 				<div style="background: #fff;" class="container">
 
-					<div class="row" style="padding-top: 20px; padding-bottom: 20px;">
+					<div class="row"  id="frameContent" style="padding-top: 20px; padding-bottom: 20px;">
 						
 						<div class="col-md-12">
 							<h2><?php echo ucfirst($gender) ?> hostel nearby <?php echo $location ?></h2>

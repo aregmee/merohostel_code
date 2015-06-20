@@ -11,7 +11,7 @@ div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, tex
 	padding: 0;
 }
 a:link, a:hover, a:visited {
-	color: red;
+	color: rgb(255, 110, 60);
 	text-decoration: none;
 }
 #lnWrapper {
@@ -188,7 +188,7 @@ div#mainTitle {
 	list-style: none;
 	float: left;
 	line-height: 50px;
-	margin-left: 18px;
+	margin-left: 15px;
 }
 div#fixedSearch {
 	background: #7B756B;
@@ -226,10 +226,11 @@ a#hpName {
 	font-family: cursive;
 }
  
- 
-input {
-  padding: 8px;
-  background-color: #fff;
+#footer a:link,#footer a:hover,#footer a:visited {
+	
+	color: #fff;
+	text-decoration: none;
+
 }
 
 
@@ -273,5 +274,15 @@ div#result .show:first-child {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+
+#frameContent {
+    min-height: 100vh;;
+}
+#tocBullets  li {
+  word-spacing: 3px;
+  font-size: 15px;
+  margin-bottom: 10px;
 }
 

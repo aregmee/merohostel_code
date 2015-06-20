@@ -5,15 +5,17 @@
             <div class="row">
                 <div class="col-sm-3">
                     <ul>
-                        <li>
-                            Company
+                    	<a href="about.php"> <li>
+                            About
                         </li>
-                        <li>
-                            Agreement
+                        </a>
+                        <a href="contact_form.php"><li>
+                            Contact
+                        </li></a>
+                       <a href="toc.php"> <li>
+                            TOC
                         </li>
-                        <li>
-                            Privacy
-                        </li>
+                        </a>                       
                     </ul>
                 </div>
                 <div class="col-sm-4">
