@@ -63,8 +63,6 @@
                     alert("Please enter the required values");
                     return false
                 }
-
-
             }
 		</script>
 	</head>
