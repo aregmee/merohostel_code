@@ -1,3 +1,9 @@
 $('.ui.dropdown')
   .dropdown()
 ;
+$('.ui.rating')
+  .rating()
+;
+$('.ui.radio.checkbox')
+  .checkbox()
+;

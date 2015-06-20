@@ -1,7 +1,7 @@
 body, html {
 	font-family: Georgia, sans-serif;
 	font-size: 16px;
-	color: #31302B ;
+	color: #31302B;
 	margin: 0;
 	padding: 0;
 	height: 100% !important;
@@ -49,17 +49,16 @@ h2.subTitle {
 	text-transform: uppercase;
 	margin: 0;
 	padding: 10px;
-	font-family: "Oswald",sans-serif;
-  font-weight: 200;
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
 }
 
-
 h2. {
-color: #333 !important;
-font-size: 26px;
-line-height: 30px;
-font-weight: normal;
-margin: 0;
+	color: #333 !important;
+	font-size: 26px;
+	line-height: 30px;
+	font-weight: normal;
+	margin: 0;
 }
 .address {
 	font-size: 11px;
@@ -72,13 +71,13 @@ margin: 0;
 h3#facilities {
 	border-bottom: 1px dotted #ccc;
 	margin-top: 20px;
-	font-family: "Oswald",sans-serif;
-  font-weight: 200;
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
 }
 h3#review {
 	border-bottom: 1px dotted #ccc;
-	font-family: "Oswald",sans-serif;
-  font-weight: 200;
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
 }
 .facilities {
 	margin-bottom: 20px;
@@ -225,64 +224,76 @@ a#hpName {
 	font-size: 18px;
 	font-family: cursive;
 }
- 
-#footer a:link,#footer a:hover,#footer a:visited {
-	
+
+#footer a:link, #footer a:hover, #footer a:visited {
+
 	color: #fff;
 	text-decoration: none;
-
 }
-
 
 /*
  div#result {
-  position: absolute;
-  background-color: #fff;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #eee;
-  z-index: 999;
-  cursor: pointer;
-}
-div#result .show {
-  padding: 7px 15px;
-  border-bottom: 1px solid #ddd;
-}
-div#result .show:last-child {
-  border: none;
-}
-div#result .show:first-child {
- 
-}
+ position: absolute;
+ background-color: #fff;
+ width: 100%;
+ padding: 10px;
+ border: 1px solid #eee;
+ z-index: 999;
+ cursor: pointer;
+ }
+ div#result .show {
+ padding: 7px 15px;
+ border-bottom: 1px solid #ddd;
+ }
+ div#result .show:last-child {
+ border: none;
+ }
+ div#result .show:first-child {
 
-*/
-
-#deHosTtl {
-	  color: rgb(255, 110, 60);
-  margin-left: -15px;
-  word-spacing: 3px;
-  font-family: "Oswald",sans-serif;
-  font-weight: 200;
-  
  }
 
-.unselectable{
+ */
 
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+#deHosTtl {
+	color: rgb(255, 110, 60);
+	margin-left: -15px;
+	word-spacing: 3px;
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
 }
 
+.unselectable {
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 
 #frameContent {
-    min-height: 100vh;;
-}
+	min-height: 100vh;;}
 #tocBullets  li {
-  word-spacing: 3px;
-  font-size: 15px;
-  margin-bottom: 10px;
+	word-spacing: 3px;
+	font-size: 15px;
+	margin-bottom: 10px;
 }
 
+.modal-header {
+
+	color: rgb(255, 110, 60);
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+	padding: 10px 20px;
+}
+h4#myModalLabel {
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+	letter-spacing: 0.5px;
+	word-spacing: 2px;
+	font-size: 18px;
+}
+.modal-dialog.modal-lg {
+  padding-top: 3%;
+}
