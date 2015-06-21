@@ -178,7 +178,7 @@
 									}
 								?>
 									</span>
-									<a href="#"> <img src="photos_4/putalisadak-orbit%20institute.png" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
+									<a href="#"> <img src="https://lh3.googleusercontent.com/-uky5eAstr6I/VYZJpH8qIlI/AAAAAAAAAEk/YfDTGhNW9hQ/s288/putalisadak-orbit%252520institute.png" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
 									<p>
 										Find pretty places to stay in Barcelona close to Las Ramblas, La Sagrada Familia and more.
 									</p>
@@ -198,7 +198,7 @@
 									}
 								?>
 									</span>
-									<a href="#"> <img src="photos_4/alpha%20beta-buddhanagar.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
+									<a href="#"> <img src="https://lh3.googleusercontent.com/-hDSk0odeaXY/VYZJleJX1vI/AAAAAAAAAEQ/M11rsX9QCUs/s288/alpha%252520beta-buddhanagar.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
 									<p>
 										Find pretty places to stay in Barcelona close to Las Ramblas, La Sagrada Familia and more.
 									</p>
@@ -218,7 +218,7 @@
 									}
 								?>
 									</span>
-									<a href="#"> <img src="photos_4/baneshwor-hotelnepal.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
+									<a href="#"> <img src="https://lh3.googleusercontent.com/-qwzCu8dVhFw/VYZJlh1pBhI/AAAAAAAAAEU/pTT_dYRs6vA/s288/baneshwor-hotelnepal.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
 									<p>
 										Find pretty places to stay in Barcelona close to Las Ramblas, La Sagrada Familia and more.
 									</p>
@@ -238,7 +238,7 @@
 									}
 								?>
 									</span>
-									<a href="#"> <img src="photos_4/shantinagar-futsal.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
+									<a href="#"> <img src="https://lh3.googleusercontent.com/-jnm5Z7pV4gM/VYZJoODNKOI/AAAAAAAAAEc/yfUQW2Nqh68/s288/shantinagar-futsal.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
 									<p>
 										Find pretty places to stay in Barcelona close to Las Ramblas, La Sagrada Familia and more.
 									</p>
