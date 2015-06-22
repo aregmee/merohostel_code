@@ -59,19 +59,46 @@
 		$id = $_GET["id"];
 		include 'DBConnection.php';
 		$row = $conn -> query("SELECT * from hostel where id='$id'");
+            $reviews = $conn->query("SELECT * from review where hostel_id = '$id' and display = 1");
 		list($id, $capacity, $contact, $gender, $location, $name, $email, $website, $additionalInfo, $ownerId, $mainPhotoUrl) = $row -> fetch_row();
 		if (isset($_POST['review']) && isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['review_email'])) {
 			$review = $_POST['review'];
 			$first_name = $_POST["firstName"];
 			$last_name = $_POST["lastName"];
 			$review_email = $_POST["review_email"];
-			$query = "INSERT INTO review VALUES($id,'$review', '$first_name', '$last_name', '$review_email', 0)";
+            $date_array = getdate();
+            $date = $date_array["year"] . "-" . $date_array["mon"] . "-" . $date_array["mday"] . " "
+                    . $date_array["hours"] . ":" . $date_array["minutes"] . ":" . $date_array["seconds"];
+            $date=date_create($date);
+            $date = date_format($date,"Y/m/d H:i:s");
+			$query = "INSERT INTO review VALUES('$review', '$first_name', '$last_name', '$review_email', 0, $id, '$date')";
 			if (mysqli_query($conn, $query)) {
 				$submitted = "true";
 			} else {
 				$submitted = "false";
 			}
 		}
+        function humanTiming ($time)
+        {
+            $time = time() - $time; // to get the time since that moment
+
+            $tokens = array (
+                31536000 => 'year',
+                2592000 => 'month',
+                604800 => 'week',
+                86400 => 'day',
+                3600 => 'hour',
+                60 => 'minute',
+                1 => 'second'
+            );
+
+            foreach ($tokens as $unit => $text) {
+                if ($time < $unit) continue;
+                $numberOfUnits = floor($time / $unit);
+                return $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
+            }
+
+        }
 		?>
 		<div id="header">
 			<div id="fixedSearch">
@@ -197,7 +224,7 @@
                                 <?php }else if($submitted == "true"){ ?>
                                     <div class="ui positive message">
                                         <div class="header">
-                                            Thanks. Review has been successfully submitted!
+                                            Thanks. Your review has been successfully submitted!
                                         </div>
                                     </div>
                                 <?php } else{ ?>
@@ -253,59 +280,41 @@
 							</div><!-- internal row 2 -->
 
 							<br>
-							
-							<!--<div class="row">-->
-								<!--<h3 id="review"><a name="review" id="review"></a>Latest Reviews</h3>
+                            <?php
+                                if($reviews->num_rows > 0){
+                            ?>
+                            <div class="row">
+                                <h3 id="review"><a name="review" id="review"></a>Latest Reviews</h3>
+                                <?php
+                                    $r_row = $reviews -> fetch_row();
+                                    while($r_row != null){
+                                    list($r_review, $r_first_name, $r_last_name, $r_email, $r_display, $r_hostel_id, $r_date) = $r_row;
+                                ?>
+                                        <div class="ui comments">
+                                          <div class="comment">
+                                            <div class="content">
+                                              <span class="author"><?php echo $r_first_name; ?></span>
+                                              <div class="metadata">
+                                                <div class="date">
+                                                    <?php
+                                                        $time = strtotime($r_date);
 
-								<div class="ui comments">
-								  <div class="comment">								   
-								    <div class="content">
-								      <span class="author">Joe Henderson</span>
-								      <div class="metadata">
-								        <div class="date">1 day ago</div>
-								      </div>
-								      <div class="text">
-								        <p>The hours, minutes and seconds stand as visible reminders 
-								        	that your effort put them all there. 
-								        	The hours, minutes and seconds stand as visible reminders 
-								        	that your effort put them all there. 
-								        	The hours, minutes and seconds stand as visible reminders 
-								        	that your effort put them all there. 
-								        	</p>
-								      </div>
-								      <div class="actions">
-								        <a class="report">Report</a>
-								      </div>
-								    </div>
-								  </div>								  
-    							</div>--><!-- comment-->
-    							
-    							<!--<div class="ui comments">
-								  <div class="comment">								   
-								    <div class="content">
-								      <span class="author">Joe Henderson</span>
-								      <div class="metadata">
-								        <div class="date">1 day ago</div>
-								      </div>
-								      <div class="text">
-								        <p>The hours, minutes and seconds stand as visible reminders 
-								        	that your effort put them all there. 
-								        	The hours, minutes and seconds stand as visible reminders 
-								        	that your effort put them all there. 
-								        	The hours, minutes and seconds stand as visible reminders 
-								        	that your effort put them all there. 
-								        	</p>
-								      </div>
-								      <div class="actions">
-								        <a class="report">Report</a>
-								      </div>
-								    </div>
-								  </div>								  
-    							</div>--><!-- comment-->
-    							
-							<!--</div>--><!-- row -->
-
-						</div><!-- main column -->
+                                                        echo humanTiming($time).' ago';
+                                                    ?>
+                                                </div>
+                                              </div>
+                                              <div class="text">
+                                                <p><?php echo $r_review; ?></p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div><!-- comment-->
+                            <?php
+                                    $r_row = $reviews->fetch_row();
+                                } ?>
+                            </div><!-- row -->
+                            <?php } ?>
+                            </div><!-- main column -->
 						
 						
 						<div class="col-md-4">

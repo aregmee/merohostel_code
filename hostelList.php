@@ -186,8 +186,15 @@
 										$prev_page = $page - 1;
 										$next_page = $page + 1;
 										$url = "hostelList.php?";
-										if (!empty($location))
-											$url .= "location=" . $location;
+										if (!empty($location)) {
+                                            $url .= "location=" . $location;
+                                            if (!empty($gender))
+                                                $url .= "&gender=" . $gender;
+                                        }else{
+
+                                            if(!empty($gender))
+                                                $url .= "gender=" . $gender;
+                                        }
 										if ($page > 1)
 											echo "<a class = \"icon item\" href= '$url&page=$prev_page'>" . '<i class="left arrow icon"></i>' . "</a>";
 

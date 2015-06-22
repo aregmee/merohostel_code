@@ -1,4 +1,4 @@
-<?php $submitted = "noidea";
+<?php
 include 'DBConnection.php';
 if (isset($_POST['recommend']) && isset($_POST['user_type']) && isset($_POST['comments']) && isset($_POST['rate'])) {
     $recommend = $_POST['recommend'];
@@ -28,6 +28,9 @@ if (isset($_POST['recommend']) && isset($_POST['user_type']) && isset($_POST['co
             }
         }
         document.getElementById("rate").value = count;
+
+        document.getElementById("feedback").innerHTML = "Thank you for providing us your invaluable feedback";
+
         return true;
     }
 </script>
@@ -58,7 +61,7 @@ if (isset($_POST['recommend']) && isset($_POST['user_type']) && isset($_POST['co
 									<form class="ui form" onsubmit="return countStars();" method="post" action="feedback.php">
 										<div class="field">
 											<label>How do you rate this site overall?</label>
-											<div class="ui huge star rating" id="stars" data-rating="3" data-max-rating="5"></div>
+											<div class="ui huge star rating" id="stars" data-rating="5" data-max-rating="5"></div>
                                             <input type="hidden" id="rate" name="rate">
 										</div>
 										<div class="inline fields">
