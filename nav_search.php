@@ -38,7 +38,7 @@
         <div class="default text">
             Gender
         </div>
-        <div class="menu" onchange="hideDiv()">
+        <div class="menu">
             <div class="item" data-value="boys" data-text="Boys" value="boys">
                 <i class="male icon"></i>
                 Boys
@@ -56,7 +56,7 @@
     </select>
     <!-- location -->
 
-    <button class="ui orange submit button" style="
+    <button onclick="return validateForm()" class="ui orange submit button" style="
                                     font-size: 16px;
                                     margin-left: 10px;
                                     " onclick="return validateForm();">
