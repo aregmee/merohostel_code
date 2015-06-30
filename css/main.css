@@ -80,6 +80,12 @@ h3#review {
 	font-family: "Oswald", sans-serif;
 	font-weight: 200;
 }
+h3#shareHostel {
+	border-bottom: 1px dotted #ccc;
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+	margin-top: 20px;
+}
 .facilities {
 	margin-bottom: 20px;
 	width: 690px;
@@ -180,6 +186,7 @@ div#mainTitle {
 }
 .subSection img {
 	margin-top: 5px;
+	height: 200px;
 }
 #mainFooter {
 	background: #31302b;
@@ -297,13 +304,27 @@ h4#myModalLabel {
 	font-size: 18px;
 }
 .modal-dialog.modal-lg {
-  padding-top: 3%;
+	padding-top: 3%;
 }
 div#atstbx a:hover {
-  opacity: 0.5;
+	opacity: 0.5;
 }
 #contactDetails p {
 	font-size: 15px;
 	word-spacing: 3px;
 	margin: 8px 0px;
+}
+#feedbackModal .ui.checkbox label {
+	padding-left: 0px;
+}
+#feedbackModal .modal-header {
+	border-bottom: 0;
+}
+#messageFeedback {
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+	font-size: 20px;
+	text-align: center;
+	line-height: 15px;
+	padding: 10px;
 }

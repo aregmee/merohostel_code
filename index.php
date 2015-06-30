@@ -113,7 +113,7 @@
 									font-size: 16px;
 									position: relative;
 									right: 5px;
-									min-width: 160px;
+									min-width: 150px;
 									">
 										<input type="hidden" name="gender" id = "genderSelect">
 										<i class="dropdown icon"></i>
@@ -131,7 +131,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="ui search dropdown selection" style="font-size: 16px; min-width: ">
+									<div class="ui search dropdown selection" style="font-size: 16px; min-width: 300px;">
 										<select id="result" name="location">
 											<option value="">Location</option>
 										</select><i class="dropdown icon"></i>
