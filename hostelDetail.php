@@ -58,10 +58,13 @@
 		<?php $submitted = "noidea";
 		$id = $_GET["id"];
 		include 'DBConnection.php';
-		$row = $conn -> query("SELECT * from hostel where id='$id'");
-            $reviews = $conn->query("SELECT * from review where hostel_id = '$id' and display = 1");
-		list($id, $capacity, $contact, $gender, $location, $name, $email, $website, $additionalInfo, $ownerId, $mainPhotoUrl) = $row -> fetch_row();
-		if (isset($_POST['review']) && isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['review_email'])) {
+		$hostel_row = $conn -> query("SELECT * from hostel where id='$id'");
+        $reviews = $conn->query("SELECT * from review where hostel_id = '$id' and display = 1");
+        //list($id, $capacity, $contact, $gender, $location, $name, $email, $website, $additionalInfo, $ownerId, $mainPhotoUrl) = $row -> fetch_row();
+        list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) = $hostel_row->fetch_row();
+        $owner_row = $conn -> query("SELECT * from owner where id='$fee_structure_id'");
+        list($owner_id, $hostel_id, $owner_name, $contact) = $owner_row->fetch_row();
+        if (isset($_POST['review']) && isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['review_email'])) {
 			$review = $_POST['review'];
 			$first_name = $_POST["firstName"];
 			$last_name = $_POST["lastName"];
@@ -151,7 +154,7 @@
 										?>
 									</p>
 									<p>
-										<?php if($contact != NULL && $contact != "NULL") echo "<i class=\"circular inverted orange  phone square icon\"></i>" . " " . $contact
+										<?php if($contact != 1) echo "<i class=\"circular inverted orange  phone square icon\"></i>" . " " . $contact
 										?>
 									</p>
 									<p>
@@ -164,7 +167,7 @@
 							</div>
 							<!-- internal row 1 -->
                             <div  class="row">
-                                <h3 id="review"><a name="review"></a>Share it!</h3>
+                                <h3 id="review"><a name="review"></a>Share this hostel</h3>
                                 <!-- Go to www.addthis.com/dashboard to customize your tools --><div class="addthis_sharing_toolbox"></div>
                             </div><!-- internal row -->
 							<div class="row">
@@ -172,42 +175,30 @@
 
 								<div class="facilities">
 									<ul class="facilitylist">
+                                        <?php
+                                            $facilities = $conn->query("SELECT DISTINCT (f.name) as facility_name from facility f
+                                                                        JOIN hostel_facility hf on hf.facility_id = f.id
+                                                                        JOIN hostel h on h.id = $id where hf.hostel_id=$id");
+                                            $facilities_row = $facilities -> fetch_assoc();
+                                            while($facilities_row != null){
+                                            $facility = $facilities_row["facility_name"];
+                                            $facilities_row = $facilities -> fetch_assoc();
+                                        ?>
 										<li>
-											24 Hour Reception
+                                            <?php
+											    echo $facility;
+                                            ?>
 										</li>
-										<li>
-											ATM
-										</li>
-										<li>
-											Breakfast Not Included
-										</li>
-										<li>
-											Elevator
-										</li>
-										<li>
-											Free WiFi
-										</li>
-										<li>
-											Games Room
-										</li>
-										<li>
-											Luggage Storage
-										</li>
-										<li>
-											Parking
-										</li>
-										<li>
-											Reading Light
-										</li>
-										<li>
-											Towels for hire
-										</li>
-										<li>
-											Vending Machines
-										</li>
-										<li>
-											Washing machine
-										</li>
+										<?php } ?>
+                                        <li>
+                                            Hostel Warden
+                                        </li>
+                                        <li>
+                                            Wi-Fi
+                                        </li>
+                                        <li>
+                                            24 hour electricity
+                                        </li>
 										<br style="clear: both;">
 									</ul>
 								</div>

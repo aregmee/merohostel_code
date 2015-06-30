@@ -190,7 +190,7 @@
                             <div class="field">
                                 <label>Telephone</label>
                                 <div class="ui corner labeled input">
-                                    <input placeholder="Email" type="text" id = "telephone" name="telephone" maxlength="30" size="30" required="true">
+                                    <input placeholder="Telephone" type="text" id = "telephone" name="telephone" maxlength="30" size="30" required="true">
                                     <div class="ui corner label">
                                         <i class="asterisk icon"></i>
                                     </div>

@@ -6,6 +6,6 @@
  * Time: 11:26 AM
  */
 
-$conn=mysqli_connect('localhost','root','iam@@$#!M','merohost_el');
+$conn=mysqli_connect('localhost','root','iam@@$#!M','merohostel');
 
 ?>

@@ -57,9 +57,9 @@
 		$start_from = ($page - 1) * $per_page;
 
 		if ($gender == "" || $gender == null)
-			$sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' ORDER BY location";
+			$sql = "SELECT * FROM hostel WHERE address LIKE '%$location%' ORDER BY address";
 		else
-			$sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' and gender = '$gender' ORDER BY location";
+			$sql = "SELECT * FROM hostel WHERE address LIKE '%$location%' and gender = '$gender' ORDER BY address";
 
 		//Selecting the data from table but with limit
 		$sql .= " LIMIT $start_from, $per_page";
@@ -101,7 +101,7 @@
                                 <?php
 								if ($gender != null || $gender != '')
 									echo ucfirst($gender) . " hostels ";
-								$test_result = $conn -> query("SELECT * FROM hostel where location = '" . $location . "'");
+								$test_result = $conn -> query("SELECT * FROM hostel where address = '" . $location . "'");
 
 								if (mysqli_num_rows($test_result) > 0 ) {
 									if (($location != null || $location != '') && ($gender == null || $gender == ''))
@@ -148,8 +148,8 @@
 									</div>
 									<div class="extra content">
 										<a class="right floated created" href="hostelList.php?gender=<?php echo $row["gender"]; ?>"><i class="circular inverted orange  user icon"></i><?php echo $row["gender"]; ?></a>
-                                        <a class="friends" href="hostelList.php?location=<?php echo $row["location"]; ?>"><i class="circular inverted orange  point icon"></i>
-                                            <?php $loc = $row["location"];
+                                        <a class="friends" href="hostelList.php?location=<?php echo $row["address"]; ?>"><i class="circular inverted orange  point icon"></i>
+                                            <?php $loc = $row["address"];
 											if (strlen($loc) > 15)
 												echo substr($loc, 0, 13) . "...";
 											else
@@ -169,9 +169,9 @@
                                 <div class="ui pagination menu">
                                     <?php
 									if ($gender == "" || $gender == null)
-										$sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' ORDER BY location";
+										$sql = "SELECT * FROM hostel WHERE address LIKE '%$location%' ORDER BY address";
 									else
-										$sql = "SELECT * FROM hostel WHERE location LIKE '%$location%' and gender = '$gender' ORDER BY location";
+										$sql = "SELECT * FROM hostel WHERE address LIKE '%$location%' and gender = '$gender' ORDER BY address";
 
 									$result = $conn -> query($sql);
 

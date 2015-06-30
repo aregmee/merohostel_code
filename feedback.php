@@ -123,7 +123,7 @@
                                             <div class="field">
                                                 <div class="ui radio checkbox">
                                                     <input type="radio" name="user_type" value="hostel">
-                                                    <label>Hostel</label>
+                                                    <label>Hostel Owner</label>
                                                 </div>
                                             </div>
                                             <div class="field">
