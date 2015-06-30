@@ -167,7 +167,7 @@
 							</div>
 							<!-- internal row 1 -->
                             <div  class="row">
-                                <h3 id="shareHostel"><a name="shareHostel"></a>Share this hostel</h3>
+                                <h3 id="shareHostel"><a name="shareHostel"></a>Share this hostel!</h3>
                                 <!-- Go to www.addthis.com/dashboard to customize your tools --><div class="addthis_sharing_toolbox"></div>
                             </div><!-- internal row -->
 							<div class="row">

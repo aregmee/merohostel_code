@@ -134,7 +134,7 @@
 									<div class="ui search dropdown selection" style="font-size: 16px; min-width: 300px;">
 										<select id="result" name="location">
 											<option value="">Location</option>
-										</select><i class="dropdown icon"></i>
+										</select>
 										<input class="search" tabindex="0">
 										<div class="default text">
 											Location
