@@ -62,7 +62,13 @@
 
 						<div class="col-md-8">
 							<h2 id="deHosTtl">Who Are We?</h2>
+
+							<div id="aboutVideo">
+								<iframe width="100%" height="415" src="https://www.youtube.com/embed/SKheskEKLWA" frameborder="0" allowfullscreen></iframe>
+							</div>
+
 							<div class="row" style="padding: 10px 0px;">
+
 								<p style="font-size: 15px;word-spacing: 3px;">
 									We are a bunch of students, who entered Kathmandu to pursue our higher studies. Since we did not have a house to reside in here, we had to search for hostels. We had a really tough time searching for hostels as we had no networking and there was no online platform that would list all the hostels available in Kathmandu. Even if we would find one or two hostels, we had to make choice from a very limited number. That was tough.
 									<br/>
