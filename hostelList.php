@@ -197,13 +197,31 @@
                                         }
 										if ($page > 1)
 											echo "<a class = \"icon item\" href= '$url&page=$prev_page'>" . '<i class="left arrow icon"></i>' . "</a>";
+                                        if($total_pages > 6){
+                                            if($page - 2 <= 0)
+                                                $i = 1;
+                                            else
+                                                $i = $page - 2;
+                                            if($page + 5 > $total_pages)
+                                                $pages_to_print = $total_pages;
+                                            else
+                                                $pages_to_print = $page + 5;
+                                            for(; $i <= $pages_to_print; $i++){
 
-										for ($i = 1; $i <= $total_pages; $i++) {
-											if ($page == $i)
-												echo "<a class = \"active item\" href='$url&page=" . $i . "'>" . $i . "</a>";
-											else
-												echo "<a class = \"item\" href='$url&page=" . $i . "'>" . $i . "</a>";
-										}
+                                                if ($page == $i)
+                                                    echo "<a class = \"active item\" href='$url&page=" . $i . "'>" . $i . "</a>";
+                                                else
+                                                    echo "<a class = \"item\" href='$url&page=" . $i . "'>" . $i . "</a>";
+                                            }
+
+                                        }else {
+                                            for ($i = 1; $i <= $total_pages; $i++) {
+                                                if ($page == $i)
+                                                    echo "<a class = \"active item\" href='$url&page=" . $i . "'>" . $i . "</a>";
+                                                else
+                                                    echo "<a class = \"item\" href='$url&page=" . $i . "'>" . $i . "</a>";
+                                            }
+                                        }
 										if ($page < $total_pages)
 											echo "<a class = \"icon item\"href='$url&page=$next_page'>" . '<i class="right arrow icon"></i>' . "</a>";
 									}
