@@ -108,7 +108,13 @@
 										echo "Hostels nearby " . $location;
 									else if (($location != null || $location != '') && ($gender != null || $gender != ''))
 										echo " nearby " . $location;
-								}
+								}elseif($conn -> query("SELECT * FROM hostel where address = '" . $location . " %'")){
+
+                                    if (($location != null || $location != '') && ($gender == null || $gender == ''))
+                                        echo "Hostels nearby " . $location;
+                                    else if (($location != null || $location != '') && ($gender != null || $gender != ''))
+                                        echo " nearby " . $location;
+                                }
 								if (($gender == null || $gender == '') && ($location == null || $location == ''))
 									echo "All Hostels in Kathmandu";
                                 ?>
