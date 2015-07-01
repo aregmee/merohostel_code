@@ -23,12 +23,14 @@
 		if ($("#genderSelect").val() != '' && $("#result").val() != '') {
 			return true;
 		} else {
-			alert("Please enter the required values");
+            sweetAlert("Oops...", "Please enter the required values", "error");
 			return false
 		}
 	}
 
 </script>
+<script src="sweetalert-master/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
 <form method = "get" action="hostelList.php" autocomplete="off">
 	<div class="ui selection dropdown" style="min-width: 150px;">
 		<input type="hidden" id="genderSelect" name="gender">
