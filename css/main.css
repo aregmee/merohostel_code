@@ -328,3 +328,6 @@ div#atstbx a:hover {
 	line-height: 15px;
 	padding: 10px;
 }
+.ui.card img {
+  width: 245px;
+}
