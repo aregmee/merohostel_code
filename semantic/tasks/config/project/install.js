@@ -228,7 +228,7 @@ module.exports = {
     siteVariable: /@siteFolder .*\'(.*)/mg
   },
 
-  // source paths (relative to tasks/install.js )
+  // fancy_box paths (relative to tasks/install.js )
   source: {
     config       : './semantic.json.example',
     definitions  : './src/definitions',

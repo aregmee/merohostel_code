@@ -32,7 +32,7 @@ gulp.task('default', false, [
 ]);
 
 gulp.task('watch', 'Watch for site/theme changes', watch);
-gulp.task('build', 'Builds all files from source', build);
+gulp.task('build', 'Builds all files from fancy_box', build);
 
 gulp.task('clean', 'Clean dist folder', clean);
 gulp.task('version', 'Displays current version of Semantic', version);

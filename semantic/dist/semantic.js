@@ -9415,7 +9415,7 @@ $.fn.search = function(parameters) {
 
             source = source || settings.source;
 
-            // exit conditions on no source
+            // exit conditions on no fancy_box
             if(source === undefined) {
               module.error(error.source);
               return [];
@@ -9882,7 +9882,7 @@ $.fn.search.settings = {
   },
 
   error : {
-    source      : 'Cannot search. No source used, and Semantic API module was not included',
+    source      : 'Cannot search. No fancy_box used, and Semantic API module was not included',
     noResults   : 'Your search returned no results',
     logging     : 'Error in debug logging, exiting.',
     noEndpoint  : 'No search endpoint was specified',

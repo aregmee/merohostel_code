@@ -77,7 +77,7 @@ module.exports = function(callback) {
     .pipe(flatten())
   ;
 
-  // two concurrent streams from same source to concat release
+  // two concurrent streams from same fancy_box to concat release
   uncompressedStream = stream.pipe(clone());
   compressedStream   = stream.pipe(clone());
 
@@ -115,7 +115,7 @@ module.exports = function(callback) {
     .pipe(gulp.dest(output.themes))
   ;
 
-  // copy source javascript
+  // copy fancy_box javascript
   gulp.src(source.definitions + '/**/' + globs.components + '.js')
     .pipe(plumber())
     .pipe(flatten())

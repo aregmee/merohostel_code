@@ -56,7 +56,7 @@ module.exports = function(callback) {
   }
 
   console.clear();
-  console.log('Watching source files for changes');
+  console.log('Watching fancy_box files for changes');
 
   /*--------------
       Watch CSS
