@@ -27,10 +27,153 @@
 		<script src="bootstrap/respond.min.js"></script>
 		<![endif]-->
 
+        <!-- Add mousewheel plugin (this is optional) -->
+        <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+
+        <!-- Add fancyBox main JS and CSS files -->
+        <script type="text/javascript" src="fancy_box/jquery.fancybox.js?v=2.1.5"></script>
+        <link rel="stylesheet" type="text/css" href="fancy_box/jquery.fancybox.css?v=2.1.5" media="screen" />
 		<!-- Google Web Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-		
+
         <script type="text/javascript">
+            $(document).ready(function() {
+                /*
+                 *  Simple image gallery. Uses default settings
+                 */
+
+                $('.fancybox').fancybox();
+
+                /*
+                 *  Different effects
+                 */
+
+                // Change title type, overlay closing speed
+                $(".fancybox-effects-a").fancybox({
+                    helpers: {
+                        title : {
+                            type : 'outside'
+                        },
+                        overlay : {
+                            speedOut : 0
+                        }
+                    }
+                });
+
+                // Disable opening and closing animations, change title type
+                $(".fancybox-effects-b").fancybox({
+                    openEffect  : 'none',
+                    closeEffect	: 'none',
+
+                    helpers : {
+                        title : {
+                            type : 'over'
+                        }
+                    }
+                });
+
+                // Set custom style, close if clicked, change title type and overlay color
+                $(".fancybox-effects-c").fancybox({
+                    wrapCSS    : 'fancybox-custom',
+                    closeClick : true,
+
+                    openEffect : 'none',
+
+                    helpers : {
+                        title : {
+                            type : 'inside'
+                        },
+                        overlay : {
+                            css : {
+                                'background' : 'rgba(238,238,238,0.85)'
+                            }
+                        }
+                    }
+                });
+
+                // Remove padding, set opening and closing animations, close if clicked and disable overlay
+                $(".fancybox-effects-d").fancybox({
+                    padding: 0,
+
+                    openEffect : 'elastic',
+                    openSpeed  : 150,
+
+                    closeEffect : 'elastic',
+                    closeSpeed  : 150,
+
+                    closeClick : true,
+
+                    helpers : {
+                        overlay : null
+                    }
+                });
+
+                /*
+                 *  Button helper. Disable animations, hide close button, change title type and content
+                 */
+
+                $('.fancybox-buttons').fancybox({
+                    openEffect  : 'none',
+                    closeEffect : 'none',
+
+                    prevEffect : 'none',
+                    nextEffect : 'none',
+
+                    closeBtn  : false,
+
+                    helpers : {
+                        title : {
+                            type : 'inside'
+                        },
+                        buttons	: {}
+                    },
+
+                    afterLoad : function() {
+                        this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+                    }
+                });
+
+
+                /*
+                 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+                 */
+
+                $('.fancybox-thumbs').fancybox({
+                    prevEffect : 'none',
+                    nextEffect : 'none',
+
+                    closeBtn  : false,
+                    arrows    : false,
+                    nextClick : true,
+
+                    helpers : {
+                        thumbs : {
+                            width  : 50,
+                            height : 50
+                        }
+                    }
+                });
+
+                /*
+                 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+                 */
+                $('.fancybox-media')
+                    .attr('rel', 'media-gallery')
+                    .fancybox({
+                        openEffect : 'none',
+                        closeEffect : 'none',
+                        prevEffect : 'none',
+                        nextEffect : 'none',
+
+                        arrows : false,
+                        helpers : {
+                            media : {},
+                            buttons : {}
+                        }
+                    });
+            });
+
+
             $(function(){
                 $(".search").keyup(function()
                 {
@@ -103,6 +246,7 @@
 
         }
 		?>
+
 		<div id="header">
 			<div id="fixedSearch">
 				<div class="container">
@@ -143,7 +287,13 @@
 							">
 								<div class="col-md-3">
 									<div class="hostelImage">
-										<img src="img/hostel.jpg"/>
+                                        <a class="fancybox" href="https://lh3.googleusercontent.com/-YAKPj79cuRk/VYgDpxxwnDI/AAAAAAAAAWA/HTh_nYY5-JE/s640/DSCN5762.JPG" data-fancybox-group="gallery"><img src="https://lh3.googleusercontent.com/-YAKPj79cuRk/VYgDpxxwnDI/AAAAAAAAAWA/HTh_nYY5-JE/s640/DSCN5762.JPG"/></a>
+
+                                        <a class="fancybox" href="https://lh3.googleusercontent.com/-9fcL1GWDGmU/VYgDp4jVmZI/AAAAAAAAAWI/2Qj0OXwz0xQ/s640/DSCN5763.JPG" data-fancybox-group="gallery"></a>
+
+                                        <a class="fancybox" href="https://lh3.googleusercontent.com/-pwAmZfQSjdA/VYgDpwwLx5I/AAAAAAAAAWE/oUy7cVybe2A/s640/DSCN5766.JPG" data-fancybox-group="gallery"></a>
+
+                                        <a class="fancybox" href="https://lh3.googleusercontent.com/-4tuMDlDFPPg/VYgDrfvoTRI/AAAAAAAAAWY/QTAhaG0MiPQ/s640/DSCN5772.JPG" data-fancybox-group="gallery"></a>
 									</div>
 								</div>
 								<div class="col-md-9" style="border-left: 2px dotted #ccc;">
@@ -330,7 +480,7 @@
 		<!-- Main Script -->
 		<script src="js/main.js"></script>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="js/jquery.min.js"></script>
+<!--		<script src="js/jquery.min.js"></script>-->
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="bootstrap/bootstrap.js"></script>
 

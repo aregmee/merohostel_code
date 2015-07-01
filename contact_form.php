@@ -29,18 +29,47 @@
 
 		<!-- Google Web Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+
+
+
+
 	</head>
 
 	<body>
 
 		<script type="text/javascript">
 			$(document).ready(function() {
-				$('#submitted').hide();
+
 			});
 
 			function mailIt() {
 
-				var first_name = document.getElementById("first_name").value;
+                if (/^[a-zA-Z]*$/.test($("#first_name").val()) == false) {//validating first name
+                    alert("Name should contain only alphabets");
+                    $("#first_name").focus()
+                    return false
+                }
+                if (/^[a-zA-Z]*$/.test($("#last_name").val()) == false) {//validating last name
+                    alert("Name should contain only alphabets");
+                    $("#last_name").focus()
+                    return false
+                }
+                var email = $("#email").val()
+                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if (!email.match(mailformat))//validating email
+                {
+                    alert("You have entered an invalid email address!");
+                    $("#email").focus()
+                    return false;
+                }
+                var phoneNo = $("#telephone").val()
+                if (/^[0-9]*$/.test($("#telephone").val()) == false) {
+                    alert("Phone Number is should only contain numbers")
+                    $("#telephone").focus()
+                    return false
+                }
+                var first_name = document.getElementById("first_name").value;
 				var last_name = document.getElementById("last_name").value;
 				var email = document.getElementById("email").value;
 				var telephone = document.getElementById("telephone").value;
@@ -61,8 +90,8 @@
 					}
 				};
 				http.send(params);
-				$('#submitted').show();
-				return false;
+                $('#submitted').removeClass('hide');
+                return false;
 			}
 
 			$(function() {
@@ -85,35 +114,6 @@
 				});
 			});
 
-			function validateContactForm() {
-				alert("Contact Form")
-				if (/^[a-zA-Z]*$/.test($("#first_name").val()) == false) {//validating first name
-					alert("Name should contain only alphabets");
-					$("#first_name").focus()
-					return false
-				}
-				if (/^[a-zA-Z]*$/.test($("#last_name").val()) == false) {//validating last name
-					alert("Name should contain only alphabets");
-					$("#last_name").focus()
-					return false
-				}
-				var email = $("#email").val()
-				var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-				if (!email.match(mailformat))//validating email
-				{
-					alert("You have entered an invalid email address!");
-					$("#email").focus()
-					return false;
-				}
-				var phoneNo = $("#telephone").val()
-				if (/^[0-9]*$/.test($("#telephone").val()) == false) {
-					alert("Phone Number is should only contain numbers")
-					$("#telephone").focus()
-					return false
-
-				}
-				return true
-			}
 
 		</script>
 
@@ -148,14 +148,20 @@
 					<div class="row" style="padding: 20px;">
 
 						<div class="col-md-8">
-							<h2 id="deHosTtl">Contact</h2>							
+                                    <h2 id="deHosTtl">Contact</h2>
+                                <div class="ui positive message hide" id="submitted">
+                                    <div class="header">
+                                        Thanks. Your email has been sent!
+                                    </div>
+                                </div>
+                                <div class="ui negative message hide" id="notSubmitted">
+                                    <div class="header">
+                                        Sorry! We are having trouble. Please try again.
+                                    </div>
+                                </div>
+
 							<div id="frameContent" class="row">
-								<form class="ui form" style="width: 97%;" name="contactform" method="post"  onsubmit="return validateContactForm();return mailIt();">
-									<div class="ui success message" id="submitted">
-										<div class="header">
-											Thank you for contacting us. You will reply as soon as possible.
-										</div>
-									</div>
+								<form class="ui form" style="width: 97%;" name="contactform" method="post"  onsubmit="return mailIt();">
 
 									<div class="two fields">
 										<div class="field">

@@ -1572,7 +1572,7 @@
             o.templates = o.templates || {};
             o.templates.notFound = o.templates.notFound || o.templates.empty;
             if (!o.source) {
-                $.error("missing source");
+                $.error("missing fancy_box");
             }
             if (!o.node) {
                 $.error("missing node");
