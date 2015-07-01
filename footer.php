@@ -40,7 +40,7 @@
                             Verified By Hostel Association
                         </li>
                         <li>
-                            Copyright © 2015, Sodhpuch Pvt. Ltd.
+                            Copyright © 2015, MeroHostel.com.
                         </li>
                     </ul>
                 </div>

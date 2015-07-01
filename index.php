@@ -139,7 +139,7 @@
                                         <input class="search" tabindex="0">
                                         <div class="default text">
                                             Location
-                                        </div>
+                                        </div><div class="menu" tabindex="-1"></div>
                                     </div>
 									<!-- location -->
 									<button class="ui orange submit button" style="
@@ -280,16 +280,6 @@
 									</p>
 								</div>
 							</div>
-
-							<div class="col-sm-3">
-								<div class="subSection">
-									<h3><i class="fa fa-heart"></i> We Know Hostels!</h3>
-									<p>
-										Our people live and breathe hostelling! We know the thousands of hostels worldwide like no one else can.
-									</p>
-								</div>
-							</div>
-
 						</div><!--row -->
 					</div><!--container -->
 				</div><!-- featuredHostel -->
