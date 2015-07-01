@@ -115,6 +115,7 @@ ul.facilitylist {
 	background-size: cover;
 	height: 90vh;
 	position: relative;
+	background-attachment: fixed;
 }
 #mainMenu li a {
 	font-size: 16px;
@@ -329,5 +330,5 @@ div#atstbx a:hover {
 	padding: 10px;
 }
 .ui.card img {
-  width: 245px;
+	width: 245px;
 }
