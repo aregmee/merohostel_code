@@ -132,14 +132,15 @@
 										</div>
 									</div>
 									<div class="ui search dropdown selection" style="font-size: 16px; min-width: 300px;">
-										<select id="result" name="location">
+                                        <!--<i class="red world icon"></i>-->
+                                        <select id="result" name="location">
 											<option value="">Location</option>
-										</select>
-										<input class="search" tabindex="0">
-										<div class="default text">
-											Location
-										</div><div class="menu" tabindex="-1"></div>
-									</div>
+                                        </select>
+                                        <input class="search" tabindex="0">
+                                        <div class="default text">
+                                            Location
+                                        </div>
+                                    </div>
 									<!-- location -->
 									<button class="ui orange submit button" style="
 									font-size: 16px;
@@ -178,7 +179,7 @@
 									}
 								?>
 									</span>
-									<a href="#"> <img src="https://lh3.googleusercontent.com/-uky5eAstr6I/VYZJpH8qIlI/AAAAAAAAAEk/YfDTGhNW9hQ/s288/putalisadak-orbit%252520institute.png" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
+									<a href="hostelList.php?location=Putalisadak"> <img src="https://lh3.googleusercontent.com/-uky5eAstr6I/VYZJpH8qIlI/AAAAAAAAAEk/YfDTGhNW9hQ/s288/putalisadak-orbit%252520institute.png" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
 									<p>
 										Find pretty places to stay in Barcelona close to Las Ramblas, La Sagrada Familia and more.
 									</p>
@@ -198,7 +199,7 @@
 									}
 								?>
 									</span>
-									<a href="#"> <img src="https://lh3.googleusercontent.com/-hDSk0odeaXY/VYZJleJX1vI/AAAAAAAAAEQ/M11rsX9QCUs/s940/alpha%252520beta-buddhanagar.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
+									<a href="hostelList.php?location=Buddhanagar"> <img src="https://lh3.googleusercontent.com/-hDSk0odeaXY/VYZJleJX1vI/AAAAAAAAAEQ/M11rsX9QCUs/s940/alpha%252520beta-buddhanagar.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
 									<p>
 										Find pretty places to stay in Barcelona close to Las Ramblas, La Sagrada Familia and more.
 									</p>
@@ -218,7 +219,7 @@
 									}
 								?>
 									</span>
-									<a href="#"> <img src="https://lh3.googleusercontent.com/-qwzCu8dVhFw/VYZJlh1pBhI/AAAAAAAAAEU/pTT_dYRs6vA/s288/baneshwor-hotelnepal.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
+									<a href="hostelList.php?location=Baneshwor"> <img src="https://lh3.googleusercontent.com/-qwzCu8dVhFw/VYZJlh1pBhI/AAAAAAAAAEU/pTT_dYRs6vA/s288/baneshwor-hotelnepal.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
 									<p>
 										Find pretty places to stay in Barcelona close to Las Ramblas, La Sagrada Familia and more.
 									</p>
@@ -238,7 +239,7 @@
 									}
 								?>
 									</span>
-									<a href="#"> <img src="https://lh3.googleusercontent.com/-jnm5Z7pV4gM/VYZJoODNKOI/AAAAAAAAAEc/yfUQW2Nqh68/s288/shantinagar-futsal.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
+									<a href="hostelList.php?location=Shantinagar"> <img src="https://lh3.googleusercontent.com/-jnm5Z7pV4gM/VYZJoODNKOI/AAAAAAAAAEc/yfUQW2Nqh68/s288/shantinagar-futsal.jpg" width="100%" alt="Barcelona Hostels" class="effect2"> </a>
 									<p>
 										Find pretty places to stay in Barcelona close to Las Ramblas, La Sagrada Familia and more.
 									</p>
@@ -247,33 +248,32 @@
 						</div><!--row -->
 					</div><!--container -->
 				</div><!-- mainSection -->
-
 				<div id="featuredHostel">
 					<div class="container">
 						<div class="row">
 							<h2 class="subTitle">Why <span style="color: rgb(255, 114, 65);"> Merohostel </span>?</h2>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h3><i class="fa fa-heart"></i> We Know Hostels!</h3>
+									<h3><i class="red large home icon"></i> We Know Hostels!</h3>
 									<p>
-										Our people live and breathe hostelling! We know the thousands of hostels worldwide like no one else can.
+                                        Our team knows about the hostels in kathmandu more than anyone. We are deeply connected in hostel business.
 									</p>
 								</div>
 							</div>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h3><i class="fa fa-heart"></i> We Know Hostels!</h3>
+									<h3><i class="red checkmark sign icon"></i> 100% Accurate Information!</h3>
 									<p>
-										Our people live and breathe hostelling! We know the thousands of hostels worldwide like no one else can.
+                                        All of the information in this website is authorized by Hostel Association of Nepal.
 									</p>
 								</div>
 							</div>
 
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h3><i class="fa fa-heart"></i> We Know Hostels!</h3>
+									<h3><i class="red users icon"></i> Group Bookings!</h3>
 									<p>
-										Our people live and breathe hostelling! We know the thousands of hostels worldwide like no one else can.
+                                        If you are in a group of 5 or more, we will find the best hostel for you, with certain deduction in the admission fees.
 									</p>
 								</div>
 							</div>

@@ -311,13 +311,24 @@
 							">
 								<div class="col-md-3">
 									<div class="hostelImage">
-                                        <a class="fancybox" href="https://lh3.googleusercontent.com/-YAKPj79cuRk/VYgDpxxwnDI/AAAAAAAAAWA/HTh_nYY5-JE/s640/DSCN5762.JPG" data-fancybox-group="gallery"><img src="https://lh3.googleusercontent.com/-YAKPj79cuRk/VYgDpxxwnDI/AAAAAAAAAWA/HTh_nYY5-JE/s640/DSCN5762.JPG"/></a>
-
-                                        <a class="fancybox" href="https://lh3.googleusercontent.com/-9fcL1GWDGmU/VYgDp4jVmZI/AAAAAAAAAWI/2Qj0OXwz0xQ/s640/DSCN5763.JPG" data-fancybox-group="gallery"><img src="https://lh3.googleusercontent.com/-9fcL1GWDGmU/VYgDp4jVmZI/AAAAAAAAAWI/2Qj0OXwz0xQ/s640/DSCN5763.JPG" style="width: 50px;height: 50px;"/></a>
-
-                                        <a class="fancybox" href="https://lh3.googleusercontent.com/-pwAmZfQSjdA/VYgDpwwLx5I/AAAAAAAAAWE/oUy7cVybe2A/s640/DSCN5766.JPG" data-fancybox-group="gallery"></a>
-
-                                        <a class="fancybox" href="https://lh3.googleusercontent.com/-4tuMDlDFPPg/VYgDrfvoTRI/AAAAAAAAAWY/QTAhaG0MiPQ/s640/DSCN5772.JPG" data-fancybox-group="gallery"></a>
+                                        <?php
+                                            $photos = $conn->query("SELECT url FROM photo p
+                                                JOIN hostel_photo hp on hp.photo_id = p.id
+                                                JOIN hostel h on h.id = hp.hostel_id where h.id = $id");
+                                            $photos_row = $photos -> fetch_assoc();
+                                            if($photos_row != null) {
+                                        ?>
+                                        <a class="fancybox" href="<?php echo $photos_row["url"];?>" data-fancybox-group="gallery">
+                                            <img src="<?php echo $photos_row["url"];?>"/>
+                                        </a>
+                                        <?php
+                                            }
+                                            while($photos_row != null){
+                                            $photo = $photos_row["url"];
+                                            $photos_row = $photos -> fetch_assoc();
+                                        ?>
+                                        <a class="fancybox" href="<?php echo $photos_row["url"];?>" data-fancybox-group="gallery"></a>
+                                        <?php } ?>
 									</div>
 								</div>
 								<div class="col-md-9" style="border-left: 2px dotted #ccc;">
@@ -328,7 +339,7 @@
 										?>
 									</p>
 									<p>
-										<?php if($contact != 1) echo "<i class=\"circular inverted orange  phone square icon\"></i>" . " " . $contact
+										<?php if($contact != NULL && $contact != "NULL") echo "<i class=\"circular inverted orange  phone square icon\"></i>" . " " . $contact
 										?>
 									</p>
 									<p>

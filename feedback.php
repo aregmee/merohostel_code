@@ -1,5 +1,10 @@
 <script type="text/javascript">
 	$(function() {
+        $("#close_button").click(function(){
+
+            $('#feedback_form_div').removeClass('hide');
+            $('#success_message').addClass('hide');
+        });
 		$("#submit").click(function() {
 
 			$("#feedback_form").submit();
@@ -76,7 +81,7 @@
 					<form class="ui form" method="post" id="feedback_form">
 						<div class="field">
 							<label>How do you rate this site overall?</label>
-							<div class="ui huge star rating" id="stars" data-rating="5" data-max-rating="5"></div>
+							<div class="ui huge star rating" id="stars" data-rating="3" data-max-rating="5"></div>
 							<input type="hidden" id="rate" name="rate">
 						</div>
 						<div class="inline fields">
@@ -168,7 +173,7 @@
 					margin-top: -5px;
 					color: red;
 					outline: 0;
-					">
+					" id="close_button">
 						&times;
 					</button>
 					<h4 id="messageFeedback" class="modal-title"><img style="width: 150px;" src="img/thanks.png"/>
