@@ -128,6 +128,7 @@
 												</div>
 											</div>
 										</div>
+                                        <a href="hostelDetail.php?id=<?php echo $row["id"]; ?>">
 										<img src="img/hostel.jpg">
 									</div>
 
