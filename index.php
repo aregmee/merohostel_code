@@ -181,7 +181,8 @@
 									</span>
 									<a href="hostelList.php?location=Putalisadak"> <img alt="Putalisadak" title="Putalisadak" src="https://lh3.googleusercontent.com/-uky5eAstr6I/VYZJpH8qIlI/AAAAAAAAAEk/YfDTGhNW9hQ/s288/putalisadak-orbit%252520institute.png" width="100%"  class="effect2"> </a>
 									<p>
-										If you are a student taking MBBS entrance courses in VIBRANT or NAME, this might be the best place for you to search for hostels.
+                                        If you are a student taking MBBS entrance courses in VIBRANT or NAME, this might be the best
+                                        place for you to search for hostels.
 									</p>
 								</div>
 							</div>
@@ -201,7 +202,8 @@
 									</span>
 									<a href="hostelList.php?location=Buddhanagar"> <img alt="Buddhanagar" title="Buddhanagar" src="https://lh3.googleusercontent.com/-hDSk0odeaXY/VYZJleJX1vI/AAAAAAAAAEQ/M11rsX9QCUs/s940/alpha%252520beta-buddhanagar.jpg" width="100%"  class="effect2"> </a>
 									<p>
-										If you are a student taking Engineering entrance courses in PEA or SEA, this might be the best place for you to search for hostels.
+                                        If you are a student taking Engineering entrance courses in PEA or SEA, this might be the best
+                                        place for you to search for hostels.
 									</p>
 								</div>
 							</div>
@@ -221,7 +223,8 @@
 									</span>
 									<a href="hostelList.php?location=Baneshwor"> <img alt="Shantinagar" title="Shantinagar" src="https://lh3.googleusercontent.com/-qwzCu8dVhFw/VYZJlh1pBhI/AAAAAAAAAEU/pTT_dYRs6vA/s288/baneshwor-hotelnepal.jpg" width="100%"  class="effect2"> </a>
 									<p>
-										Crowded streets, engaged people and heavy population reside in New Baneshwor. One of the most happening places in Kathmandu.
+                                        Crowded streets, engaged people and heavy population reside in New Baneshwor. One of the most
+                                        happening places in Kathmandu.
 									</p>
 								</div>
 							</div>
@@ -241,7 +244,7 @@
 									</span>
 									<a href="hostelList.php?location=Shantinagar"> <img alt="Shantinagar" title="Shantinagar" src="https://lh3.googleusercontent.com/-jnm5Z7pV4gM/VYZJoODNKOI/AAAAAAAAAEc/yfUQW2Nqh68/s288/shantinagar-futsal.jpg" width="100%"  class="effect2"> </a>
 									<p>
-										Shantinagar has become a hub for hostels in Kathmandu.
+                                        Shantinagar has become a hub for hostels in Kathmandu.
 									</p>
 								</div>
 							</div>
