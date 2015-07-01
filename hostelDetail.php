@@ -194,6 +194,30 @@
                     return false;
                 });
             });
+
+
+            function validateReview(){
+                if (/^[a-zA-Z]*$/.test($("#first_name").val()) == false) {//validating first name
+                    alert("Name should contain only alphabets");
+                    $("#first_name").focus()
+                    return false
+                }
+                if (/^[a-zA-Z]*$/.test($("#last_name").val()) == false) {//validating last name
+                    alert("Name should contain only alphabets");
+                    $("#last_name").focus()
+                    return false
+                }
+                var email = $("#email").val()
+                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if (!email.match(mailformat))//validating email
+                {
+                    alert("You have entered an invalid email address!");
+                    $("#email").focus()
+                    return false;
+                }
+                $("#reviewSubmitted").removeClass('hide')
+                return true
+            }
         </script>
 	</head>
 
@@ -289,7 +313,7 @@
 									<div class="hostelImage">
                                         <a class="fancybox" href="https://lh3.googleusercontent.com/-YAKPj79cuRk/VYgDpxxwnDI/AAAAAAAAAWA/HTh_nYY5-JE/s640/DSCN5762.JPG" data-fancybox-group="gallery"><img src="https://lh3.googleusercontent.com/-YAKPj79cuRk/VYgDpxxwnDI/AAAAAAAAAWA/HTh_nYY5-JE/s640/DSCN5762.JPG"/></a>
 
-                                        <a class="fancybox" href="https://lh3.googleusercontent.com/-9fcL1GWDGmU/VYgDp4jVmZI/AAAAAAAAAWI/2Qj0OXwz0xQ/s640/DSCN5763.JPG" data-fancybox-group="gallery"></a>
+                                        <a class="fancybox" href="https://lh3.googleusercontent.com/-9fcL1GWDGmU/VYgDp4jVmZI/AAAAAAAAAWI/2Qj0OXwz0xQ/s640/DSCN5763.JPG" data-fancybox-group="gallery"><img src="https://lh3.googleusercontent.com/-9fcL1GWDGmU/VYgDp4jVmZI/AAAAAAAAAWI/2Qj0OXwz0xQ/s640/DSCN5763.JPG" style="width: 50px;height: 50px;"/></a>
 
                                         <a class="fancybox" href="https://lh3.googleusercontent.com/-pwAmZfQSjdA/VYgDpwwLx5I/AAAAAAAAAWE/oUy7cVybe2A/s640/DSCN5766.JPG" data-fancybox-group="gallery"></a>
 
@@ -355,32 +379,28 @@
 							</div><!-- row 2 -->
 
 							<div class="row">
-                                <?php if($submitted == "noidea"){?>
                                     <div class="ui attached message">
                                         <div class="header">
                                             Submit Review
                                         </div>
                                         <p>Please fill out the form below to submit a review for this hostel.</p>
                                     </div>
-                                <?php }else if($submitted == "true"){ ?>
-                                    <div class="ui positive message">
+                                    <div class="ui positive message hide" id="reviewSubmitted">
                                         <div class="header">
                                             Thanks. Your review has been successfully submitted!
                                         </div>
                                     </div>
-                                <?php } else{ ?>
-                                    <div class="ui negative message">
-                                        <div class="header">
+                                    <div class="ui negative message hide">
+                                        <div class="header hide">
                                             Sorry! We are having trouble. Please try again.
                                         </div>
                                     </div>
-                                <?php } ?>
-                                <form class="ui form attached fluid segment" method="post" action="hostelDetail.php?id=<?php echo $_GET["id"]?>">
+                                <form class="ui form attached fluid segment" method="post" onsubmit="return validateReview()" action="hostelDetail.php?id=<?php echo $_GET["id"]?>">
                                     <div class="two fields">
                                         <div class="field">
                                             <label>First name</label>
                                             <div class="ui corner labeled input">
-                                                <input placeholder="First Name" type="text" name="firstName" required="true">
+                                                <input placeholder="First Name" type="text" name="firstName" id="first_name" required="true">
                                                 <div class="ui corner label">
                                                     <i class="asterisk icon"></i>
                                                 </div>
@@ -389,7 +409,7 @@
                                         <div class="field">
                                             <label>Last name</label>
                                             <div class="ui corner labeled input">
-                                                <input placeholder="Last Name" type="text" name="lastName" required="true">
+                                                <input placeholder="Last Name" type="text" name="lastName" id="last_name" required="true">
                                                 <div class="ui corner label">
                                                     <i class="asterisk icon"></i>
                                                 </div>
@@ -399,7 +419,7 @@
                                     <div class="field">
                                         <label>Email Address</label>
                                         <div class="ui corner labeled input">
-                                            <input placeholder="Email" type="text" name="review_email" required="true">
+                                            <input placeholder="Email" type="text" name="review_email" id="email" required="true">
                                             <div class="ui corner label">
                                                 <i class="asterisk icon"></i>
                                             </div>

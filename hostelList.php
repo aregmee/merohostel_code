@@ -26,10 +26,10 @@
 		<script src="bootstrap/html5shiv.min.js"></script>
 		<script src="bootstrap/respond.min.js"></script>
 		<![endif]-->
-		
+
 		<!-- Google Web Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-		
+
 	</head>
 
 	<body>
@@ -95,7 +95,7 @@
 				<div style="background: #fff;" class="container">
 
 					<div class="row"  id="frameContent" style="padding-top: 20px; padding-bottom: 20px;">
-						
+
 						<div class="col-md-12">
 	<h2 style="  color: rgb(255, 110, 60); word-spacing: 3px; font-family: 'Oswald', sans-serif; font-weight: 200;">
                                 <?php
@@ -135,10 +135,13 @@
 										<div class="header">
 											<?php $name = $row["name"];
 											/*$name = stripslashes($name);*/
-											if (strlen($name) > 24)
-												echo substr($name, 0, 22) . "...";
-											else
-												echo $name;
+											if (strlen($name) > 24){
+                                                $shortName=substr($name, 0, 22)."...";
+                                                echo "<a href=hostelDetail.php?id=".$row["id"],">$shortName</a>";
+                                            }
+											else{
+                                                echo "<a href=hostelDetail.php?id=".$row["id"],">$name</a>";
+                                            }
                                             ?>
 										</div>
 
@@ -231,7 +234,7 @@
 
 						</div><!-- main column -->
 
-					
+
 					</div><!--row -->
 				</div><!--container -->
 
