@@ -318,19 +318,26 @@
                                         $photos_row = $photos -> fetch_assoc();
                                         if($photos_row != null) {
                                             ?>
-                                            <a class="fancybox" href="<?php echo $photos_row["url"];?>" data-fancybox-group="gallery">
-                                                <img src="<?php echo $photos_row["url"];?>"/>
+                                            <a class="fancybox" href="<?php echo $photos_row["url"]; ?>"
+                                               data-fancybox-group="gallery">
+                                                <img src="<?php echo $photos_row["url"]; ?>"/>
                                             </a>
+                                            <?php
+                                            while ($photos_row != null) {
+                                                $photo = $photos_row["url"];
+                                                $photos_row = $photos->fetch_assoc();
+                                                if ($photos_row["url"] == "")
+                                                    break;
+                                                ?>
+                                                <a class="fancybox" href="<?php echo $photos_row["url"];?>"
+                                                   data-fancybox-group="gallery"></a>
+                                            <?php }
+                                        }else {
+                                            ?>
+                                            <img src="img/hostel_icon.png"/>
                                         <?php
                                         }
-                                        while($photos_row != null){
-                                            $photo = $photos_row["url"];
-                                            $photos_row = $photos -> fetch_assoc();
-                                            if($photos_row["url"] == "" )
-                                                break;
-                                            ?>
-                                            <a class="fancybox" href="<?php echo $photos_row["url"];?>" data-fancybox-group="gallery"></a>
-                                        <?php } ?>
+                                        ?>
 
 									</div>
 								</div>
@@ -391,6 +398,49 @@
 									</ul>
 								</div>
 							</div><!-- row 2 -->
+
+                            <div class="row">
+                                <h3><a id="fee_structure"></a>Fee Structure</h3>
+
+                                <div>
+                                    <p></p>
+                                    <?php
+                                        $fee_structure_row =$conn->query("SELECT * FROM fee_structure where id=" . $fee_structure_id);
+                                        $fee_structure = $fee_structure_row->fetch_assoc();
+                                        $admission = $fee_structure["admission"];
+                                        $security_deposit = $fee_structure["security_deposit"];
+                                        $bed_1 = $fee_structure["1_bed"];
+                                        $bed_2 = $fee_structure["2_bed"];
+                                        $bed_3 = $fee_structure["3_bed"];
+                                        $bed_4 = $fee_structure["4_bed"];
+                                        if(!empty($admission)) {
+                                            echo "Admission Fee: ";
+                                            echo $admission . "<br>";
+                                        }
+                                        if(!empty($security_deposit)){
+
+                                            echo "Security Deposit: ";
+                                            echo $security_deposit;
+                                        }
+                                        if(!empty($bed_1)) {
+                                            echo "Single Bedded Room: ";
+                                            echo $bed_1. "<br>";
+                                        }
+                                        if(!empty($bed_2)) {
+                                            echo "Two beds per room: ";
+                                            echo $bed_2. "<br>";
+                                        }
+                                        if(!empty($bed_3)) {
+                                            echo "Three beds per room";
+                                            echo $bed_3. "<br>";
+                                        }
+                                        if(!empty($bed_4)) {
+                                            echo "Four beds per room";
+                                            echo $bed_4. "<br>";
+                                        }
+                                    ?>
+                                </div>
+                            </div><!-- fee structure row -->
 
 							<div class="row">
                                     <div class="ui attached message">
