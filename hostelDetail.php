@@ -215,8 +215,7 @@
                     $("#email").focus()
                     return false;
                 }
-                $("#reviewSubmitted").removeClass('hide')
-                return true
+                return true;
             }
         </script>
 	</head>
@@ -241,7 +240,7 @@
                     . $date_array["hours"] . ":" . $date_array["minutes"] . ":" . $date_array["seconds"];
             $date=date_create($date);
             $date = date_format($date,"Y/m/d H:i:s");
-			$query = "INSERT INTO review VALUES('$review', '$first_name', '$last_name', '$review_email', 0, $id, '$date')";
+			$query = "INSERT INTO review VALUES('$review', '$first_name', '$last_name', '$review_email', 0, $id, '$date', null)";
 			if (mysqli_query($conn, $query)) {
 				$submitted = "true";
 			} else {
@@ -443,22 +442,28 @@
                             </div><!-- fee structure row -->
 
 							<div class="row">
+                                <?php if ($submitted == "noidea"){?>
                                     <div class="ui attached message">
                                         <div class="header">
                                             Submit Review
                                         </div>
                                         <p>Please fill out the form below to submit a review for this hostel.</p>
                                     </div>
-                                    <div class="ui positive message hide" id="reviewSubmitted">
+                                <?php } ?>
+                                <?php if ($submitted == "true"){?>
+                                    <div class="ui positive message">
                                         <div class="header">
                                             Thanks. Your review has been successfully submitted!
                                         </div>
                                     </div>
-                                    <div class="ui negative message hide">
-                                        <div class="header hide">
+                                <?php } ?>
+                                <?php if ($submitted == "false"){?>
+                                    <div class="ui negative message">
+                                        <div class="header">
                                             Sorry! We are having trouble. Please try again.
                                         </div>
                                     </div>
+                                <?php } ?>
                                 <form class="ui form attached fluid segment" method="post" onsubmit="return validateReview()" action="hostelDetail.php?id=<?php echo $_GET["id"]?>">
                                     <div class="two fields">
                                         <div class="field">
