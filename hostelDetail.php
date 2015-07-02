@@ -1,11 +1,17 @@
 <!DOCTYPE HTML>
+<?php $submitted = "noidea";
+$id = $_GET["id"];
+include 'DBConnection.php';
+$hostel_row = $conn -> query("SELECT * from hostel where id='$id'");
+list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) = $hostel_row->fetch_row();
+?>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>Main - Mero Hostel</title>
+		<title><?php echo $name; ?> | Merohostel.com</title>
 
 		<!-- Main Styslesheet -->
 		<link rel="stylesheet" href="css/main.css" />
@@ -221,13 +227,9 @@
 	</head>
 
 	<body>
-		<?php $submitted = "noidea";
-		$id = $_GET["id"];
-		include 'DBConnection.php';
-		$hostel_row = $conn -> query("SELECT * from hostel where id='$id'");
+		<?php
         $reviews = $conn->query("SELECT * from review where hostel_id = '$id' and display = 1");
         //list($id, $capacity, $contact, $gender, $location, $name, $email, $website, $additionalInfo, $ownerId, $mainPhotoUrl) = $row -> fetch_row();
-        list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) = $hostel_row->fetch_row();
         $owner_row = $conn -> query("SELECT * from owner where id='$fee_structure_id'");
         list($owner_id, $hostel_id, $owner_name, $contact) = $owner_row->fetch_row();
         if (isset($_POST['review']) && isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['review_email'])) {
