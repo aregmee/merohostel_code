@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1f0672a-8076-4cae-a676-2ee64d43c782" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about.php" afterPath="$PROJECT_DIR$/about.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contact_form.php" afterPath="$PROJECT_DIR$/contact_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hostelDetail.php" afterPath="$PROJECT_DIR$/hostelDetail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hostelList.php" afterPath="$PROJECT_DIR$/hostelList.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/toc.php" afterPath="$PROJECT_DIR$/toc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feedback.php" afterPath="$PROJECT_DIR$/feedback.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="97c1566f-f5a9-495e-b107-7dd6122a5903" name="Failed commit: Default" comment="Contact Us made" />
@@ -34,7 +29,18 @@
     <favorites_list name="merohostel_view" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="feedback.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/feedback.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.43293718" vertical-offset="1950" max-vertical-offset="2850">
+              <caret line="152" column="41" selection-start-line="152" selection-start-column="41" selection-end-line="152" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,7 +69,6 @@
         <option value="$PROJECT_DIR$/send_form_email.php" />
         <option value="$PROJECT_DIR$/contact_form.html" />
         <option value="$PROJECT_DIR$/search.php" />
-        <option value="$PROJECT_DIR$/feedback.php" />
         <option value="$PROJECT_DIR$/DBConnection.php" />
         <option value="$PROJECT_DIR$/merohostel.sql" />
         <option value="$PROJECT_DIR$/footer.php" />
@@ -75,6 +80,7 @@
         <option value="$PROJECT_DIR$/contact_form.php" />
         <option value="$PROJECT_DIR$/toc.php" />
         <option value="$PROJECT_DIR$/hostelList.php" />
+        <option value="$PROJECT_DIR$/feedback.php" />
       </list>
     </option>
   </component>
@@ -474,7 +480,13 @@
       <option name="project" value="LOCAL" />
       <updated>1435820783531</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="tab titles added">
+      <created>1435821223267</created>
+      <option name="number" value="00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1435821223267</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -557,7 +569,8 @@
     <MESSAGE value="merohostel datasource updated" />
     <MESSAGE value="photos added" />
     <MESSAGE value="review submitted message bug fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="review submitted message bug fixed" />
+    <MESSAGE value="tab titles added" />
+    <option name="LAST_COMMIT_MESSAGE" value="tab titles added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -838,13 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feedback.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45840406" vertical-offset="240" max-vertical-offset="2850">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/hostel.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -935,6 +941,14 @@
             <marker date="1435821142409" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..hostel..." />
             <marker date="1435821142409" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..hostel..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feedback.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43293718" vertical-offset="1950" max-vertical-offset="2850">
+          <caret line="152" column="41" selection-start-line="152" selection-start-column="41" selection-end-line="152" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>

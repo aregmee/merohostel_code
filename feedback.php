@@ -148,9 +148,9 @@
 							<label>Any other comments</label>
 							<div class="ui corner labeled input">
 								<textarea name="comments" id = "comments" maxlength="1000" cols="25" rows="6"required="true"></textarea>
-								<div class="ui corner label">
+								<!--<div class="ui corner label">
 									<i class="asterisk icon"></i>
-								</div>
+								</div>-->
 							</div>
 						</div>
 				</div>
