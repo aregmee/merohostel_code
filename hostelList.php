@@ -224,14 +224,14 @@
 										if ($page > 1)
 											echo "<a class = \"icon item\" href= '$url&page=$prev_page'>" . '<i class="left arrow icon"></i>' . "</a>";
                                         if($total_pages > 6){
-                                            if($page - 2 <= 0)
+                                            if($page - 4 <= 0)
                                                 $i = 1;
                                             else
-                                                $i = $page - 2;
-                                            if($page + 5 > $total_pages)
+                                                $i = $page - 4;
+                                            if($page + 4 > $total_pages)
                                                 $pages_to_print = $total_pages;
                                             else
-                                                $pages_to_print = $page + 5;
+                                                $pages_to_print = $page + 4;
                                             for(; $i <= $pages_to_print; $i++){
 
                                                 if ($page == $i)
