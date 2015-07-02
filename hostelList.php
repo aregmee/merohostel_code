@@ -135,7 +135,22 @@
 											</div>
 										</div>
                                         <a href="hostelDetail.php?id=<?php echo $row["id"]; ?>">
-                                            <img src="img/kathmandu-city.jpg"/>
+                                            <?php
+                                            $h_id = $row["id"];
+                                            $photos = $conn->query("SELECT url FROM photo p
+                                                JOIN hostel_photo hp on hp.photo_id = p.id
+                                                JOIN hostel h on h.id = hp.hostel_id where h.id = $h_id");
+                                            $photos_row = $photos -> fetch_assoc();
+                                            if($photos_row != null) {
+                                                ?>
+                                                <img src="<?php echo $photos_row["url"];?>"/>
+                                            <?php
+                                            }else {
+                                                ?>
+                                                <img src="img/hostel_icon.png"/>
+                                            <?php
+                                            }
+                                            ?>
                                         </a>
 									</div>
 
