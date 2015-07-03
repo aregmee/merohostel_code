@@ -90,7 +90,7 @@
 						<div class="row" style="height: 90vh;">
 							<div id="mainHeader">
 								<div id="mainLogo">
-									<a href="index.php"> <img alt="merohostel-logo" title"Merohostel" src="img/mero-hostel-logo.png" /> </a>
+									<a href="/"> <img alt="merohostel-logo" title"Merohostel" src="img/mero-hostel-logo.png" /> </a>
 								</div>
 								<!-- mainLogo -->
 								<div id="mainMenu">

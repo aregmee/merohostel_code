@@ -46,7 +46,7 @@
 					<div class="row">
 
 						<div style="float: left;padding: 14px 14px;margin-top: -15px;margin-bottom: -15px;">
-							<a href="index.php"> <img src="img/mero-hostel-logo.png"/> </a>
+							<a href="/"> <img src="img/mero-hostel-logo.png"/> </a>
 						</div>
 						<!-- logo -->
 						<?php include 'nav_search.php'?>

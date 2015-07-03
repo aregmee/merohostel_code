@@ -13,7 +13,7 @@
 						<li>
 							Terms & Conditions
 						</li> </a>
-						<a title="Contact Us" href="contact_form.php">
+						<a title="Contact Us" href="contactUs.php">
 						<li>
 							Contact
 						</li></a>

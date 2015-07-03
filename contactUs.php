@@ -76,7 +76,7 @@
 				var last_name = document.getElementById("last_name").value;
 				var email = document.getElementById("email").value;
 				var telephone = document.getElementById("telephone").value;
-				var comments = document.getElementById("comments").value;
+				var comments = document.getElementById("comment").value;
 
 				var http = new XMLHttpRequest();
 				var url = "send_form_email.php";
@@ -94,6 +94,12 @@
 				};
 				http.send(params);
 				$('#submitted').removeClass('hide');
+
+                document.getElementById("first_name").value = "";
+                document.getElementById("last_name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("telephone").value = "";
+                document.getElementById("#comments").value = "";
 				return false;
 			}
 
@@ -125,7 +131,7 @@
 					<div class="row">
 
 						<div style="float: left;padding: 14px 14px;margin-top: -15px;margin-bottom: -15px;">
-							<a href="index.php"> <img src="img/mero-hostel-logo.png"/> </a>
+							<a href="/"> <img src="img/mero-hostel-logo.png"/> </a>
 						</div>
 						<!-- logo -->
 
@@ -219,7 +225,7 @@
 									<div class="field">
 										<label>Comments</label>
 										<div class="ui corner labeled input">
-											<textarea name="comments" id = "comments" maxlength="1000" cols="25" rows="6"required="true"></textarea>
+											<textarea name="comments" id = "comment" maxlength="1000" cols="25" rows="6" required="true"></textarea>
 											<div class="ui corner label">
 												<i class="asterisk icon"></i>
 											</div>
