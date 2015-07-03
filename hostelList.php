@@ -10,8 +10,16 @@
 		<link rel="icon" href="img/favicon.ico">
 		<meta content='noodp,noydir' name='robots'/>
 		<meta content='INDEX, FOLLOW' name='GOOGLEBOT'/>
-		<meta content='Merohostel.com' name='author'/>		
-		<meta content="Choose from {number} hostels in {Area} and read reviews from your fellow hostellers." name="description" >
+		<meta content='Merohostel.com' name='author'/>
+        <?php
+            if (isset($_GET["location"])) {
+                $meta_location = $_GET["location"];
+            } else {
+                $meta_location = "";
+            }
+            $meta_location .= " kathmandu";
+        ?>
+		<meta content="Choose from 237 hostels in <?php echo $meta_location; ?> and read reviews from your fellow hostellers." name="description" >
 		<meta content='hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel,  merohostel.com' name='keywords'/>
 
 
