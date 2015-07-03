@@ -12,11 +12,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title><?php echo $name; ?> | Merohostel.com</title>
-		
+
 		<link rel="icon" href="img/favicon.ico">
 		<meta content='noodp,noydir' name='robots'/>
 		<meta content='INDEX, FOLLOW' name='GOOGLEBOT'/>
-		<meta content='Merohostel.com' name='author'/>		
+		<meta content='Merohostel.com' name='author'/>
 		<meta content="{Hostel Name} is located in {Area}." name="description" >
 		<meta content='<?php echo $name; ?>, hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel, merohostel.com' name='keywords'/>
 
@@ -328,7 +328,7 @@
                                                 <div id="snippetImg">
                                                 <a class="fancybox" href="<?php echo $photos_row["url"]; ?>"
                                                    data-fancybox-group="gallery">  <img src="<?php echo $photos_row["url"]; ?>"/></a>
-                                                 </div>  
+                                                 </div>
                                             <?php }
 													}else {
                                             ?>
@@ -394,7 +394,7 @@
 							</div><!-- row 2 -->
 
                             <div class="row">
-                            	<h3 id="fee_structure"><a name="fee_structure" id="fee_structure"></a>Facilities</h3>                         
+                            	<h3 id="fee_structure"><a name="fee_structure" id="fee_structure"></a>Facilities</h3>
                                 <div>
                                     <p></p>
                                     <?php $fee_structure_row = $conn -> query("SELECT * FROM fee_structure where id=" . $fee_structure_id);
@@ -552,13 +552,13 @@
                             </div><!-- row -->
                             <?php } ?>
                             </div><!-- main column -->
-						
-						
+
+
 						<div class="col-md-4">
 
 						</div><!-- sidebar -->
-						
-						
+
+
 					</div><!-- content -->
 				</div><!-- container -->
 			</div>

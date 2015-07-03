@@ -73,9 +73,13 @@
 		$start_from = ($page - 1) * $per_page;
 
 		if ($gender == "" || $gender == null)
-			$sql = "SELECT * FROM hostel WHERE address LIKE '%$location%' ORDER BY address";
+			$sql = "select DISTINCT(h.id), h.name, h.address, h.gender from hostel h
+                    left join hostel_photo hp on h.id = hp.hostel_id
+                    where address like '%$location%' order by case when photo_id is null then 1 else 0 end, photo_id";
 		else
-			$sql = "SELECT * FROM hostel WHERE address LIKE '%$location%' and gender = '$gender' ORDER BY address";
+			$sql = "select DISTINCT(h.id), h.name, h.address, h.gender from hostel h
+                    left join hostel_photo hp on h.id = hp.hostel_id
+                    where address like '%$location%' and gender = '$gender' order by case when photo_id is null then 1 else 0 end, photo_id";
 
 		//Selecting the data from table but with limit
 		$sql .= " LIMIT $start_from, $per_page";
@@ -205,10 +209,14 @@
                             <div id="pager">
                                 <div class="ui pagination menu">
                                     <?php
-									if ($gender == "" || $gender == null)
-										$sql = "SELECT * FROM hostel WHERE address LIKE '%$location%' ORDER BY address";
-									else
-										$sql = "SELECT * FROM hostel WHERE address LIKE '%$location%' and gender = '$gender' ORDER BY address";
+                                    if ($gender == "" || $gender == null)
+                                        $sql = "select DISTINCT(h.id), h.name, h.address, h.gender from hostel h
+                    left join hostel_photo hp on h.id = hp.hostel_id
+                    where address like '%$location%' order by case when photo_id is null then 1 else 0 end, photo_id";
+                                    else
+                                        $sql = "select DISTINCT(h.id), h.name, h.address, h.gender from hostel h
+                    left join hostel_photo hp on h.id = hp.hostel_id
+                    where address like '%$location%' and gender = '$gender' order by case when photo_id is null then 1 else 0 end, photo_id";
 
 									$result = $conn -> query($sql);
 
