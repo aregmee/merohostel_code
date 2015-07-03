@@ -6,14 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>Contact Merohostel.com | Search hostels in Kathmandu online</title>
-		
+
 		<link rel="icon" href="img/favicon.ico">
 		<meta content='noodp,noydir' name='robots'/>
 		<meta content='INDEX, FOLLOW' name='GOOGLEBOT'/>
-		<meta content='Merohostel.com' name='author'/>		
+		<meta content='Merohostel.com' name='author'/>
 		<meta content="Help, support, and advice from Merohostel’s Customer Service team. To find out how we can help you, submit your question via the contact form." name="description" >
 		<meta content='contact merohsotel.com, contact merohostel, contact hostel nepal, nepal contact hostel, hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel,  merohostel.com' name='keywords'/>
-
 
 		<!-- Main Styslesheet -->
 		<link rel="stylesheet" href="css/main.css" />
@@ -150,9 +149,20 @@
 
 					<div class="row" style="padding: 20px;">
 
+						<h2 style="margin-left: 0px;" id="deHosTtl">Contact</h2>
+						<div>
+							<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="350" src="https://maps.google.com/maps?hl=en&q=Deerwalk &ie=UTF8&t=m&z=16&iwloc=B&output=embed">
+								<div>
+									<small><a href="http://www.embedgooglemaps.com">embed google map</a></small>
+								</div>
+								<div>
+									<small><a href="http://embedgooglemaps.com">embed google maps here</a></small>
+								</div>
+							</iframe>
+						</div>
+						<br/>
 						<div class="col-md-8">
-													
-							<h2 id="deHosTtl">Contact</h2>
+							<h3 style="margin-left: -15px;" id="review"><a name="review" id="review"></a>Contact Form</h3>
 							<div class="ui positive message hide" id="submitted">
 								<div class="header">
 									Thanks. Your email has been sent!
@@ -218,21 +228,8 @@
 									<div>
 										<input class="ui orange submit button" type = "submit" value = "Submit" name = "submit" />
 									</div>
-									
-									<br/>
-									
-						<div>
-							<h3>Google Map </h3>
-							<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="350" src="https://maps.google.com/maps?hl=en&q=Deerwalk &ie=UTF8&t=m&z=16&iwloc=B&output=embed">
-								<div>
-									<small><a href="http://www.embedgooglemaps.com">embed google map</a></small>
-								</div>
-								<div>
-									<small><a href="http://embedgooglemaps.com">embed google maps here</a></small>
-								</div>
-							</iframe>
 
-						</div>
+									<br/>
 
 								</form>
 							</div>
@@ -244,6 +241,7 @@
 							<div  class="row">
 								<div style="padding: 0px 10px;">
 									<h3 id="review"><a name="review" id="review"></a>Contact Details</h3>
+
 									<div id="contactDetails">
 										<p>
 											<i class="circular inverted orange  marker  icon"></i> Sifal, Kathmandu

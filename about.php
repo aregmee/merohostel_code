@@ -6,14 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>About Merohostel.com | Search hostels in Kathmandu online</title>
-		
+
 		<link rel="icon" href="img/favicon.ico">
 		<meta content='noodp,noydir' name='robots'/>
 		<meta content='INDEX, FOLLOW' name='GOOGLEBOT'/>
-		<meta content='Merohostel.com' name='author'/>		
+		<meta content='Merohostel.com' name='author'/>
 		<meta content="Merohostel.com aims to include the information of all the hostels inside Kathmandu valley. In order to ensure that the students will get accurate and enough information, we have dug inside as much hostel possible and have collected reliable information from them." name="description" >
 		<meta content='about merohostel, merohostel team, hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel' name='keywords'/>
-
 
 		<!-- Main Styslesheet -->
 		<link rel="stylesheet" href="css/main.css" />
@@ -78,13 +77,13 @@
 							<div class="row" style="padding: 10px 0px;">
 
 								<p style="font-size: 15px;word-spacing: 3px;">
-									We are a bunch of students, who entered Kathmandu to pursue our higher studies. Since we did not have a house to reside in here, we had to search for hostels. We had a really tough time searching for hostels as we had no networking and there was no online platform that would list all the hostels available in Kathmandu. Even if we would find one or two hostels, we had to make choice from a very limited number. That was tough.
+									As students, we entered Kathmandu valley some years ago to pursue our higher studies. Since we did not have a house to reside in here, we had to search for hostels. We had a really tough time searching for hostels as we had no networking and there was no online platform that would list all the hostels available in Kathmandu. Even if we would find one or two hostels, we had to make choice from a very limited number. That was tough.
 									<br/>
 									<br/>
 									That situation helped us realize a problem that not only have we faced, but thousands of students who come to Kathmandu to pursue their higher studies, face every year. They are compelled to pick a hostel without knowing the information about the available hostels in Kathmandu. If they had a platform that would solve this problem – they would choose hostels that would exactly meet their needs.
 									<br/>
 									<br/>
-									Hence, we created this authorized website portal to help students get right information in more comfortable way.
+									Hence, we created this authorized website portal to help students get right information of hostels in a more comfortable way.
 									<br/>
 									<br/>
 									Merohostel.com is a website that aims to include the information of all the hostels inside Kathmandu valley. In order to ensure that the students will get accurate and enough information, we have dug inside as much hostel possible and have collected reliable information from them.

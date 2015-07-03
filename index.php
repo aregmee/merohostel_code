@@ -176,7 +176,7 @@
 								<?php include "feedback.php"; ?>
 	
 						<div class="row">
-							<h2 class="subTitle"><span style="color: rgb(255, 114, 65);">Featured</span> Hostels</h2>
+							<h2 class="subTitle"><span style="color: rgb(255, 114, 65);">Favourable</span> Areas</h2>
 							<div class="col-sm-3">
 								<div class="subSection">
 									<h2><a href="hostelList.php?location=Putalisadak">Putalisadak</a></h2>
@@ -233,7 +233,7 @@
 									}
 								?>
 									</span>
-									<a href="hostelList.php?location=Baneshwor"> <img alt="Shantinagar" title="Shantinagar" src="https://lh3.googleusercontent.com/-qwzCu8dVhFw/VYZJlh1pBhI/AAAAAAAAAEU/pTT_dYRs6vA/s288/baneshwor-hotelnepal.jpg" width="100%"  class="effect2"> </a>
+									<a href="hostelList.php?location=Baneshwor"> <img alt="Baneshwor" title="Baneshwor" src="https://lh3.googleusercontent.com/-qwzCu8dVhFw/VYZJlh1pBhI/AAAAAAAAAEU/pTT_dYRs6vA/s288/baneshwor-hotelnepal.jpg" width="100%"  class="effect2"> </a>
 									<p>
                                         Crowded streets, engaged people and heavy population reside in New Baneshwor. One of the most
                                         happening places in Kathmandu.
@@ -268,7 +268,7 @@
 						<div class="row">
 							<h2 class="subTitle">Why <span style="color: rgb(255, 114, 65);"> Merohostel </span>?</h2>
 							<div class="col-sm-3">
-								<div class="subSection">
+								<div class="whyUsSection">
 									<h3><i class="red large home icon"></i> We Know Hostels!</h3>
 									<p>
                                         Our team knows about the hostels in kathmandu more than anyone. We are deeply connected in hostel business.
@@ -276,7 +276,16 @@
 								</div>
 							</div>
 							<div class="col-sm-3">
-								<div class="subSection">
+								<div class="whyUsSection">
+									<h3><i class="red exchange  sign icon"></i> We Connect You!</h3>
+									<p>
+                                       Through Merohostel.com, we connect you to 237 hostels in Kathmandu. Choose the best hostel for you today!
+									</p>
+								</div>
+							</div>
+							
+							<div class="col-sm-3">
+								<div class="whyUsSection">
 									<h3><i class="red checkmark sign icon"></i> 100% Accurate Information!</h3>
 									<p>
                                         All of the information in this website is authorized by Hostel Association of Nepal.
@@ -285,7 +294,7 @@
 							</div>
 
 							<div class="col-sm-3">
-								<div class="subSection">
+								<div class="whyUsSection">
 									<h3><i class="red users icon"></i> Group Bookings!</h3>
 									<p>
                                         If you are in a group of 5 or more, we will find the best hostel for you, with certain deduction in the admission fees.

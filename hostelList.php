@@ -111,18 +111,18 @@
 									echo ucfirst($gender) . " hostels ";
 								$test_result = $conn -> query("SELECT * FROM hostel where address = '" . $location . "'");
 
-								if (mysqli_num_rows($test_result) > 0 ) {
+								if (mysqli_num_rows($test_result) > 0) {
 									if (($location != null || $location != '') && ($gender == null || $gender == ''))
 										echo "Hostels nearby " . $location;
 									else if (($location != null || $location != '') && ($gender != null || $gender != ''))
 										echo " nearby " . $location;
-								}elseif($conn -> query("SELECT * FROM hostel where address = '" . $location . " %'")){
+								} elseif ($conn -> query("SELECT * FROM hostel where address = '" . $location . " %'")) {
 
-                                    if (($location != null || $location != '') && ($gender == null || $gender == ''))
-                                        echo "Hostels nearby " . $location;
-                                    else if (($location != null || $location != '') && ($gender != null || $gender != ''))
-                                        echo " nearby " . $location;
-                                }
+									if (($location != null || $location != '') && ($gender == null || $gender == ''))
+										echo "Hostels nearby " . $location;
+									else if (($location != null || $location != '') && ($gender != null || $gender != ''))
+										echo " nearby " . $location;
+								}
 								if (($gender == null || $gender == '') && ($location == null || $location == ''))
 									echo "All Hostels in Kathmandu";
                                 ?>
@@ -151,14 +151,10 @@
                                             $photos_row = $photos -> fetch_assoc();
                                             if($photos_row != null) {
                                                 ?>
-                                                <img src="<?php echo $photos_row["url"];?>"/>
-                                            <?php
-                                            }else {
-                                                ?>
+                                                <img src="<?php echo $photos_row["url"]; ?>"/>
+                                            <?php }else { ?>
                                                 <img src="img/hostel_icon.png"/>
-                                            <?php
-                                            }
-                                            ?>
+                                            <?php } ?>
                                         </a>
 									</div>
 
@@ -166,13 +162,12 @@
 										<div class="header">
 											<?php $name = $row["name"];
 											/*$name = stripslashes($name);*/
-											if (strlen($name) > 24){
-                                                $shortName=substr($name, 0, 22)."...";
-                                                echo "<a href=hostelDetail.php?id=".$row["id"],">$shortName</a>";
-                                            }
-											else{
-                                                echo "<a href=hostelDetail.php?id=".$row["id"],">$name</a>";
-                                            }
+											if (strlen($name) > 24) {
+												$shortName = substr($name, 0, 22) . "...";
+												echo "<a href=hostelDetail.php?id=" . $row["id"], ">$shortName</a>";
+											} else {
+												echo "<a href=hostelDetail.php?id=" . $row["id"], ">$name</a>";
+											}
                                             ?>
 										</div>
 
@@ -221,41 +216,41 @@
 										$next_page = $page + 1;
 										$url = "hostelList.php?";
 										if (!empty($location)) {
-                                            $url .= "location=" . $location;
-                                            if (!empty($gender))
-                                                $url .= "&gender=" . $gender;
-                                        }else{
+											$url .= "location=" . $location;
+											if (!empty($gender))
+												$url .= "&gender=" . $gender;
+										} else {
 
-                                            if(!empty($gender))
-                                                $url .= "gender=" . $gender;
-                                        }
+											if (!empty($gender))
+												$url .= "gender=" . $gender;
+										}
 										if ($page > 1)
 											echo "<a class = \"icon item\" href= '$url&page=$prev_page'>" . '<i class="left arrow icon"></i>' . "</a>";
-                                        if($total_pages > 6){
-                                            if($page - 4 <= 0)
-                                                $i = 1;
-                                            else
-                                                $i = $page - 4;
-                                            if($page + 4 > $total_pages)
-                                                $pages_to_print = $total_pages;
-                                            else
-                                                $pages_to_print = $page + 4;
-                                            for(; $i <= $pages_to_print; $i++){
+										if ($total_pages > 6) {
+											if ($page - 4 <= 0)
+												$i = 1;
+											else
+												$i = $page - 4;
+											if ($page + 4 > $total_pages)
+												$pages_to_print = $total_pages;
+											else
+												$pages_to_print = $page + 4;
+											for (; $i <= $pages_to_print; $i++) {
 
-                                                if ($page == $i)
-                                                    echo "<a class = \"active item\" href='$url&page=" . $i . "'>" . $i . "</a>";
-                                                else
-                                                    echo "<a class = \"item\" href='$url&page=" . $i . "'>" . $i . "</a>";
-                                            }
+												if ($page == $i)
+													echo "<a class = \"active item\" href='$url&page=" . $i . "'>" . $i . "</a>";
+												else
+													echo "<a class = \"item\" href='$url&page=" . $i . "'>" . $i . "</a>";
+											}
 
-                                        }else {
-                                            for ($i = 1; $i <= $total_pages; $i++) {
-                                                if ($page == $i)
-                                                    echo "<a class = \"active item\" href='$url&page=" . $i . "'>" . $i . "</a>";
-                                                else
-                                                    echo "<a class = \"item\" href='$url&page=" . $i . "'>" . $i . "</a>";
-                                            }
-                                        }
+										} else {
+											for ($i = 1; $i <= $total_pages; $i++) {
+												if ($page == $i)
+													echo "<a class = \"active item\" href='$url&page=" . $i . "'>" . $i . "</a>";
+												else
+													echo "<a class = \"item\" href='$url&page=" . $i . "'>" . $i . "</a>";
+											}
+										}
 										if ($page < $total_pages)
 											echo "<a class = \"icon item\"href='$url&page=$next_page'>" . '<i class="right arrow icon"></i>' . "</a>";
 									}

@@ -5,15 +5,15 @@
 			<div class="row">
 				<div class="col-sm-3">
 					<ul>
-						<a href="about.php">
+						<a title="About Us" href="about.php">
 						<li>
 							About
 						</li> </a>
-						<a href="terms_and_conditions.php">
+						<a title="Terms and Condtions" href="terms_and_conditions.php">
 						<li>
 							Terms & Conditions
 						</li> </a>
-						<a href="contact_form.php">
+						<a title="Contact Us" href="contact_form.php">
 						<li>
 							Contact
 						</li></a>
@@ -22,12 +22,10 @@
 				<div class="col-sm-2">
 					<ul>
 						<li>
-							<i class="fa fa-facebook-square"></i>
-							Facebook
+							<a title="Merohostel on Facebook" target="_blank" href="https://www.facebook.com/merohostel"><i class="fa fa-facebook-square"></i> Facebook </a>
 						</li>
 						<li>
-							<i class="fa fa-twitter-square"></i>
-							Twitter
+							<a title="Merohostel on LinkedIn" target="_blank" href="https://www.linkedin.com/company/merohostel-com"><i class="fa fa-linkedin-square"></i> LinkedIn </a>
 						</li>
 					</ul>
 				</div>

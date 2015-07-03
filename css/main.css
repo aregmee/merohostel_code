@@ -103,11 +103,21 @@ div#mainTitle {
 }
 #featuredHostel {
 	background: #fff;
-	padding: 30px 0px;
+	padding: 20px 0px;
 }
 .subSection {
 	padding: 10px 0px 20px 0px;
 	color: #676056;
+}
+.whyUsSection {
+	padding: 10px 0px 20px 0px;
+	color: #676056;
+}
+.whyUsSection  h3{
+	font-size: 17px;
+}
+.whyUsSection p {
+	text-align: justify;
 }
 .subSection h2 {
 	margin-bottom: 5px;
