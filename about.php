@@ -6,6 +6,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>About Merohostel.com | Search hostels in Kathmandu online</title>
+		
+		<link rel="icon" href="img/favicon.ico">
+		<meta content='noodp,noydir' name='robots'/>
+		<meta content='INDEX, FOLLOW' name='GOOGLEBOT'/>
+		<meta content='Merohostel.com' name='author'/>		
+		<meta content="Merohostel.com aims to include the information of all the hostels inside Kathmandu valley. In order to ensure that the students will get accurate and enough information, we have dug inside as much hostel possible and have collected reliable information from them." name="description" >
+		<meta content='about merohostel, merohostel team, hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel' name='keywords'/>
+
 
 		<!-- Main Styslesheet -->
 		<link rel="stylesheet" href="css/main.css" />

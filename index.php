@@ -6,7 +6,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>Find hostels in Kathmandu online | Merohostel.com</title>
-
+		
+		<link rel="icon" href="img/favicon.ico">
+		<meta content='noodp,noydir' name='robots'/>
+		<meta content='INDEX, FOLLOW' name='GOOGLEBOT'/>
+		<meta content='Merohostel.com' name='author'/>		
+		<meta content="Merohostel.com helps you browse hostels inside Kathmandu valley online. Read reviews from fellow hostellers, view the detailed information & choose a hostel today." name="description" >
+		<meta content='hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel,  merohostel.com' name='keywords'/>
+		
+			
 		<!-- Main Styslesheet -->
 		<link rel="stylesheet" href="css/main.css" />
 		<!-- Bootstrap CSS -->
@@ -48,6 +56,7 @@
 							url : "search.php",
 							data : dataString,
 							cache : false,
+							
 							success : function(html) {
 								$("#result").html(html).show();
 							}
@@ -56,7 +65,8 @@
 					return false;
 				});
 			});
-
+			
+		
             function validateForm(){
                 if($("#genderSelect").val()!='' && $("#result").val()!=''){
                     return true;

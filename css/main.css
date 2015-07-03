@@ -10,10 +10,17 @@ div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, tex
 	margin: 0;
 	padding: 0;
 }
-a:link, a:hover, a:visited {
+a:link, a:visited {
 	color: rgb(255, 110, 60);
 	text-decoration: none;
 }
+a:hover {
+	color: rgb(255, 110, 60);
+	text-decoration: underline;
+}
+/*------------------------------------
+ * index.php
+ */
 #lnWrapper {
 	min-height: 100%;
 	position: relative;
@@ -29,87 +36,6 @@ a:link, a:hover, a:visited {
 	z-index: 9999;
 	width: 100%;
 }
-
-#content {
-	background-color: #f7f3eb;
-	/*background: #fff url(../img/bg-tile.png) repeat-x top left;*/
-	padding-bottom: 50px; /* Height of the footer element */
-}
-#footer {
-	width: 100%;
-	height: 50px;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-}
-h2.subTitle {
-	text-align: center;
-	font-size: 30px;
-	color: #31302b;
-	letter-spacing: .04em;
-	text-transform: uppercase;
-	margin: 0;
-	padding: 10px;
-	font-family: "Oswald", sans-serif;
-	font-weight: 200;
-}
-
-h2. {
-	color: #333 !important;
-	font-size: 26px;
-	line-height: 30px;
-	font-weight: normal;
-	margin: 0;
-}
-.address {
-	font-size: 11px;
-	margin-bottom: 12px;
-	margin-top: 7px;
-}
-.hostelImage img {
-	width: 100%;
-}
-h3#facilities {
-	border-bottom: 1px dotted #ccc;
-	margin-top: 20px;
-	font-family: "Oswald", sans-serif;
-	font-weight: 200;
-}
-h3#review {
-	border-bottom: 1px dotted #ccc;
-	font-family: "Oswald", sans-serif;
-	font-weight: 200;
-}
-h3#shareHostel {
-	border-bottom: 1px dotted #ccc;
-	font-family: "Oswald", sans-serif;
-	font-weight: 200;
-	margin-top: 20px;
-}
-.facilities {
-	margin-bottom: 20px;
-	width: 690px;
-}
-ul.facilitylist {
-	list-style: none;
-}
-.facilitylist li {
-	width: 190px;
-	float: left;
-	margin-right: 20px;
-	margin-bottom: 15px;
-	background: url(http://icd.hwstatic.com/static/images/1.32.7.0/HW-sprites-microsite.png) no-repeat;
-	background-position: 0 -226px;
-	padding-left: 20px;
-}
-
-#feedback a {
-	display: block;
-	position: fixed;
-	top: 200px;
-	left: -1px;
-}
-
 #mainCover {
 	background: url('../img/kathmandu-city.jpg');
 	background-size: cover;
@@ -129,6 +55,11 @@ ul.facilitylist {
 
 #mainHeader {
 	padding-top: 20px;
+}
+#content {
+	background-color: #f7f3eb;
+	/*background: #fff url(../img/bg-tile.png) repeat-x top left;*/
+	padding-bottom: 50px; /* Height of the footer element */
 }
 #mainLogo {
 	display: inline-block;
@@ -198,7 +129,107 @@ div#mainTitle {
 	float: left;
 	line-height: 50px;
 	margin-left: 15px;
+	font-size: 13px;
 }
+#footer {
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+h2.subTitle {
+	text-align: center;
+	font-size: 30px;
+	color: #31302b;
+	letter-spacing: .04em;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 10px;
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+}
+
+/*h2. {
+ color: #333 !important;
+ font-size: 26px;
+ line-height: 30px;
+ font-weight: normal;
+ margin: 0;
+ }*/
+.address {
+	font-size: 11px;
+	margin-bottom: 12px;
+	margin-top: 7px;
+}
+#firstDetailImage {
+	width: 100%;
+	height: 213px;
+}
+div#snippetImg img {
+	width: 65px;
+	display: inline-block;
+	float: left;
+	margin-top: 10px;
+	margin-left: 3px;
+	height: 60px;
+	border: 1px solid #999;
+}
+h3#facilities {
+	border-bottom: 1px dotted #ccc;
+	margin-top: 20px;
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+}
+h3#review {
+	border-bottom: 1px dotted #ccc;
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+}
+h3#fee_structure {
+	border-bottom: 1px dotted #ccc;
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+}
+#fee_details {
+	list-style: none;
+}
+#fee_details  li {
+	padding-top: 3px;
+}
+h3#shareHostel {
+	border-bottom: 1px dotted #ccc;
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+	margin-top: 20px;
+}
+.facilities {
+	/*margin-bottom: 20px;*/
+	width: 690px;
+}
+ul.facilitylist {
+	list-style: none;
+}
+.facilitylist li {
+	width: 190px;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 15px;
+	background: url(http://icd.hwstatic.com/static/images/1.32.7.0/HW-sprites-microsite.png) no-repeat;
+	background-position: 0 -226px;
+	padding-left: 20px;
+}
+
+#feedback a {
+	display: block;
+	position: fixed;
+	top: 200px;
+	left: -1px;
+}
+
+/*------------------------------------
+ * hostelList.php
+ */
 div#fixedSearch {
 	background: #7B756B;
 	padding: 10px;
@@ -330,5 +361,12 @@ div#atstbx a:hover {
 	padding: 10px;
 }
 .ui.card img {
-	width: 245px;
+	width: 100%;
+	height: 220px;
+}
+#generalInfo {
+	border-left: 2px dotted #ccc;
+}
+.fancybox-skin {
+  margin-top: 10%;
 }

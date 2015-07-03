@@ -12,6 +12,14 @@ list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) =
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title><?php echo $name; ?> | Merohostel.com</title>
+		
+		<link rel="icon" href="img/favicon.ico">
+		<meta content='noodp,noydir' name='robots'/>
+		<meta content='INDEX, FOLLOW' name='GOOGLEBOT'/>
+		<meta content='Merohostel.com' name='author'/>		
+		<meta content="{Hostel Name} is located in {Area}." name="description" >
+		<meta content='<?php echo $name; ?>, hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel, merohostel.com' name='keywords'/>
+
 
 		<!-- Main Styslesheet -->
 		<link rel="stylesheet" href="css/main.css" />
@@ -310,7 +318,7 @@ list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) =
 							padding: 10px 0px;
 
 							">
-								<div class="col-md-3">
+								<div class="col-md-5">
 									<div class="hostelImage">
                                         <?php
                                         $photos = $conn->query("SELECT url FROM photo p
@@ -319,9 +327,9 @@ list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) =
                                         $photos_row = $photos -> fetch_assoc();
                                         if($photos_row != null) {
                                             ?>
-                                            <a class="fancybox" href="<?php echo $photos_row["url"]; ?>"
+                                            <a  class="fancybox" href="<?php echo $photos_row["url"]; ?>"
                                                data-fancybox-group="gallery">
-                                                <img src="<?php echo $photos_row["url"]; ?>"/>
+                                                <img id="firstDetailImage" src="<?php echo $photos_row["url"]; ?>"/>
                                             </a>
                                             <?php
                                             while ($photos_row != null) {
@@ -330,19 +338,21 @@ list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) =
                                                 if ($photos_row["url"] == "")
                                                     break;
                                                 ?>
+                                                <div id="snippetImg">
                                                 <a class="fancybox" href="<?php echo $photos_row["url"];?>"
-                                                   data-fancybox-group="gallery"></a>
+                                                   data-fancybox-group="gallery">  <img src="<?php echo $photos_row["url"]; ?>"/></a>
+                                                 </div>  
                                             <?php }
                                         }else {
                                             ?>
-                                            <img src="img/hostel_icon.png"/>
+                                            <img  id="firstDetailImage" src="img/hostel_icon.png"/>
                                         <?php
                                         }
                                         ?>
 
 									</div>
 								</div>
-								<div class="col-md-9" style="border-left: 2px dotted #ccc;">
+								<div class="col-md-7" id="generalInfo" >
 
 									<h4>General Info</h4>
 									<p>
@@ -401,8 +411,7 @@ list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) =
 							</div><!-- row 2 -->
 
                             <div class="row">
-                                <h3><a id="fee_structure"></a>Fee Structure</h3>
-
+                            	<h3 id="fee_structure"><a name="fee_structure" id="fee_structure"></a>Facilities</h3>                         
                                 <div>
                                     <p></p>
                                     <?php
@@ -414,31 +423,46 @@ list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) =
                                         $bed_2 = $fee_structure["2_bed"];
                                         $bed_3 = $fee_structure["3_bed"];
                                         $bed_4 = $fee_structure["4_bed"];
+										
+										echo '<ul id="fee_details">';
+										
                                         if(!empty($admission)) {
-                                            echo "Admission Fee: ";
+                                        	echo "<li>";
+                                            echo "<b>Admission Fee: </b> ";
                                             echo $admission . "<br>";
+											echo "</li>";
                                         }
                                         if(!empty($security_deposit)){
-
-                                            echo "Security Deposit: ";
+											echo "<li>";
+                                            echo "<b>Security Deposit: </b> ";
                                             echo $security_deposit;
+											echo "</li>";
                                         }
                                         if(!empty($bed_1)) {
-                                            echo "Single Bedded Room: ";
+                                        	echo "<li>";
+                                            echo "<b>Single Bedded Room: </b> ";
                                             echo $bed_1. "<br>";
+											echo "</li>";
                                         }
                                         if(!empty($bed_2)) {
-                                            echo "Two beds per room: ";
+                                        	echo "<li>";
+                                            echo "<b>Two beds per room: </b>";
                                             echo $bed_2. "<br>";
+											echo "</li>";
                                         }
                                         if(!empty($bed_3)) {
-                                            echo "Three beds per room";
+                                        	echo "<li>";
+                                            echo "<b>Three beds per room: </b>";
                                             echo $bed_3. "<br>";
+											echo "</li>";
                                         }
                                         if(!empty($bed_4)) {
-                                            echo "Four beds per room";
+                                        	echo "<li>";
+                                            echo "<b>Four beds per room: </b>";
                                             echo $bed_4. "<br>";
+											echo "</li>";
                                         }
+										echo "</ul>";
                                     ?>
                                 </div>
                             </div><!-- fee structure row -->

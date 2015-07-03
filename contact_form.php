@@ -6,6 +6,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>Contact Merohostel.com | Search hostels in Kathmandu online</title>
+		
+		<link rel="icon" href="img/favicon.ico">
+		<meta content='noodp,noydir' name='robots'/>
+		<meta content='INDEX, FOLLOW' name='GOOGLEBOT'/>
+		<meta content='Merohostel.com' name='author'/>		
+		<meta content="Help, support, and advice from Merohostel’s Customer Service team. To find out how we can help you, submit your question via the contact form." name="description" >
+		<meta content='contact merohsotel.com, contact merohostel, contact hostel nepal, nepal contact hostel, hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel,  merohostel.com' name='keywords'/>
+
 
 		<!-- Main Styslesheet -->
 		<link rel="stylesheet" href="css/main.css" />
@@ -30,10 +38,6 @@
 		<!-- Google Web Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
-
-
-
-
 	</head>
 
 	<body>
@@ -45,31 +49,31 @@
 
 			function mailIt() {
 
-                if (/^[a-zA-Z]*$/.test($("#first_name").val()) == false) {//validating first name
-                    alert("Name should contain only alphabets");
-                    $("#first_name").focus()
-                    return false
-                }
-                if (/^[a-zA-Z]*$/.test($("#last_name").val()) == false) {//validating last name
-                    alert("Name should contain only alphabets");
-                    $("#last_name").focus()
-                    return false
-                }
-                var email = $("#email").val()
-                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                if (!email.match(mailformat))//validating email
-                {
-                    alert("You have entered an invalid email address!");
-                    $("#email").focus()
-                    return false;
-                }
-                var phoneNo = $("#telephone").val()
-                if (/^[0-9]*$/.test($("#telephone").val()) == false) {
-                    alert("Phone Number is should only contain numbers")
-                    $("#telephone").focus()
-                    return false
-                }
-                var first_name = document.getElementById("first_name").value;
+				if (/^[a-zA-Z]*$/.test($("#first_name").val()) == false) {//validating first name
+					alert("Name should contain only alphabets");
+					$("#first_name").focus()
+					return false
+				}
+				if (/^[a-zA-Z]*$/.test($("#last_name").val()) == false) {//validating last name
+					alert("Name should contain only alphabets");
+					$("#last_name").focus()
+					return false
+				}
+				var email = $("#email").val()
+				var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+				if (!email.match(mailformat))//validating email
+				{
+					alert("You have entered an invalid email address!");
+					$("#email").focus()
+					return false;
+				}
+				var phoneNo = $("#telephone").val()
+				if (/^[0-9]*$/.test($("#telephone").val()) == false) {
+					alert("Phone Number is should only contain numbers")
+					$("#telephone").focus()
+					return false
+				}
+				var first_name = document.getElementById("first_name").value;
 				var last_name = document.getElementById("last_name").value;
 				var email = document.getElementById("email").value;
 				var telephone = document.getElementById("telephone").value;
@@ -90,8 +94,8 @@
 					}
 				};
 				http.send(params);
-                $('#submitted').removeClass('hide');
-                return false;
+				$('#submitted').removeClass('hide');
+				return false;
 			}
 
 			$(function() {
@@ -113,7 +117,6 @@
 					return false;
 				});
 			});
-
 
 		</script>
 
@@ -148,19 +151,21 @@
 					<div class="row" style="padding: 20px;">
 
 						<div class="col-md-8">
-                                    <h2 id="deHosTtl">Contact</h2>
-                                <div class="ui positive message hide" id="submitted">
-                                    <div class="header">
-                                        Thanks. Your email has been sent!
-                                    </div>
-                                </div>
-                                <div class="ui negative message hide" id="notSubmitted">
-                                    <div class="header">
-                                        Sorry! We are having trouble. Please try again.
-                                    </div>
-                                </div>
+													
+							<h2 id="deHosTtl">Contact</h2>
+							<div class="ui positive message hide" id="submitted">
+								<div class="header">
+									Thanks. Your email has been sent!
+								</div>
+							</div>
+							<div class="ui negative message hide" id="notSubmitted">
+								<div class="header">
+									Sorry! We are having trouble. Please try again.
+								</div>
+							</div>
 
 							<div id="frameContent" class="row">
+
 								<form class="ui form" style="width: 97%;" name="contactform" method="post"  onsubmit="return mailIt();">
 
 									<div class="two fields">
@@ -213,6 +218,21 @@
 									<div>
 										<input class="ui orange submit button" type = "submit" value = "Submit" name = "submit" />
 									</div>
+									
+									<br/>
+									
+						<div>
+							<h3>Google Map </h3>
+							<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="350" src="https://maps.google.com/maps?hl=en&q=Deerwalk &ie=UTF8&t=m&z=16&iwloc=B&output=embed">
+								<div>
+									<small><a href="http://www.embedgooglemaps.com">embed google map</a></small>
+								</div>
+								<div>
+									<small><a href="http://embedgooglemaps.com">embed google maps here</a></small>
+								</div>
+							</iframe>
+
+						</div>
 
 								</form>
 							</div>
@@ -244,7 +264,7 @@
 					<!-- content -->
 
 					<?php
-	include "footer.php";
+					include "footer.php";
 					?>
 				</div>
 			</div><!-- wrapper -->
