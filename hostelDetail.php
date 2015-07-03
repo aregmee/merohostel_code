@@ -339,7 +339,7 @@
 
 									<h4>General Info</h4>
 									<p>
-										<?php if($location != NULL && $location != "NULL") echo "<a href=\"hostelList.php?location=" . $location . "\"><i class=\"circular inverted orange  point icon\"></i>" . " " . $location . "</a>"
+										<?php if($location != NULL && $location != "NULL") echo "<i class=\"circular inverted orange  point icon\"></i>" . " <a href=\"hostelList.php?location=" . $location . "\">" . $location . "</a>"
 										?>
 									</p>
 									<p>
