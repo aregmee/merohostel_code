@@ -48,17 +48,17 @@
 
 			function mailIt() {
 
-				if (/^[a-zA-Z]*$/.test($("#first_name").val()) == false) {//validating first name
+				if (/^[a-zA-Z]*$/.test($("#first_name").val().trim()) == false) {//validating first name
                     sweetAlert("Oops...", "First Name should only contain alphabets!", "error");
 					$("#first_name").focus()
 					return false
 				}
-				if (/^[a-zA-Z]*$/.test($("#last_name").val()) == false) {//validating last name
+				if (/^[a-zA-Z]*$/.test($("#last_name").val().trim()) == false) {//validating last name
                     sweetAlert("Oops...", "Last Name should only contain alphabets!", "error");
 					$("#last_name").focus();
 					return false
 				}
-				var email = $("#email").val();
+				var email = $("#email").val().trim();
 				var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 				if (!email.match(mailformat))//validating email
 				{
@@ -66,7 +66,7 @@
 					$("#email").focus();
 					return false;
 				}
-				var phoneNo = $("#telephone").val();
+				var phoneNo = $("#telephone").val().trim();
 				if (/^[0-9]*$/.test($("#telephone").val()) == false) {
 
                     sweetAlert("Oops...", "Telephone should only contain numbers!", "error");

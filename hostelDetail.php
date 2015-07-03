@@ -205,27 +205,29 @@
 			});
 
 			function validateReview() {
-				if (/^[a-zA-Z]*$/.test($("#first_name").val()) == false) {//validating first name
-					alert("Name should contain only alphabets");
+				if (/^[a-zA-Z]*$/.test($("#first_name").val().trim()) == false) {//validating first name
+                    sweetAlert("Oops...", "First Name should only contain alphabets!", "error");
 					$("#first_name").focus()
 					return false
 				}
-				if (/^[a-zA-Z]*$/.test($("#last_name").val()) == false) {//validating last name
-					alert("Name should contain only alphabets");
+				if (/^[a-zA-Z]*$/.test($("#last_name").val().trim()) == false) {//validating last name
+                    sweetAlert("Oops...", "Last Name should only contain alphabets!", "error");
 					$("#last_name").focus()
 					return false
 				}
-				var email = $("#email").val()
+				var email = $("#email").val().trim();
 				var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 				if (!email.match(mailformat))//validating email
 				{
-					alert("You have entered an invalid email address!");
+                    sweetAlert("Oops...", "You have entered an invalid email address!", "error");
 					$("#email").focus()
 					return false;
 				}
 				return true;
 			}
         </script>
+        <script src="sweetalert-master/dist/sweetalert.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
 	</head>
 
 	<body>
@@ -235,9 +237,9 @@
 		list($owner_id, $hostel_id, $owner_name, $contact) = $owner_row -> fetch_row();
 		if (isset($_POST['review']) && isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['review_email'])) {
 			$review = $_POST['review'];
-			$first_name = $_POST["firstName"];
-			$last_name = $_POST["lastName"];
-			$review_email = $_POST["review_email"];
+			$first_name = trim($_POST["firstName"]);
+			$last_name = trim($_POST["lastName"]);
+			$review_email = trim($_POST["review_email"]);
 			$date_array = getdate();
 			$date = $date_array["year"] . "-" . $date_array["mon"] . "-" . $date_array["mday"] . " " . $date_array["hours"] . ":" . $date_array["minutes"] . ":" . $date_array["seconds"];
 			$date = date_create($date);

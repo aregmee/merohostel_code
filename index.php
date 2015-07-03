@@ -72,7 +72,7 @@
                     return true;
                 }else{
                     sweetAlert("Oops...", "Please enter the required values", "error");
-                    return false
+                    return false;
                 }
             }
 
