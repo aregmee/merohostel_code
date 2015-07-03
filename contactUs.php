@@ -49,27 +49,28 @@
 			function mailIt() {
 
 				if (/^[a-zA-Z]*$/.test($("#first_name").val()) == false) {//validating first name
-					alert("Name should contain only alphabets");
+                    sweetAlert("Oops...", "First Name should only contain alphabets!", "error");
 					$("#first_name").focus()
 					return false
 				}
 				if (/^[a-zA-Z]*$/.test($("#last_name").val()) == false) {//validating last name
-					alert("Name should contain only alphabets");
-					$("#last_name").focus()
+                    sweetAlert("Oops...", "Last Name should only contain alphabets!", "error");
+					$("#last_name").focus();
 					return false
 				}
-				var email = $("#email").val()
+				var email = $("#email").val();
 				var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 				if (!email.match(mailformat))//validating email
 				{
-					alert("You have entered an invalid email address!");
-					$("#email").focus()
+                    sweetAlert("Oops...", "You have entered an invalid email address!", "error");
+					$("#email").focus();
 					return false;
 				}
-				var phoneNo = $("#telephone").val()
+				var phoneNo = $("#telephone").val();
 				if (/^[0-9]*$/.test($("#telephone").val()) == false) {
-					alert("Phone Number is should only contain numbers")
-					$("#telephone").focus()
+
+                    sweetAlert("Oops...", "Telephone should only contain numbers!", "error");
+					$("#telephone").focus();
 					return false
 				}
 				var first_name = document.getElementById("first_name").value;
@@ -124,6 +125,8 @@
 			});
 
 		</script>
+        <script src="sweetalert-master/dist/sweetalert.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
 
 		<div id="header">
 			<div id="fixedSearch">
@@ -169,18 +172,17 @@
 						<br/>
 						<div class="col-md-8">
 							<h3 style="margin-left: -15px;" id="review"><a name="review" id="review"></a>Contact Form</h3>
-							<div class="ui positive message hide" id="submitted">
-								<div class="header">
-									Thanks. Your email has been sent!
-								</div>
-							</div>
-							<div class="ui negative message hide" id="notSubmitted">
-								<div class="header">
-									Sorry! We are having trouble. Please try again.
-								</div>
-							</div>
-
 							<div id="frameContent" class="row">
+                                <div class="ui positive message hide" id="submitted">
+                                    <div class="header">
+                                        Thanks. Your email has been sent!
+                                    </div>
+                                </div>
+                                <div class="ui negative message hide" id="notSubmitted">
+                                    <div class="header">
+                                        Sorry! We are having trouble. Please try again.
+                                    </div>
+                                </div>
 
 								<form class="ui form" style="width: 97%;" name="contactform" method="post"  onsubmit="return mailIt();">
 
