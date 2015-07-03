@@ -99,7 +99,7 @@
                 document.getElementById("last_name").value = "";
                 document.getElementById("email").value = "";
                 document.getElementById("telephone").value = "";
-                document.getElementById("#comments").value = "";
+                document.getElementById("comment").value = "";
 				return false;
 			}
 
