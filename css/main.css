@@ -380,3 +380,8 @@ div#atstbx a:hover {
 .fancybox-skin {
   margin-top: 10%;
 }
+
+#addHostel .ui.checkbox label {
+	padding-left: 0px;
+}
+

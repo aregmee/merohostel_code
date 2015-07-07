@@ -394,7 +394,7 @@
 							</div><!-- row 2 -->
 
                             <div class="row">
-                            	<h3 id="fee_structure"><a name="fee_structure" id="fee_structure"></a>Facilities</h3>
+                            	<h3 id="fee_structure"><a name="fee_structure" id="fee_structure"></a>Fee Structure</h3>
                                 <div>
                                     <p></p>
                                     <?php $fee_structure_row = $conn -> query("SELECT * FROM fee_structure where id=" . $fee_structure_id);
