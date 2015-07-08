@@ -97,20 +97,23 @@
 											<a href="hostelList.php">All Hostels</a>
 										</li>
 										<li>
-											<a style="padding: 5px 10px;
-												  font-weight: 400;
-												  font-size: 13px;
-												  margin-top: -5px;" 
-												  class="ui orange small button" href="addHostel.php">Add Your Hostels</a>
+											<a style="
+													padding: 2px 7px;
+													  letter-spacing: 0.2px;
+													  font-size: 14px;
+													  margin-top: -2px;
+													    font-family: cambria;
+												" 
+												  class="ui orange small button" href="addHostel.php">Add Your Hostel</a>
 										</li>
-										<li>
+										<!-- <li>
 											<div class="column" style="
 											color: rgb(247, 247, 247);
 											font-weight: bold;
 											">
 												<i class="circular orange inverted mobile icon"></i>9813953967
 											</div>
-										</li>
+										</li> -->
 									</ul>
 								</div>
 								<!-- mainMenu -->
@@ -178,7 +181,7 @@
 					<div class="container">
 
 						<?php
-	include "feedback.php";
+						include "feedback.php";
  ?>
 
 						<div class="row">
