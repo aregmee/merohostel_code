@@ -6,15 +6,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>Find hostels in Kathmandu online | Merohostel.com</title>
-		
+
 		<link rel="icon" href="img/favicon.ico">
 		<meta content='noodp,noydir' name='robots'/>
 		<meta content='INDEX, FOLLOW' name='GOOGLEBOT'/>
-		<meta content='Merohostel.com' name='author'/>		
+		<meta content='Merohostel.com' name='author'/>
 		<meta content="Merohostel.com helps you browse hostels inside Kathmandu valley online. Read reviews from fellow hostellers, view the detailed information & choose a hostel today." name="description" >
 		<meta content='hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel,  merohostel.com' name='keywords'/>
-		
-			
+
 		<!-- Main Styslesheet -->
 		<link rel="stylesheet" href="css/main.css" />
 		<!-- Bootstrap CSS -->
@@ -56,7 +55,7 @@
 							url : "search.php",
 							data : dataString,
 							cache : false,
-							
+
 							success : function(html) {
 								$("#result").html(html).show();
 							}
@@ -65,20 +64,19 @@
 					return false;
 				});
 			});
-			
-		
-            function validateForm(){
-                if($("#genderSelect").val()!='' && $("#result").val()!=''){
-                    return true;
-                }else{
-                    sweetAlert("Oops...", "Please enter the required values", "error");
-                    return false;
-                }
-            }
+
+			function validateForm() {
+				if ($("#genderSelect").val() != '' && $("#result").val() != '') {
+					return true;
+				} else {
+					sweetAlert("Oops...", "Please enter the required values", "error");
+					return false;
+				}
+			}
 
 		</script>
-        <script src="sweetalert-master/dist/sweetalert.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
+		<script src="sweetalert-master/dist/sweetalert.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
 	</head>
 
 	<body>
@@ -97,6 +95,13 @@
 									<ul>
 										<li>
 											<a href="hostelList.php">All Hostels</a>
+										</li>
+										<li>
+											<a style="padding: 5px 10px;
+												  font-weight: 400;
+												  font-size: 13px;
+												  margin-top: -5px;" 
+												  class="ui orange small button" href="addHostel.php">Add Your Hostels</a>
 										</li>
 										<li>
 											<div class="column" style="
@@ -144,15 +149,15 @@
 										</div>
 									</div>
 									<div class="ui search dropdown selection" style="font-size: 16px; min-width: 300px;">
-                                        <!--<i class="red world icon"></i>-->
-                                        <select id="result" name="location">
+										<!--<i class="red world icon"></i>-->
+										<select id="result" name="location">
 											<option value="">Location</option>
-                                        </select>
-                                        <input class="search" tabindex="0">
-                                        <div class="default text">
-                                            Location
-                                        </div><div class="menu" tabindex="-1"></div>
-                                    </div>
+										</select>
+										<input class="search" tabindex="0">
+										<div class="default text">
+											Location
+										</div><div class="menu" tabindex="-1"></div>
+									</div>
 									<!-- location -->
 									<button class="ui orange submit button" style="
 									font-size: 16px;
@@ -169,12 +174,13 @@
 			</div>
 
 			<div id="content">
-				<div id="mainSection">					
+				<div id="mainSection">
 					<div class="container">
-						
-						
-								<?php include "feedback.php"; ?>
-	
+
+						<?php
+	include "feedback.php";
+ ?>
+
 						<div class="row">
 							<h2 class="subTitle"><span style="color: rgb(255, 114, 65);">Favourable</span> Areas</h2>
 							<div class="col-sm-3">
@@ -189,12 +195,11 @@
 
 										echo $row["no_of_hostels"] . " hostels";
 									}
-								?>
-									</span>
+										?></span>
 									<a href="hostelList.php?location=Putalisadak"> <img alt="Putalisadak" title="Putalisadak" src="https://lh3.googleusercontent.com/-uky5eAstr6I/VYZJpH8qIlI/AAAAAAAAAEk/YfDTGhNW9hQ/s288/putalisadak-orbit%252520institute.png" width="100%"  class="effect2"> </a>
 									<p>
-                                        If you are a student taking MBBS entrance courses in VIBRANT or NAME, this might be the best
-                                        place for you to search for hostels.
+										If you are a student taking MBBS entrance courses in VIBRANT or NAME, this might be the best
+										place for you to search for hostels.
 									</p>
 								</div>
 							</div>
@@ -210,12 +215,11 @@
 
 										echo $row["no_of_hostels"] . " hostels";
 									}
-								?>
-									</span>
+										?></span>
 									<a href="hostelList.php?location=Buddhanagar"> <img alt="Buddhanagar" title="Buddhanagar" src="https://lh3.googleusercontent.com/-hDSk0odeaXY/VYZJleJX1vI/AAAAAAAAAEQ/M11rsX9QCUs/s940/alpha%252520beta-buddhanagar.jpg" width="100%"  class="effect2"> </a>
 									<p>
-                                        If you are a student taking Engineering entrance courses in PEA or SEA, this might be the best
-                                        place for you to search for hostels.
+										If you are a student taking Engineering entrance courses in PEA or SEA, this might be the best
+										place for you to search for hostels.
 									</p>
 								</div>
 							</div>
@@ -231,12 +235,11 @@
 
 										echo $row["no_of_hostels"] . " hostels";
 									}
-								?>
-									</span>
+										?></span>
 									<a href="hostelList.php?location=Baneshwor"> <img alt="Baneshwor" title="Baneshwor" src="https://lh3.googleusercontent.com/-qwzCu8dVhFw/VYZJlh1pBhI/AAAAAAAAAEU/pTT_dYRs6vA/s288/baneshwor-hotelnepal.jpg" width="100%"  class="effect2"> </a>
 									<p>
-                                        Crowded streets, engaged people and heavy population reside in New Baneshwor. One of the most
-                                        happening places in Kathmandu.
+										Crowded streets, engaged people and heavy population reside in New Baneshwor. One of the most
+										happening places in Kathmandu.
 									</p>
 								</div>
 							</div>
@@ -252,11 +255,10 @@
 
 										echo $row["no_of_hostels"] . " hostels";
 									}
-								?>
-									</span>
+										?></span>
 									<a href="hostelList.php?location=Shantinagar"> <img alt="Shantinagar" title="Shantinagar" src="https://lh3.googleusercontent.com/-jnm5Z7pV4gM/VYZJoODNKOI/AAAAAAAAAEc/yfUQW2Nqh68/s288/shantinagar-futsal.jpg" width="100%"  class="effect2"> </a>
 									<p>
-                                        Shantinagar has become a hub for hostels in Kathmandu.
+										Shantinagar has become a hub for hostels in Kathmandu.
 									</p>
 								</div>
 							</div>
@@ -271,7 +273,7 @@
 								<div class="whyUsSection">
 									<h3><i class="red large home icon"></i> We Know Hostels!</h3>
 									<p>
-                                        Our team knows about the hostels in kathmandu more than anyone. We are deeply connected in hostel business.
+										Our team knows about the hostels in kathmandu more than anyone. We are deeply connected in hostel business.
 									</p>
 								</div>
 							</div>
@@ -279,16 +281,16 @@
 								<div class="whyUsSection">
 									<h3><i class="red exchange  sign icon"></i> We Connect You!</h3>
 									<p>
-                                       Through Merohostel.com, we connect you to 237 hostels in Kathmandu. Choose the best hostel for you today!
+										Through Merohostel.com, we connect you to 237 hostels in Kathmandu. Choose the best hostel for you today!
 									</p>
 								</div>
 							</div>
-							
+
 							<div class="col-sm-3">
 								<div class="whyUsSection">
 									<h3><i class="red checkmark sign icon"></i> 100% Accurate Information!</h3>
 									<p>
-                                        All of the information in this website is authorized by Hostel Association of Nepal.
+										All of the information in this website is authorized by Hostel Association of Nepal.
 									</p>
 								</div>
 							</div>
@@ -297,7 +299,7 @@
 								<div class="whyUsSection">
 									<h3><i class="red users icon"></i> Group Bookings!</h3>
 									<p>
-                                        If you are in a group of 5 or more, we will find the best hostel for you, with certain deduction in the admission fees.
+										If you are in a group of 5 or more, we will find the best hostel for you, with certain deduction in the admission fees.
 									</p>
 								</div>
 							</div>
@@ -309,8 +311,8 @@
 			<!-- content -->
 
 			<?php
-	include "footer.php";
-?>
+			include "footer.php";
+			?>
 			<!-- footer -->
 		</div>
 
