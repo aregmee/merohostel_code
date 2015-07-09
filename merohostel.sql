@@ -274,3 +274,55 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2015-07-01 21:29:33
+
+/*This is to be run manually
+
+DROP TABLE IF EXISTS `temp_fee_structure`;
+CREATE TABLE `temp_fee_structure` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `admission` int(11),
+  `security_deposit` int(11),
+  `1_bed` varchar(255) DEFAULT NULL,
+  `2_bed` varchar(255) DEFAULT NULL,
+  `3_bed` varchar(255) DEFAULT NULL,
+  `4_bed` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=236 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `temp_hostel` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `gender` varchar(5) NOT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `estd_year` int(11),
+  `fee_structure_id` int(11),
+  `capacity` int(11),
+  PRIMARY KEY (`id`),
+  KEY `fk_temp_fee_st_hostel` (`fee_structure_id`),
+  CONSTRAINT `fk_temp_fee_st_hostel` FOREIGN KEY (`fee_structure_id`) REFERENCES `temp_fee_structure` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=236 DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `temp_owner` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `hostel_id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `contact` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_temp_owner_hostel` (`hostel_id`),
+  CONSTRAINT `fk_temp_owner_hostel` FOREIGN KEY (`hostel_id`) REFERENCES `temp_hostel` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=236 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `temp_hostel_facility` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `hostel_id` int(11) NOT NULL,
+  `facility_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_temp_host_facility` (`hostel_id`),
+  KEY `fk_temp_facility_host` (`facility_id`),
+  CONSTRAINT `fk_temp_facility_host` FOREIGN KEY (`facility_id`) REFERENCES `facility` (`id`),
+  CONSTRAINT `fk_temp_host_facility` FOREIGN KEY (`hostel_id`) REFERENCES `temp_hostel` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=latin1;
+
+
+*/
