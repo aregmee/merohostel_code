@@ -38,10 +38,11 @@ if(isset($name) && isset($gender) && isset($address)){
 	VALUES ('$hos_id ',' $honame ','$cno ')";
     mysqli_query($conn, $sql);
 
-
-    foreach($_POST['facility'] as $selected){
-        $sql = "INSERT INTO temp_hostel_facility (hostel_id, facility_id) VALUES('$hos_id ', '$selected')";
-        mysqli_query($conn, $sql);
+    if(is_array($_POST['facility'])) {
+        foreach ($_POST['facility'] as $selected) {
+            $sql = "INSERT INTO temp_hostel_facility (hostel_id, facility_id) VALUES('$hos_id ', '$selected')";
+            mysqli_query($conn, $sql);
+        }
     }
     $submitted = "true";
 }
