@@ -1,0 +1,388 @@
+body, html {
+	font-family: Georgia, sans-serif;
+	font-size: 16px;
+	color: #31302B;
+	margin: 0;
+	padding: 0;
+	height: 100% !important;
+}
+div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+a:link, a:visited {
+	color: rgb(255, 110, 60);
+	text-decoration: none;
+}
+a:hover {
+	color: rgb(255, 110, 60);
+	text-decoration: underline;
+}
+/*------------------------------------
+ * index.php
+ */
+#lnWrapper {
+	min-height: 100%;
+	position: relative;
+}
+
+#wrapper {
+	min-height: 100%;
+	position: relative;
+	top: 55px;
+}
+#header {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+}
+#mainCover {
+	background: url('../img/kathmandu-city.jpg');
+	background-size: cover;
+	height: 90vh;
+	position: relative;
+	background-attachment: fixed;
+}
+#mainMenu li a {
+	font-size: 16px;
+	color: #fff;
+	line-height: 25px;
+}
+#mainMenu li a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+#mainHeader {
+	padding-top: 20px;
+}
+#content {
+	background-color: #f7f3eb;
+	/*background: #fff url(../img/bg-tile.png) repeat-x top left;*/
+	padding-bottom: 50px; /* Height of the footer element */
+}
+#mainLogo {
+	display: inline-block;
+}
+div#mainTitle h1 {
+	font-size: 70px;
+	color: #FFF;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+div#mainTitle {
+	position: absolute;
+	top: 30%;
+	text-align: center;
+	left: 0;
+	right: 0;
+}
+#mainMenu {
+	display: inline-block;
+	float: right;
+}
+#mainMenu ul li {
+	list-style: none;
+	float: left;
+	margin-left: 10px;
+}
+#mainSearch {
+	background: #000;
+	background: rgba(0,0,0,0.6);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#mainSection {
+	background: #f7f3eb;
+	padding-top: 10px;
+}
+#featuredHostel {
+	background: #fff;
+	padding: 20px 0px;
+}
+.subSection {
+	padding: 10px 0px 20px 0px;
+	color: #676056;
+}
+.whyUsSection {
+	padding: 10px 0px 20px 0px;
+	color: #676056;
+}
+.whyUsSection  h3{
+	font-size: 17px;
+}
+.whyUsSection p {
+	text-align: justify;
+}
+.subSection h2 {
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+.subSection a, .subSection a:hover {
+	color: rgb(255, 112, 62);
+}
+.subSection img {
+	margin-top: 5px;
+	height: 200px;
+}
+#mainFooter {
+	background: #31302b;
+	color: #fff;
+}
+#mainFooter ul li {
+	list-style: none;
+	float: left;
+	line-height: 50px;
+	margin-left: 15px;
+	font-size: 13px;
+}
+#footer {
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+h2.subTitle {
+	text-align: center;
+	font-size: 30px;
+	color: #31302b;
+	letter-spacing: .04em;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 10px;
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+}
+
+/*h2. {
+ color: #333 !important;
+ font-size: 26px;
+ line-height: 30px;
+ font-weight: normal;
+ margin: 0;
+ }*/
+.address {
+	font-size: 11px;
+	margin-bottom: 12px;
+	margin-top: 7px;
+}
+#firstDetailImage {
+	width: 100%;
+	height: 213px;
+}
+div#snippetImg img {
+	width: 65px;
+	display: inline-block;
+	float: left;
+	margin-top: 10px;
+	margin-left: 3px;
+	height: 60px;
+	border: 1px solid #999;
+}
+h3#facilities {
+	border-bottom: 1px dotted #ccc;
+	margin-top: 20px;
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+}
+h3#review {
+	border-bottom: 1px dotted #ccc;
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+}
+h3#fee_structure {
+	border-bottom: 1px dotted #ccc;
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+}
+#fee_details {
+	list-style: none;
+}
+#fee_details  li {
+	padding-top: 3px;
+}
+h3#shareHostel {
+	border-bottom: 1px dotted #ccc;
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+	margin-top: 20px;
+}
+.facilities {
+	/*margin-bottom: 20px;*/
+	width: 690px;
+}
+ul.facilitylist {
+	list-style: none;
+}
+.facilitylist li {
+	width: 190px;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 15px;
+	background: url(http://icd.hwstatic.com/static/images/1.32.7.0/HW-sprites-microsite.png) no-repeat;
+	background-position: 0 -226px;
+	padding-left: 20px;
+}
+
+#feedback a {
+	display: block;
+	position: fixed;
+	top: 200px;
+	left: -1px;
+}
+
+/*------------------------------------
+ * hostelList.php
+ */
+div#fixedSearch {
+	background: #7B756B;
+	padding: 10px;
+	text-align: center;
+	width: 100%;
+}
+.ui.dropdown.selection {
+	border: 0;
+	border-radius: 0;
+}
+
+.hostelThumb {
+	display: inline-block;
+	width: 245px;
+	margin-left: 30px;
+	margin-bottom: 20px;
+}
+.extra.content a {
+	text-decoration: none;
+}
+div#pager {
+	text-align: center;
+}
+.pagination {
+	display: inline-block;
+	padding-left: 0px;
+	margin: 20px 0px;
+	border-radius: 4px;
+}
+a#hpName {
+	background: rgb(99, 210, 205);
+	color: #fff;
+	font-size: 18px;
+	font-family: cursive;
+}
+
+#footer a:link, #footer a:hover, #footer a:visited {
+
+	color: #fff;
+	text-decoration: none;
+}
+
+/*
+ div#result {
+ position: absolute;
+ background-color: #fff;
+ width: 100%;
+ padding: 10px;
+ border: 1px solid #eee;
+ z-index: 999;
+ cursor: pointer;
+ }
+ div#result .show {
+ padding: 7px 15px;
+ border-bottom: 1px solid #ddd;
+ }
+ div#result .show:last-child {
+ border: none;
+ }
+ div#result .show:first-child {
+
+ }
+
+ */
+
+#deHosTtl {
+	color: rgb(255, 110, 60);
+	margin-left: -15px;
+	word-spacing: 3px;
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+}
+
+.unselectable {
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#frameContent {
+	min-height: 100vh;;
+}
+#tocBullets  li {
+	word-spacing: 3px;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+
+.modal-header {
+
+	color: rgb(255, 110, 60);
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+	padding: 10px 20px;
+}
+h4#myModalLabel {
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+	letter-spacing: 0.5px;
+	word-spacing: 2px;
+	font-size: 18px;
+}
+.modal-dialog.modal-lg {
+	padding-top: 3%;
+}
+div#atstbx a:hover {
+	opacity: 0.5;
+}
+#contactDetails p {
+	font-size: 15px;
+	word-spacing: 3px;
+	margin: 8px 0px;
+}
+#feedbackModal .ui.checkbox label {
+	padding-left: 0px;
+}
+#feedbackModal .modal-header {
+	border-bottom: 0;
+}
+#messageFeedback {
+	font-family: "Oswald", sans-serif;
+	font-weight: 200;
+	font-size: 20px;
+	text-align: center;
+	line-height: 15px;
+	padding: 10px;
+}
+.ui.card img {
+	width: 100%;
+	height: 220px;
+}
+#generalInfo {
+	border-left: 2px dotted #ccc;
+}
+.fancybox-skin {
+  margin-top: 10%;
+}
+
+#addHostel .ui.checkbox label {
+	padding-left: 0px;
+}
+
