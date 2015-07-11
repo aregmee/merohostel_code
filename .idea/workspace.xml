@@ -1,8 +1,773 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1f0672a-8076-4cae-a676-2ee64d43c782" name="Default" comment="add hostel feature added">
+    <list default="true" id="f1f0672a-8076-4cae-a676-2ee64d43c782" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/1mero-hostel-logo.png" afterPath="$PROJECT_DIR$/img/1mero-hostel-logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/font_awesome/fonts/FontAwesome.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/fonts/GreatVibes-Regular.ttf" afterPath="$PROJECT_DIR$/font_awesome/fonts/GreatVibes-Regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/bg-tile.png" afterPath="$PROJECT_DIR$/img/bg-tile.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/images/bg.jpg" afterPath="$PROJECT_DIR$/semantic/examples/images/bg.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fancy_box/blank.gif" afterPath="$PROJECT_DIR$/fancy_box/blank.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fancy_box/blank.gif" afterPath="$PROJECT_DIR$/js/fancy_box/blank.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/blue-bg.jpg" afterPath="$PROJECT_DIR$/img/blue-bg.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/bootstrap3/elements/button.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/bootstrap3/elements/button.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/round/elements/button.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/round/elements/button.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/images/cat.png" afterPath="$PROJECT_DIR$/semantic/examples/images/cat.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/images/wireframe/centered-paragraph.png" afterPath="$PROJECT_DIR$/semantic/examples/images/wireframe/centered-paragraph.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/cover_desktop_2.jpg" afterPath="$PROJECT_DIR$/img/cover_desktop_2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fancy_box/helpers/fancybox_buttons.png" afterPath="$PROJECT_DIR$/fancy_box/helpers/fancybox_buttons.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fancy_box/helpers/fancybox_buttons.png" afterPath="$PROJECT_DIR$/js/fancy_box/helpers/fancybox_buttons.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fancy_box/fancybox_loading.gif" afterPath="$PROJECT_DIR$/fancy_box/fancybox_loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fancy_box/fancybox_loading.gif" afterPath="$PROJECT_DIR$/js/fancy_box/fancybox_loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fancy_box/fancybox_loading@2x.gif" afterPath="$PROJECT_DIR$/fancy_box/fancybox_loading@2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fancy_box/fancybox_loading@2x.gif" afterPath="$PROJECT_DIR$/js/fancy_box/fancybox_loading@2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fancy_box/fancybox_overlay.png" afterPath="$PROJECT_DIR$/fancy_box/fancybox_overlay.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fancy_box/fancybox_overlay.png" afterPath="$PROJECT_DIR$/js/fancy_box/fancybox_overlay.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fancy_box/fancybox_sprite.png" afterPath="$PROJECT_DIR$/fancy_box/fancybox_sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fancy_box/fancybox_sprite.png" afterPath="$PROJECT_DIR$/js/fancy_box/fancybox_sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fancy_box/fancybox_sprite@2x.png" afterPath="$PROJECT_DIR$/fancy_box/fancybox_sprite@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fancy_box/fancybox_sprite@2x.png" afterPath="$PROJECT_DIR$/js/fancy_box/fancybox_sprite@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/favicon.ico" afterPath="$PROJECT_DIR$/img/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/feedback.png" afterPath="$PROJECT_DIR$/img/feedback.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/themes/default/assets/images/flags.png" afterPath="$PROJECT_DIR$/semantic/dist/themes/default/assets/images/flags.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/assets/images/flags.png" afterPath="$PROJECT_DIR$/semantic/src/themes/default/assets/images/flags.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/font_awesome/fonts/fontawesome-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/font_awesome/fonts/fontawesome-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/font_awesome/fonts/fontawesome-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/hostel.jpg" afterPath="$PROJECT_DIR$/img/hostel.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/hostel_color.png" afterPath="$PROJECT_DIR$/img/hostel_color.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/hostel_icon.png" afterPath="$PROJECT_DIR$/img/hostel_icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/themes/basic/assets/fonts/icons.eot" afterPath="$PROJECT_DIR$/semantic/dist/themes/basic/assets/fonts/icons.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/themes/default/assets/fonts/icons.eot" afterPath="$PROJECT_DIR$/semantic/dist/themes/default/assets/fonts/icons.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/assets/fonts/icons.eot" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/assets/fonts/icons.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/assets/fonts/icons.eot" afterPath="$PROJECT_DIR$/semantic/src/themes/default/assets/fonts/icons.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/themes/default/assets/fonts/icons.otf" afterPath="$PROJECT_DIR$/semantic/dist/themes/default/assets/fonts/icons.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/themes/basic/assets/fonts/icons.ttf" afterPath="$PROJECT_DIR$/semantic/dist/themes/basic/assets/fonts/icons.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/themes/default/assets/fonts/icons.ttf" afterPath="$PROJECT_DIR$/semantic/dist/themes/default/assets/fonts/icons.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/assets/fonts/icons.ttf" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/assets/fonts/icons.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/assets/fonts/icons.ttf" afterPath="$PROJECT_DIR$/semantic/src/themes/default/assets/fonts/icons.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/themes/default/assets/fonts/icons.woff2" afterPath="$PROJECT_DIR$/semantic/dist/themes/default/assets/fonts/icons.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/assets/fonts/icons.woff2" afterPath="$PROJECT_DIR$/semantic/src/themes/default/assets/fonts/icons.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/themes/basic/assets/fonts/icons.woff" afterPath="$PROJECT_DIR$/semantic/dist/themes/basic/assets/fonts/icons.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/themes/default/assets/fonts/icons.woff" afterPath="$PROJECT_DIR$/semantic/dist/themes/default/assets/fonts/icons.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/assets/fonts/icons.woff" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/assets/fonts/icons.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/assets/fonts/icons.woff" afterPath="$PROJECT_DIR$/semantic/src/themes/default/assets/fonts/icons.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/images/wireframe/image-square.png" afterPath="$PROJECT_DIR$/semantic/examples/images/wireframe/image-square.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/images/wireframe/image-text.png" afterPath="$PROJECT_DIR$/semantic/examples/images/wireframe/image-text.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/images/wireframe/image.png" afterPath="$PROJECT_DIR$/semantic/examples/images/wireframe/image.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/kathmandu-city.jpg" afterPath="$PROJECT_DIR$/img/kathmandu-city.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/logo.png" afterPath="$PROJECT_DIR$/semantic/logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/example/images/logo_big.png" afterPath="$PROJECT_DIR$/sweetalert-master/example/images/logo_big.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/example/images/logo_big@2x.png" afterPath="$PROJECT_DIR$/sweetalert-master/example/images/logo_big@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/example/images/logo_small.png" afterPath="$PROJECT_DIR$/sweetalert-master/example/images/logo_small.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/example/images/logo_small@2x.png" afterPath="$PROJECT_DIR$/sweetalert-master/example/images/logo_small@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/images/wireframe/media-paragraph-alt.png" afterPath="$PROJECT_DIR$/semantic/examples/images/wireframe/media-paragraph-alt.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/images/wireframe/media-paragraph.png" afterPath="$PROJECT_DIR$/semantic/examples/images/wireframe/media-paragraph.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/mero-hostel-logo - Copy.psd" afterPath="$PROJECT_DIR$/img/mero-hostel-logo - Copy.psd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/mero-hostel-logo.png" afterPath="$PROJECT_DIR$/img/mero-hostel-logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/mero-hostel-logo.psd" afterPath="$PROJECT_DIR$/img/mero-hostel-logo.psd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/gmail/collections/message.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/gmail/collections/message.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/images/wireframe/paragraph.png" afterPath="$PROJECT_DIR$/semantic/examples/images/wireframe/paragraph.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/images/wireframe/short-paragraph.png" afterPath="$PROJECT_DIR$/semantic/examples/images/wireframe/short-paragraph.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/material/globals/site.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/material/globals/site.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/small_thumbail.png" afterPath="$PROJECT_DIR$/img/small_thumbail.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/images/wireframe/square-image.png" afterPath="$PROJECT_DIR$/semantic/examples/images/wireframe/square-image.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/sweetalert.gif" afterPath="$PROJECT_DIR$/sweetalert-master/sweetalert.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/images/wireframe/text-image.png" afterPath="$PROJECT_DIR$/semantic/examples/images/wireframe/text-image.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/thanks.png" afterPath="$PROJECT_DIR$/img/thanks.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/thumbail.png" afterPath="$PROJECT_DIR$/img/thumbail.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/example/images/thumbs-up.jpg" afterPath="$PROJECT_DIR$/sweetalert-master/example/images/thumbs-up.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/video.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/video.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/example/images/vs_icon.png" afterPath="$PROJECT_DIR$/sweetalert-master/example/images/vs_icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/example/images/vs_icon@2x.png" afterPath="$PROJECT_DIR$/sweetalert-master/example/images/vs_icon@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/images/wireframe/white-image.png" afterPath="$PROJECT_DIR$/semantic/examples/images/wireframe/white-image.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/.csscomb.json" afterPath="$PROJECT_DIR$/semantic/.csscomb.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/.csslintrc" afterPath="$PROJECT_DIR$/semantic/.csslintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/.editorconfig" afterPath="$PROJECT_DIR$/sweetalert-master/.editorconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/.gitignore" afterPath="$PROJECT_DIR$/semantic/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/.gitignore" afterPath="$PROJECT_DIR$/sweetalert-master/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/.jshintrc" afterPath="$PROJECT_DIR$/semantic/.jshintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/.jshintrc" afterPath="$PROJECT_DIR$/sweetalert-master/.jshintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/semantic/CONTRIBUTING.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBConnection.php" afterPath="$PROJECT_DIR$/DBConnection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/LICENSE.md" afterPath="$PROJECT_DIR$/semantic/LICENSE.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/LICENSE" afterPath="$PROJECT_DIR$/sweetalert-master/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/README.md" afterPath="$PROJECT_DIR$/semantic/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/README.md" afterPath="$PROJECT_DIR$/semantic/src/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/README.md" afterPath="$PROJECT_DIR$/semantic/tasks/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/collections/README.md" afterPath="$PROJECT_DIR$/semantic/tasks/collections/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/admin/templates/README.md" afterPath="$PROJECT_DIR$/semantic/tasks/config/admin/templates/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/README.md" afterPath="$PROJECT_DIR$/sweetalert-master/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/RELEASE-NOTES.md" afterPath="$PROJECT_DIR$/semantic/RELEASE-NOTES.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/font_awesome/scss/_bordered-pulled.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/scss/_core.scss" afterPath="$PROJECT_DIR$/font_awesome/scss/_core.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/font_awesome/scss/_fixed-width.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/scss/_icons.scss" afterPath="$PROJECT_DIR$/font_awesome/scss/_icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/scss/_larger.scss" afterPath="$PROJECT_DIR$/font_awesome/scss/_larger.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/scss/_list.scss" afterPath="$PROJECT_DIR$/font_awesome/scss/_list.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/scss/_mixins.scss" afterPath="$PROJECT_DIR$/font_awesome/scss/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/scss/_path.scss" afterPath="$PROJECT_DIR$/font_awesome/scss/_path.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/font_awesome/scss/_rotated-flipped.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/scss/_spinning.scss" afterPath="$PROJECT_DIR$/font_awesome/scss/_spinning.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/scss/_stacked.scss" afterPath="$PROJECT_DIR$/font_awesome/scss/_stacked.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/scss/_variables.scss" afterPath="$PROJECT_DIR$/font_awesome/scss/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about.php" afterPath="$PROJECT_DIR$/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/accordion.css" afterPath="$PROJECT_DIR$/semantic/dist/components/accordion.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/fixtures/accordion.html" afterPath="$PROJECT_DIR$/semantic/test/fixtures/accordion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/accordion.js" afterPath="$PROJECT_DIR$/semantic/dist/components/accordion.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/accordion.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/accordion.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/accordion.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/accordion.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/accordion.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/accordion.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/accordion.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/accordion.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/accordion.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/accordion.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/chubby/modules/accordion.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/chubby/modules/accordion.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/accordion.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/accordion.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/modules/accordion.spec.js" afterPath="$PROJECT_DIR$/semantic/test/modules/accordion.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/accordion.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/accordion.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/chubby/modules/accordion.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/chubby/modules/accordion.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/accordion.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/accordion.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/ad.css" afterPath="$PROJECT_DIR$/semantic/dist/components/ad.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/views/ad.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/views/ad.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/ad.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/ad.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/views/ad.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/views/ad.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/views/ad.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/views/ad.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/views/ad.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/views/ad.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/views/ad.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/views/ad.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addHostel.php" afterPath="$PROJECT_DIR$/addHostel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/collections/admin.js" afterPath="$PROJECT_DIR$/semantic/tasks/collections/admin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/api.js" afterPath="$PROJECT_DIR$/semantic/dist/components/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/behaviors/api.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/behaviors/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/api.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/api.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/meteor/assets.js" afterPath="$PROJECT_DIR$/semantic/test/meteor/assets.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/bootstrap.css" afterPath="$PROJECT_DIR$/bootstrap/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/bootstrap.js" afterPath="$PROJECT_DIR$/bootstrap/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/font_awesome/less/bordered-pulled.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/bower.json" afterPath="$PROJECT_DIR$/semantic/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/admin/templates/bower.json" afterPath="$PROJECT_DIR$/semantic/tasks/config/admin/templates/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/bower.json" afterPath="$PROJECT_DIR$/sweetalert-master/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/breadcrumb.css" afterPath="$PROJECT_DIR$/semantic/dist/components/breadcrumb.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/collections/breadcrumb.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/collections/breadcrumb.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/breadcrumb.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/breadcrumb.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/collections/breadcrumb.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/collections/breadcrumb.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/collections/breadcrumb.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/collections/breadcrumb.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/collections/breadcrumb.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/collections/breadcrumb.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/collections/breadcrumb.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/collections/breadcrumb.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/build.js" afterPath="$PROJECT_DIR$/semantic/tasks/build.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/docs/build.js" afterPath="$PROJECT_DIR$/semantic/tasks/docs/build.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/rtl/build.js" afterPath="$PROJECT_DIR$/semantic/tasks/rtl/build.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/button.css" afterPath="$PROJECT_DIR$/semantic/dist/components/button.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/button.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/button.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/button.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/button.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/button.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/button.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/amazon/elements/button.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/amazon/elements/button.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/elements/button.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/elements/button.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/chubby/elements/button.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/chubby/elements/button.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/classic/elements/button.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/classic/elements/button.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/button.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/button.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/github/elements/button.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/github/elements/button.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/material/elements/button.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/material/elements/button.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/raised/elements/button.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/raised/elements/button.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/twitter/elements/button.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/twitter/elements/button.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/button.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/button.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/amazon/elements/button.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/amazon/elements/button.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/elements/button.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/elements/button.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/bootstrap3/elements/button.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/bootstrap3/elements/button.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/chubby/elements/button.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/chubby/elements/button.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/classic/elements/button.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/classic/elements/button.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/button.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/button.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/github/elements/button.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/github/elements/button.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/material/elements/button.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/material/elements/button.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/raised/elements/button.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/raised/elements/button.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/round/elements/button.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/round/elements/button.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/twitter/elements/button.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/twitter/elements/button.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/card.css" afterPath="$PROJECT_DIR$/semantic/dist/components/card.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/views/card.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/views/card.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/card.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/card.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/views/card.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/views/card.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/views/card.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/views/card.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/classic/views/card.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/classic/views/card.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/views/card.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/views/card.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/views/card.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/views/card.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/views/card.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/views/card.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/classic/views/card.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/classic/views/card.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/views/card.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/views/card.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/chatroom.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/chatroom.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/chatroom.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/chatroom.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/chatroom.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/chatroom.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/chatroom.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/chatroom.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/check-install.js" afterPath="$PROJECT_DIR$/semantic/tasks/check-install.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/checkbox.css" afterPath="$PROJECT_DIR$/semantic/dist/components/checkbox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/fixtures/checkbox.html" afterPath="$PROJECT_DIR$/semantic/test/fixtures/checkbox.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/checkbox.js" afterPath="$PROJECT_DIR$/semantic/dist/components/checkbox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/checkbox.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/checkbox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/checkbox.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/checkbox.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/checkbox.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/checkbox.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/checkbox.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/checkbox.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/checkbox.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/checkbox.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/checkbox.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/checkbox.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/modules/checkbox.spec.js" afterPath="$PROJECT_DIR$/semantic/test/modules/checkbox.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/checkbox.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/checkbox.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/checkbox.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/checkbox.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/clean.js" afterPath="$PROJECT_DIR$/semantic/tasks/clean.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/behaviors/colorize.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/behaviors/colorize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/comment.css" afterPath="$PROJECT_DIR$/semantic/dist/components/comment.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/views/comment.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/views/comment.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/comment.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/comment.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/views/comment.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/views/comment.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/chubby/views/comment.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/chubby/views/comment.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/views/comment.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/views/comment.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/views/comment.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/views/comment.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/chubby/views/comment.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/chubby/views/comment.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/views/comment.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/views/comment.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/admin/templates/component-package.js" afterPath="$PROJECT_DIR$/semantic/tasks/config/admin/templates/component-package.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/composer.json" afterPath="$PROJECT_DIR$/semantic/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/admin/templates/composer.json" afterPath="$PROJECT_DIR$/semantic/tasks/config/admin/templates/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/project/config.js" afterPath="$PROJECT_DIR$/semantic/tasks/config/project/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contactUs.php" afterPath="$PROJECT_DIR$/contactUs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/less/core.less" afterPath="$PROJECT_DIR$/font_awesome/less/core.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/admin/components/create.js" afterPath="$PROJECT_DIR$/semantic/tasks/admin/components/create.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/admin/distributions/create.js" afterPath="$PROJECT_DIR$/semantic/tasks/admin/distributions/create.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/admin/templates/css-package.js" afterPath="$PROJECT_DIR$/semantic/tasks/config/admin/templates/css-package.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/dev/modules/default-params.js" afterPath="$PROJECT_DIR$/sweetalert-master/dev/modules/default-params.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/defaults.js" afterPath="$PROJECT_DIR$/semantic/tasks/config/defaults.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/dimmer.css" afterPath="$PROJECT_DIR$/semantic/dist/components/dimmer.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/dimmer.js" afterPath="$PROJECT_DIR$/semantic/dist/components/dimmer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/dimmer.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/dimmer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/dimmer.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/dimmer.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/dimmer.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/dimmer.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/dimmer.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/dimmer.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/dimmer.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/dimmer.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/dimmer.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/dimmer.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/dimmer.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/dimmer.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/dimmer.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/dimmer.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/divider.css" afterPath="$PROJECT_DIR$/semantic/dist/components/divider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/divider.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/divider.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/divider.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/divider.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/divider.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/divider.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/divider.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/divider.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/divider.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/divider.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/divider.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/divider.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/docs.js" afterPath="$PROJECT_DIR$/semantic/tasks/config/docs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/dropdown.css" afterPath="$PROJECT_DIR$/semantic/dist/components/dropdown.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/fixtures/dropdown.html" afterPath="$PROJECT_DIR$/semantic/test/fixtures/dropdown.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/dropdown.js" afterPath="$PROJECT_DIR$/semantic/dist/components/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/dropdown.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/dropdown.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/dropdown.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/dropdown.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/dropdown.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/dropdown.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/dropdown.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/dropdown.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/dropdown.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/dropdown.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/dropdown.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/modules/dropdown.spec.js" afterPath="$PROJECT_DIR$/semantic/test/modules/dropdown.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/dropdown.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/dropdown.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/dropdown.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/dropdown.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/example/example.css" afterPath="$PROJECT_DIR$/sweetalert-master/example/example.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/example/example.scss" afterPath="$PROJECT_DIR$/sweetalert-master/example/example.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/themes/facebook/facebook.css" afterPath="$PROJECT_DIR$/sweetalert-master/themes/facebook/facebook.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/themes/facebook/facebook.scss" afterPath="$PROJECT_DIR$/sweetalert-master/themes/facebook/facebook.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/feed.css" afterPath="$PROJECT_DIR$/semantic/dist/components/feed.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/feed.css" afterPath="$PROJECT_DIR$/semantic/examples/feed.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/feed.html" afterPath="$PROJECT_DIR$/semantic/examples/feed.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/feed.js" afterPath="$PROJECT_DIR$/semantic/examples/feed.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/views/feed.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/views/feed.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/feed.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/feed.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/views/feed.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/views/feed.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/views/feed.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/views/feed.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/timeline/views/feed.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/timeline/views/feed.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/views/feed.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/views/feed.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/views/feed.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/views/feed.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/timeline/views/feed.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/timeline/views/feed.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feedback.php" afterPath="$PROJECT_DIR$/feedback.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/less/fixed-width.less" afterPath="$PROJECT_DIR$/font_awesome/less/fixed-width.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/flag.css" afterPath="$PROJECT_DIR$/semantic/dist/components/flag.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/flag.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/flag.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/flag.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/flag.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/flag.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/flag.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/flag.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/flag.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/flag.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/flag.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/flag.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/flag.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/font_awesome/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/less/font-awesome.less" afterPath="$PROJECT_DIR$/font_awesome/less/font-awesome.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/font_awesome/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/font_awesome/scss/font-awesome.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/font_awesome/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/meteor/fonts.js" afterPath="$PROJECT_DIR$/semantic/test/meteor/fonts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/form.css" afterPath="$PROJECT_DIR$/semantic/dist/components/form.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/form.js" afterPath="$PROJECT_DIR$/semantic/dist/components/form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/behaviors/form.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/behaviors/form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/collections/form.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/collections/form.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/form.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/form.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/form.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/form.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/collections/form.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/collections/form.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/chubby/collections/form.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/chubby/collections/form.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/collections/form.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/collections/form.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/flat/collections/form.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/flat/collections/form.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/github/collections/form.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/github/collections/form.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/collections/form.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/collections/form.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/chubby/collections/form.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/chubby/collections/form.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/collections/form.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/collections/form.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/flat/collections/form.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/flat/collections/form.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/github/collections/form.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/github/collections/form.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getLocation.php" afterPath="$PROJECT_DIR$/getLocation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/admin/github.js" afterPath="$PROJECT_DIR$/semantic/tasks/config/admin/github.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/themes/google/google.css" afterPath="$PROJECT_DIR$/sweetalert-master/themes/google/google.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/themes/google/google.scss" afterPath="$PROJECT_DIR$/sweetalert-master/themes/google/google.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/grid.css" afterPath="$PROJECT_DIR$/semantic/dist/components/grid.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/grid.css" afterPath="$PROJECT_DIR$/semantic/examples/grid.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/grid.html" afterPath="$PROJECT_DIR$/semantic/examples/grid.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/collections/grid.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/collections/grid.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/grid.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/grid.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/collections/grid.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/collections/grid.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/collections/grid.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/collections/grid.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/fixed-width/collections/grid.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/fixed-width/collections/grid.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/collections/grid.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/collections/grid.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/collections/grid.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/collections/grid.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/fixed-width/collections/grid.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/fixed-width/collections/grid.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/dev/gulpfile-wrap-template.js" afterPath="$PROJECT_DIR$/sweetalert-master/dev/gulpfile-wrap-template.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/gulpfile.js" afterPath="$PROJECT_DIR$/semantic/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/npm/gulpfile.js" afterPath="$PROJECT_DIR$/semantic/tasks/config/npm/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/gulpfile.js" afterPath="$PROJECT_DIR$/sweetalert-master/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/dev/modules/handle-click.js" afterPath="$PROJECT_DIR$/sweetalert-master/dev/modules/handle-click.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/dev/modules/handle-dom.js" afterPath="$PROJECT_DIR$/sweetalert-master/dev/modules/handle-dom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/dev/modules/handle-key.js" afterPath="$PROJECT_DIR$/sweetalert-master/dev/modules/handle-key.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/dev/modules/handle-swal-dom.js" afterPath="$PROJECT_DIR$/sweetalert-master/dev/modules/handle-swal-dom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/header.css" afterPath="$PROJECT_DIR$/semantic/dist/components/header.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/header.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/header.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/header.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/header.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/header.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/header.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/bookish/elements/header.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/bookish/elements/header.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/chubby/elements/header.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/chubby/elements/header.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/classic/elements/header.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/classic/elements/header.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/header.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/header.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/material/elements/header.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/material/elements/header.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/header.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/header.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/bookish/elements/header.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/bookish/elements/header.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/chubby/elements/header.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/chubby/elements/header.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/classic/elements/header.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/classic/elements/header.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/header.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/header.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/material/elements/header.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/material/elements/header.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/homepage.css" afterPath="$PROJECT_DIR$/semantic/examples/homepage.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/homepage.html" afterPath="$PROJECT_DIR$/semantic/examples/homepage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/homepage.js" afterPath="$PROJECT_DIR$/semantic/examples/homepage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hostelDetail.php" afterPath="$PROJECT_DIR$/hostelDetail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hostelList.php" afterPath="$PROJECT_DIR$/hostelList.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/html5shiv.js" afterPath="$PROJECT_DIR$/bootstrap/html5shiv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/html5shiv.min.js" afterPath="$PROJECT_DIR$/bootstrap/html5shiv.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/icon.css" afterPath="$PROJECT_DIR$/semantic/dist/components/icon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/icon.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/icon.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/icon.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/icon.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/icon.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/icon.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/elements/icon.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/elements/icon.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/icon.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/icon.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/icon.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/icon.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/elements/icon.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/elements/icon.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/icon.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/icon.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/less/icons.less" afterPath="$PROJECT_DIR$/font_awesome/less/icons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/themes/basic/assets/fonts/icons.svg" afterPath="$PROJECT_DIR$/semantic/dist/themes/basic/assets/fonts/icons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/themes/default/assets/fonts/icons.svg" afterPath="$PROJECT_DIR$/semantic/dist/themes/default/assets/fonts/icons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/assets/fonts/icons.svg" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/assets/fonts/icons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/assets/fonts/icons.svg" afterPath="$PROJECT_DIR$/semantic/src/themes/default/assets/fonts/icons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/dev/ie9.css" afterPath="$PROJECT_DIR$/sweetalert-master/dev/ie9.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/image.css" afterPath="$PROJECT_DIR$/semantic/dist/components/image.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/image.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/image.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/image.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/image.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/image.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/image.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/image.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/image.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/image.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/image.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/image.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/image.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/index.html" afterPath="$PROJECT_DIR$/sweetalert-master/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/admin/components/init.js" afterPath="$PROJECT_DIR$/semantic/tasks/admin/components/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/admin/distributions/init.js" afterPath="$PROJECT_DIR$/semantic/tasks/admin/distributions/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/dev/modules/injected-html.js" afterPath="$PROJECT_DIR$/sweetalert-master/dev/modules/injected-html.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/input.css" afterPath="$PROJECT_DIR$/semantic/dist/components/input.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/input.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/input.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/input.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/input.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/input.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/input.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/input.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/input.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/input.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/input.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/input.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/input.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/install.js" afterPath="$PROJECT_DIR$/semantic/tasks/install.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/project/install.js" afterPath="$PROJECT_DIR$/semantic/tasks/config/project/install.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/collections/internal.js" afterPath="$PROJECT_DIR$/semantic/tasks/collections/internal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/item.css" afterPath="$PROJECT_DIR$/semantic/dist/components/item.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/views/item.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/views/item.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/item.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/item.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/views/item.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/views/item.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/views/item.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/views/item.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/views/item.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/views/item.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/views/item.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/views/item.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/helpers/jasmine-clog.js" afterPath="$PROJECT_DIR$/semantic/test/helpers/jasmine-clog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/helpers/jasmine-jquery.js" afterPath="$PROJECT_DIR$/semantic/test/helpers/jasmine-jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/helpers/jasmine-sinon.js" afterPath="$PROJECT_DIR$/semantic/test/helpers/jasmine-sinon.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery-1.10.2.js" afterPath="$PROJECT_DIR$/js/jquery-1.10.2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/helpers/jquery-events.js" afterPath="$PROJECT_DIR$/semantic/test/helpers/jquery-events.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery-ui.js" afterPath="$PROJECT_DIR$/js/jquery-ui.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.address.js" afterPath="$PROJECT_DIR$/js/jquery.address.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fancy_box/helpers/jquery.fancybox-buttons.css" afterPath="$PROJECT_DIR$/fancy_box/helpers/jquery.fancybox-buttons.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fancy_box/helpers/jquery.fancybox-buttons.css" afterPath="$PROJECT_DIR$/js/fancy_box/helpers/jquery.fancybox-buttons.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fancy_box/helpers/jquery.fancybox-buttons.js" afterPath="$PROJECT_DIR$/fancy_box/helpers/jquery.fancybox-buttons.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fancy_box/helpers/jquery.fancybox-buttons.js" afterPath="$PROJECT_DIR$/js/fancy_box/helpers/jquery.fancybox-buttons.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fancy_box/helpers/jquery.fancybox-media.js" afterPath="$PROJECT_DIR$/fancy_box/helpers/jquery.fancybox-media.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fancy_box/helpers/jquery.fancybox-media.js" afterPath="$PROJECT_DIR$/js/fancy_box/helpers/jquery.fancybox-media.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fancy_box/helpers/jquery.fancybox-thumbs.css" afterPath="$PROJECT_DIR$/fancy_box/helpers/jquery.fancybox-thumbs.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fancy_box/helpers/jquery.fancybox-thumbs.css" afterPath="$PROJECT_DIR$/js/fancy_box/helpers/jquery.fancybox-thumbs.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fancy_box/helpers/jquery.fancybox-thumbs.js" afterPath="$PROJECT_DIR$/fancy_box/helpers/jquery.fancybox-thumbs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fancy_box/helpers/jquery.fancybox-thumbs.js" afterPath="$PROJECT_DIR$/js/fancy_box/helpers/jquery.fancybox-thumbs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fancy_box/jquery.fancybox.css" afterPath="$PROJECT_DIR$/fancy_box/jquery.fancybox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fancy_box/jquery.fancybox.css" afterPath="$PROJECT_DIR$/js/fancy_box/jquery.fancybox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fancy_box/jquery.fancybox.js" afterPath="$PROJECT_DIR$/fancy_box/jquery.fancybox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fancy_box/jquery.fancybox.js" afterPath="$PROJECT_DIR$/js/fancy_box/jquery.fancybox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fancy_box/jquery.fancybox.pack.js" afterPath="$PROJECT_DIR$/fancy_box/jquery.fancybox.pack.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fancy_box/jquery.fancybox.pack.js" afterPath="$PROJECT_DIR$/js/fancy_box/jquery.fancybox.pack.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.min.js" afterPath="$PROJECT_DIR$/js/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.mousewheel-3.0.6.pack.js" afterPath="$PROJECT_DIR$/js/jquery.mousewheel-3.0.6.pack.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/karma.conf.js" afterPath="$PROJECT_DIR$/semantic/karma.conf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/kitchensink.css" afterPath="$PROJECT_DIR$/semantic/examples/kitchensink.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/examples/kitchensink.html" afterPath="$PROJECT_DIR$/semantic/examples/kitchensink.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/label.css" afterPath="$PROJECT_DIR$/semantic/dist/components/label.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/label.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/label.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/label.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/label.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/label.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/label.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/label.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/label.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/label.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/label.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/label.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/label.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/less/larger.less" afterPath="$PROJECT_DIR$/font_awesome/less/larger.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/admin/templates/less-package.js" afterPath="$PROJECT_DIR$/semantic/tasks/config/admin/templates/less-package.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/list.css" afterPath="$PROJECT_DIR$/semantic/dist/components/list.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/less/list.less" afterPath="$PROJECT_DIR$/font_awesome/less/list.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/list.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/list.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/list.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/list.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/list.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/list.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/list.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/list.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/list.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/list.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/list.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/list.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/loader.css" afterPath="$PROJECT_DIR$/semantic/dist/components/loader.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/loader.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/loader.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/loader.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/loader.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/loader.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/loader.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/loader.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/loader.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/duo/elements/loader.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/duo/elements/loader.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/pulsar/elements/loader.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/pulsar/elements/loader.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/loader.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/loader.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/loader.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/loader.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/duo/elements/loader.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/duo/elements/loader.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/pulsar/elements/loader.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/pulsar/elements/loader.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/menu.css" afterPath="$PROJECT_DIR$/semantic/dist/components/menu.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/collections/menu.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/collections/menu.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/menu.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/menu.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/collections/menu.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/collections/menu.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/collections/menu.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/collections/menu.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/github/collections/menu.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/github/collections/menu.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/collections/menu.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/collections/menu.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/collections/menu.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/collections/menu.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/github/collections/menu.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/github/collections/menu.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/merohostel.sql" afterPath="$PROJECT_DIR$/merohostel.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/merohostel.sql" afterPath="$PROJECT_DIR$/sql/merohostel.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/merohostel_view.iml" afterPath="$PROJECT_DIR$/.idea/merohostel_view.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/message.css" afterPath="$PROJECT_DIR$/semantic/dist/components/message.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/collections/message.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/collections/message.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/message.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/message.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/collections/message.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/collections/message.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/collections/message.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/collections/message.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/github/collections/message.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/github/collections/message.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/collections/message.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/collections/message.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/collections/message.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/collections/message.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/github/collections/message.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/github/collections/message.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/gmail/collections/message.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/gmail/collections/message.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/less/mixins.less" afterPath="$PROJECT_DIR$/font_awesome/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/modal.css" afterPath="$PROJECT_DIR$/semantic/dist/components/modal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/fixtures/modal.html" afterPath="$PROJECT_DIR$/semantic/test/fixtures/modal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/modal.js" afterPath="$PROJECT_DIR$/semantic/dist/components/modal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/modal.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/modal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/modal.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/modal.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/modal.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/modal.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/modal.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/modal.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/modal.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/modal.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/modal.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/modal.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/fixed-width/modules/modal.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/fixed-width/modules/modal.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/material/modules/modal.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/material/modules/modal.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/modules/modal.spec.js" afterPath="$PROJECT_DIR$/semantic/test/modules/modal.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/modal.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/modal.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/modal.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/modal.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/fixed-width/modules/modal.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/fixed-width/modules/modal.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/material/modules/modal.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/material/modules/modal.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/modules/module.spec.js" afterPath="$PROJECT_DIR$/semantic/test/modules/module.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/nag.css" afterPath="$PROJECT_DIR$/semantic/dist/components/nag.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/nag.js" afterPath="$PROJECT_DIR$/semantic/dist/components/nag.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/nag.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/nag.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/nag.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/nag.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/nag.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/nag.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/nag.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/nag.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/nag.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/nag.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/nag.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/nag.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/nag.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/nag.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/nag.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/nag.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nav_search.php" afterPath="$PROJECT_DIR$/nav_search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/admin/oauth.example.js" afterPath="$PROJECT_DIR$/semantic/tasks/config/admin/oauth.example.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/package.json" afterPath="$PROJECT_DIR$/semantic/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/admin/templates/package.json" afterPath="$PROJECT_DIR$/semantic/tasks/config/admin/templates/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/package.json" afterPath="$PROJECT_DIR$/sweetalert-master/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/less/path.less" afterPath="$PROJECT_DIR$/font_awesome/less/path.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/popup.css" afterPath="$PROJECT_DIR$/semantic/dist/components/popup.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/fixtures/popup.html" afterPath="$PROJECT_DIR$/semantic/test/fixtures/popup.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/popup.js" afterPath="$PROJECT_DIR$/semantic/dist/components/popup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/popup.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/popup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/popup.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/popup.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/popup.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/popup.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/popup.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/popup.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/popup.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/popup.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/popup.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/popup.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/modules/popup.spec.js" afterPath="$PROJECT_DIR$/semantic/test/modules/popup.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/popup.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/popup.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/popup.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/popup.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/progress.css" afterPath="$PROJECT_DIR$/semantic/dist/components/progress.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/progress.js" afterPath="$PROJECT_DIR$/semantic/dist/components/progress.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/progress.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/progress.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/progress.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/progress.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/progress.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/progress.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/progress.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/progress.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/progress.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/progress.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/modules/progress.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/modules/progress.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/classic/modules/progress.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/classic/modules/progress.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/progress.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/progress.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/striped/modules/progress.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/striped/modules/progress.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/progress.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/progress.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/modules/progress.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/modules/progress.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/classic/modules/progress.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/classic/modules/progress.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/progress.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/progress.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/striped/modules/progress.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/striped/modules/progress.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/admin/publish.js" afterPath="$PROJECT_DIR$/semantic/tasks/admin/publish.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/rail.css" afterPath="$PROJECT_DIR$/semantic/dist/components/rail.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/rail.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/rail.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/rail.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/rail.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/rail.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/rail.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/rail.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/rail.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/rail.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/rail.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/rail.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/rail.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/rating.css" afterPath="$PROJECT_DIR$/semantic/dist/components/rating.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/fixtures/rating.html" afterPath="$PROJECT_DIR$/semantic/test/fixtures/rating.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/rating.js" afterPath="$PROJECT_DIR$/semantic/dist/components/rating.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/rating.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/rating.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/rating.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/rating.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/rating.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/rating.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/rating.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/rating.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/rating.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/rating.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/rating.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/rating.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/rating.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/rating.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/rating.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/rating.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/admin/register.js" afterPath="$PROJECT_DIR$/semantic/tasks/admin/register.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/admin/release.js" afterPath="$PROJECT_DIR$/semantic/tasks/admin/release.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/admin/release.js" afterPath="$PROJECT_DIR$/semantic/tasks/config/admin/release.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/project/release.js" afterPath="$PROJECT_DIR$/semantic/tasks/config/project/release.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/reset.css" afterPath="$PROJECT_DIR$/semantic/dist/components/reset.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/globals/reset.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/globals/reset.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/reset.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/reset.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/globals/reset.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/globals/reset.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/globals/reset.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/globals/reset.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/globals/reset.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/globals/reset.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/resetcss/globals/reset.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/resetcss/globals/reset.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/globals/reset.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/globals/reset.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/globals/reset.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/globals/reset.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/globals/reset.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/globals/reset.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/resetcss/globals/reset.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/resetcss/globals/reset.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/respond.min.js" afterPath="$PROJECT_DIR$/bootstrap/respond.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/reveal.css" afterPath="$PROJECT_DIR$/semantic/dist/components/reveal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/reveal.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/reveal.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/reveal.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/reveal.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/reveal.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/reveal.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/reveal.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/reveal.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/reveal.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/reveal.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/reveal.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/reveal.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/font_awesome/less/rotated-flipped.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/search.css" afterPath="$PROJECT_DIR$/semantic/dist/components/search.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/search.js" afterPath="$PROJECT_DIR$/semantic/dist/components/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/search.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/search.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/search.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/search.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/search.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/search.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/search.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/search.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/search.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/search.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/search.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/modules/search.spec.js" afterPath="$PROJECT_DIR$/semantic/test/modules/search.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/search.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/search.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/search.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/search.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/segment.css" afterPath="$PROJECT_DIR$/semantic/dist/components/segment.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/segment.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/segment.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/segment.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/segment.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/segment.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/segment.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/segment.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/segment.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/github/elements/segment.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/github/elements/segment.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/segment.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/segment.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/segment.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/segment.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/github/elements/segment.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/github/elements/segment.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/semantic.css" afterPath="$PROJECT_DIR$/semantic/dist/semantic.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/semantic.js" afterPath="$PROJECT_DIR$/semantic/dist/semantic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/semantic.json.example" afterPath="$PROJECT_DIR$/semantic/semantic.json.example" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/semantic.less" afterPath="$PROJECT_DIR$/semantic/src/semantic.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/semantic.min.css" afterPath="$PROJECT_DIR$/semantic/dist/semantic.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/semantic.min.js" afterPath="$PROJECT_DIR$/semantic/dist/semantic.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_feedback.php" afterPath="$PROJECT_DIR$/send_feedback.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_form_email.php" afterPath="$PROJECT_DIR$/send_form_email.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/docs/serve.js" afterPath="$PROJECT_DIR$/semantic/tasks/docs/serve.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/dev/modules/set-params.js" afterPath="$PROJECT_DIR$/sweetalert-master/dev/modules/set-params.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/shape.css" afterPath="$PROJECT_DIR$/semantic/dist/components/shape.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/fixtures/shape.html" afterPath="$PROJECT_DIR$/semantic/test/fixtures/shape.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/shape.js" afterPath="$PROJECT_DIR$/semantic/dist/components/shape.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/shape.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/shape.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/shape.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/shape.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/shape.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/shape.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/shape.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/shape.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/shape.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/shape.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/shape.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/shape.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/modules/shape.spec.js" afterPath="$PROJECT_DIR$/semantic/test/modules/shape.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/shape.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/shape.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/shape.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/shape.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/sidebar.css" afterPath="$PROJECT_DIR$/semantic/dist/components/sidebar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/fixtures/sidebar.html" afterPath="$PROJECT_DIR$/semantic/test/fixtures/sidebar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/sidebar.js" afterPath="$PROJECT_DIR$/semantic/dist/components/sidebar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/sidebar.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/sidebar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/sidebar.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/sidebar.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/sidebar.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/sidebar.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/sidebar.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/sidebar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/sidebar.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/sidebar.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/sidebar.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/sidebar.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/modules/sidebar.spec.js" afterPath="$PROJECT_DIR$/semantic/test/modules/sidebar.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/sidebar.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/sidebar.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/sidebar.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/sidebar.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/helpers/sinon.js" afterPath="$PROJECT_DIR$/semantic/test/helpers/sinon.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/site.css" afterPath="$PROJECT_DIR$/semantic/dist/components/site.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/site.js" afterPath="$PROJECT_DIR$/semantic/dist/components/site.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/globals/site.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/globals/site.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/globals/site.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/globals/site.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/site.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/site.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/site.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/site.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/globals/site.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/globals/site.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/globals/site.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/globals/site.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/flat/globals/site.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/flat/globals/site.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/rtl/globals/site.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/rtl/globals/site.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/globals/site.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/globals/site.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/globals/site.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/globals/site.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/flat/globals/site.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/flat/globals/site.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/material/globals/site.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/material/globals/site.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/rtl/globals/site.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/rtl/globals/site.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fancy_box/slider_helper.js" afterPath="$PROJECT_DIR$/js/fancy_box/slider_helper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/less/spinning.less" afterPath="$PROJECT_DIR$/font_awesome/less/spinning.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/less/stacked.less" afterPath="$PROJECT_DIR$/font_awesome/less/stacked.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/state.js" afterPath="$PROJECT_DIR$/semantic/dist/components/state.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/behaviors/state.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/behaviors/state.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/state.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/state.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/statistic.css" afterPath="$PROJECT_DIR$/semantic/dist/components/statistic.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/views/statistic.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/views/statistic.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/statistic.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/statistic.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/views/statistic.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/views/statistic.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/views/statistic.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/views/statistic.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/views/statistic.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/views/statistic.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/views/statistic.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/views/statistic.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/step.css" afterPath="$PROJECT_DIR$/semantic/dist/components/step.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/elements/step.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/elements/step.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/step.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/step.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/step.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/step.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/elements/step.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/elements/step.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/step.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/step.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/github/elements/step.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/github/elements/step.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/elements/step.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/elements/step.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/elements/step.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/elements/step.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/elements/step.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/elements/step.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/github/elements/step.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/github/elements/step.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/sticky.css" afterPath="$PROJECT_DIR$/semantic/dist/components/sticky.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/sticky.js" afterPath="$PROJECT_DIR$/semantic/dist/components/sticky.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/sticky.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/sticky.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/sticky.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/sticky.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/sticky.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/sticky.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/sticky.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/sticky.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/sticky.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/sticky.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/sticky.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/sticky.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/sticky.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/sticky.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/sticky.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/sticky.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/dist/sweetalert-dev.js" afterPath="$PROJECT_DIR$/sweetalert-master/dist/sweetalert-dev.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/dist/sweetalert.css" afterPath="$PROJECT_DIR$/sweetalert-master/dist/sweetalert.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/dev/sweetalert.es6.js" afterPath="$PROJECT_DIR$/sweetalert-master/dev/sweetalert.es6.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/dist/sweetalert.min.js" afterPath="$PROJECT_DIR$/sweetalert-master/dist/sweetalert.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/dev/sweetalert.scss" afterPath="$PROJECT_DIR$/sweetalert-master/dev/sweetalert.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/tab.css" afterPath="$PROJECT_DIR$/semantic/dist/components/tab.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/fixtures/tab.html" afterPath="$PROJECT_DIR$/semantic/test/fixtures/tab.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/tab.js" afterPath="$PROJECT_DIR$/semantic/dist/components/tab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/tab.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/tab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/tab.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/tab.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/tab.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/tab.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/tab.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/tab.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/tab.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/tab.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/tab.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/tab.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/modules/tab.spec.js" afterPath="$PROJECT_DIR$/semantic/test/modules/tab.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/tab.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/tab.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/tab.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/tab.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/table.css" afterPath="$PROJECT_DIR$/semantic/dist/components/table.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/collections/table.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/collections/table.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/table.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/table.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/collections/table.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/collections/table.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/collections/table.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/collections/table.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/classic/collections/table.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/classic/collections/table.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/collections/table.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/collections/table.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/collections/table.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/collections/table.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/basic/collections/table.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/basic/collections/table.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/classic/collections/table.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/classic/collections/table.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/collections/table.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/collections/table.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/project/tasks.js" afterPath="$PROJECT_DIR$/semantic/tasks/config/project/tasks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/example/images/te-logo-small.svg" afterPath="$PROJECT_DIR$/sweetalert-master/example/images/te-logo-small.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/terms_and_conditions.php" afterPath="$PROJECT_DIR$/terms_and_conditions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/theme.config.example" afterPath="$PROJECT_DIR$/semantic/src/theme.config.example" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/theme.less" afterPath="$PROJECT_DIR$/semantic/src/theme.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/transition.css" afterPath="$PROJECT_DIR$/semantic/dist/components/transition.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/fixtures/transition.html" afterPath="$PROJECT_DIR$/semantic/test/fixtures/transition.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/transition.js" afterPath="$PROJECT_DIR$/semantic/dist/components/transition.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/transition.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/transition.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/transition.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/transition.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/transition.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/transition.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/transition.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/transition.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/transition.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/transition.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/transition.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/transition.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/modules/transition.spec.js" afterPath="$PROJECT_DIR$/semantic/test/modules/transition.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/transition.variables" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/transition.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/transition.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/transition.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/themes/twitter/twitter.css" afterPath="$PROJECT_DIR$/sweetalert-master/themes/twitter/twitter.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/themes/twitter/twitter.scss" afterPath="$PROJECT_DIR$/sweetalert-master/themes/twitter/twitter.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/typeahead.js" afterPath="$PROJECT_DIR$/js/typeahead.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/admin/components/update.js" afterPath="$PROJECT_DIR$/semantic/tasks/admin/components/update.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/admin/distributions/update.js" afterPath="$PROJECT_DIR$/semantic/tasks/admin/distributions/update.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/config/user.js" afterPath="$PROJECT_DIR$/semantic/tasks/config/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sweetalert-master/dev/modules/utils.js" afterPath="$PROJECT_DIR$/sweetalert-master/dev/modules/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font_awesome/less/variables.less" afterPath="$PROJECT_DIR$/font_awesome/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/version.js" afterPath="$PROJECT_DIR$/semantic/tasks/version.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/video.css" afterPath="$PROJECT_DIR$/semantic/dist/components/video.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/fixtures/video.html" afterPath="$PROJECT_DIR$/semantic/test/fixtures/video.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/video.js" afterPath="$PROJECT_DIR$/semantic/dist/components/video.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/video.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/video.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/modules/video.less" afterPath="$PROJECT_DIR$/semantic/src/definitions/modules/video.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/video.min.css" afterPath="$PROJECT_DIR$/semantic/dist/components/video.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/video.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/video.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/_site/modules/video.overrides" afterPath="$PROJECT_DIR$/semantic/src/_site/modules/video.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/video.overrides" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/video.overrides" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/test/modules/video.spec.js" afterPath="$PROJECT_DIR$/semantic/test/modules/video.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/themes/default/modules/video.variables" afterPath="$PROJECT_DIR$/semantic/src/themes/default/modules/video.variables" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/visibility.js" afterPath="$PROJECT_DIR$/semantic/dist/components/visibility.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/behaviors/visibility.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/behaviors/visibility.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/dist/components/visibility.min.js" afterPath="$PROJECT_DIR$/semantic/dist/components/visibility.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/src/definitions/behaviors/visit.js" afterPath="$PROJECT_DIR$/semantic/src/definitions/behaviors/visit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/watch.js" afterPath="$PROJECT_DIR$/semantic/tasks/watch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/semantic/tasks/rtl/watch.js" afterPath="$PROJECT_DIR$/semantic/tasks/rtl/watch.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="97c1566f-f5a9-495e-b107-7dd6122a5903" name="Failed commit: Default" comment="Contact Us made" />
@@ -30,12 +795,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/main.js">
+      <file leaf-file-name="DBConnection.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBConnection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28753993" vertical-offset="0" max-vertical-offset="626">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="180">
+              <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hostelDetail.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hostelDetail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.15280136" vertical-offset="0" max-vertical-offset="8790">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+              <folding>
+                <marker date="1436623984036" expanded="true" signature="125:160" placeholder="SELECT * fro..hostel..." />
+                <marker date="1436623984036" expanded="true" signature="6670:6730" placeholder="SELECT * fro..review..." />
+                <marker date="1436623984036" expanded="true" signature="6910:6958" placeholder="SELECT * fro..owner..." />
+                <marker date="1436623984036" expanded="true" signature="7631:7736" placeholder="INSERT INTO ..." />
+                <marker date="1436623984036" expanded="true" signature="9328:9541" placeholder="SELECT url F..photo..." />
+                <marker date="1436623984036" expanded="true" signature="12609:12907" placeholder="SELECT DISTI..facility..." />
+                <marker date="1436623984036" expanded="true" signature="14293:14330" placeholder="SELECT * FRO..fee_structure..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,11 +862,12 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/contactUs.php" />
         <option value="$PROJECT_DIR$/hostelList.php" />
-        <option value="$PROJECT_DIR$/hostelDetail.php" />
-        <option value="$PROJECT_DIR$/DBConnection.php" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/addHostel.php" />
         <option value="$PROJECT_DIR$/merohostel.sql" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/DBConnection.php" />
+        <option value="$PROJECT_DIR$/hostelDetail.php" />
       </list>
     </option>
   </component>
@@ -92,9 +876,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1366" />
-    <option name="height" value="772" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -137,20 +921,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="merohostel_view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="merohostel_code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -180,7 +950,7 @@
     <property name="options.lastSelected" value="preferences.lookFeel" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="prompt&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="hostelDetail.php: 352&#9;null&#9;null&#10;prompt&#9;null&#9;null" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RecentsManager">
@@ -192,6 +962,122 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/js" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/DBConnection.php</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/contactUs.php</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/css/main.css</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/hostelDetail.php</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/index.php</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -208,9 +1094,6 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -218,6 +1101,9 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -531,47 +1417,48 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="24" width="1366" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.863706" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32779455" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34214503" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.63399696" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.863706" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.63399696" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.336858" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -592,7 +1479,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Contact Us made" />
     <MESSAGE value="Merge branch 'master' of https://github.com/aregmee/merohostel_code&#10;&#10;Conflicts:&#10;&#9;search.php&#10;&#9;second_page.php&#10;" />
     <MESSAGE value="Footer seperated in a php file" />
     <MESSAGE value="first_page renamed to index" />
@@ -617,7 +1503,8 @@
     <MESSAGE value="sweet alert and alert messages" />
     <MESSAGE value="several bugs fixed" />
     <MESSAGE value="add hostel feature added" />
-    <option name="LAST_COMMIT_MESSAGE" value="add hostel feature added" />
+    <MESSAGE value="minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -626,6 +1513,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hostelList.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4995">
@@ -752,13 +1646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3600">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/mero-hostel-logo.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -869,7 +1756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="2580">
           <caret line="49" column="38" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -894,41 +1780,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBConnection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07475083" vertical-offset="0" max-vertical-offset="602">
-          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hostelDetail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-59.25" vertical-offset="5418" max-vertical-offset="8775">
-          <caret line="460" column="32" selection-start-line="460" selection-start-column="32" selection-end-line="466" selection-end-column="42" />
-          <folding>
-            <marker date="1436405546295" expanded="true" signature="-1:-1" placeholder="SELECT * fro..hostel..." />
-            <marker date="1436405546295" expanded="true" signature="-1:-1" placeholder="SELECT * fro..review..." />
-            <marker date="1436405546295" expanded="true" signature="-1:-1" placeholder="SELECT * fro..owner..." />
-            <marker date="1436405546295" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1436405546295" expanded="true" signature="-1:-1" placeholder="SELECT url F..photo..." />
-            <marker date="1436405546295" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..facility..." />
-            <marker date="1436405546295" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..fee_structure..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5602716" vertical-offset="1260" max-vertical-offset="4905">
           <caret line="106" column="63" selection-start-line="106" selection-start-column="63" selection-end-line="106" selection-end-column="63" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1436405546303" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
-            <marker date="1436405546303" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
-            <marker date="1436405546303" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
-            <marker date="1436405546303" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..hostel..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -936,21 +1791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2801358" vertical-offset="0" max-vertical-offset="5400">
           <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1436414505262" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1436414505262" expanded="true" signature="-1:-1" placeholder="SELECT id FR..temp_fee_structure..." />
-            <marker date="1436414505262" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1436414505262" expanded="true" signature="-1:-1" placeholder="SELECT id FR..temp_hostel..." />
-            <marker date="1436414505262" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1436414505262" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -958,42 +1798,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5990415" vertical-offset="0" max-vertical-offset="5910">
           <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hostelList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6876061" vertical-offset="2865" max-vertical-offset="4590">
-          <caret line="218" column="141" selection-start-line="218" selection-start-column="141" selection-end-line="218" selection-end-column="141" />
-          <folding>
-            <marker date="1436405546295" expanded="true" signature="-1:-1" placeholder="select DISTI..hostel..." />
-            <marker date="1436405546295" expanded="true" signature="-1:-1" placeholder="select DISTI..hostel..." />
-            <marker date="1436405546295" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..hostel..." />
-            <marker date="1436405546295" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..hostel..." />
-            <marker date="1436405546295" expanded="true" signature="-1:-1" placeholder="SELECT url F..photo..." />
-            <marker date="1436405546295" expanded="true" signature="-1:-1" placeholder="select DISTI..hostel..." />
-            <marker date="1436405546295" expanded="true" signature="-1:-1" placeholder="select DISTI..hostel..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/merohostel.sql">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30232558" vertical-offset="3986" max-vertical-offset="4995">
           <caret line="277" column="28" selection-start-line="277" selection-start-column="28" selection-end-line="277" selection-end-column="28" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28753993" vertical-offset="0" max-vertical-offset="626">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hostelList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.050933786" vertical-offset="0" max-vertical-offset="4590">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBConnection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="180">
+          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hostelDetail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15280136" vertical-offset="0" max-vertical-offset="8790">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding>
+            <marker date="1436623984036" expanded="true" signature="125:160" placeholder="SELECT * fro..hostel..." />
+            <marker date="1436623984036" expanded="true" signature="6670:6730" placeholder="SELECT * fro..review..." />
+            <marker date="1436623984036" expanded="true" signature="6910:6958" placeholder="SELECT * fro..owner..." />
+            <marker date="1436623984036" expanded="true" signature="7631:7736" placeholder="INSERT INTO ..." />
+            <marker date="1436623984036" expanded="true" signature="9328:9541" placeholder="SELECT url F..photo..." />
+            <marker date="1436623984036" expanded="true" signature="12609:12907" placeholder="SELECT DISTI..facility..." />
+            <marker date="1436623984036" expanded="true" signature="14293:14330" placeholder="SELECT * FRO..fee_structure..." />
+          </folding>
         </state>
       </provider>
     </entry>

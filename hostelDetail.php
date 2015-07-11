@@ -4,6 +4,7 @@
 	include 'DBConnection.php';
 	$hostel_row = $conn -> query("SELECT * from hostel where id='$id'");
 	list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) = $hostel_row -> fetch_row();
+    $email = "";
 ?>
 <html>
 	<head>
