@@ -97,14 +97,7 @@
 											<a href="hostelList.php">All Hostels</a>
 										</li>
 										<li>
-											<a style="
-													padding: 2px 7px;
-													  letter-spacing: 0.2px;
-													  font-size: 14px;
-													  margin-top: -2px;
-													    font-family: cambria;
-												" 
-												  class="ui orange small button" href="addHostel.php">Add Your Hostel</a>
+											<a style="font-size: 14px" id="addHostelBtn" href="addHostel.php">Add Your Hostel</a>
 										</li>
 										<!-- <li>
 											<div class="column" style="
@@ -185,7 +178,7 @@
  ?>
 
 						<div class="row">
-							<h2 class="subTitle"><span style="color: rgb(255, 114, 65);">Favourable</span> Areas</h2>
+							<h2 class="subTitle"><span style="color: rgb(255, 114, 65);">Featured</span> Areas</h2>
 							<div class="col-sm-3">
 								<div class="subSection">
 									<h2><a href="hostelList.php?location=Putalisadak">Putalisadak</a></h2>

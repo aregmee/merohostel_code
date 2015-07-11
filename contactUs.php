@@ -37,24 +37,76 @@
 		<!-- Google Web Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
+		<style>
+			#map-canvas {
+				height: 400px;
+				margin: 0px;
+				padding: 0px;
+				margin-bottom: -55px;
+			}
+		</style>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+		<script>
+			// In this example, we center the map, and add a marker, using a LatLng object
+			// literal instead of a google.maps.LatLng object. LatLng object literals are
+			// a convenient way to add a LatLng coordinate and, in most cases, can be used
+			// in place of a google.maps.LatLng object.
+
+			var map;
+			function initialize() {
+				var mapOptions = {
+					zoom : 16,
+					center : {
+						lat : 27.7120170,
+						lng : 85.3427396
+					}
+				};
+				map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+				var marker = new google.maps.Marker({
+					// The below line is equivalent to writing:
+					// position: new google.maps.LatLng(-34.397, 150.644)
+					position : {
+						lat : 27.7120170,
+						lng : 85.3427396
+					},
+
+					map : map
+				});
+
+				// You can use a LatLng literal in place of a google.maps.LatLng object when
+				// creating the Marker object. Once the Marker object is instantiated, its
+				// position will be available as a google.maps.LatLng object. In this case,
+				// we retrieve the marker's position using the
+				// google.maps.LatLng.getPosition() method.
+				var infowindow = new google.maps.InfoWindow({
+					// content: '<p>Marker Location:' + marker.getPosition() + '</p>'
+					content : '<h4 style="font-weight: bold; font-size: 18px; margin-bottom: 0px;margin-top: 5px;;">MeroHostel.com</h4><p>Siphal, Kathmandu</p>'
+
+				});
+				google.maps.event.addListener(marker, 'click', function() {
+					infowindow.open(map, marker);
+				});
+			}
+
+
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+
 	</head>
 
 	<body>
 
 		<script type="text/javascript">
-			$(document).ready(function() {
-
-			});
-
 			function mailIt() {
 
 				if (/^[a-zA-Z]*$/.test($("#first_name").val().trim()) == false) {//validating first name
-                    sweetAlert("Oops...", "First Name should only contain alphabets!", "error");
+					sweetAlert("Oops...", "First Name should only contain alphabets!", "error");
 					$("#first_name").focus()
 					return false
 				}
 				if (/^[a-zA-Z]*$/.test($("#last_name").val().trim()) == false) {//validating last name
-                    sweetAlert("Oops...", "Last Name should only contain alphabets!", "error");
+					sweetAlert("Oops...", "Last Name should only contain alphabets!", "error");
 					$("#last_name").focus();
 					return false
 				}
@@ -62,14 +114,14 @@
 				var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 				if (!email.match(mailformat))//validating email
 				{
-                    sweetAlert("Oops...", "You have entered an invalid email address!", "error");
+					sweetAlert("Oops...", "You have entered an invalid email address!", "error");
 					$("#email").focus();
 					return false;
 				}
 				var phoneNo = $("#telephone").val().trim();
 				if (/^[0-9]*$/.test($("#telephone").val()) == false) {
 
-                    sweetAlert("Oops...", "Telephone should only contain numbers!", "error");
+					sweetAlert("Oops...", "Telephone should only contain numbers!", "error");
 					$("#telephone").focus();
 					return false
 				}
@@ -96,11 +148,11 @@
 				http.send(params);
 				$('#submitted').removeClass('hide');
 
-                document.getElementById("first_name").value = "";
-                document.getElementById("last_name").value = "";
-                document.getElementById("email").value = "";
-                document.getElementById("telephone").value = "";
-                document.getElementById("comment").value = "";
+				document.getElementById("first_name").value = "";
+				document.getElementById("last_name").value = "";
+				document.getElementById("email").value = "";
+				document.getElementById("telephone").value = "";
+				document.getElementById("comment").value = "";
 				return false;
 			}
 
@@ -125,8 +177,8 @@
 			});
 
 		</script>
-        <script src="sweetalert-master/dist/sweetalert.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
+		<script src="sweetalert-master/dist/sweetalert.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
 
 		<div id="header">
 			<div id="fixedSearch">
@@ -146,6 +198,8 @@
 			</div><!-- fixedSearch -->
 		</div><!-- header-->
 
+		<div id="map-canvas"></div>
+
 		<div id="wrapper">
 
 			<div id="content">
@@ -159,30 +213,34 @@
 					<div class="row" style="padding: 20px;">
 
 						<h2 style="margin-left: 0px;" id="deHosTtl">Contact</h2>
+
+						<!--
 						<div>
-							<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="350" src="https://maps.google.com/maps?hl=en&q=Deerwalk &ie=UTF8&t=m&z=16&iwloc=B&output=embed">
-								<div>
-									<small><a href="http://www.embedgooglemaps.com">embed google map</a></small>
-								</div>
-								<div>
-									<small><a href="http://embedgooglemaps.com">embed google maps here</a></small>
-								</div>
-							</iframe>
+
+						<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="350" src="https://maps.google.com/maps?hl=en&q=Deerwalk &ie=UTF8&t=m&z=16&iwloc=B&output=embed">
+						<div>
+						<small><a href="http://www.embedgooglemaps.com">embed google map</a></small>
 						</div>
+						<div>
+						<small><a href="http://embedgooglemaps.com">embed google maps here</a></small>
+						</div>
+						</iframe>
+						</div>-->
+
 						<br/>
 						<div class="col-md-8">
 							<h3 style="margin-left: -15px;" id="review"><a name="review" id="review"></a>Contact Form</h3>
 							<div id="frameContent" class="row">
-                                <div class="ui positive message hide" id="submitted">
-                                    <div class="header">
-                                        Thanks. Your email has been sent!
-                                    </div>
-                                </div>
-                                <div class="ui negative message hide" id="notSubmitted">
-                                    <div class="header">
-                                        Sorry! We are having trouble. Please try again.
-                                    </div>
-                                </div>
+								<div class="ui positive message hide" id="submitted">
+									<div class="header">
+										Thanks. Your email has been sent!
+									</div>
+								</div>
+								<div class="ui negative message hide" id="notSubmitted">
+									<div class="header">
+										Sorry! We are having trouble. Please try again.
+									</div>
+								</div>
 
 								<form class="ui form" style="width: 97%;" name="contactform" method="post"  onsubmit="return mailIt();">
 

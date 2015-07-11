@@ -305,7 +305,7 @@
 							padding: 10px 0px;
 
 							">
-								<div class="col-md-5">
+								<div class="col-md-5" id="generalInfo">
 									<div class="hostelImage">
                                         <?php
                                         $photos = $conn->query("SELECT url FROM photo p
@@ -337,7 +337,7 @@
 
 									</div>
 								</div>
-								<div class="col-md-7" id="generalInfo" >
+								<div class="col-md-7"  >
 
 									<h4>General Info</h4>
 									<p>
