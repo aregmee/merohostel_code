@@ -88,23 +88,7 @@ if(isset($name) && isset($gender) && isset($address)){
 
 <body>
 
-<div id="header">
-    <div id="fixedSearch">
-        <div class="container">
-            <div class="row">
-
-                <div style="float: left;padding: 14px 14px;margin-top: -15px;margin-bottom: -15px;">
-                    <a href="index.php"> <img src="img/mero-hostel-logo.png"/> </a>
-                </div>
-                <!-- logo -->
-
-                <?php include 'nav_search.php'?>
-
-            </div><!--row -->
-        </div><!--container -->
-
-    </div><!-- fixedSearch -->
-</div><!-- header-->
+<?php include 'header.php'; ?>
 
 <div id="wrapper">
 

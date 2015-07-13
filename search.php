@@ -2,23 +2,18 @@
 include 'DBConnection.php';
 if($_POST)
 {
-    $q=$_POST['search'];
     $p=$_POST['gender'];
-    $query="Select DISTINCT(address) from hostel where address like '$q%' AND gender='$p'";
+    $query="Select DISTINCT(address) from hostel where gender='$p'";
     $result = $conn->query($query);
+    $response = array();
     while($row = $result->fetch_assoc()) {
         $location = $row['address'];
-        $hostelName=$row['name'];
         ?>
         <?php
         if ($location != 'NULL') {
 
-            ?>
-            <option value="<?php echo $location; ?>">
-                <?php echo $location; ?>
-            </option>
-        <?php
+            array_push($response, $location);
         }
     }
+    echo json_encode($response);
 }
-?>

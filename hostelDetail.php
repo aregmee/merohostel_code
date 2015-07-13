@@ -268,23 +268,7 @@ function humanTiming($time) {
 }
 ?>
 
-<div id="header">
-    <div id="fixedSearch">
-        <div class="container">
-            <div class="row">
-
-                <div style="float: left;padding: 14px 14px;margin-top: -15px;margin-bottom: -15px;">
-                    <a href="/"> <img src="img/mero-hostel-logo.png"/> </a>
-                </div>
-                <!-- logo -->
-
-                <?php include 'nav_search.php'?>
-
-            </div><!--row -->
-        </div><!--container -->
-
-    </div><!-- fixedSearch -->
-</div><!-- header-->
+<?php include 'header.php'; ?>
 
 <div id="wrapper">
 
@@ -309,17 +293,26 @@ function humanTiming($time) {
                         <div class="col-md-5" id="generalInfo">
                             <div class="hostelImage">
                                 <?php
+
+                                $main_photo = $conn->query("SELECT url FROM photo p
+                                                JOIN hostel_photo mp on mp.photo_id = p.id
+                                                JOIN hostel h on h.id = mp.hostel_id where h.id = $id;");
+                                $main_photo_row = $main_photo -> fetch_assoc();
+
+                                if($main_photo_row != null){
+                                    ?>
+                                    <a  class="fancybox" href="<?php echo $main_photo_row["url"]; ?>"
+                                        data-fancybox-group="gallery">
+                                        <img id="firstDetailImage" src="<?php echo $main_photo_row["url"]; ?>"/>
+                                    </a>
+                                    <?php
+                                }
+
                                 $photos = $conn->query("SELECT url FROM photo p
                                                 JOIN hostel_photo hp on hp.photo_id = p.id
                                                 JOIN hostel h on h.id = hp.hostel_id where h.id = $id");
                                 $photos_row = $photos -> fetch_assoc();
                                 if($photos_row != null) {
-                                    ?>
-                                    <a  class="fancybox" href="<?php echo $photos_row["url"]; ?>"
-                                        data-fancybox-group="gallery">
-                                        <img id="firstDetailImage" src="<?php echo $photos_row["url"]; ?>"/>
-                                    </a>
-                                    <?php
                                     $noOfImage=1;
                                     while ($photos_row != null) {
                                         $photo = $photos_row["url"];

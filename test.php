@@ -45,6 +45,26 @@
     <script type="text/javascript" charset="utf-8" src="js/typeahead.jquery.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/handlebars.js"></script>
     <script type="text/javascript">
+        var locations = [];
+        var myfunction = function(){
+            while(locations.pop()!= null);
+            var gender = $('#genderSelect').val();
+            var dataString = 'gender=' + gender;
+            $.ajax({
+                type : "POST",
+                url : "search.php",
+                data : dataString,
+                cache : false,
+                success : function(html) {
+                    html = html.split("\"");
+                    for(var i = 1; i < html.length; i+=2){
+
+                        locations.push(html[i]);
+                    }
+                }
+            });
+        };
+
         $(document).ready(function() {
 
             var substringMatcher = function(strs) {
@@ -68,45 +88,14 @@
                     cb(matches);
                 };
             };
-            var searchid = $(this).val();
-            var gender = $("#genderSelect").val();
-            var dataString = 'search=' + searchid + '&gender=' + gender;
-                $.ajax({
-                    type : "POST",
-                    url : "search.php",
-                    data : dataString,
-                    dataType:'json',
-                    cache : false,
-
-                    success : function(html) {
-                        if(html.success){
-
-                            locations = html.options;
-                            alert(locations);
-                        }
-                    }
-                });
-
-            var states = ['Asim', 'Alaska', 'Arizona', 'Arkansas', 'California',
-                'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
-                'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
-                'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
-                'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
-                'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
-                'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
-                'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
-                'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
-            ];
-            var locations = [];
-
             $('#the-basics .typeahead').typeahead({
                     hint: true,
                     highlight: true,
                     minLength: 1
                 },
                 {
-                    name: 'states',
-                    source: substringMatcher(states)
+                    name: 'locations',
+                    source: substringMatcher(locations)
                 });
         });
     </script>
@@ -154,7 +143,7 @@
      </button>-->
 
     <div id="the-basics">
-        <input class="typeahead" type="text" placeholder="States of USA">
+        <input class="typeahead" type="text" placeholder="Location" onfocus="myfunction();">
     </div>
 </form>
 <script src="js/main.js"></script>

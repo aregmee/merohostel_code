@@ -180,23 +180,7 @@
 		<script src="sweetalert-master/dist/sweetalert.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
 
-		<div id="header">
-			<div id="fixedSearch">
-				<div class="container">
-					<div class="row">
-
-						<div style="float: left;padding: 14px 14px;margin-top: -15px;margin-bottom: -15px;">
-							<a href="/"> <img src="img/mero-hostel-logo.png"/> </a>
-						</div>
-						<!-- logo -->
-
-						<?php include 'nav_search.php'?>
-
-					</div><!--row -->
-				</div><!--container -->
-
-			</div><!-- fixedSearch -->
-		</div><!-- header-->
+        <?php include 'header.php'; ?>
 
 		<div id="map-canvas"></div>
 

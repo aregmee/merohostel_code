@@ -85,24 +85,7 @@
 		$sql .= " LIMIT $start_from, $per_page";
 		$result = $conn -> query($sql);
         ?>
-			<div id="header">
-				<div id="fixedSearch">
-                    <form method = "get" action="hostelList.php">
-					<div class="container">
-						<div class="row">
-
-							<div style="float: left;padding: 14px 14px;margin-top: -15px;margin-bottom: -15px;">
-								<a href="/"> <img src="img/mero-hostel-logo.png"/> </a>
-							</div>
-							<!-- logo -->
-
-                            <?php include 'nav_search.php'?>
-
-						</div><!--row -->
-					</div><!--container -->
-                    </form>
-				</div><!-- fixedSearch -->
-			</div><!-- header-->
+        <?php include 'header.php'; ?>
 
 		<div id="wrapper">
 
@@ -158,8 +141,8 @@
                                             <?php
                                             $h_id = $row["id"];
                                             $photos = $conn->query("SELECT url FROM photo p
-                                                JOIN hostel_photo hp on hp.photo_id = p.id
-                                                JOIN hostel h on h.id = hp.hostel_id where h.id = $h_id");
+                                                JOIN main_photo mp on mp.photo_id = p.id
+                                                JOIN hostel h on h.id = mp.hostel_id where h.id = $h_id");
                                             $photos_row = $photos -> fetch_assoc();
                                             if($photos_row != null) {
                                                 ?>
