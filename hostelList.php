@@ -74,11 +74,11 @@
 
 		if ($gender == "" || $gender == null)
 			$sql = "select DISTINCT(h.id), h.name, h.address, h.gender from hostel h
-                    left join hostel_photo hp on h.id = hp.hostel_id
+                    left join main_photo mp on h.id = mp.hostel_id
                     where address like '%$location%' order by case when photo_id is null then 1 else 0 end, photo_id";
 		else
 			$sql = "select DISTINCT(h.id), h.name, h.address, h.gender from hostel h
-                    left join hostel_photo hp on h.id = hp.hostel_id
+                    left join main_photo mp on h.id = mp.hostel_id
                     where address like '%$location%' and gender = '$gender' order by case when photo_id is null then 1 else 0 end, photo_id";
 
 		//Selecting the data from table but with limit
