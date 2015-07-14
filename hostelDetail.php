@@ -4,6 +4,8 @@ $id = $_GET["id"];
 include 'DBConnection.php';
 $hostel_row = $conn -> query("SELECT * from hostel where id='$id'");
 list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) = $hostel_row -> fetch_row();
+if(empty($id))
+    header("Location: error.php");
 $email = "";
 ?>
 <html>
@@ -295,39 +297,49 @@ function humanTiming($time) {
                                 <?php
 
                                 $main_photo = $conn->query("SELECT url FROM photo p
-                                                JOIN hostel_photo mp on mp.photo_id = p.id
+                                                JOIN main_photo mp on mp.photo_id = p.id
                                                 JOIN hostel h on h.id = mp.hostel_id where h.id = $id;");
-                                $main_photo_row = $main_photo -> fetch_assoc();
+                                $main_photo_row = null;
+                                if($main_photo->num_rows > 0) {
+                                    $main_photo_row = $main_photo->fetch_assoc();
 
-                                if($main_photo_row != null){
-                                    ?>
-                                    <a  class="fancybox" href="<?php echo $main_photo_row["url"]; ?>"
-                                        data-fancybox-group="gallery">
-                                        <img id="firstDetailImage" src="<?php echo $main_photo_row["url"]; ?>"/>
-                                    </a>
+                                    if ($main_photo_row != null) {
+                                        ?>
+                                        <a class="fancybox" href="<?php echo $main_photo_row["url"]; ?>"
+                                           data-fancybox-group="gallery">
+                                            <img id="firstDetailImage" src="<?php echo $main_photo_row["url"]; ?>"/>
+                                        </a>
                                     <?php
-                                }
+                                    }
 
-                                $photos = $conn->query("SELECT url FROM photo p
+                                    $photos = $conn->query("SELECT url FROM photo p
                                                 JOIN hostel_photo hp on hp.photo_id = p.id
                                                 JOIN hostel h on h.id = hp.hostel_id where h.id = $id");
-                                $photos_row = $photos -> fetch_assoc();
-                                if($photos_row != null) {
-                                    $noOfImage=1;
-                                    while ($photos_row != null) {
-                                        $photo = $photos_row["url"];
+
+                                    $photos_row = null;
+                                    if ($photos->num_rows > 0)
                                         $photos_row = $photos->fetch_assoc();
-                                        if ($photos_row["url"] == "")
-                                            break;
-                                        ?>
-                                        <div id="snippetImg">
-                                            <a class="fancybox" href="<?php echo $photos_row["url"]; ?>"
-                                               data-fancybox-group="gallery"><?php if($noOfImage>4){ echo '</a>';}else{?><img
-                                                    src="<?php echo $photos_row["url"];?>"/>
-                                                    <?php echo '</a>';}?>
-                                        </div>
-                                        <?php
-                                        $noOfImage++;
+                                    if ($photos_row != null) {
+                                        $noOfImage = 1;
+                                        while ($photos_row != null) {
+                                            $photo = $photos_row["url"];
+                                            $photos_row = $photos->fetch_assoc();
+                                            ?>
+                                            <div id="snippetImg">
+                                                <a class="fancybox" href="<?php echo $photo; ?>"
+                                                   data-fancybox-group="gallery">
+                                                    <?php if ($noOfImage > 4) {
+                                                        echo '</a>';
+                                                    } else { ?><img
+                                                        src="<?php echo $photo; ?>"/>
+                                                        <?php echo '</a>';
+                                                    } ?>
+                                            </div>
+                                            <?php
+                                            $noOfImage++;
+                                            if ($photos_row["url"] == "")
+                                                break;
+                                        }
                                     }
                                 }else {
                                     ?>
