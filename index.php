@@ -147,12 +147,7 @@
 							<div id="mainSearch">
                                 <form method = "get" action="hostelList.php" autocomplete="off" onsubmit="return validateForm()">
 
-                                    <div class="ui selection dropdown" style="
-									font-size: 16px;
-									position: relative;
-									right: 5px;
-									min-width: 150px;
-									">
+                                    <div class="ui selection dropdown" style="font-size: 16px;position: relative;right: 5px;min-width: 150px;">
                                         <input type="hidden" name="gender" id = "genderSelect" onchange="search();">
                                         <i class="dropdown icon"></i>
                                         <div class="default text">
@@ -185,8 +180,8 @@
                                          <i class="search icon"></i>Search
                                      </button>-->
 
-                                    <div id="locations">
-                                        <input class="typeahead" type="text" placeholder="Location" onfocus="search();" name="location">
+                                    <div id="locations" style="display: inline-block;  line-height: 45px">
+                                        <input class="ui input typeahead " style="width: 300px;font-size: 16px; padding: 11px; padding-left: 20px;border: 1px solid #ddd; border-radius: 5px;" type="text" placeholder="Location" onfocus="search();" name="location">
                                     </div>
                                     <!-- location -->
                                     <button class="ui orange submit button" style="
