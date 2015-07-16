@@ -48,7 +48,6 @@
         <script type="text/javascript">
             var locations = [];
             var search = function(){
-                while(locations.pop()!= null);
                 var gender = $('#genderSelect').val();
                 var dataString = 'gender=' + gender;
                 $.ajax({
@@ -58,6 +57,7 @@
                     cache : false,
                     success : function(html) {
                         html = html.split("\"");
+                        locations.length = 0;
                         for(var i = 1; i < html.length; i+=2){
 
                             locations.push(html[i]);
