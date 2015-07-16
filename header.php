@@ -7,78 +7,94 @@
                     <a href="/"> <img src="img/mero-hostel-logo.png"/> </a>
                 </div>
                 <!-- logo -->
-
+                <script type="text/javascript" charset="utf-8" src="js/typeahead.jquery.js"></script>
+                <script type="text/javascript" charset="utf-8" src="js/handlebars.js"></script>
                 <script type="text/javascript">
-                    $(function() {
-                        $(".search").keyup(function() {
-                            var searchid = $(this).val();
-                            var gender = $("#genderSelect").val();
-                            var dataString = 'search=' + searchid + '&gender=' + gender;
-                            if (searchid != '') {
-                                $.ajax({
-                                    type : "POST",
-                                    url : "search.php",
-                                    data : dataString,
-                                    cache : false,
-                                    success : function(html) {
-                                        $("#result").html(html).show();
+                    var locations = [];
+                    var search = function(){
+                        while(locations.pop()!= null);
+                        var gender = $('#genderSelect').val();
+                        var dataString = 'gender=' + gender;
+                        $.ajax({
+                            type : "POST",
+                            url : "search.php",
+                            data : dataString,
+                            cache : false,
+                            success : function(html) {
+                                html = html.split("\"");
+                                for(var i = 1; i < html.length; i+=2){
+
+                                    locations.push(html[i]);
+                                }
+                            }
+                        });
+                    };
+
+                    $(document).ready(function() {
+
+                        var substringMatcher = function(strs) {
+                            return function findMatches(q, cb) {
+                                var matches, substringRegex;
+
+                                // an array that will be populated with substring matches
+                                matches = [];
+
+                                // regex used to determine if a string contains the substring `q`
+                                substrRegex = new RegExp(q, 'i');
+
+                                // iterate through the pool of strings and for any string that
+                                // contains the substring `q`, add it to the `matches` array
+                                $.each(strs, function(i, str) {
+                                    if (substrRegex.test(str)) {
+                                        matches.push(str);
                                     }
                                 });
-                            }
-                            return false;
-                        });
+
+                                cb(matches);
+                            };
+                        };
+                        $('#locations .typeahead').typeahead({
+                                hint: true,
+                                highlight: true,
+                                minLength: 1
+                            },
+                            {
+                                name: 'locations',
+                                source: substringMatcher(locations)
+                            });
                     });
-
-                    function validateForm() {
-                        if ($("#genderSelect").val() != '' && $("#result").val() != '') {
-                            return true;
-                        } else {
-                            sweetAlert("Oops...", "Please enter the required values", "error");
-                            return false
-                        }
-                    }
-
                 </script>
-                <script src="sweetalert-master/dist/sweetalert.min.js"></script>
-                <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
-                <form method = "get" action="hostelList.php" autocomplete="off">
-                    <div class="ui selection dropdown" style="min-width: 150px;">
-                        <input type="hidden" id="genderSelect" name="gender">
-                        <i class="dropdown icon"></i>
-                        <div class="default text">
-                            Gender
-                        </div>
-                        <div class="menu">
-                            <div class="item" data-value="boys" data-text="Boys" value="boys">
-                                <i class="male icon"></i>
-                                Boys
-                            </div>
-                            <div class="item" data-value="girls" data-text="Girls" value="girls">
-                                <i class="female icon"></i>
-                                Girls
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gender -->
+                    <form method = "get" action="hostelList.php" autocomplete="off">
 
-                    <div class="ui search dropdown selection" style="min-width: 300px;  margin-left: 5px;">
-                        <select id="result" name="location">
-                            <option value="">Location</option>
-                        </select>
-                        <input class="search" tabindex="0">
-                        <div class="default text">
-                            Location
-                        </div><div class="menu" tabindex="-1"></div>
-                    </div>
-                    <!-- location -->
+                        <div class="ui selection dropdown" style="font-size: 16px;position: relative;right: 5px;min-width: 150px;">
+                            <input type="hidden" name="gender" id = "genderSelect" onchange="search();">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">
+                                Gender
+                            </div>
+                            <div class="menu">
+                                <div class="item" data-value="boys" data-text="Boys" value="boys">
+                                    <i class="male icon"></i>
+                                    Boys
+                                </div>
+                                <div class="item" data-value="girls" data-text="Girls" value="girls">
+                                    <i class="female icon"></i>
+                                    Girls
+                                </div>
+                            </div>
+                        </div>
 
-                    <button onclick="return validateForm()" class="ui orange submit button" style="
-	font-size: 15px;
-	margin-left: 10px;
-	" onclick="return validateForm();">
-                        <i class="search icon"></i>Search
-                    </button>
-                </form>
+                        <div id="locations" style="display: inline-block;  line-height: 45px">
+                            <input class="ui input typeahead " style="width: 300px;font-size: 16px; padding: 11px; padding-left: 20px;border: 1px solid #ddd; border-radius: 5px;" type="text" placeholder="Location" onfocus="search();" name="location">
+                        </div>
+                        <!-- location -->
+                        <button class="ui orange submit button" style="
+									font-size: 16px;
+									margin-left: 10px;
+									">
+                            <i class="search icon"></i>Search
+                        </button>
+                    </form>
 
             </div><!--row -->
         </div><!--container -->

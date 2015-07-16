@@ -275,8 +275,6 @@
 
 		<!-- Main Script -->
 		<script src="js/main.js"></script>
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="js/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="bootstrap/bootstrap.js"></script>
 

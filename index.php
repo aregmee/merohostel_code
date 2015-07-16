@@ -100,8 +100,6 @@
                     });
             });
         </script>
-		<script src="sweetalert-master/dist/sweetalert.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
 	</head>
 
 	<body>
@@ -164,21 +162,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <div class="ui search dropdown selection" style="font-size: 16px; min-width: 300px;">
-                                         <select id="result" name="location">
-                                             <option value="">Location</option>
-                                         </select>
-                                         <input class="search" tabindex="0">
-                                         <div class="default text">
-                                             Location
-                                         </div><div class="menu" tabindex="-1"></div>
-                                     </div>
-                                     <button class="ui orange submit button" style="
-                                                                     font-size: 16px;
-                                                                     margin-left: 10px;
-                                                                     ">
-                                         <i class="search icon"></i>Search
-                                     </button>-->
 
                                     <div id="locations" style="display: inline-block;  line-height: 45px">
                                         <input class="ui input typeahead " style="width: 300px;font-size: 16px; padding: 11px; padding-left: 20px;border: 1px solid #ddd; border-radius: 5px;" type="text" placeholder="Location" onfocus="search();" name="location">

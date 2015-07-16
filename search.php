@@ -3,7 +3,11 @@ include 'DBConnection.php';
 if($_POST)
 {
     $p=$_POST['gender'];
-    $query="Select DISTINCT(address) from hostel where gender='$p'";
+
+    if(!empty($p))
+        $query = "SELECT DISTINCT(address) from hostel where gender='$p'";
+    else
+        $query = "SELECT DISTINCT(address) from hostel";
     $result = $conn->query($query);
     $response = array();
     while($row = $result->fetch_assoc()) {
