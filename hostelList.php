@@ -18,10 +18,44 @@
                 $meta_location = "";
             }
             $meta_location .= " kathmandu";
-        ?>
-		<meta content="Choose from 237 hostels in <?php echo $meta_location; ?> and read reviews from your fellow hostellers." name="description" >
-		<meta content='hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel,  merohostel.com' name='keywords'/>
+            if (!isset($_GET["gender"])) {
+                $gender = "";
+            } else {
+                $gender = $_GET["gender"];
+            }
 
+            if (isset($_GET["location"])) {
+                $location = $_GET["location"];
+            } else {
+                $location = "";
+            }
+            include 'DBConnection.php';
+
+            $per_page = 8;
+
+            if (isset($_GET["page"]))
+                $page = $_GET["page"];
+            else
+                $page = 1;
+            // Page will start from 0 and Multiple by Per Page
+            $start_from = ($page - 1) * $per_page;
+
+            if ($gender == "" || $gender == null)
+                $sql = "select DISTINCT(h.id), h.name, h.address, h.gender from hostel h
+                        left join main_photo mp on h.id = mp.hostel_id
+                        where address like '%$location%' order by case when photo_id is null then 1 else 0 end, photo_id";
+            else
+                $sql = "select DISTINCT(h.id), h.name, h.address, h.gender from hostel h
+                        left join main_photo mp on h.id = mp.hostel_id
+                        where address like '%$location%' and gender = '$gender' order by case when photo_id is null then 1 else 0 end, photo_id";
+            $result = $conn -> query($sql);
+        ?>
+		<meta content="Choose from <?php echo $result->num_rows;?> hostels in <?php echo ucfirst($meta_location); ?> and read reviews from your fellow hostellers." name="description" >
+		<meta content='hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel,  merohostel.com' name='keywords'/>
+        <?php
+            $sql .= " LIMIT $start_from, $per_page";
+            $result = $conn -> query($sql);
+        ?>
 
 		<!-- Main Styslesheet -->
 		<link rel="stylesheet" href="css/main.css" />
@@ -49,42 +83,6 @@
 	</head>
 
 	<body>
-        <?php
-		if (!isset($_GET["gender"])) {
-			$gender = "";
-		} else {
-			$gender = $_GET["gender"];
-		}
-
-		if (isset($_GET["location"])) {
-			$location = $_GET["location"];
-		} else {
-			$location = "";
-		}
-		include 'DBConnection.php';
-
-		$per_page = 8;
-
-		if (isset($_GET["page"]))
-			$page = $_GET["page"];
-		else
-			$page = 1;
-		// Page will start from 0 and Multiple by Per Page
-		$start_from = ($page - 1) * $per_page;
-
-		if ($gender == "" || $gender == null)
-			$sql = "select DISTINCT(h.id), h.name, h.address, h.gender from hostel h
-                    left join main_photo mp on h.id = mp.hostel_id
-                    where address like '%$location%' order by case when photo_id is null then 1 else 0 end, photo_id";
-		else
-			$sql = "select DISTINCT(h.id), h.name, h.address, h.gender from hostel h
-                    left join main_photo mp on h.id = mp.hostel_id
-                    where address like '%$location%' and gender = '$gender' order by case when photo_id is null then 1 else 0 end, photo_id";
-
-		//Selecting the data from table but with limit
-		$sql .= " LIMIT $start_from, $per_page";
-		$result = $conn -> query($sql);
-        ?>
         <?php include 'header.php'; ?>
 
 		<div id="wrapper">
@@ -122,7 +120,11 @@
 									echo "All Hostels in Kathmandu";
                                 ?>
                             </h2>
-                                <?php while($row = $result->fetch_assoc()) { ?>
+                                <?php
+                                    if($result->num_rows == 0)
+                                        echo "<i>Sorry! No hostels match your criteria.</i>";
+                                    while($row = $result->fetch_assoc()) {
+                                ?>
 
 
 							<div class="hostelThumb">
