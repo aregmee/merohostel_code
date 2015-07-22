@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
 
-                <div style="float: left;padding: 14px 14px;margin-top: -15px;margin-bottom: -15px;">
+                <div style="float: left;padding: 14px 14px;margin-top: -10px;margin-bottom: -15px;">
                     <a href="/"> <img src="img/mero-hostel-logo.png"/> </a>
                 </div>
                 <!-- logo -->
@@ -84,8 +84,8 @@
                             </div>
                         </div>
 
-                        <div id="locations" style="display: inline-block;  line-height: 45px">
-                            <input class="ui input typeahead " style="width: 300px;font-size: 16px; padding: 11px; padding-left: 20px;border: 1px solid #ddd; border-radius: 5px;" type="text" placeholder="Location" onfocus="search();" name="location">
+                        <div id="locations" style=" display: inline-block;  line-height: 45px">
+                            <input class="ui input typeahead " style="outline: 0;width: 300px;font-size: 16px; padding: 11px; padding-left: 20px;border: 1px solid #ddd; border-radius: 5px;" type="text" placeholder="Location" onfocus="search();" name="location">
                         </div>
                         <!-- location -->
                         <button class="ui orange submit button" style="
