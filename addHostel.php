@@ -14,7 +14,7 @@ $mf1 = $_POST["mf1"];
 $mf2 = $_POST["mf2"];
 $mf3 = $_POST["mf3"];
 $mf4 = $_POST["mf4"];
-
+$description = $_POST["description"];
 if(isset($name) && isset($gender) && isset($address)){
 
     $sql = "INSERT INTO temp_fee_structure (admission, security_deposit, 1_bed, 2_bed, 3_bed, 4_bed)
@@ -26,8 +26,8 @@ if(isset($name) && isset($gender) && isset($address)){
     $ids_row = $ids->fetch_assoc();
     $fee_id = $ids_row["id"];
 
-    $sql = "INSERT INTO temp_hostel (name ,gender ,address ,estd_year,fee_structure_id,capacity)
-	VALUES ('$name ','	$gender ','$address ','$edate ','$fee_id','$tno ')";
+    $sql = "INSERT INTO temp_hostel (name ,gender ,address ,estd_year,fee_structure_id,capacity,description)
+	VALUES ('$name ','	$gender ','$address ','$edate ','$fee_id','$tno ','$description')";
     mysqli_query($conn, $sql);
 
     $last_id = "SELECT id FROM temp_hostel ORDER BY id desc";
@@ -299,6 +299,12 @@ if(isset($name) && isset($gender) && isset($address)){
                                         </div>
                                     </div>
                                 </div>
+								<div class="field">
+									<label>Description</label>
+									<div>
+										<input type = "text" name="description" id = "description">										
+									</div>
+								</div>
                             </div>
 
                             <div>
