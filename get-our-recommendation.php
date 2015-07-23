@@ -11,8 +11,8 @@
 		<meta content='noodp,noydir' name='robots'/>
 		<meta content='INDEX, FOLLOW' name='GOOGLEBOT'/>
 		<meta content='Merohostel.com' name='author'/>
-		<meta content="Read all the Merohostel.com terms and conditions for advertising hostels. Through Merohostel, advertisers can advertise their business and the users can benefit from the information provided." name="description" >
-		<meta content='hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel,  merohostel.com' name='keywords'/>
+		<meta content="Are you planning stay in a hostel that provides a familiar and studying environment? Hostels that stand out from the crowd? Our new ‘Get Our Recommendation’ program helps you do just that." name="description" >
+		<meta content='get hostels kathmandu, hostel recommendation kathmandu, recommend hostel, hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel,  merohostel.com' name='keywords'/>
 
 		<!-- Main Styslesheet -->
 		<link rel="stylesheet" href="css/main.css" />

@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <?php $submitted = "noidea";
-$id = $_GET["id"];
-include 'DBConnection.php';
-$hostel_row = $conn -> query("SELECT * from hostel where id='$id'");
-list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) = $hostel_row -> fetch_row();
-if(empty($id))
-    header("Location: error.php");
-$email = "";
+	$id = $_GET["id"];
+	include 'DBConnection.php';
+	$hostel_row = $conn -> query("SELECT * from hostel where id='$id'");
+	list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) = $hostel_row -> fetch_row();
+	if (empty($id))
+		header("Location: error.php");
+	$email = "";
 ?>
 <html>
 <head>
@@ -54,180 +54,180 @@ $email = "";
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
     <script type="text/javascript">
-        $(document).ready(function() {
-            /*
-             *  Simple image gallery. Uses default settings
-             */
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
 
-            $('.fancybox').fancybox();
+			$('.fancybox').fancybox();
 
-            /*
-             *  Different effects
-             */
+			/*
+			*  Different effects
+			*/
 
-            // Change title type, overlay closing speed
-            $(".fancybox-effects-a").fancybox({
-                helpers : {
-                    title : {
-                        type : 'outside'
-                    },
-                    overlay : {
-                        speedOut : 0
-                    }
-                }
-            });
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers : {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
 
-            // Disable opening and closing animations, change title type
-            $(".fancybox-effects-b").fancybox({
-                openEffect : 'none',
-                closeEffect : 'none',
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect : 'none',
+				closeEffect : 'none',
 
-                helpers : {
-                    title : {
-                        type : 'over'
-                    }
-                }
-            });
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
 
-            // Set custom style, close if clicked, change title type and overlay color
-            $(".fancybox-effects-c").fancybox({
-                wrapCSS : 'fancybox-custom',
-                closeClick : true,
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS : 'fancybox-custom',
+				closeClick : true,
 
-                openEffect : 'none',
+				openEffect : 'none',
 
-                helpers : {
-                    title : {
-                        type : 'inside'
-                    },
-                    overlay : {
-                        css : {
-                            'background' : 'rgba(238,238,238,0.85)'
-                        }
-                    }
-                }
-            });
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
 
-            // Remove padding, set opening and closing animations, close if clicked and disable overlay
-            $(".fancybox-effects-d").fancybox({
-                padding : 0,
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding : 0,
 
-                openEffect : 'elastic',
-                openSpeed : 150,
+				openEffect : 'elastic',
+				openSpeed : 150,
 
-                closeEffect : 'elastic',
-                closeSpeed : 150,
+				closeEffect : 'elastic',
+				closeSpeed : 150,
 
-                closeClick : true,
+				closeClick : true,
 
-                helpers : {
-                    overlay : null
-                }
-            });
+				helpers : {
+					overlay : null
+				}
+			});
 
-            /*
-             *  Button helper. Disable animations, hide close button, change title type and content
-             */
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
 
-            $('.fancybox-buttons').fancybox({
-                openEffect : 'none',
-                closeEffect : 'none',
+			$('.fancybox-buttons').fancybox({
+				openEffect : 'none',
+				closeEffect : 'none',
 
-                prevEffect : 'none',
-                nextEffect : 'none',
+				prevEffect : 'none',
+				nextEffect : 'none',
 
-                closeBtn : false,
+				closeBtn : false,
 
-                helpers : {
-                    title : {
-                        type : 'inside'
-                    },
-                    buttons : {}
-                },
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons : {}
+				},
 
-                afterLoad : function() {
-                    this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
-                }
-            });
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
 
-            /*
-             *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
-             */
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
 
-            $('.fancybox-thumbs').fancybox({
-                prevEffect : 'none',
-                nextEffect : 'none',
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
 
-                closeBtn : false,
-                arrows : false,
-                nextClick : true,
+				closeBtn : false,
+				arrows : false,
+				nextClick : true,
 
-                helpers : {
-                    thumbs : {
-                        width : 50,
-                        height : 50
-                    }
-                }
-            });
+				helpers : {
+					thumbs : {
+						width : 50,
+						height : 50
+					}
+				}
+			});
 
-            /*
-             *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
-             */
-            $('.fancybox-media').attr('rel', 'media-gallery').fancybox({
-                openEffect : 'none',
-                closeEffect : 'none',
-                prevEffect : 'none',
-                nextEffect : 'none',
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			 */
+			$('.fancybox-media').attr('rel', 'media-gallery').fancybox({
+				openEffect : 'none',
+				closeEffect : 'none',
+				prevEffect : 'none',
+				nextEffect : 'none',
 
-                arrows : false,
-                helpers : {
-                    media : {},
-                    buttons : {}
-                }
-            });
-        });
+				arrows : false,
+				helpers : {
+					media : {},
+					buttons : {}
+				}
+			});
+		});
 
-        $(function() {
-            $(".search").keyup(function() {
-                var searchid = $(this).val();
-                var gender = $("#genderSelect").val();
-                var dataString = 'search=' + searchid + '&gender=' + gender;
-                if (searchid != '') {
-                    $.ajax({
-                        type : "POST",
-                        url : "search.php",
-                        data : dataString,
-                        cache : false,
-                        success : function(html) {
-                            $("#result").html(html).show();
-                        }
-                    });
-                }
-                return false;
-            });
-        });
+		$(function() {
+			$(".search").keyup(function() {
+				var searchid = $(this).val();
+				var gender = $("#genderSelect").val();
+				var dataString = 'search=' + searchid + '&gender=' + gender;
+				if (searchid != '') {
+					$.ajax({
+						type : "POST",
+						url : "search.php",
+						data : dataString,
+						cache : false,
+						success : function(html) {
+							$("#result").html(html).show();
+						}
+					});
+				}
+				return false;
+			});
+		});
 
-        function validateReview() {
-            if (/^[a-zA-Z]*$/.test($("#first_name").val().trim()) == false) {//validating first name
-                sweetAlert("Oops...", "First Name should only contain alphabets!", "error");
-                $("#first_name").focus()
-                return false
-            }
-            if (/^[a-zA-Z]*$/.test($("#last_name").val().trim()) == false) {//validating last name
-                sweetAlert("Oops...", "Last Name should only contain alphabets!", "error");
-                $("#last_name").focus()
-                return false
-            }
-            var email = $("#email").val().trim();
-            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            if (!email.match(mailformat))//validating email
-            {
-                sweetAlert("Oops...", "You have entered an invalid email address!", "error");
-                $("#email").focus()
-                return false;
-            }
-            return true;
-        }
+		function validateReview() {
+			if (/^[a-zA-Z]*$/.test($("#first_name").val().trim()) == false) {//validating first name
+				sweetAlert("Oops...", "First Name should only contain alphabets!", "error");
+				$("#first_name").focus()
+				return false
+			}
+			if (/^[a-zA-Z]*$/.test($("#last_name").val().trim()) == false) {//validating last name
+				sweetAlert("Oops...", "Last Name should only contain alphabets!", "error");
+				$("#last_name").focus()
+				return false
+			}
+			var email = $("#email").val().trim();
+			var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			if (!email.match(mailformat))//validating email
+			{
+				sweetAlert("Oops...", "You have entered an invalid email address!", "error");
+				$("#email").focus()
+				return false;
+			}
+			return true;
+		}
     </script>
     <script src="sweetalert-master/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
@@ -235,49 +235,51 @@ $email = "";
 
 <body>
 <?php $reviews = $conn -> query("SELECT * from review where hostel_id = '$id' and display = 1");
-//list($id, $capacity, $contact, $gender, $location, $name, $email, $website, $additionalInfo, $ownerId, $mainPhotoUrl) = $row -> fetch_row();
-$owner_row = $conn -> query("SELECT * from owner where id='$fee_structure_id'");
-list($owner_id, $hostel_id, $owner_name, $contact) = $owner_row -> fetch_row();
-if (isset($_POST['review']) && isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['review_email'])) {
-    $review = $_POST['review'];
-    $first_name = trim($_POST["firstName"]);
-    $last_name = trim($_POST["lastName"]);
-    $review_email = trim($_POST["review_email"]);
-    $date_array = getdate();
-    $date = $date_array["year"] . "-" . $date_array["mon"] . "-" . $date_array["mday"] . " " . $date_array["hours"] . ":" . $date_array["minutes"] . ":" . $date_array["seconds"];
-    $date = date_create($date);
-    $date = date_format($date, "Y/m/d H:i:s");
-    $query = "INSERT INTO review VALUES('$review', '$first_name', '$last_name', '$review_email', 0, $id, '$date', null)";
-    if (mysqli_query($conn, $query)) {
-        $submitted = "true";
-    } else {
-        $submitted = "false";
-    }
-}
-function humanTiming($time) {
-    $time = time() - $time;
-    // to get the time since that moment
+	//list($id, $capacity, $contact, $gender, $location, $name, $email, $website, $additionalInfo, $ownerId, $mainPhotoUrl) = $row -> fetch_row();
+	$owner_row = $conn -> query("SELECT * from owner where id='$fee_structure_id'");
+	list($owner_id, $hostel_id, $owner_name, $contact) = $owner_row -> fetch_row();
+	if (isset($_POST['review']) && isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['review_email'])) {
+		$review = $_POST['review'];
+		$first_name = trim($_POST["firstName"]);
+		$last_name = trim($_POST["lastName"]);
+		$review_email = trim($_POST["review_email"]);
+		$date_array = getdate();
+		$date = $date_array["year"] . "-" . $date_array["mon"] . "-" . $date_array["mday"] . " " . $date_array["hours"] . ":" . $date_array["minutes"] . ":" . $date_array["seconds"];
+		$date = date_create($date);
+		$date = date_format($date, "Y/m/d H:i:s");
+		$query = "INSERT INTO review VALUES('$review', '$first_name', '$last_name', '$review_email', 0, $id, '$date', null)";
+		if (mysqli_query($conn, $query)) {
+			$submitted = "true";
+		} else {
+			$submitted = "false";
+		}
+	}
+	function humanTiming($time) {
+		$time = time() - $time;
+		// to get the time since that moment
 
-    $tokens = array(31536000 => 'year', 2592000 => 'month', 604800 => 'week', 86400 => 'day', 3600 => 'hour', 60 => 'minute', 1 => 'second');
+		$tokens = array(31536000 => 'year', 2592000 => 'month', 604800 => 'week', 86400 => 'day', 3600 => 'hour', 60 => 'minute', 1 => 'second');
 
-    foreach ($tokens as $unit => $text) {
-        if ($time < $unit)
-            continue;
-        $numberOfUnits = floor($time / $unit);
-        return $numberOfUnits . ' ' . $text . (($numberOfUnits > 1) ? 's' : '');
-    }
+		foreach ($tokens as $unit => $text) {
+			if ($time < $unit)
+				continue;
+			$numberOfUnits = floor($time / $unit);
+			return $numberOfUnits . ' ' . $text . (($numberOfUnits > 1) ? 's' : '');
+		}
 
-}
+	}
 ?>
 
-<?php include 'header.php'; ?>
+<?php
+include 'header.php';
+ ?>
 
 <div id="wrapper">
 
     <div id="content">
 
         <?php
-        include "feedback.php";
+		include "feedback.php";
         ?>
 
         <div style="background: #fff;" class="container">
@@ -309,21 +311,20 @@ function humanTiming($time) {
                                            data-fancybox-group="gallery">
                                             <img id="firstDetailImage" src="<?php echo $main_photo_row["url"]; ?>"/>
                                         </a>
-                                    <?php
-                                    }
+                                    <?php }
 
-                                    $photos = $conn->query("SELECT url FROM photo p
-                                                JOIN hostel_photo hp on hp.photo_id = p.id
-                                                JOIN hostel h on h.id = hp.hostel_id where h.id = $id");
+											$photos = $conn->query("SELECT url FROM photo p
+											JOIN hostel_photo hp on hp.photo_id = p.id
+											JOIN hostel h on h.id = hp.hostel_id where h.id = $id");
 
-                                    $photos_row = null;
-                                    if ($photos->num_rows > 0)
-                                        $photos_row = $photos->fetch_assoc();
-                                    if ($photos_row != null) {
-                                        $noOfImage = 1;
-                                        while ($photos_row != null) {
-                                            $photo = $photos_row["url"];
-                                            $photos_row = $photos->fetch_assoc();
+											$photos_row = null;
+											if ($photos->num_rows > 0)
+											$photos_row = $photos->fetch_assoc();
+											if ($photos_row != null) {
+											$noOfImage = 1;
+											while ($photos_row != null) {
+											$photo = $photos_row["url"];
+											$photos_row = $photos->fetch_assoc();
                                             ?>
                                             <div id="snippetImg">
                                                 <a class="fancybox" href="<?php echo $photo; ?>"
@@ -333,15 +334,15 @@ function humanTiming($time) {
                                                     } else { ?><img
                                                         src="<?php echo $photo; ?>"/>
                                                         <?php echo '</a>';
-                                                    } ?>
+															}
+ ?>
                                             </div>
-                                            <?php
-                                            $noOfImage++;
-                                            if ($photos_row["url"] == "")
-                                                break;
-                                        }
-                                    }
-                                }else {
+                                            <?php $noOfImage++;
+												if ($photos_row["url"] == "")
+													break;
+												}
+												}
+												}else {
                                     ?>
                                     <img  id="firstDetailImage" src="img/hostel_icon.png"/>
                                 <?php } ?>
@@ -409,53 +410,53 @@ function humanTiming($time) {
                         <div>
                             <p></p>
                             <?php $fee_structure_row = $conn -> query("SELECT * FROM fee_structure where id=" . $fee_structure_id);
-                            $fee_structure = $fee_structure_row -> fetch_assoc();
-                            $admission = $fee_structure["admission"];
-                            $security_deposit = $fee_structure["security_deposit"];
-                            $bed_1 = $fee_structure["1_bed"];
-                            $bed_2 = $fee_structure["2_bed"];
-                            $bed_3 = $fee_structure["3_bed"];
-                            $bed_4 = $fee_structure["4_bed"];
+								$fee_structure = $fee_structure_row -> fetch_assoc();
+								$admission = $fee_structure["admission"];
+								$security_deposit = $fee_structure["security_deposit"];
+								$bed_1 = $fee_structure["1_bed"];
+								$bed_2 = $fee_structure["2_bed"];
+								$bed_3 = $fee_structure["3_bed"];
+								$bed_4 = $fee_structure["4_bed"];
 
-                            echo '<ul id="fee_details">';
+								echo '<ul id="fee_details">';
 
-                            if (!empty($admission)) {
-                                echo "<li>";
-                                echo "<b>Admission Fee: </b> ";
-                                echo $admission . "<br>";
-                                echo "</li>";
-                            }
-                            if (!empty($security_deposit)) {
-                                echo "<li>";
-                                echo "<b>Security Deposit: </b> ";
-                                echo $security_deposit;
-                                echo "</li>";
-                            }
-                            if (!empty($bed_1)) {
-                                echo "<li>";
-                                echo "<b>Single Bedded Room: </b> ";
-                                echo $bed_1 . "<br>";
-                                echo "</li>";
-                            }
-                            if (!empty($bed_2)) {
-                                echo "<li>";
-                                echo "<b>Two beds per room: </b>";
-                                echo $bed_2 . "<br>";
-                                echo "</li>";
-                            }
-                            if (!empty($bed_3)) {
-                                echo "<li>";
-                                echo "<b>Three beds per room: </b>";
-                                echo $bed_3 . "<br>";
-                                echo "</li>";
-                            }
-                            if (!empty($bed_4)) {
-                                echo "<li>";
-                                echo "<b>Four beds per room: </b>";
-                                echo $bed_4 . "<br>";
-                                echo "</li>";
-                            }
-                            echo "</ul>";
+								if (!empty($admission)) {
+									echo "<li>";
+									echo "<b>Admission Fee: </b> ";
+									echo $admission . "<br>";
+									echo "</li>";
+								}
+								if (!empty($security_deposit)) {
+									echo "<li>";
+									echo "<b>Security Deposit: </b> ";
+									echo $security_deposit;
+									echo "</li>";
+								}
+								if (!empty($bed_1)) {
+									echo "<li>";
+									echo "<b>Single Bedded Room: </b> ";
+									echo $bed_1 . "<br>";
+									echo "</li>";
+								}
+								if (!empty($bed_2)) {
+									echo "<li>";
+									echo "<b>Two beds per room: </b>";
+									echo $bed_2 . "<br>";
+									echo "</li>";
+								}
+								if (!empty($bed_3)) {
+									echo "<li>";
+									echo "<b>Three beds per room: </b>";
+									echo $bed_3 . "<br>";
+									echo "</li>";
+								}
+								if (!empty($bed_4)) {
+									echo "<li>";
+									echo "<b>Four beds per room: </b>";
+									echo $bed_4 . "<br>";
+									echo "</li>";
+								}
+								echo "</ul>";
                             ?>
                         </div>
                     </div><!-- fee structure row -->
@@ -547,7 +548,7 @@ function humanTiming($time) {
                                                 <div class="date">
                                                     <?php $time = strtotime($r_date);
 
-                                                    echo humanTiming($time) . ' ago';
+													echo humanTiming($time) . ' ago';
                                                     ?>
                                                 </div>
                                             </div>
@@ -558,7 +559,7 @@ function humanTiming($time) {
                                     </div>
                                 </div><!-- comment-->
                                 <?php $r_row = $reviews -> fetch_row();
-                            }
+									}
                             ?>
                         </div><!-- row -->
                     <?php } ?>
@@ -566,7 +567,13 @@ function humanTiming($time) {
 
 
                 <div class="col-md-4">
-
+                	 <h3 style="    color: #FF6E3D; font-size: 20px;" id="review"><a name="review" id="review"></a>Advertisement</h3>
+					<div class="advertisement">
+						<img src="img/aayushree-hostel.PNG" title="AAyushree Hostel" alt="aayushree-hostel"/>	
+						<h2 style="position: relative;top: -31px;">AAyush Boys hostel</h2>					
+					</div>
+						
+						
                 </div><!-- sidebar -->
 
 
@@ -576,7 +583,7 @@ function humanTiming($time) {
     <!-- content -->
 
     <?php
-    include "footer.php";
+	include "footer.php";
     ?>
 
 </div><!-- footer -->
