@@ -568,10 +568,13 @@ include 'header.php';
 
                 <div class="col-md-4">
                 	 <h3 style="    color: #FF6E3D; font-size: 20px;" id="review"><a name="review" id="review"></a>Advertisement</h3>
+					
+					<a href="#">
 					<div class="advertisement">
 						<img src="img/aayushree-hostel.PNG" title="AAyushree Hostel" alt="aayushree-hostel"/>	
-						<h2 style="position: relative;top: -31px;">AAyush Boys hostel</h2>					
+						<h2 style="position: relative;top: -31px;">AAyush Boys Hostel</h2>					
 					</div>
+					</a>
 						
 						
                 </div><!-- sidebar -->
