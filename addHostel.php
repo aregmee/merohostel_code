@@ -59,7 +59,7 @@ if(isset($name) && isset($gender) && isset($address)){
     <meta content='noodp,noydir' name='robots'/>
     <meta content='INDEX, FOLLOW' name='GOOGLEBOT'/>
     <meta content='Merohostel.com' name='author'/>
-    <meta content="" name="description" >
+    <meta content="Add your Hostel details by filling a simple form and get enlisted your hostel in Merohostel.com" name="description" >
     <meta content='add hostels, submit hostel in merohostel, hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel, merohostel.com' name='keywords'/>
 
     <!-- Main Styslesheet -->
