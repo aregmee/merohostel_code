@@ -111,18 +111,18 @@
 									</div>
 
 									<div class="ui form">
-										<label>Gender</label>
+										<label>Are you a boy or a girl?</label>
 										<div class="inline fields">
 											<div class="field">
 												<div class="ui radio checkbox">
 													<input type="radio" name="sex" checked="checked" value="boys">
-													<label>Boys</label>
+													<label>Boy</label>
 												</div>
 											</div>
 											<div class="field">
 												<div class="ui radio checkbox">
 													<input type="radio" name="sex" value="girls">
-													<label>Girls</label>
+													<label>Girl</label>
 												</div>
 											</div>
 										</div>
