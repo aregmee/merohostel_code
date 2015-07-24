@@ -20,7 +20,7 @@
     <meta content='noodp,noydir' name='robots'/>
     <meta content='INDEX, FOLLOW' name='GOOGLEBOT'/>
     <meta content='Merohostel.com' name='author'/>
-    <meta content="{Hostel Name} is located in {Area}." name="description" >
+    <meta content="<?php echo $name; ?> is located in <?php echo $location; ?>." name="description" >
     <meta content='<?php echo $name; ?>, hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel, merohostel.com' name='keywords'/>
 
 
