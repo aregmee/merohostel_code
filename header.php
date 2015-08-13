@@ -101,3 +101,4 @@
 
     </div><!-- fixedSearch -->
 </div><!-- header-->
+<?php include 'analyticstracking.php'; ?>

@@ -1,20 +1,34 @@
 <!DOCTYPE HTML>
 <?php
 include("DBConnection.php");
-$name = $_POST["hname"];
-$gender = $_POST["sex"];
-$address = $_POST["address"];
-$honame = $_POST["honame"];
-$cno = $_POST["cno"];
-$edate = $_POST["edate"];
-$capacity = $_POST["tno"];
-$adfee = $_POST["admissionfee"];
-$sdepo = $_POST["sdepo"];
-$mf1 = $_POST["mf1"];
-$mf2 = $_POST["mf2"];
-$mf3 = $_POST["mf3"];
-$mf4 = $_POST["mf4"];
-$description = $_POST["description"];
+if(isset($_POST["hname"]))
+    $name = $_POST["hname"];
+if(isset($_POST["sex"]))
+    $gender = $_POST["sex"];
+if(isset($_POST["address"]))
+    $address = $_POST["address"];
+if(isset($_POST["honame"]))
+    $honame = $_POST["honame"];
+if(isset($_POST["cno"]))
+    $cno = $_POST["cno"];
+if(isset($_POST["edate"]))
+    $edate = $_POST["edate"];
+if(isset($_POST["tno"]))
+    $capacity = $_POST["tno"];
+if(isset($_POST["admissionfee"]))
+    $adfee = $_POST["admissionfee"];
+if(isset($_POST["sdepo"]))
+    $sdepo = $_POST["sdepo"];
+if(isset($_POST["mf1"]))
+    $mf1 = $_POST["mf1"];
+if(isset($_POST["mf2"]))
+    $mf2 = $_POST["mf2"];
+if(isset($_POST["mf3"]))
+    $mf3 = $_POST["mf3"];
+if(isset($_POST["mf4"]))
+    $mf4 = $_POST["mf4"];
+if(isset($_POST["description"]))
+    $description = $_POST["description"];
 if(isset($name) && isset($gender) && isset($address)){
 
     $sql = "INSERT INTO temp_fee_structure (admission, security_deposit, 1_bed, 2_bed, 3_bed, 4_bed)
@@ -126,6 +140,12 @@ if(isset($name) && isset($gender) && isset($address)){
                                     </div>
                                 </div>
                             </div>
+                            <div class="field">
+                                <label>Description</label>
+                                <div>
+                                    <textarea name="description" id = "description" rows="5" cols="40" required="true"></textarea>
+                                </div>
+                            </div>
                             <div class="ui form">
                                 <label>Gender</label>
                                 <div class="inline fields">
@@ -157,7 +177,6 @@ if(isset($name) && isset($gender) && isset($address)){
                                 <div class="ui corner labeled input">
                                     <input placeholder="Hostel Owner's Name" type="text"  name="honame" >
                                     <div class="ui corner label">
-                                    	<i class="asterisk icon"></i>
                                     </div>
                                 </div>
                             </div>
@@ -176,7 +195,6 @@ if(isset($name) && isset($gender) && isset($address)){
                                     <div class="ui corner labeled input">
                                         <input placeholder="Established Year" type="text"  name="edate"  >
                                         <div class="ui corner label">
-                                        	<i class="asterisk icon"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -234,7 +252,6 @@ if(isset($name) && isset($gender) && isset($address)){
                                     <div class="ui corner labeled input">
                                         <input placeholder="Capacity" type="number" id = "capacity" name="tno" maxlength="30" size="30">
                                         <div class="ui corner label">
-                                        	<i class="asterisk icon"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -248,7 +265,6 @@ if(isset($name) && isset($gender) && isset($address)){
                                     <div class="ui corner labeled input">
                                         <input placeholder="Admission" type="number" id = "admission_fee" name="admissionfee" maxlength="30" size="30">
                                         <div class="ui corner label">
-                                        	<i class="asterisk icon"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -257,7 +273,6 @@ if(isset($name) && isset($gender) && isset($address)){
                                     <div class="ui corner labeled input">
                                         <input placeholder="Security Deposit" type="number" id = "sec_dep" name="sdepo" maxlength="30" size="30">
                                         <div class="ui corner label">
-                                        	<i class="asterisk icon"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -268,7 +283,6 @@ if(isset($name) && isset($gender) && isset($address)){
                                     <div class="ui corner labeled input">
                                         <input placeholder="1 Bed" type="number" id="one_bed" name="mf1" maxlength="50" size="30">
                                         <div class="ui corner label">
-                                        	<i class="asterisk icon"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -277,7 +291,6 @@ if(isset($name) && isset($gender) && isset($address)){
                                     <div class="ui corner labeled input">
                                         <input placeholder="2 Bed" type="number" id ="two_bed" name="mf2" maxlength="50" size="30">
                                         <div class="ui corner label">
-                                        	<i class="asterisk icon"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -286,7 +299,6 @@ if(isset($name) && isset($gender) && isset($address)){
                                     <div class="ui corner labeled input">
                                         <input placeholder="3 Bed" type="number" id="three_bed" name="mf3" maxlength="50" size="30">
                                         <div class="ui corner label">
-                                        	<i class="asterisk icon"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -295,16 +307,9 @@ if(isset($name) && isset($gender) && isset($address)){
                                     <div class="ui corner labeled input">
                                         <input placeholder="4 Bed" type="number" id ="four_bed" name="mf4" maxlength="50" size="30">
                                         <div class="ui corner label">
-                                        	<i class="asterisk icon"></i>
                                         </div>
                                     </div>
                                 </div>
-								<div class="field">
-									<label>Description</label>
-									<div>
-										<input type = "text" name="description" id = "description">										
-									</div>
-								</div>
                             </div>
 
                             <div>

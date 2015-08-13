@@ -43,6 +43,9 @@
 		<script src="bootstrap/html5shiv.min.js"></script>
 		<script src="bootstrap/respond.min.js"></script>
 		<![endif]-->
+
+        <?php include 'analyticstracking.php'; ?>
+
         <script type="text/javascript" charset="utf-8" src="js/typeahead.jquery.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/handlebars.js"></script>
         <script type="text/javascript">
