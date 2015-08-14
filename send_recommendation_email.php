@@ -44,7 +44,7 @@
 
         !isset($_POST['course']) ||
 
-        !isset($_POST['roomType']) ||
+        !isset($_POST['rtype']) ||
 
         !isset($_POST['duration'])) {
 
@@ -65,7 +65,7 @@
 
     $course = $_POST['course']; // required
 
-    $roomType = $_POST['roomType']; // required
+    $roomType = $_POST['rtype']; // required
 
     $duration = $_POST['duration']; // required
 
@@ -128,17 +128,46 @@
 
 
 
+require_once('phpMailer/class.phpmailer.php');
 
+require_once("phpMailer/class.smtp.php");
 
-// create email headers
+require 'phpMailer/PHPMailerAutoload.php';
 
-    $headers = 'From: '.$emailAddress."\r\n".
+$mailer = new PHPMailer();
 
-        'Reply-To: '.$emailAddress."\r\n" .
+$mailer->IsSMTP();
 
-        'X-Mailer: PHP/' . phpversion();
+$mailer->SMTPSecure = 'tls';
 
-    @mail($email_to, $email_subject, $email_message, $headers);
+$mailer->Host = 'smtp.gmail.com';
+
+$mailer->Port = 587;
+
+$mailer->Username = $email_to;
+
+$mailer->Password = 'MeroHostel123!';
+
+$mailer->SMTPAuth = true;
+
+$mailer->From = $emailAddress;
+
+$mailer->FromName = $name;
+
+$mailer->addReplyTo($emailAddress,$name);
+
+$mailer->Subject = $email_subject;
+
+    $mailer->Body = $email_message;
+
+    $mailer->ClearAddresses();
+
+    $mailer->AddAddress($email_to);
+
+    if($mailer->Send()) {
+
+        echo 'Thank you for contacting us. We will be in touch with you very soon.';
+    }
 
     ?>
 
@@ -148,7 +177,6 @@
 
 
 
-    Thank you for contacting us. We will be in touch with you very soon.
 
 
 
