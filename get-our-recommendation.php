@@ -47,9 +47,9 @@
                 var duration=document.getElementById("duration").value;
                 var roomType=document.getElementById('rtype').value;
                 var http = new XMLHttpRequest();
-                var url = "send_recomendation_email.php";
-                var params = "name=" + name + "&emailAddress=" + emailAddress + "&contactNo=" + contactNo +
-                    "&gender=" + gender+"&course="+course+"$location="+location+"&duration="+duration+"&roomType="+roomType;
+                var url = "send_form_email.php";
+                var comments = "\ngender=" + gender+"\ncourse="+course+"\nlocation="+location+"\nduration="+duration+"\nroomType="+roomType;
+                var params = "first_name=" + name + + "&last_name=asdf" + "&email=" + emailAddress + "&telephone=" + contactNo + "&comments=" + comments;
                 http.open("POST", url, true);
 
                 http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -62,6 +62,8 @@
                     }
                 };
                 http.send(params);
+                alert('comments'+comments);
+                alert('params'+comments);
                 $('#sendSuccess').removeClass('hide');
 				document.getElementById("name").value=" ";
 				document.getElementById("cno").value=" ";
