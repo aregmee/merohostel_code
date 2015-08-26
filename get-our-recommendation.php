@@ -38,7 +38,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 		<script>
 			function recommendation(){
-                var name= document.getElementById("name").value;
+                var name=document.getElementById("name").value;
                 var contactNo=document.getElementById("cno").value;
                 var emailAddress=document.getElementById("emailAddress").value;
                 var gender=document.getElementById("gender").value;
@@ -47,9 +47,9 @@
                 var duration=document.getElementById("duration").value;
                 var roomType=document.getElementById('rtype').value;
                 var http = new XMLHttpRequest();
-                var url = "send_form_email.php";
-                var comments = "\ngender=" + gender+"\ncourse="+course+"\nlocation="+location+"\nduration="+duration+"\nroomType="+roomType;
-                var params = "first_name=" + name + + "&last_name=asdf" + "&email=" + emailAddress + "&telephone=" + contactNo + "&comments=" + comments;
+                var url = "save_recommendation.php";
+                var params ="name=" + name + "&emailAddress=" + emailAddress + "&contactNo=" + contactNo +
+                    "&gender=" + gender+"&course="+course+"&location="+location+"&duration="+duration+"&rtype="+roomType;
                 http.open("POST", url, true);
 
                 http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -61,9 +61,8 @@
                         //alert(http.responseText);
                     }
                 };
+                console.log(params)
                 http.send(params);
-                alert('comments'+comments);
-                alert('params'+comments);
                 $('#sendSuccess').removeClass('hide');
 				document.getElementById("name").value=" ";
 				document.getElementById("cno").value=" ";
@@ -118,7 +117,7 @@
 									Here is the form that you need to fill up.
 								</p>
 
-								<form id="addHostel" class="ui form" style="width: 97%;" onsubmit="return recommendation();">
+								<form id="addHostel" class="ui form" style="width: 97%;" onsubmit="return recommendation()">
                                     <div class="ui positive message hide" id="sendSuccess">
                                         <div class="header">
                                             Thanks. Your email has been sent!
@@ -143,7 +142,7 @@
 										<div class="field">
 											<label>Contact Number</label>
 											<div class="ui corner labeled input">
-												<input placeholder="Contact Number" type="text" id="cno"  name="cno"  required="true">
+												<input placeholder="Contact Number" type="text" id="cno"  name="contactNo"  required="true">
 												<div class="ui corner label">
 													<i class="asterisk icon"></i>
 												</div>
@@ -152,7 +151,7 @@
 										<div class="field">
 											<label>Email Address</label>
 											<div class="ui corner labeled input">
-												<input placeholder="Email Address" type="text" id="emailAddress" name="email"  >
+												<input placeholder="Email Address" type="text" id="emailAddress" name="emailAddress"  >
 												<div class="ui corner label">
 													<i class="asterisk icon"></i>
 												</div>
@@ -165,13 +164,13 @@
 										<div class="inline fields">
 											<div class="field">
 												<div class="ui radio checkbox">
-													<input type="radio" name="sex" checked="checked" value="boys" id="gender">
+													<input type="radio" name="gender" checked="checked" value="boys" id="gender">
 													<label>Boy</label>
 												</div>
 											</div>
 											<div class="field">
 												<div class="ui radio checkbox">
-													<input type="radio" name="sex" value="girls" id="gender">
+													<input type="radio" name="gender" value="girls" id="gender">
 													<label>Girl</label>
 												</div>
 											</div>
@@ -182,7 +181,7 @@
 										<div class="field">
 											<label>Preferred Location</label>
 											<div class="ui corner labeled input">
-												<input placeholder="Preferred Location" type="text" id="location"  name=""  required="true">
+												<input placeholder="Preferred Location" type="text" id="location"  name="location"  required="true">
 												<div class="ui corner label">
 													<i class="asterisk icon"></i>
 												</div>
@@ -191,7 +190,7 @@
 										<div class="field">
 											<label>Course of study</label>
 											<div class="ui corner labeled input">
-												<input placeholder="Course of study" type="text" id="course"  name=""  required="true">
+												<input placeholder="Course of study" type="text" id="course"  name="course"  required="true">
 												<div class="ui corner label">
 													<i class="asterisk icon"></i>
 												</div>
