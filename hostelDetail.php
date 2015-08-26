@@ -360,11 +360,14 @@ include 'header.php';
                                 <?php if($contact != NULL && $contact != "NULL") echo "<i class=\"circular inverted orange  phone square icon\"></i>" . " " . $contact
                                 ?>
                             </p>
-                            <p>
-                                <?php if($email != NULL && $email != "NULL") echo "<i class=\"circular inverted orange  mail  icon\"></i>" . " " . $email
-                                ?>
-                            </p>
-
+                             <!-- 
+                             <p class="ui header">
+							 <i class="large icons">
+					  			  <i class="orange inverted twitter icon"></i>					    	    
+							 </i>
+									  Quick Inquiry
+							</p>	
+							-->			
                         </div>
 
                     </div>
@@ -567,15 +570,24 @@ include 'header.php';
 
 
                 <div class="col-md-4">
+                	 
                 	 <h3 style="    color: #FF6E3D; font-size: 20px;" id="review"><a name="review" id="review"></a>Advertisement</h3>
 					
-					<a href="#">
+					<a href="http://merohostel.com/hostelDetail.php?id=67" target="_blank">
 					<div class="advertisement">
-						<img src="img/aayushree-hostel.PNG" title="AAyushree Hostel" alt="aayushree-hostel"/>	
-						<h2 style="position: relative;top: -31px;">AAyush Boys Hostel</h2>					
+						<img src="img/aayushree-hostel.PNG" title="Aayush Hostel" alt="aayush-hostel"/>	
+						<h2 style="position: relative;top: -31px;">Aayush Boys Hostel</h2>					
 					</div>
 					</a>
-						
+					
+					<br/>
+				
+					<a href="http://www.merohostel.com/hostelDetail.php?id=264" target="_blank">
+					<div class="advertisement">
+						<img src="img/kanya-girls-hostel.JPG" title="Kanya Chhatrabas (Girls Hostel)" alt="kanya-girls-hostel"/>	
+						<h2 style="position: relative;top: -31px;">Kanya Girls Hostel</h2>					
+					</div>
+					</a>
 						
                 </div><!-- sidebar -->
 

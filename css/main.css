@@ -25,11 +25,11 @@ a:hover {
 .advertisement {
 	border: 1px solid #ddd;
 	box-shadow: 2px 2px 2px #ddd;
-	height: 252px;
+	height: 182px;
 }
 .advertisement img {
 	width: 100%;
-	height: 250px;
+	height: 180px;
 }
 .advertisement h2 {
 	padding: 10px;
@@ -473,4 +473,8 @@ input.ui.input.typeahead.tt-input {
 }
 .tt-suggestion.tt-selectable:last-child {
 	border: none;
+}
+
+#quickInquiry {
+	width: 150px;
 }
