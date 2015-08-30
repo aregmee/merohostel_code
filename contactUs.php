@@ -180,7 +180,9 @@
 		<script src="sweetalert-master/dist/sweetalert.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
 
-        <?php include 'header.php'; ?>
+		<?php
+	include 'header.php';
+ ?>
 
 		<div id="map-canvas"></div>
 

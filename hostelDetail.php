@@ -292,6 +292,7 @@ include 'header.php';
                     <div class="row" style="
 							background-color: #f6f6f6;
 							padding: 10px 0px;
+							position: relative;
 
 							">
                         <div class="col-md-5" id="generalInfo">
@@ -359,16 +360,22 @@ include 'header.php';
                             <p>
                                 <?php if($contact != NULL && $contact != "NULL") echo "<i class=\"circular inverted orange  phone square icon\"></i>" . " " . $contact
                                 ?>
-                            </p>
-                             <!-- 
-                             <p class="ui header">
-							 <i class="large icons">
-					  			  <i class="orange inverted twitter icon"></i>					    	    
-							 </i>
-									  Quick Inquiry
-							</p>	
-							-->			
+                            </p>                            		
                         </div>
+                        
+                        <!--
+                          <div id="quickInquiry">
+                                                 <a href=""
+                                                         <p class="ui header">
+                                                         <i class="large icons">
+                                                                <i class="orange inverted envelope icon"></i>					    	    
+                                                         </i>
+                                                                  Quick Inquiry
+                                                        </p>	
+                                                    </div>	-->
+                                                    
+                                                    <?php include 'inquiry.php'?>
+                        
 
                     </div>
                     <!-- internal row 1 -->

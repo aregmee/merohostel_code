@@ -413,7 +413,7 @@ div#atstbx a:hover {
 	padding-left: 0px;
 }
 #feedbackModal .modal-header {
-	border-bottom: 0;
+	/*border-bottom: 0;*/
 }
 #messageFeedback {
 	font-family: "Oswald", sans-serif;
@@ -475,6 +475,29 @@ input.ui.input.typeahead.tt-input {
 	border: none;
 }
 
+/*Inquiry */
 #quickInquiry {
-	width: 150px;
+	border: 1px solid #ddd;
+	display: inline-block;
+	position: absolute;
+	bottom: 10px;
+	right: 15px;
+	background-color: #E07B53;
+	padding: 9px;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #ddd;
+	font-size: 11px;
+	cursor: pointer;
 }
+div#quickInquiry p {
+	color: #fff;
+}
+#quickInquiry:hover {
+	background-color: #e28560;
+	color: #fff;
+	text-shadow: none;
+}
+div#radioGap div {
+	padding-right: 5px;
+}
+/*Inquiry */
