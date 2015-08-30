@@ -12,6 +12,7 @@
 		<meta content='INDEX, FOLLOW' name='GOOGLEBOT'/>
 		<meta content='Merohostel.com' name='author'/>
         <?php
+            include 'addressPriority.php';
             if (isset($_GET["location"])) {
                 $meta_location = $_GET["location"];
             } else {
@@ -80,6 +81,7 @@
 		<!-- Google Web Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
+
 	</head>
 
 	<body>
@@ -112,8 +114,10 @@
 								} elseif ($conn -> query("SELECT * FROM hostel where address = '" . $location . " %'")) {
 
 									if (($location != null || $location != '') && ($gender == null || $gender == ''))
-										echo "Hostels nearby " . $location;
-									else if (($location != null || $location != '') && ($gender != null || $gender != ''))
+                                        if($result->num_rows > 0)
+                                            echo "Hostels nearby " . $location;
+
+                                        else if (($location != null || $location != '') && ($gender != null || $gender != ''))
 										echo " nearby " . $location;
 								}
 								if (($gender == null || $gender == '') && ($location == null || $location == ''))
@@ -122,7 +126,11 @@
                             </h2>
                                 <?php
                                     if($result->num_rows == 0)
+
                                         echo "<i>Sorry! No hostels match your criteria.</i>";
+
+                                getAddressPriority($location);
+
                                     while($row = $result->fetch_assoc()) {
                                 ?>
 
