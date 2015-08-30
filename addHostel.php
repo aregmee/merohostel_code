@@ -203,18 +203,6 @@ if(isset($name) && isset($gender) && isset($address)){
                             <h3 id="facilities"><a name="facilities" id="facilities"></a>Facilities</h3>
                             <div class=" fields">
                                 <div class="field">
-                                    <div class="ui checkbox">
-                                        <input type="checkbox" name="facility[]" value="1">
-                                        <label>24 electricity</label>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <div class="ui  checkbox">
-                                        <input type="checkbox" name="facility[]" value="2">
-                                        <label>Wi-Fi</label>
-                                    </div>
-                                </div>
-                                <div class="field">
                                     <div class="ui  checkbox">
                                         <input type="checkbox" name="facility[]" value="3">
                                         <label>Hot Water</label>
@@ -224,12 +212,6 @@ if(isset($name) && isset($gender) && isset($address)){
                                     <div class="ui  checkbox">
                                         <input type="checkbox" name="facility[]" value="4">
                                         <label>Locker</label>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <div class="ui  checkbox">
-                                        <input type="checkbox" name="facility[]" value="5">
-                                        <label>Hostel Warden</label>
                                     </div>
                                 </div>
                                 <div class="field">
