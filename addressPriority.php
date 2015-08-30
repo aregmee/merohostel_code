@@ -127,22 +127,13 @@ function getAddressPriority($location){
 
         echo "<br>Did you mean<br>";
 
-        /*for($k=0;$k<sizeof($matchedAddress)-1;$k++){
+        if(sizeof($matchedAddress)>=8){
+            $loop=8;
+        }else{
+            $loop=sizeof($matchedAddress);
+        }
 
-            for($j=0;$j<sizeof($matchedAddress);$j++){
-
-                if($matchedAddress[$k]==$matchedAddress[$j]){
-
-                    unset($matchedAddress[$j]);
-
-                    $matchedAddress=array_values($matchedAddress);
-                }
-
-            }
-
-        }*/
-
-        for($k=0;$k<sizeof($matchedAddress);$k++){
+        for($k=0;$k<$loop;$k++){
 
             echo "<a href='hostelList.php?location=" . ($matchedAddress[$k]) . "' class='icon item'>$matchedAddress[$k]</a><br>";
 
