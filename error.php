@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>Terms And Conditions | Merohostel.com</title>
+		<title>Whoops! Error | Merohostel.com</title>
 		
 		<link rel="icon" href="img/favicon.ico">
 		<meta content='noodp,noydir' name='robots'/>
@@ -58,59 +58,14 @@
 						<div class="col-md-8">
 							<h2 id="deHosTtl">Terms and Conditions</h2>
 							<div class="row" style="padding: 10px 0px;">
-								<p style="font-size: 15px;word-spacing: 3px;">
-									The objective of Merohostel.com is to provide a web based platform for easy browsing of hostels inside the Kathmandu valley. Through Merohostel, advertisers can advertise their business and the users can benefit from the information provided.
-									</br>
-									</br>
-									Website refers to www.merohostel.com.
-									</br>
-									</br>
-									Advertiser: Advertiser is a person, who is either an owner or representative of a hostel in Nepal, which is listed on Merohostel.com.
-									</br>
-									</br>
-									User: User is a general public who views Merohostel.com to gain the information of hostels that are listed on the website. This person is not registered with Merohostel.com.
-									</br>
-									</br>
-									Content administrator is a member of Merohostel, who justifies the information of hostel, uploaded to the website, and makes it public only after getting the consent from the hostel owner.
-								</p>
-								<h3> Terms of Contract: </h3>
-
-								<ol id="tocBullets">
-									<li>
-										The name-list of registered hostels inside the Kathmandu valley is provided to us by the Hostel Association of Nepal. The list includes only Hostel name, Owner’s name, Address, and Contact number. Other information that is listed on the website are collected by either contacting the hostel on phone or visiting them door-to-door.
-									</li>
-									<li>
-										All registrations and advertisements have to be approved by Merohostel before being published on the website.
-									</li>
-									<li>
-										The advertiser is allowed to add a hostel on the website. Once the hostel registration is received by the content administrator, s/he will contact the hostel owner and verify the business before posting it on the website.
-									</li>
-									<li>
-										All the hostels listed on Merohostel.com may or may not be registered to the Hostel Association of Nepal. This decision is at hostel owner’s discretion.
-									</li>
-									<li>
-										All registrations and advertisements have to be approved by Merohostel before being published on the website.
-									</li>
-									<li>
-										‘Verified hostel’ tag on any hostel detail page means that the Merohostel team have contacted the hostel and received the consent to upload the information on the website.
-									</li>
-									<li>
-										All the hostels on the website are currently registered for free and the services might change at our own discretion.
-									</li>
-									<li>
-										All the images of hostels included in the website arse taken by Merohostel team itself.
-									</li>
-									<li>
-										The credit of the cover image of the website belongs to Helminadia Ranford.
-									</li>
-									<li>
-										The information provided on the website can be used by the user in any way s/he wants and be shared to anyone s/he wishes to.
-									</li>
-									<li>
-										Within the registration, the advertiser agrees to accept communications through Call/Email/SMS from Merohostel.
-									</li>
-
-								</ol>
+								
+								<div id="error404">
+									<img  class="img-responsive" src="img/404.png" title="404 Error"/>
+									<h1>Sorry! this page flew to the Moon!</h1>
+									<h3>Perhaps, you would like to go to our <a href="index.php"><em>homepage</em></a>?</h3>
+			
+								</div>
+																
 							</div>
 							<!-- internal row 1 -->
 

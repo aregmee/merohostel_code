@@ -501,3 +501,11 @@ div#radioGap div {
 	padding-right: 5px;
 }
 /*Inquiry */
+#error404 {
+	text-align: center;
+}
+#error404  img {
+	display: block;
+	margin: auto;
+	width: 550px;
+}
