@@ -50,6 +50,9 @@
                         left join main_photo mp on h.id = mp.hostel_id
                         where address like '%$location%' and gender = '$gender' order by case when photo_id is null then 1 else 0 end, photo_id";
             $result = $conn -> query($sql);
+            if (!$result) {
+    			echo $conn->error;
+			}
         ?>
 		<meta content="Choose from <?php echo $result->num_rows;?> hostels in <?php echo ucfirst($meta_location); ?> and read reviews from your fellow hostellers." name="description" >
 		<meta content='hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel,  merohostel.com' name='keywords'/>

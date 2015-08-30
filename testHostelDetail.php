@@ -1,12 +1,13 @@
 <!DOCTYPE HTML>
 <?php $submitted = "noidea";
-	$id = $_GET["id"];
-	include 'DBConnection.php';
-	$hostel_row = $conn -> query("SELECT * from hostel where id='$id'");
-	list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) = $hostel_row -> fetch_row();
-	if (empty($id))
-		header("Location: error.php");
-	$email = "";
+$id = $_GET["id"];
+include 'database/connection.php';
+include 'oop/HostelAction.php';
+$hostel = $hostelAction->getHostelDetail($id);
+$id = $hostel->getId();
+if (empty($id))
+    header("Location: error.php");
+$email = "";
 ?>
 <html>
 <head>
@@ -14,14 +15,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title><?php echo $name; ?> | Merohostel.com</title>
+    <title><?php echo $hostel->getName(); ?> | Merohostel.com</title>
 
     <link rel="icon" href="img/favicon.ico">
     <meta content='noodp,noydir' name='robots'/>
     <meta content='INDEX, FOLLOW' name='GOOGLEBOT'/>
     <meta content='Merohostel.com' name='author'/>
-    <meta content="<?php echo $name; ?> is located in <?php echo $location; ?>." name="description" >
-    <meta content='<?php echo $name; ?>, hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel, merohostel.com' name='keywords'/>
+    <meta content="<?php echo $hostel->getName(); ?> is located in <?php echo $hostel->getAddress(); ?>." name="description" >
+    <meta content='<?php echo $hostel->getName(); ?>, hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel, merohostel.com' name='keywords'/>
 
 
     <!-- Main Styslesheet -->
@@ -54,180 +55,180 @@
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
     <script type="text/javascript">
-		$(document).ready(function() {
-			/*
-			 *  Simple image gallery. Uses default settings
-			 */
+        $(document).ready(function() {
+            /*
+             *  Simple image gallery. Uses default settings
+             */
 
-			$('.fancybox').fancybox();
+            $('.fancybox').fancybox();
 
-			/*
-			*  Different effects
-			*/
+            /*
+             *  Different effects
+             */
 
-			// Change title type, overlay closing speed
-			$(".fancybox-effects-a").fancybox({
-				helpers : {
-					title : {
-						type : 'outside'
-					},
-					overlay : {
-						speedOut : 0
-					}
-				}
-			});
+            // Change title type, overlay closing speed
+            $(".fancybox-effects-a").fancybox({
+                helpers : {
+                    title : {
+                        type : 'outside'
+                    },
+                    overlay : {
+                        speedOut : 0
+                    }
+                }
+            });
 
-			// Disable opening and closing animations, change title type
-			$(".fancybox-effects-b").fancybox({
-				openEffect : 'none',
-				closeEffect : 'none',
+            // Disable opening and closing animations, change title type
+            $(".fancybox-effects-b").fancybox({
+                openEffect : 'none',
+                closeEffect : 'none',
 
-				helpers : {
-					title : {
-						type : 'over'
-					}
-				}
-			});
+                helpers : {
+                    title : {
+                        type : 'over'
+                    }
+                }
+            });
 
-			// Set custom style, close if clicked, change title type and overlay color
-			$(".fancybox-effects-c").fancybox({
-				wrapCSS : 'fancybox-custom',
-				closeClick : true,
+            // Set custom style, close if clicked, change title type and overlay color
+            $(".fancybox-effects-c").fancybox({
+                wrapCSS : 'fancybox-custom',
+                closeClick : true,
 
-				openEffect : 'none',
+                openEffect : 'none',
 
-				helpers : {
-					title : {
-						type : 'inside'
-					},
-					overlay : {
-						css : {
-							'background' : 'rgba(238,238,238,0.85)'
-						}
-					}
-				}
-			});
+                helpers : {
+                    title : {
+                        type : 'inside'
+                    },
+                    overlay : {
+                        css : {
+                            'background' : 'rgba(238,238,238,0.85)'
+                        }
+                    }
+                }
+            });
 
-			// Remove padding, set opening and closing animations, close if clicked and disable overlay
-			$(".fancybox-effects-d").fancybox({
-				padding : 0,
+            // Remove padding, set opening and closing animations, close if clicked and disable overlay
+            $(".fancybox-effects-d").fancybox({
+                padding : 0,
 
-				openEffect : 'elastic',
-				openSpeed : 150,
+                openEffect : 'elastic',
+                openSpeed : 150,
 
-				closeEffect : 'elastic',
-				closeSpeed : 150,
+                closeEffect : 'elastic',
+                closeSpeed : 150,
 
-				closeClick : true,
+                closeClick : true,
 
-				helpers : {
-					overlay : null
-				}
-			});
+                helpers : {
+                    overlay : null
+                }
+            });
 
-			/*
-			 *  Button helper. Disable animations, hide close button, change title type and content
-			 */
+            /*
+             *  Button helper. Disable animations, hide close button, change title type and content
+             */
 
-			$('.fancybox-buttons').fancybox({
-				openEffect : 'none',
-				closeEffect : 'none',
+            $('.fancybox-buttons').fancybox({
+                openEffect : 'none',
+                closeEffect : 'none',
 
-				prevEffect : 'none',
-				nextEffect : 'none',
+                prevEffect : 'none',
+                nextEffect : 'none',
 
-				closeBtn : false,
+                closeBtn : false,
 
-				helpers : {
-					title : {
-						type : 'inside'
-					},
-					buttons : {}
-				},
+                helpers : {
+                    title : {
+                        type : 'inside'
+                    },
+                    buttons : {}
+                },
 
-				afterLoad : function() {
-					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
-				}
-			});
+                afterLoad : function() {
+                    this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+                }
+            });
 
-			/*
-			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
-			 */
+            /*
+             *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+             */
 
-			$('.fancybox-thumbs').fancybox({
-				prevEffect : 'none',
-				nextEffect : 'none',
+            $('.fancybox-thumbs').fancybox({
+                prevEffect : 'none',
+                nextEffect : 'none',
 
-				closeBtn : false,
-				arrows : false,
-				nextClick : true,
+                closeBtn : false,
+                arrows : false,
+                nextClick : true,
 
-				helpers : {
-					thumbs : {
-						width : 50,
-						height : 50
-					}
-				}
-			});
+                helpers : {
+                    thumbs : {
+                        width : 50,
+                        height : 50
+                    }
+                }
+            });
 
-			/*
-			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
-			 */
-			$('.fancybox-media').attr('rel', 'media-gallery').fancybox({
-				openEffect : 'none',
-				closeEffect : 'none',
-				prevEffect : 'none',
-				nextEffect : 'none',
+            /*
+             *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+             */
+            $('.fancybox-media').attr('rel', 'media-gallery').fancybox({
+                openEffect : 'none',
+                closeEffect : 'none',
+                prevEffect : 'none',
+                nextEffect : 'none',
 
-				arrows : false,
-				helpers : {
-					media : {},
-					buttons : {}
-				}
-			});
-		});
+                arrows : false,
+                helpers : {
+                    media : {},
+                    buttons : {}
+                }
+            });
+        });
 
-		$(function() {
-			$(".search").keyup(function() {
-				var searchid = $(this).val();
-				var gender = $("#genderSelect").val();
-				var dataString = 'search=' + searchid + '&gender=' + gender;
-				if (searchid != '') {
-					$.ajax({
-						type : "POST",
-						url : "search.php",
-						data : dataString,
-						cache : false,
-						success : function(html) {
-							$("#result").html(html).show();
-						}
-					});
-				}
-				return false;
-			});
-		});
+        $(function() {
+            $(".search").keyup(function() {
+                var searchid = $(this).val();
+                var gender = $("#genderSelect").val();
+                var dataString = 'search=' + searchid + '&gender=' + gender;
+                if (searchid != '') {
+                    $.ajax({
+                        type : "POST",
+                        url : "search.php",
+                        data : dataString,
+                        cache : false,
+                        success : function(html) {
+                            $("#result").html(html).show();
+                        }
+                    });
+                }
+                return false;
+            });
+        });
 
-		function validateReview() {
-			if (/^[a-zA-Z]*$/.test($("#first_name").val().trim()) == false) {//validating first name
-				sweetAlert("Oops...", "First Name should only contain alphabets!", "error");
-				$("#first_name").focus()
-				return false
-			}
-			if (/^[a-zA-Z]*$/.test($("#last_name").val().trim()) == false) {//validating last name
-				sweetAlert("Oops...", "Last Name should only contain alphabets!", "error");
-				$("#last_name").focus()
-				return false
-			}
-			var email = $("#email").val().trim();
-			var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-			if (!email.match(mailformat))//validating email
-			{
-				sweetAlert("Oops...", "You have entered an invalid email address!", "error");
-				$("#email").focus()
-				return false;
-			}
-			return true;
-		}
+        function validateReview() {
+            if (/^[a-zA-Z]*$/.test($("#first_name").val().trim()) == false) {//validating first name
+                sweetAlert("Oops...", "First Name should only contain alphabets!", "error");
+                $("#first_name").focus()
+                return false
+            }
+            if (/^[a-zA-Z]*$/.test($("#last_name").val().trim()) == false) {//validating last name
+                sweetAlert("Oops...", "Last Name should only contain alphabets!", "error");
+                $("#last_name").focus()
+                return false
+            }
+            var email = $("#email").val().trim();
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (!email.match(mailformat))//validating email
+            {
+                sweetAlert("Oops...", "You have entered an invalid email address!", "error");
+                $("#email").focus()
+                return false;
+            }
+            return true;
+        }
     </script>
     <script src="sweetalert-master/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
@@ -235,51 +236,51 @@
 
 <body>
 <?php $reviews = $conn -> query("SELECT * from review where hostel_id = '$id' and display = 1");
-	//list($id, $capacity, $contact, $gender, $location, $name, $email, $website, $additionalInfo, $ownerId, $mainPhotoUrl) = $row -> fetch_row();
-	$owner_row = $conn -> query("SELECT * from owner where id='$fee_structure_id'");
-	list($owner_id, $hostel_id, $owner_name, $contact) = $owner_row -> fetch_row();
-	if (isset($_POST['review']) && isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['review_email'])) {
-		$review = $_POST['review'];
-		$first_name = trim($_POST["firstName"]);
-		$last_name = trim($_POST["lastName"]);
-		$review_email = trim($_POST["review_email"]);
-		$date_array = getdate();
-		$date = $date_array["year"] . "-" . $date_array["mon"] . "-" . $date_array["mday"] . " " . $date_array["hours"] . ":" . $date_array["minutes"] . ":" . $date_array["seconds"];
-		$date = date_create($date);
-		$date = date_format($date, "Y/m/d H:i:s");
-		$query = "INSERT INTO review VALUES('$review', '$first_name', '$last_name', '$review_email', 0, $id, '$date', null)";
-		if (mysqli_query($conn, $query)) {
-			$submitted = "true";
-		} else {
-			$submitted = "false";
-		}
-	}
-	function humanTiming($time) {
-		$time = time() - $time;
-		// to get the time since that moment
+//list($id, $capacity, $contact, $gender, $location, $name, $email, $website, $additionalInfo, $ownerId, $mainPhotoUrl) = $row -> fetch_row();
+$owner_row = $conn -> query("SELECT * from owner where id='$fee_structure_id'");
+list($owner_id, $hostel_id, $owner_name, $contact) = $owner_row -> fetch_row();
+if (isset($_POST['review']) && isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['review_email'])) {
+    $review = $_POST['review'];
+    $first_name = trim($_POST["firstName"]);
+    $last_name = trim($_POST["lastName"]);
+    $review_email = trim($_POST["review_email"]);
+    $date_array = getdate();
+    $date = $date_array["year"] . "-" . $date_array["mon"] . "-" . $date_array["mday"] . " " . $date_array["hours"] . ":" . $date_array["minutes"] . ":" . $date_array["seconds"];
+    $date = date_create($date);
+    $date = date_format($date, "Y/m/d H:i:s");
+    $query = "INSERT INTO review VALUES('$review', '$first_name', '$last_name', '$review_email', 0, $id, '$date', null)";
+    if (mysqli_query($conn, $query)) {
+        $submitted = "true";
+    } else {
+        $submitted = "false";
+    }
+}
+function humanTiming($time) {
+    $time = time() - $time;
+    // to get the time since that moment
 
-		$tokens = array(31536000 => 'year', 2592000 => 'month', 604800 => 'week', 86400 => 'day', 3600 => 'hour', 60 => 'minute', 1 => 'second');
+    $tokens = array(31536000 => 'year', 2592000 => 'month', 604800 => 'week', 86400 => 'day', 3600 => 'hour', 60 => 'minute', 1 => 'second');
 
-		foreach ($tokens as $unit => $text) {
-			if ($time < $unit)
-				continue;
-			$numberOfUnits = floor($time / $unit);
-			return $numberOfUnits . ' ' . $text . (($numberOfUnits > 1) ? 's' : '');
-		}
+    foreach ($tokens as $unit => $text) {
+        if ($time < $unit)
+            continue;
+        $numberOfUnits = floor($time / $unit);
+        return $numberOfUnits . ' ' . $text . (($numberOfUnits > 1) ? 's' : '');
+    }
 
-	}
+}
 ?>
 
 <?php
 include 'header.php';
- ?>
+?>
 
 <div id="wrapper">
 
     <div id="content">
 
         <?php
-		include "feedback.php";
+        include "feedback.php";
         ?>
 
         <div style="background: #fff;" class="container">
@@ -287,12 +288,10 @@ include 'header.php';
             <div class="row" style="padding: 20px;">
 
                 <div class="col-md-8">
-                    <h2 id="deHosTtl"><?php echo $name
-                        ?></h2>
+                    <h2 id="deHosTtl"><?php echo $hostel->getName(); ?></h2>
                     <div class="row" style="
 							background-color: #f6f6f6;
 							padding: 10px 0px;
-							position: relative;
 
 							">
                         <div class="col-md-5" id="generalInfo">
@@ -301,7 +300,7 @@ include 'header.php';
 
                                 $main_photo = $conn->query("SELECT url FROM photo p
                                                 JOIN main_photo mp on mp.photo_id = p.id
-                                                JOIN hostel h on h.id = mp.hostel_id where h.id = $id;");
+                                                JOIN hostel h on h.id = mp.hostel_id where h.id = $hostel->getId();");
                                 $main_photo_row = null;
                                 if($main_photo->num_rows > 0) {
                                     $main_photo_row = $main_photo->fetch_assoc();
@@ -314,18 +313,18 @@ include 'header.php';
                                         </a>
                                     <?php }
 
-											$photos = $conn->query("SELECT url FROM photo p
+                                    $photos = $conn->query("SELECT url FROM photo p
 											JOIN hostel_photo hp on hp.photo_id = p.id
-											JOIN hostel h on h.id = hp.hostel_id where h.id = $id");
+											JOIN hostel h on h.id = hp.hostel_id where h.id = $hostel->getId()");
 
-											$photos_row = null;
-											if ($photos->num_rows > 0)
-											$photos_row = $photos->fetch_assoc();
-											if ($photos_row != null) {
-											$noOfImage = 1;
-											while ($photos_row != null) {
-											$photo = $photos_row["url"];
-											$photos_row = $photos->fetch_assoc();
+                                    $photos_row = null;
+                                    if ($photos->num_rows > 0)
+                                        $photos_row = $photos->fetch_assoc();
+                                    if ($photos_row != null) {
+                                        $noOfImage = 1;
+                                        while ($photos_row != null) {
+                                            $photo = $photos_row["url"];
+                                            $photos_row = $photos->fetch_assoc();
                                             ?>
                                             <div id="snippetImg">
                                                 <a class="fancybox" href="<?php echo $photo; ?>"
@@ -335,15 +334,15 @@ include 'header.php';
                                                     } else { ?><img
                                                         src="<?php echo $photo; ?>"/>
                                                         <?php echo '</a>';
-															}
- ?>
+                                                    }
+                                                    ?>
                                             </div>
                                             <?php $noOfImage++;
-												if ($photos_row["url"] == "")
-													break;
-												}
-												}
-												}else {
+                                            if ($photos_row["url"] == "")
+                                                break;
+                                        }
+                                    }
+                                }else {
                                     ?>
                                     <img  id="firstDetailImage" src="img/hostel_icon.png"/>
                                 <?php } ?>
@@ -354,28 +353,22 @@ include 'header.php';
 
                             <h4>General Info</h4>
                             <p>
-                                <?php if($location != NULL && $location != "NULL") echo "<i class=\"circular inverted orange  point icon\"></i>" . " <a href=\"hostelList.php?location=" . $location . "\">" . $location . "</a>"
+                                <?php if($hostel->getAddress() != NULL && $hostel->getAddress() != "NULL") echo "<i class=\"circular inverted orange  point icon\"></i>" . " <a href=\"hostelList.php?location=" . $hostel->getAddress() . "\">" . $hostel->getAddress() . "</a>"
                                 ?>
                             </p>
                             <p>
-                                <?php if($contact != NULL && $contact != "NULL") echo "<i class=\"circular inverted orange  phone square icon\"></i>" . " " . $contact
-                                ?>
-                            </p>                            		
+                                <?php /*if($contact != NULL && $contact != "NULL") echo "<i class=\"circular inverted orange  phone square icon\"></i>" . " " . $contact
+                                */?>
+                            </p>
+                            <!--
+                            <p class="ui header">
+                            <i class="large icons">
+                                   <i class="orange inverted twitter icon"></i>
+                            </i>
+                                     Quick Inquiry
+                           </p>
+                           -->
                         </div>
-                        
-                        <!--
-                          <div id="quickInquiry">
-                                                 <a href=""
-                                                         <p class="ui header">
-                                                         <i class="large icons">
-                                                                <i class="orange inverted envelope icon"></i>					    	    
-                                                         </i>
-                                                                  Quick Inquiry
-                                                        </p>	
-                                                    </div>	-->
-                                                    
-                                                    <?php include 'inquiry.php'?>
-                        
 
                     </div>
                     <!-- internal row 1 -->
@@ -389,10 +382,7 @@ include 'header.php';
                         <div class="facilities">
                             <ul class="facilitylist">
                                 <?php
-                                $facilities = $conn->query("SELECT DISTINCT (f.name) as facility_name from facility f
-                                                                        JOIN hostel_facility hf on hf.facility_id = f.id
-                                                                        JOIN hostel h on h.id = $id where hf.hostel_id=$id");
-                                $facilities_row = $facilities -> fetch_assoc();
+
                                 while($facilities_row != null){
                                     $facility = $facilities_row["facility_name"];
                                     $facilities_row = $facilities -> fetch_assoc();
@@ -420,53 +410,53 @@ include 'header.php';
                         <div>
                             <p></p>
                             <?php $fee_structure_row = $conn -> query("SELECT * FROM fee_structure where id=" . $fee_structure_id);
-								$fee_structure = $fee_structure_row -> fetch_assoc();
-								$admission = $fee_structure["admission"];
-								$security_deposit = $fee_structure["security_deposit"];
-								$bed_1 = $fee_structure["1_bed"];
-								$bed_2 = $fee_structure["2_bed"];
-								$bed_3 = $fee_structure["3_bed"];
-								$bed_4 = $fee_structure["4_bed"];
+                            $fee_structure = $fee_structure_row -> fetch_assoc();
+                            $admission = $fee_structure["admission"];
+                            $security_deposit = $fee_structure["security_deposit"];
+                            $bed_1 = $fee_structure["1_bed"];
+                            $bed_2 = $fee_structure["2_bed"];
+                            $bed_3 = $fee_structure["3_bed"];
+                            $bed_4 = $fee_structure["4_bed"];
 
-								echo '<ul id="fee_details">';
+                            echo '<ul id="fee_details">';
 
-								if (!empty($admission)) {
-									echo "<li>";
-									echo "<b>Admission Fee: </b> ";
-									echo $admission . "<br>";
-									echo "</li>";
-								}
-								if (!empty($security_deposit)) {
-									echo "<li>";
-									echo "<b>Security Deposit: </b> ";
-									echo $security_deposit;
-									echo "</li>";
-								}
-								if (!empty($bed_1)) {
-									echo "<li>";
-									echo "<b>Single Bedded Room: </b> ";
-									echo $bed_1 . "<br>";
-									echo "</li>";
-								}
-								if (!empty($bed_2)) {
-									echo "<li>";
-									echo "<b>Two beds per room: </b>";
-									echo $bed_2 . "<br>";
-									echo "</li>";
-								}
-								if (!empty($bed_3)) {
-									echo "<li>";
-									echo "<b>Three beds per room: </b>";
-									echo $bed_3 . "<br>";
-									echo "</li>";
-								}
-								if (!empty($bed_4)) {
-									echo "<li>";
-									echo "<b>Four beds per room: </b>";
-									echo $bed_4 . "<br>";
-									echo "</li>";
-								}
-								echo "</ul>";
+                            if (!empty($admission)) {
+                                echo "<li>";
+                                echo "<b>Admission Fee: </b> ";
+                                echo $admission . "<br>";
+                                echo "</li>";
+                            }
+                            if (!empty($security_deposit)) {
+                                echo "<li>";
+                                echo "<b>Security Deposit: </b> ";
+                                echo $security_deposit;
+                                echo "</li>";
+                            }
+                            if (!empty($bed_1)) {
+                                echo "<li>";
+                                echo "<b>Single Bedded Room: </b> ";
+                                echo $bed_1 . "<br>";
+                                echo "</li>";
+                            }
+                            if (!empty($bed_2)) {
+                                echo "<li>";
+                                echo "<b>Two beds per room: </b>";
+                                echo $bed_2 . "<br>";
+                                echo "</li>";
+                            }
+                            if (!empty($bed_3)) {
+                                echo "<li>";
+                                echo "<b>Three beds per room: </b>";
+                                echo $bed_3 . "<br>";
+                                echo "</li>";
+                            }
+                            if (!empty($bed_4)) {
+                                echo "<li>";
+                                echo "<b>Four beds per room: </b>";
+                                echo $bed_4 . "<br>";
+                                echo "</li>";
+                            }
+                            echo "</ul>";
                             ?>
                         </div>
                     </div><!-- fee structure row -->
@@ -558,7 +548,7 @@ include 'header.php';
                                                 <div class="date">
                                                     <?php $time = strtotime($r_date);
 
-													echo humanTiming($time) . ' ago';
+                                                    echo humanTiming($time) . ' ago';
                                                     ?>
                                                 </div>
                                             </div>
@@ -569,7 +559,7 @@ include 'header.php';
                                     </div>
                                 </div><!-- comment-->
                                 <?php $r_row = $reviews -> fetch_row();
-									}
+                            }
                             ?>
                         </div><!-- row -->
                     <?php } ?>
@@ -577,25 +567,25 @@ include 'header.php';
 
 
                 <div class="col-md-4">
-                	 
-                	 <h3 style="    color: #FF6E3D; font-size: 20px;" id="review"><a name="review" id="review"></a>Advertisement</h3>
-					
-					<a href="http://merohostel.com/hostelDetail.php?id=67" target="_blank">
-					<div class="advertisement">
-						<img src="img/aayushree-hostel.PNG" title="Aayush Hostel" alt="aayush-hostel"/>	
-						<h2 style="position: relative;top: -31px;">Aayush Boys Hostel</h2>					
-					</div>
-					</a>
-					
-					<br/>
-				
-					<a href="http://www.merohostel.com/hostelDetail.php?id=264" target="_blank">
-					<div class="advertisement">
-						<img src="img/kanya-girls-hostel.JPG" title="Kanya Chhatrabas (Girls Hostel)" alt="kanya-girls-hostel"/>	
-						<h2 style="position: relative;top: -31px;">Kanya Girls Hostel</h2>					
-					</div>
-					</a>
-						
+
+                    <h3 style="    color: #FF6E3D; font-size: 20px;" id="review"><a name="review" id="review"></a>Advertisement</h3>
+
+                    <a href="http://merohostel.com/hostelDetail.php?id=67" target="_blank">
+                        <div class="advertisement">
+                            <img src="img/aayushree-hostel.PNG" title="Aayush Hostel" alt="aayush-hostel"/>
+                            <h2 style="position: relative;top: -31px;">Aayush Boys Hostel</h2>
+                        </div>
+                    </a>
+
+                    <br/>
+
+                    <a href="http://www.merohostel.com/hostelDetail.php?id=264" target="_blank">
+                        <div class="advertisement">
+                            <img src="img/kanya-girls-hostel.JPG" title="Kanya Chhatrabas (Girls Hostel)" alt="kanya-girls-hostel"/>
+                            <h2 style="position: relative;top: -31px;">Kanya Girls Hostel</h2>
+                        </div>
+                    </a>
+
                 </div><!-- sidebar -->
 
 
@@ -605,7 +595,7 @@ include 'header.php';
     <!-- content -->
 
     <?php
-	include "footer.php";
+    include "footer.php";
     ?>
 
 </div><!-- footer -->
