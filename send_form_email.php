@@ -8,7 +8,7 @@ if(isset($_POST['email'])) {
 
     $email_to = "merohostel@gmail.com";
 
-    $email_subject = "Contact Us - Query";
+    $email_subject = $_POST['emailType'];
 
 
 

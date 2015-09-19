@@ -133,7 +133,8 @@
 
 				var http = new XMLHttpRequest();
 				var url = "send_form_email.php";
-				var params = "first_name=" + first_name + "&last_name=" + last_name + "&email=" + email + "&telephone=" + telephone + "&comments=" + comments;
+				var params = "first_name=" + first_name + "&last_name=" + last_name + "&email=" + email + "&telephone=" + telephone + "&comments=" + comments
+                    + "&emailType=HostelInquiry";
 				http.open("POST", url, true);
 
 				http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

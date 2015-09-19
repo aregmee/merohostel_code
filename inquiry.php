@@ -49,7 +49,8 @@
 
             var http = new XMLHttpRequest();
             var url = "send_form_email.php";
-            var params = "first_name=" + first_name + "&last_name=" + last_name + "&email=" + email + "&telephone=" + phoneNo + "&comments=" + comments;
+            var params = "first_name=" + first_name + "&last_name=" + last_name + "&email=" + email + "&telephone=" + phoneNo + "&comments=" + comments
+                + "&emailType=HostelInquiry";
             alert(params);
             http.open("POST", url, true);
 
