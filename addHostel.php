@@ -59,6 +59,16 @@ VALUES ('$hos_id ',' $honame ','$cno ')";
 		}
 	}
 	$submitted = "true";
+    $email_from = "merohostel@gmail.com";
+    $headers = 'From: '.$email_from."\r\n".
+
+        'Reply-To: '.$email_from."\r\n" .
+
+        'X-Mailer: PHP/' . phpversion();
+    $email_message = "New Hostel has been added through 'Add Your Hostel'";
+    $email_subject = "New Hostel Added";
+    $email_to = "merohostel@gmail.com";
+    @mail($email_to, $email_subject, $email_message, $headers);
 }
 ?>
 <html>
