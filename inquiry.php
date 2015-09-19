@@ -11,28 +11,59 @@
         });
         $("#inquiry_form").submit(function(event) {
 
-            var name = $("#name").val();
+            var first_name = $("#first_name").val();
+            var last_name = $("#last_name").val();
             var contact = $("#contact").val();
             var email = $("#email").val();
             var rtype = $('input[name="rtype"]:checked').val();
             var comments = $("#message").val();
             var hostel_id = $("#hostel_id").val();
             var hostel_name = $("#hostel_name").val();
-            var dataString = 'name=' + name + '&contact=' + contact + '&rtype=' + rtype + '&message=' + comments
-                +'&hostel_id='+ hostel_id + '&hostel_name=' + hostel_name + '&email=' + email;
 
-            $.ajax({
-                type : "POST",
-                url : "save_inquiry.php",
-                data : dataString,
-                cache : false,
-                success : function(html) {
-                    if (html == "true") {
-                        $('#inquiry_form_div').addClass('hide');
-                        $('#success_message_inquiry').removeClass('hide');
-                    }
+            comments += "\nHostel Id: " + hostel_id + "\nHostel Name: " + hostel_name + "\nBed Type: " + rtype;
+
+            if (/^[a-zA-Z]*$/.test($("#first_name").val().trim()) == false) {//validating first name
+                sweetAlert("Oops...", "First Name should only contain alphabets!", "error");
+                $("#first_name").focus();
+                return false;
+            }
+            if (/^[a-zA-Z]*$/.test($("#last_name").val().trim()) == false) {//validating first name
+                sweetAlert("Oops...", "Last Name should only contain alphabets!", "error");
+                $("#last_name").focus();
+                return false;
+            }
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (!email.match(mailformat))//validating email
+            {
+                sweetAlert("Oops...", "You have entered an invalid email address!", "error");
+                $("#email").focus();
+                return false;
+            }
+            var phoneNo = $("#contact").val().trim();
+            if (/^[0-9]*$/.test($("#contact").val()) == false) {
+
+                sweetAlert("Oops...", "Phone Number should only contain numbers!", "error");
+                $("#telephone").focus();
+                return false
+            }
+
+            var http = new XMLHttpRequest();
+            var url = "send_form_email.php";
+            var params = "first_name=" + first_name + "&last_name=" + last_name + "&email=" + email + "&telephone=" + phoneNo + "&comments=" + comments;
+            alert(params);
+            http.open("POST", url, true);
+
+            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            http.setRequestHeader("Content-length", params.length);
+            http.setRequestHeader("Connection", "close");
+
+            http.onreadystatechange = function() {//Call a function when the state changes.
+                if (http.readyState == 4 && http.status == 200) {
+                    $('#inquiry_form_div').addClass('hide');
+                    $('#success_message_inquiry').removeClass('hide');
                 }
-            });
+            };
+            http.send(params);
             event.preventDefault();
             return false;
         });
@@ -68,24 +99,33 @@
 					<form class="ui form" method="post" id="inquiry_form">
 						<div  class="two fields">
 							<div class="field">
-								<label>Name</label>
+								<label>First Name</label>
 								<div class="ui corner labeled input">
-									<input placeholder="Name" type="text" name="name" maxlength="50" size="30" required="true" id = "name">
+									<input placeholder="First Name" type="text" name="name" maxlength="50" size="30" required="true" id = "first_name">
 									<div class="ui corner label">
 										<i class="asterisk icon"></i>
 									</div>
 								</div>
 							</div>
-							<div class="field">
-								<label>Email Address</label>
-								<div class="ui corner labeled input">
-									<input placeholder="Email" type="text" name="email" maxlength="80" size="30" required="true" id = "email">
-									<div class="ui corner label">
-										<i class="asterisk icon"></i>
-									</div>
-								</div>
-							</div>
-						</div>
+                            <div class="field">
+                                <label>Last Name</label>
+                                <div class="ui corner labeled input">
+                                    <input placeholder="Last Name" type="text" name="name" maxlength="50" size="30" required="true" id = "last_name">
+                                    <div class="ui corner label">
+                                        <i class="asterisk icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Email Address</label>
+                            <div class="ui corner labeled input">
+                                <input placeholder="Email" type="text" name="email" maxlength="80" size="30" required="true" id = "email">
+                                <div class="ui corner label">
+                                    <i class="asterisk icon"></i>
+                                </div>
+                            </div>
+                        </div>
 						<div  class="two fields">
 							<div class="field">
 								<label>Contact Number</label>
