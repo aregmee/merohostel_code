@@ -1,13 +1,16 @@
-<!DOCTYPE HTML>
 <?php $submitted = "noidea";
-	$id = $_GET["id"];
-	include 'DBConnection.php';
-	$hostel_row = $conn -> query("SELECT * from hostel where id='$id'");
-	list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) = $hostel_row -> fetch_row();
-	if (empty($id))
-		header("Location: error.php");
-	$email = "";
+$id = $_GET["id"];
+include 'DBConnection.php';
+$hostel_row = $conn -> query("SELECT * from hostel where id='$id'");
+list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) = $hostel_row -> fetch_row();
+
+if (empty($id)){
+    header("Location: error.php");
+    exit;
+}
+$email = "";
 ?>
+<!DOCTYPE HTML>
 <html>
 <head>
     <meta charset="utf-8">
