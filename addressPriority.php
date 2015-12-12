@@ -6,7 +6,7 @@
  * Time: 12:46 PM
  */
 
-
+error_reporting(0);
 function getAddressPriority($location){
 
     include 'DBConnection.php';
@@ -92,7 +92,8 @@ function getAddressPriority($location){
 
             $databaseAddressListUpper[$k]=strtoupper($databaseAddressList[$k]);
 
-            if($databaseAddressListUpper[$k][0]==$location[0]){
+            //echo "\n" . strtoupper($databaseAddressList[$k]);
+            if($databaseAddressListUpper[$k][0]== $location[0]){
 
                 $matchedAddress[$matchedCount]=$databaseAddressList[$k];
 

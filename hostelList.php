@@ -131,8 +131,8 @@
                                     if($result->num_rows == 0)
 
                                         echo "<i>Sorry! No hostels match your criteria.</i>";
-
-                                getAddressPriority($location);
+                                        if($location != null)
+                                            getAddressPriority($location);
 
                                     while($row = $result->fetch_assoc()) {
                                 ?>
