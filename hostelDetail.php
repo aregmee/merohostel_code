@@ -578,11 +578,11 @@ include 'header.php';
 
                 <div class="col-md-4">
                 	 
-                	 <h3 style="    color: #FF6E3D; font-size: 20px;" id="review"><a name="review" id="review"></a>Advertisement</h3>
+                	 <h3 style="    color: #FF6E3D; font-size: 20px;" id="review"><a name="review" id="review"></a>Featured Hostels</h3>
 					
 					<a href="http://merohostel.com/hostelDetail.php?id=67" target="_blank">
 					<div class="advertisement">
-						<img src="img/aayushree-hostel.PNG" title="Aayush Hostel" alt="aayush-hostel"/>	
+						<img src="https://lh3.googleusercontent.com/-VXhWslwawLk/VbBiWGPSnzI/AAAAAAAAAp8/t7uCKlWoVMw/s240-Ic42/1.PNG" title="Aayush Hostel" alt="aayush-hostel"/>
 						<h2 style="position: relative;top: -31px;">Aayush Boys Hostel</h2>					
 					</div>
 					</a>
@@ -591,7 +591,7 @@ include 'header.php';
 				
 					<a href="http://www.merohostel.com/hostelDetail.php?id=264" target="_blank">
 					<div class="advertisement">
-						<img src="img/kanya-girls-hostel.JPG" title="Kanya Chhatrabas (Girls Hostel)" alt="kanya-girls-hostel"/>	
+						<img src="https://lh3.googleusercontent.com/-oXuoQAEHKbc/VeLJaJpaNyI/AAAAAAAAApw/9EX80_Dbdp4/s240-Ic42/main%252520photo.jpg" title="Kanya Chhatrabas (Girls Hostel)" alt="kanya-girls-hostel"/>
 						<h2 style="position: relative;top: -31px;">Kanya Girls Hostel</h2>					
 					</div>
 					</a>

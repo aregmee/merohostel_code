@@ -157,9 +157,11 @@
                                                 JOIN main_photo mp on mp.photo_id = p.id
                                                 JOIN hostel h on h.id = mp.hostel_id where h.id = $h_id");
                                             $photos_row = $photos -> fetch_assoc();
-                                            if($photos_row != null) {
+                                            $url = $photos_row["url"];
+                                            $url = str_replace("s640", "s240", $url);
+                                            if($url != null) {
                                                 ?>
-                                                <img src="<?php echo $photos_row["url"]; ?>"/>
+                                                <img src="<?php echo $url; ?>"/>
                                             <?php }else { ?>
                                                 <img src="img/hostel_icon.png"/>
                                             <?php } ?>
