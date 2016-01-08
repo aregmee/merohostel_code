@@ -120,7 +120,7 @@
 								<div id="mainMenu">
 									<ul>
 										<li>
-											<a href="hostelList.php">All Hostels</a>
+											<a href="hostels-in-kathmandu.php">All Hostels</a>
 										</li>
 										<li>
 											<a style="font-size: 14px" id="addHostelBtn" href="addHostel.php">Add Your Hostel</a>
@@ -152,7 +152,7 @@
 							
 							
 							<div id="mainSearch">
-                                <form method = "get" action="hostelList.php" autocomplete="off" onsubmit="return validateForm()">
+                                <form method = "get" action="hostels-in-kathmandu.php" autocomplete="off" onsubmit="return validateForm()">
 
                                     <div class="ui selection dropdown" style="font-size: 16px;position: relative;right: 5px;min-width: 150px;">
                                         <input type="hidden" name="gender" id = "genderSelect" onchange="search();">
@@ -202,7 +202,7 @@
 							<h2 class="subTitle"><span style="color: rgb(255, 114, 65);">Featured</span> Areas</h2>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h2><a href="hostelList.php?location=Putalisadak">Putalisadak</a></h2>
+									<h2><a href="hostels-in-kathmandu.php?location=Putalisadak">Putalisadak</a></h2>
 									<span><i class="fa fa-map-marker"></i> <?php
 									include 'DBConnection.php';
 									$sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE address LIKE '%Putalisadak%' ORDER BY address";
@@ -213,7 +213,7 @@
 										echo $row["no_of_hostels"] . " hostels";
 									}
 										?></span>
-									<a href="hostelList.php?location=Putalisadak"> <img alt="Putalisadak" title="Putalisadak" src="https://lh3.googleusercontent.com/-uky5eAstr6I/VYZJpH8qIlI/AAAAAAAAAEk/YfDTGhNW9hQ/s288/putalisadak-orbit%252520institute.png" width="100%"  class="effect2"> </a>
+									<a href="hostels-in-kathmandu.php?location=Putalisadak"> <img alt="Putalisadak" title="Putalisadak" src="https://lh3.googleusercontent.com/-uky5eAstr6I/VYZJpH8qIlI/AAAAAAAAAEk/YfDTGhNW9hQ/s288/putalisadak-orbit%252520institute.png" width="100%"  class="effect2"> </a>
 									<p>
 										If you are a student taking MBBS entrance courses in VIBRANT or NAME, this might be the best
 										place for you to search for hostels.
@@ -222,7 +222,7 @@
 							</div>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h2><a href="hostelList.php?location=Buddhanagar">Buddhanagar</a></h2>
+									<h2><a href="hostels-in-kathmandu.php?location=Buddhanagar">Buddhanagar</a></h2>
 									<span><i class="fa fa-map-marker"></i> <?php
 									include 'DBConnection.php';
 									$sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE address LIKE '%Buddhanagar%' ORDER BY address";
@@ -233,7 +233,7 @@
 										echo $row["no_of_hostels"] . " hostels";
 									}
 										?></span>
-									<a href="hostelList.php?location=Buddhanagar"> <img alt="Buddhanagar" title="Buddhanagar" src="https://lh3.googleusercontent.com/-hDSk0odeaXY/VYZJleJX1vI/AAAAAAAAAEQ/M11rsX9QCUs/s940/alpha%252520beta-buddhanagar.jpg" width="100%"  class="effect2"> </a>
+									<a href="hostels-in-kathmandu.php?location=Buddhanagar"> <img alt="Buddhanagar" title="Buddhanagar" src="https://lh3.googleusercontent.com/-hDSk0odeaXY/VYZJleJX1vI/AAAAAAAAAEQ/M11rsX9QCUs/s940/alpha%252520beta-buddhanagar.jpg" width="100%"  class="effect2"> </a>
 									<p>
 										If you are a student taking Engineering entrance courses in PEA or SEA, this might be the best
 										place for you to search for hostels.
@@ -242,7 +242,7 @@
 							</div>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h2><a href="hostelList.php?location=Baneshwor">Baneshwor</a></h2>
+									<h2><a href="hostels-in-kathmandu.php?location=Baneshwor">Baneshwor</a></h2>
 									<span><i class="fa fa-map-marker"></i> <?php
 									include 'DBConnection.php';
 									$sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE address LIKE '%Baneshwor%' ORDER BY address";
@@ -253,7 +253,7 @@
 										echo $row["no_of_hostels"] . " hostels";
 									}
 										?></span>
-									<a href="hostelList.php?location=Baneshwor"> <img alt="Baneshwor" title="Baneshwor" src="https://lh3.googleusercontent.com/-qwzCu8dVhFw/VYZJlh1pBhI/AAAAAAAAAEU/pTT_dYRs6vA/s288/baneshwor-hotelnepal.jpg" width="100%"  class="effect2"> </a>
+									<a href="hostels-in-kathmandu.php?location=Baneshwor"> <img alt="Baneshwor" title="Baneshwor" src="https://lh3.googleusercontent.com/-qwzCu8dVhFw/VYZJlh1pBhI/AAAAAAAAAEU/pTT_dYRs6vA/s288/baneshwor-hotelnepal.jpg" width="100%"  class="effect2"> </a>
 									<p>
 										Crowded streets, engaged people and heavy population reside in New Baneshwor. One of the most
 										happening places in Kathmandu.
@@ -262,7 +262,7 @@
 							</div>
 							<div class="col-sm-3">
 								<div class="subSection">
-									<h2><a href="hostelList.php?location=Shantinagar">Shantinagar</a></h2>
+									<h2><a href="hostels-in-kathmandu.php?location=Shantinagar">Shantinagar</a></h2>
 									<span><i class="fa fa-map-marker"></i> <?php
 									include 'DBConnection.php';
 									$sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE address LIKE '%Shantinagar%' ORDER BY address";
@@ -273,7 +273,7 @@
 										echo $row["no_of_hostels"] . " hostels";
 									}
 										?></span>
-									<a href="hostelList.php?location=Shantinagar"> <img alt="Shantinagar" title="Shantinagar" src="https://lh3.googleusercontent.com/-jnm5Z7pV4gM/VYZJoODNKOI/AAAAAAAAAEc/yfUQW2Nqh68/s288/shantinagar-futsal.jpg" width="100%"  class="effect2"> </a>
+									<a href="hostels-in-kathmandu.php?location=Shantinagar"> <img alt="Shantinagar" title="Shantinagar" src="https://lh3.googleusercontent.com/-jnm5Z7pV4gM/VYZJoODNKOI/AAAAAAAAAEc/yfUQW2Nqh68/s288/shantinagar-futsal.jpg" width="100%"  class="effect2"> </a>
 									<p>
 										Shantinagar has become a hub for hostels in Kathmandu.
 									</p>

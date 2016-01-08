@@ -64,7 +64,7 @@
                             });
                     });
                 </script>
-                    <form method = "get" action="hostelList.php" autocomplete="off">
+                    <form method = "get" action="hostels-in-kathmandu.php" autocomplete="off">
 
                         <div class="ui selection dropdown" style="font-size: 16px;position: relative;right: 5px;min-width: 150px;">
                             <input type="hidden" name="gender" id = "genderSelect" onchange="search();">

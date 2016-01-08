@@ -186,8 +186,8 @@
 										</div>
 									</div>
 									<div class="extra content">
-										<a class="right floated created" href="hostelList.php?gender=<?php echo $row["gender"]; ?>"><i class="circular inverted orange  user icon"></i><?php echo $row["gender"]; ?></a>
-                                        <a class="friends" href="hostelList.php?location=<?php echo $row["address"]; ?>"><i class="circular inverted orange  point icon"></i>
+										<a class="right floated created" href="hostels-in-kathmandu.php?gender=<?php echo $row["gender"]; ?>"><i class="circular inverted orange  user icon"></i><?php echo $row["gender"]; ?></a>
+                                        <a class="friends" href="hostels-in-kathmandu.php?location=<?php echo $row["address"]; ?>"><i class="circular inverted orange  point icon"></i>
                                             <?php $loc = $row["address"];
 											if (strlen($loc) > 15)
 												echo substr($loc, 0, 13) . "...";
@@ -228,7 +228,7 @@
 
 										$prev_page = $page - 1;
 										$next_page = $page + 1;
-										$url = "hostelList.php?";
+										$url = "hostels-in-kathmandu.php?";
 										if (!empty($location)) {
 											$url .= "location=" . $location;
 											if (!empty($gender))

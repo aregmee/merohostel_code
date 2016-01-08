@@ -136,7 +136,7 @@ function getAddressPriority($location){
 
         for($k=0;$k<$loop;$k++){
 
-            echo "<a href='hostelList.php?location=" . ($matchedAddress[$k]) . "' class='icon item'>$matchedAddress[$k]</a><br>";
+            echo "<a href='hostels-in-kathmandu.php?location=" . ($matchedAddress[$k]) . "' class='icon item'>$matchedAddress[$k]</a><br>";
 
         }
 

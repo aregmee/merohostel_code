@@ -357,7 +357,7 @@ include 'header.php';
 
                             <h4>General Info</h4>
                             <p>
-                                <?php if($location != NULL && $location != "NULL") echo "<i class=\"circular inverted orange  point icon\"></i>" . " <a href=\"hostelList.php?location=" . $location . "\">" . $location . "</a>"
+                                <?php if($location != NULL && $location != "NULL") echo "<i class=\"circular inverted orange  point icon\"></i>" . " <a href=\"hostels-in-kathmandu.php?location=" . $location . "\">" . $location . "</a>"
                                 ?>
                             </p>
                             <p>

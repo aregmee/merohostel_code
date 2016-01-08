@@ -102,7 +102,7 @@
 </head>
 <body>
 
-<form method = "get" action="hostelList.php" autocomplete="off" onsubmit="return validateForm()">
+<form method = "get" action="hostels-in-kathmandu.php" autocomplete="off" onsubmit="return validateForm()">
 
     <div class="ui selection dropdown" style="
 									font-size: 16px;

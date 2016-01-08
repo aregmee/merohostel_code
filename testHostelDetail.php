@@ -353,7 +353,7 @@ include 'header.php';
 
                             <h4>General Info</h4>
                             <p>
-                                <?php if($hostel->getAddress() != NULL && $hostel->getAddress() != "NULL") echo "<i class=\"circular inverted orange  point icon\"></i>" . " <a href=\"hostelList.php?location=" . $hostel->getAddress() . "\">" . $hostel->getAddress() . "</a>"
+                                <?php if($hostel->getAddress() != NULL && $hostel->getAddress() != "NULL") echo "<i class=\"circular inverted orange  point icon\"></i>" . " <a href=\"hostels-in-kathmandu.php?location=" . $hostel->getAddress() . "\">" . $hostel->getAddress() . "</a>"
                                 ?>
                             </p>
                             <p>
