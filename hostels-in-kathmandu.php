@@ -12,7 +12,6 @@
 		<meta content='INDEX, FOLLOW' name='GOOGLEBOT'/>
 		<meta content='Merohostel.com' name='author'/>
         <?php
-            include 'addressPriority.php';
             if (isset($_GET["location"])) {
                 $meta_location = $_GET["location"];
             } else {
@@ -50,9 +49,6 @@
                         left join main_photo mp on h.id = mp.hostel_id
                         where address like '%$location%' and gender = '$gender' order by case when photo_id is null then 1 else 0 end, photo_id";
             $result = $conn -> query($sql);
-            if (!$result) {
-    			echo $conn->error;
-			}
         ?>
 		<meta content="Choose from <?php echo $result->num_rows;?> hostels in <?php echo ucfirst($meta_location); ?> and read reviews from your fellow hostellers." name="description" >
 		<meta content='hostels in kathmandu, kathmandu hostel, hostel kathmandu, hostel nepal, hostels in nepal, merohostel,  merohostel.com' name='keywords'/>
@@ -83,7 +79,6 @@
 
 		<!-- Google Web Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-
 
 	</head>
 
@@ -117,10 +112,8 @@
 								} elseif ($conn -> query("SELECT * FROM hostel where address = '" . $location . " %'")) {
 
 									if (($location != null || $location != '') && ($gender == null || $gender == ''))
-                                        if($result->num_rows > 0)
-                                            echo "Hostels nearby " . $location;
-
-                                        else if (($location != null || $location != '') && ($gender != null || $gender != ''))
+										echo "Hostels nearby " . $location;
+									else if (($location != null || $location != '') && ($gender != null || $gender != ''))
 										echo " nearby " . $location;
 								}
 								if (($gender == null || $gender == '') && ($location == null || $location == ''))
@@ -129,11 +122,7 @@
                             </h2>
                                 <?php
                                     if($result->num_rows == 0)
-
                                         echo "<i>Sorry! No hostels match your criteria.</i>";
-                                        if($location != null)
-                                            getAddressPriority($location);
-
                                     while($row = $result->fetch_assoc()) {
                                 ?>
 
@@ -150,7 +139,11 @@
 												</div>
 											</div>
 										</div>
-                                        <a href="hostelDetail.php?id=<?php echo $row["id"]; ?>">
+					<?php 
+						$name = $row["name"];
+						$nameForLink=str_replace(" ", "+", $name);																			
+					?>																
+                                        <a href="hostelDetail.php?name=<?php echo $nameForLink; ?>">
                                             <?php
                                             $h_id = $row["id"];
                                             $photos = $conn->query("SELECT url FROM photo p
@@ -170,13 +163,13 @@
 
 									<div class="content">
 										<div class="header">
-											<?php $name = $row["name"];
-											/*$name = stripslashes($name);*/
+											<?php
+
 											if (strlen($name) > 24) {
 												$shortName = substr($name, 0, 22) . "...";
-												echo "<a href=hostelDetail.php?id=" . $row["id"], ">$shortName</a>";
+												echo "<a href=hostelDetail.php?name=" . $nameForLink, ">$shortName</a>";
 											} else {
-												echo "<a href=hostelDetail.php?id=" . $row["id"], ">$name</a>";
+												echo "<a href=hostelDetail.php?name=" . $nameForLink, ">$name</a>";
 											}
                                             ?>
 										</div>
