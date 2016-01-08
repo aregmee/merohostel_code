@@ -1,14 +1,14 @@
 <?php $submitted = "noidea";
-$id = $_GET["id"];
-include 'DBConnection.php';
-$hostel_row = $conn -> query("SELECT * from hostel where id='$id'");
-list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) = $hostel_row -> fetch_row();
-
-if (empty($id)){
-    header("Location: error.php");
-    exit;
-}
-$email = "";
+	$name = $_GET["name"];
+	include 'DBConnection.php';
+	$hostel_row = $conn -> query("SELECT * from hostel where name='$name'");
+	list($id, $name, $gender, $location, $estd_year, $fee_structure_id, $capacity) = $hostel_row -> fetch_row();
+	
+	if (empty($name)){
+		header("Location: error.php");
+		exit;
+	}
+	$email = "";
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -61,13 +61,10 @@ $email = "";
 			/*
 			 *  Simple image gallery. Uses default settings
 			 */
-
 			$('.fancybox').fancybox();
-
 			/*
 			*  Different effects
 			*/
-
 			// Change title type, overlay closing speed
 			$(".fancybox-effects-a").fancybox({
 				helpers : {
@@ -79,26 +76,21 @@ $email = "";
 					}
 				}
 			});
-
 			// Disable opening and closing animations, change title type
 			$(".fancybox-effects-b").fancybox({
 				openEffect : 'none',
 				closeEffect : 'none',
-
 				helpers : {
 					title : {
 						type : 'over'
 					}
 				}
 			});
-
 			// Set custom style, close if clicked, change title type and overlay color
 			$(".fancybox-effects-c").fancybox({
 				wrapCSS : 'fancybox-custom',
 				closeClick : true,
-
 				openEffect : 'none',
-
 				helpers : {
 					title : {
 						type : 'inside'
@@ -110,61 +102,46 @@ $email = "";
 					}
 				}
 			});
-
 			// Remove padding, set opening and closing animations, close if clicked and disable overlay
 			$(".fancybox-effects-d").fancybox({
 				padding : 0,
-
 				openEffect : 'elastic',
 				openSpeed : 150,
-
 				closeEffect : 'elastic',
 				closeSpeed : 150,
-
 				closeClick : true,
-
 				helpers : {
 					overlay : null
 				}
 			});
-
 			/*
 			 *  Button helper. Disable animations, hide close button, change title type and content
 			 */
-
 			$('.fancybox-buttons').fancybox({
 				openEffect : 'none',
 				closeEffect : 'none',
-
 				prevEffect : 'none',
 				nextEffect : 'none',
-
 				closeBtn : false,
-
 				helpers : {
 					title : {
 						type : 'inside'
 					},
 					buttons : {}
 				},
-
 				afterLoad : function() {
 					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
 				}
 			});
-
 			/*
 			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
 			 */
-
 			$('.fancybox-thumbs').fancybox({
 				prevEffect : 'none',
 				nextEffect : 'none',
-
 				closeBtn : false,
 				arrows : false,
 				nextClick : true,
-
 				helpers : {
 					thumbs : {
 						width : 50,
@@ -172,7 +149,6 @@ $email = "";
 					}
 				}
 			});
-
 			/*
 			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
 			 */
@@ -181,7 +157,6 @@ $email = "";
 				closeEffect : 'none',
 				prevEffect : 'none',
 				nextEffect : 'none',
-
 				arrows : false,
 				helpers : {
 					media : {},
@@ -189,7 +164,6 @@ $email = "";
 				}
 			});
 		});
-
 		$(function() {
 			$(".search").keyup(function() {
 				var searchid = $(this).val();
@@ -209,7 +183,6 @@ $email = "";
 				return false;
 			});
 		});
-
 		function validateReview() {
 			if (/^[a-zA-Z]*$/.test($("#first_name").val().trim()) == false) {//validating first name
 				sweetAlert("Oops...", "First Name should only contain alphabets!", "error");
@@ -260,16 +233,13 @@ $email = "";
 	function humanTiming($time) {
 		$time = time() - $time;
 		// to get the time since that moment
-
 		$tokens = array(31536000 => 'year', 2592000 => 'month', 604800 => 'week', 86400 => 'day', 3600 => 'hour', 60 => 'minute', 1 => 'second');
-
 		foreach ($tokens as $unit => $text) {
 			if ($time < $unit)
 				continue;
 			$numberOfUnits = floor($time / $unit);
 			return $numberOfUnits . ' ' . $text . (($numberOfUnits > 1) ? 's' : '');
 		}
-
 	}
 ?>
 
@@ -296,19 +266,16 @@ include 'header.php';
 							background-color: #f6f6f6;
 							padding: 10px 0px;
 							position: relative;
-
 							">
                         <div class="col-md-5" id="generalInfo">
                             <div class="hostelImage">
                                 <?php
-
                                 $main_photo = $conn->query("SELECT url FROM photo p
                                                 JOIN main_photo mp on mp.photo_id = p.id
                                                 JOIN hostel h on h.id = mp.hostel_id where h.id = $id;");
                                 $main_photo_row = null;
                                 if($main_photo->num_rows > 0) {
                                     $main_photo_row = $main_photo->fetch_assoc();
-
                                     if ($main_photo_row != null) {
                                         ?>
                                         <a class="fancybox" href="<?php echo $main_photo_row["url"]; ?>"
@@ -316,11 +283,9 @@ include 'header.php';
                                             <img id="firstDetailImage" src="<?php echo $main_photo_row["url"]; ?>"/>
                                         </a>
                                     <?php }
-
 											$photos = $conn->query("SELECT url FROM photo p
 											JOIN hostel_photo hp on hp.photo_id = p.id
 											JOIN hostel h on h.id = hp.hostel_id where h.id = $id");
-
 											$photos_row = null;
 											if ($photos->num_rows > 0)
 											$photos_row = $photos->fetch_assoc();
@@ -357,16 +322,23 @@ include 'header.php';
 
                             <h4>General Info</h4>
                             <p>
-                                <?php if($location != NULL && $location != "NULL") echo "<i class=\"circular inverted orange  point icon\"></i>" . " <a href=\"hostels-in-kathmandu.php?location=" . $location . "\">" . $location . "</a>"
+                                <?php if($location != NULL && $location != "NULL") echo "<i class=\"circular inverted orange  point icon\"></i>" . " <a href=\"hostels-in-kathmandu.php?location=" . $location . "\">" . $location . "</a>";
+                              
                                 ?>
                             </p>
                             <p>
-                                <?php if($contact != NULL && $contact != "NULL") echo "<i class=\"circular inverted orange  phone square icon\"></i>" . " " . $contact
+                                <?php
+                                if($hostel_id==264 || $hostel_id==67)
+                                    if($contact != NULL && $contact != "NULL")
+                                        echo "<i class=\"circular inverted orange  phone square icon\"></i>" . " " . $contact
+
                                 ?>
-                            </p>                            		
+                            </p>  
+                                
+                               
                         </div>
                         
-                        <!--
+                       
                           <div id="quickInquiry">
                                                  <a href=""
                                                          <p class="ui header">
@@ -375,11 +347,10 @@ include 'header.php';
                                                          </i>
                                                                   Quick Inquiry
                                                         </p>	
-                                                    </div>	-->
+                                                    </div>	
                                                     
-                                                    <?php include 'inquiry.php'?>
+                                                    <?php include 'inquiry.php'; ?>
                         
-
                     </div>
                     <!-- internal row 1 -->
                     <div  class="row">
@@ -388,7 +359,6 @@ include 'header.php';
                     </div><!-- internal row -->
                     <div class="row">
                         <h3 id="facilities"><a name="facilities" id="facilities"></a>Facilities</h3>
-
                         <div class="facilities">
                             <ul class="facilitylist">
                                 <?php
@@ -430,9 +400,7 @@ include 'header.php';
 								$bed_2 = $fee_structure["2_bed"];
 								$bed_3 = $fee_structure["3_bed"];
 								$bed_4 = $fee_structure["4_bed"];
-
 								echo '<ul id="fee_details">';
-
 								if (!empty($admission)) {
 									echo "<li>";
 									echo "<b>Admission Fee: </b> ";
@@ -560,7 +528,6 @@ include 'header.php';
                                             <div class="metadata">
                                                 <div class="date">
                                                     <?php $time = strtotime($r_date);
-
 													echo humanTiming($time) . ' ago';
                                                     ?>
                                                 </div>
