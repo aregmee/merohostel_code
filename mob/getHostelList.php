@@ -44,11 +44,27 @@ while($row = $result->fetch_assoc()) {
     if(strlen($photos_string) > 1)
         $photos_string = substr($photos_string, 0, strlen($photos_string) - 1);
     $photos_string .= "]";
+    $name = $row["name"];
+    $search = array(chr(145),
+        chr(146),
+        chr(147),
+        chr(148),
+        chr(151),
+        chr(39));
+
+    $replace = array("",
+        "",
+        '',
+        '',
+        '',
+        '');
+    $name = str_replace($search, $replace, $name);
+
     $response_string .= json_encode(
             array(
                 'id' => $row["id"],
                 'address'=> $row["address"],
-                'name' => $row["name"],
+                'name' => $name,
                 'gender' => $row["gender"],
                 'photos' => $photos_string
             )
