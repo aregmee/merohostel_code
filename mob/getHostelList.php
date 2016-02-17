@@ -6,13 +6,8 @@
  * Time: 2:14 PM
  */
 include_once '../DBConnection.php';
-if (isset($_GET["location"])) {
-    $location = $_GET["location"];
-} else {
-    $location = "";
-}
 
-$sql = "SELECT DISTINCT(h.id), h.name, h.address, h.gender, h.fee_structure_id from hostel h where address like '%$location%'";
+$sql = "SELECT DISTINCT(id), name, address, gender, fee_structure_id from hostel";
 $result = $conn -> query($sql);
 
 $response_string = "[";
@@ -23,9 +18,10 @@ while($row = $result->fetch_assoc()) {
     $fee_result = $conn->query($fee_sql);
 
     $fee_array = array();
-    if($fee_row = $fee_result->fetch_assoc()){
+    if($fee_result){
+        if($fee_row = $fee_result->fetch_assoc()){
 
-        $fee_array = array(
+            $fee_array = array(
                 'id' => $fee_row["id"],
                 'admission' => $fee_row["admission"],
                 'security_deposit' => $fee_row["security_deposit"],
@@ -33,23 +29,53 @@ while($row = $result->fetch_assoc()) {
                 '2_bed' => $fee_row["2_bed"],
                 '3_bed' => $fee_row["3_bed"],
                 '4_bed' => $fee_row["4_bed"]
-        );
-    }
+            );
+        }}
+
     $hostel_facility_sql = "SELECT * FROM hostel_facility WHERE hostel_id = " . $row["id"];
     $hostel_facility_result = $conn->query($hostel_facility_sql);
 
     $hostel_facility_string = "[";
     while($hostel_facility_row = $hostel_facility_result->fetch_assoc()){
 
-        $hostel_facility_string .= json_encode(
+
+        $facility_sql = "SELECT * FROM facility WHERE id = " . $hostel_facility_row["facility_id"];
+        $facility_result = $conn->query($facility_sql);
+
+        if($facility_row = $facility_result->fetch_assoc()) {
+
+            $hostel_facility_string .= json_encode(
+
+                    array(
+                        'id' => $facility_row["id"],
+                        'facility' => $facility_row["name"]
+                    )
+                ) . ",";
+        }
+    }
+
+    $hostel_facility_string .= json_encode(
 
             array(
-                'id' => $hostel_facility_row["id"],
-                'hid' => $row["id"],
-                'fid' => $hostel_facility_row["facility_id"]
+                'id' => "1",
+                'facility' => "24 hour electricity"
             )
-        ). ",";
-    }
+        ) . ",";
+    $hostel_facility_string .= json_encode(
+
+            array(
+                'id' => "2",
+                'facility' => "Wi-Fi"
+            )
+        ) . ",";
+    $hostel_facility_string .= json_encode(
+
+            array(
+                'id' => "5",
+                'facility' => "Hostel Warden"
+            )
+        ) . ",";
+
 
     if(strlen($hostel_facility_string) > 1)
         $hostel_facility_string = substr($hostel_facility_string, 0, strlen($hostel_facility_string) - 1);
@@ -124,25 +150,41 @@ while($row = $result->fetch_assoc()) {
         '');
     $name = str_replace($search, $replace, $name);
 
-    $response_string .= json_encode(
-            array(
-                'id' => $row["id"],
-                'address'=> $row["address"],
-                'name' => $name,
-                'gender' => $row["gender"],
-                'photos' => $photos_string,
-                'facilities' => $hostel_facility_string,
-                'fee_structure' => array(
-                    'id' => $fee_row["id"],
-                    'admission' => $fee_row["admission"],
-                    'security_deposit' => $fee_row["security_deposit"],
-                    '1_bed' => $fee_row["1_bed"],
-                    '2_bed' => $fee_row["2_bed"],
-                    '3_bed' => $fee_row["3_bed"],
-                    '4_bed' => $fee_row["4_bed"]
+
+    if($fee_row) {
+
+        $response_string .= json_encode(
+                array(
+                    'id' => $row["id"],
+                    'address' => $row["address"],
+                    'name' => $name,
+                    'gender' => $row["gender"],
+                    'photos' => $photos_string,
+                    'facilities' => $hostel_facility_string,
+                    'fee_structure' => array(
+                        'id' => $fee_row["id"],
+                        'admission' => $fee_row["admission"],
+                        'security_deposit' => $fee_row["security_deposit"],
+                        '1_bed' => $fee_row["1_bed"],
+                        '2_bed' => $fee_row["2_bed"],
+                        '3_bed' => $fee_row["3_bed"],
+                        '4_bed' => $fee_row["4_bed"]
+                    )
                 )
-            )
-        ) . ",";
+            ) . ",";
+    }else{
+
+        $response_string .= json_encode(
+                array(
+                    'id' => $row["id"],
+                    'address' => $row["address"],
+                    'name' => $name,
+                    'gender' => $row["gender"],
+                    'photos' => $photos_string,
+                    'facilities' => $hostel_facility_string
+                )
+            ) . ",";
+    }
 }
 $response_string = str_replace("\\", "", $response_string);
 $response_string = str_replace("\"[", "[", $response_string);
