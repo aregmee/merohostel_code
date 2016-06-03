@@ -10,7 +10,14 @@ $(function(){
             var firstResult = $(".pac-container .pac-item:first").text();
             $(".pac-container .pac-item:first").addClass("pac-selected");
             input.value = firstResult;
-            latLong(firstResult);
+            if(firstResult!=''){
+                latLong(firstResult);
+            }else{
+                var latlng={lat:27.7172,lng:85.3240};
+                map.setCenter(latlng);
+                map.setZoom(13);
+            }
+
         }
     });
 });
@@ -36,7 +43,7 @@ function latLong(address){
         }
     }
     var fetchLatLng = "https://maps.googleapis.com/maps/api/geocode/json?address="+finalAddress+"";
-    console.log(fetchLatLng);
+    console.log(fetchLatLng)
     $.getJSON(fetchLatLng, function( json ) {
         if(json.status=="OK"){
             var location = json.results[0].geometry.location;
@@ -68,9 +75,6 @@ function latLong(address){
                });
             }
 
-        }else{
-            var message = "<span style='color: red;'>Map Not Available</span>";
-            $("#hostelMap").append(message);
         }
     });
 }
@@ -95,15 +99,11 @@ function initialize(lat,lng,location,name) {
             labelAnchor: new google.maps.Point(22, 0),
             labelClass: "hostelLabel", // the CSS class for the label
         });
-
     }else{
         var input = document.getElementById('pac-input');
         autocomplete = new google.maps.places.Autocomplete(input);
         autocomplete.bindTo('bounds', map);
         map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-        autocomplete.addListener('place_changed', function() {
-
-        });
         input.value=location;
         setTimeout(
             function()
@@ -113,7 +113,7 @@ function initialize(lat,lng,location,name) {
                 e.keyCode = 13;
                 $("#pac-input").keypress();
                 $("#pac-input").trigger(e);
-            }, 4000);
+            }, 5000);
     }
 
 }
