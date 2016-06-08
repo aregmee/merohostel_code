@@ -784,7 +784,7 @@ include 'header.php';
 
                     <a href="hostelDetail.php?name=Subhalaxmi+Boys+Hostel" target="_blank">
                         <div class="advertisement">
-                            <img src="img/subhalaxmi-boys-hostel.JPG" title="SubhaLaxmi Boys Hostel" alt="subhalaxmi-boys-hostel"/>
+                            <img src="https://lh3.googleusercontent.com/-ORQHnjDpWy0/VYgB4o8QhuI/AAAAAAAAAQg/VdEy60o9u5g-7PVYi_RlXKAbR8R1ccHVgCCo/s720-Ic42/DSCN5684.JPG" title="SubhaLaxmi Boys Hostel" alt="subhalaxmi-boys-hostel"/>
                             <h2 style="position: relative;top: -31px;">SubhaLaxmi Boys Hostel</h2>
                         </div> </a>
 
