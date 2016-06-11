@@ -656,7 +656,7 @@ include 'header.php';
                                             </p>
                                             </div> -->
 
-                                            <form class="ui form attached fluid " method="post" onsubmit="return validateReview()" action="hostelDetail.php?id=<?php echo $_GET["id"]?>">
+                                            <form class="ui form attached fluid " method="post" onsubmit="return validateReview()" action="hostelDetail.php?name=<?php echo $_GET["name"]?>">
                                                 <div class="two fields">
                                                     <div class="field">
                                                         <label>First name</label>
