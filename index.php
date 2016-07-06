@@ -1,4 +1,9 @@
 <!DOCTYPE HTML>
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -28,11 +33,7 @@
 		<!-- Semantic JS -->
 		<script src="semantic/dist/semantic.min.js" type="text/javascript" ></script>
 
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
-
 		<!-- Used with Tab History !-->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
-		<script src="semantic/dist/semantic.js"></script>
 		<!-- Google Web Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
@@ -85,8 +86,14 @@
 						// iterate through the pool of strings and for any string that
 						// contains the substring `q`, add it to the `matches` array
 						$.each(strs, function(i, str) {
+							if(str.indexOf(',') != -1) {
+								str = str.split(',')[1];
+							}
+							str = str.trim();
 							if (substrRegex.test(str)) {
-								matches.push(str);
+								if($.inArray(str, matches) === -1) {
+									matches.push(str);
+								}
 							}
 						});
 
@@ -205,7 +212,8 @@
 									<h2><a href="hostels-in-kathmandu.php?location=Putalisadak">Putalisadak</a></h2>
 									<span><i class="fa fa-map-marker"></i> <?php
 									include 'DBConnection.php';
-									$sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE address LIKE '%Putalisadak%' ORDER BY address";
+									$sql = "SELECT COUNT(id) as no_of_hostels FROM hostel WHERE address LIKE '%Putalisadak%' ORDER BY address";
+
 									$result = $conn -> query($sql);
 
 									while ($row = $result -> fetch_assoc()) {
@@ -225,7 +233,7 @@
 									<h2><a href="hostels-in-kathmandu.php?location=Buddhanagar">Buddhanagar</a></h2>
 									<span><i class="fa fa-map-marker"></i> <?php
 									include 'DBConnection.php';
-									$sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE address LIKE '%Buddhanagar%' ORDER BY address";
+									$sql = "SELECT COUNT(id) as no_of_hostels FROM hostel WHERE address LIKE '%Buddhanagar%' ORDER BY address";
 									$result = $conn -> query($sql);
 
 									while ($row = $result -> fetch_assoc()) {
@@ -245,7 +253,7 @@
 									<h2><a href="hostels-in-kathmandu.php?location=Baneshwor">Baneshwor</a></h2>
 									<span><i class="fa fa-map-marker"></i> <?php
 									include 'DBConnection.php';
-									$sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE address LIKE '%Baneshwor%' ORDER BY address";
+									$sql = "SELECT COUNT(id) as no_of_hostels FROM hostel WHERE address LIKE '%Baneshwor%' ORDER BY address";
 									$result = $conn -> query($sql);
 
 									while ($row = $result -> fetch_assoc()) {
@@ -265,7 +273,7 @@
 									<h2><a href="hostels-in-kathmandu.php?location=Shantinagar">Shantinagar</a></h2>
 									<span><i class="fa fa-map-marker"></i> <?php
 									include 'DBConnection.php';
-									$sql = "SELECT COUNT(id) as no_of_hostels, id FROM hostel WHERE address LIKE '%Shantinagar%' ORDER BY address";
+									$sql = "SELECT COUNT(id) as no_of_hostels FROM hostel WHERE address LIKE '%Shantinagar%' ORDER BY address";
 									$result = $conn -> query($sql);
 
 									while ($row = $result -> fetch_assoc()) {
