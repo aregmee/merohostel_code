@@ -41,13 +41,26 @@
             $start_from = ($page - 1) * $per_page;
 
             if ($gender == "" || $gender == null)
-                $sql = "select DISTINCT(h.id), h.name, h.address, h.gender from hostel h
+                $sql = "select DISTINCT(h.id), h.name, h.address, h.gender, photo_id, priority from hostel h
                         left join main_photo mp on h.id = mp.hostel_id
-                        where address like '%$location%' order by case when photo_id is null then 1 else 0 end, photo_id";
+                        where address like '%$location%' order by priority ASC,
+						(case 
+                         	when photo_id is null then 
+                         		1 
+                         	else 
+                         		0 
+                         	end
+                        ), photo_id";
             else
-                $sql = "select DISTINCT(h.id), h.name, h.address, h.gender from hostel h
-                        left join main_photo mp on h.id = mp.hostel_id
-                        where address like '%$location%' and gender = '$gender' order by case when photo_id is null then 1 else 0 end, photo_id";
+                $sql = "select DISTINCT(h.id), h.name, h.address, h.gender, photo_id, priority from hostel h left join main_photo mp on h.id = mp.hostel_id
+                        where address like '%$location%' and gender = '$gender' order by priority ASC,
+						(case 
+                         	when photo_id is null then 
+                         		1 
+                         	else 
+                         		0 
+                         	end
+                        ), photo_id";
             $result = $conn -> query($sql);
         ?>
 		<meta content="Choose from <?php echo $result->num_rows;?> hostels in <?php echo ucfirst($meta_location); ?> and read reviews from your fellow hostellers." name="description" >
@@ -102,14 +115,14 @@
                                 <?php
 								if ($gender != null || $gender != '')
 									echo ucfirst($gender) . " hostels ";
-								$test_result = $conn -> query("SELECT * FROM hostel where address = '" . $location . "'");
+								$test_result = $conn -> query("SELECT * FROM hostel where address = '" . $location . "' order by priority ASC");
 
 								if (mysqli_num_rows($test_result) > 0) {
 									if (($location != null || $location != '') && ($gender == null || $gender == ''))
 										echo "Hostels nearby " . $location;
 									else if (($location != null || $location != '') && ($gender != null || $gender != ''))
 										echo " nearby " . $location;
-								} elseif ($conn -> query("SELECT * FROM hostel where address = '" . $location . " %'")) {
+								} elseif ($conn -> query("SELECT * FROM hostel where address = '" . $location . " %' order by priority ASC")) {
 
 									if (($location != null || $location != '') && ($gender == null || $gender == ''))
 										echo "Hostels nearby " . $location;
@@ -201,13 +214,13 @@
                                 <div class="ui pagination menu">
                                     <?php
                                     if ($gender == "" || $gender == null)
-                                        $sql = "select DISTINCT(h.id), h.name, h.address, h.gender from hostel h
+                                        $sql = "select DISTINCT(h.id), h.name, h.address, h.gender, h.priority from hostel h
                     left join hostel_photo hp on h.id = hp.hostel_id
-                    where address like '%$location%' order by case when photo_id is null then 1 else 0 end, photo_id";
+                    where address like '%$location%' order by priority ASC, case when photo_id is null then 1 else 0 end, photo_id";
                                     else
-                                        $sql = "select DISTINCT(h.id), h.name, h.address, h.gender from hostel h
+                                        $sql = "select DISTINCT(h.id), h.name, h.address, h.gender, h.priority from hostel h
                     left join hostel_photo hp on h.id = hp.hostel_id
-                    where address like '%$location%' and gender = '$gender' order by case when photo_id is null then 1 else 0 end, photo_id";
+                    where address like '%$location%' and gender = '$gender' order by priority ASC, case when photo_id is null then 1 else 0 end, photo_id";
 
 									$result = $conn -> query($sql);
 

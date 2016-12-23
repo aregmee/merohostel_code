@@ -165,13 +165,13 @@ if ($submitted == "true"){
 										<div class="inline fields">
 											<div class="field">
 												<div class="ui radio checkbox">
-													<input type="radio" name="sex" checked="checked" value="boys">
+													<input type="radio" name="sex" checked="checked" value="Boys">
 													<label>Boys</label>
 												</div>
 											</div>
 											<div class="field">
 												<div class="ui radio checkbox">
-													<input type="radio" name="sex" value="girls">
+													<input type="radio" name="sex" value="Girls">
 													<label>Girls</label>
 												</div>
 											</div>

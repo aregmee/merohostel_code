@@ -334,7 +334,7 @@ $email = "";
 
 <?php $reviews = $conn -> query("SELECT * from review where hostel_id = '$id' and display = 1");
 //list($id, $capacity, $contact, $gender, $location, $name, $email, $website, $additionalInfo, $ownerId, $mainPhotoUrl) = $row -> fetch_row();
-$owner_row = $conn -> query("SELECT * from owner where id='$fee_structure_id'");
+$owner_row = $conn -> query("SELECT * from owner where hostel_id='$id'");
 list($owner_id, $hostel_id, $owner_name, $contact) = $owner_row -> fetch_row();
 if (isset($_POST['review']) && isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['review_email'])) {
     $review = $_POST['review'];
@@ -428,7 +428,9 @@ include 'header.php';
 
 
                                                 <?php
-                                                if($hostel_id==264 || $hostel_id==67)
+                                                $phone_priority_result = $conn->query("SELECT priority FROM hostel WHERE id = " . $hostel_id);
+                                                $phone_priority_row = $phone_priority_result->fetch_assoc();
+                                                if($phone_priority_row["priority"] != 9999){
                                                     if($contact != NULL && $contact != "NULL") {
 
                                                         ?>
@@ -445,6 +447,7 @@ include 'header.php';
 
                                                         <?php
                                                     }
+                                                }
                                                 ?>
                                                 <br/>
                                                 <br/>
