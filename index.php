@@ -43,6 +43,19 @@
 		<script src="bootstrap/html5shiv.min.js"></script>
 		<script src="bootstrap/respond.min.js"></script>
 		<![endif]-->
+		
+		<style>
+			@media screen and (max-width : 480px){
+	#mainTitle h1 {
+    	font-size: 20px;
+	}
+	#mDrpDown{
+		font-size: 14px;
+		right: 0px;
+		min-width: 0px;
+	}
+}
+		</style>
 
         <?php include 'analyticstracking.php'; ?>
 
@@ -140,7 +153,7 @@
 							<!-- mainHeader -->
 
 							<div id="mainTitle">
-								<h1>Room to Greatest
+								<h1 u>Room to Greatest
 								<br>
 								Hostels in Kathmandu</h1>
 								
@@ -154,7 +167,7 @@
 							<div id="mainSearch">
                                 <form method = "get" action="hostels-in-kathmandu.php" autocomplete="off" onsubmit="return validateForm()">
 
-                                    <div class="ui selection dropdown" style="font-size: 16px;position: relative;right: 5px;min-width: 150px;">
+                                    <div id="mDrpDown" class="ui selection dropdown" ">
                                         <input type="hidden" name="gender" id = "genderSelect" onchange="search();">
                                         <i class="dropdown icon"></i>
                                         <div class="default text">

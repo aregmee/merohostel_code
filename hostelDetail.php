@@ -565,6 +565,16 @@ include 'header.php';
 						<h2 style="position: relative;top: -31px;">Kanya Girls Hostel</h2>					
 					</div>
 					</a>
+					
+					<br/>
+				
+					<a href="http://merohostel.com/hostelDetail.php?name=Subhalaxmi+Boys+Hostel" target="_blank">
+					<div class="advertisement">
+						<img src="img/subhalaxmi-boys-hostel.JPG" title="SubhaLaxmi Boys Hostel" alt="subhalaxmi-boys-hostel"/>
+						<h2 style="position: relative;top: -31px;">SubhaLaxmi Boys Hostel</h2>					
+					</div>
+					</a>
+						
 						
                 </div><!-- sidebar -->
 
