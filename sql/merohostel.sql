@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.10
+-- version 4.1.12
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Jul 14, 2015 at 09:19 AM
--- Server version: 5.5.43-0ubuntu0.14.04.1
--- PHP Version: 5.5.9-1ubuntu4.11
+-- Host: 127.0.0.1
+-- Generation Time: Jun 02, 2016 at 07:14 AM
+-- Server version: 5.6.16
+-- PHP Version: 5.5.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -27,9 +27,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `facility` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `facility`
@@ -56,9 +57,10 @@ CREATE TABLE IF NOT EXISTS `feedback` (
   `user_type` varchar(25) DEFAULT NULL,
   `comments` text,
   `recommend` varchar(10) DEFAULT NULL,
-  `id` int(11) NOT NULL,
-  `date` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=79 ;
 
 --
 -- Dumping data for table `feedback`
@@ -68,11 +70,9 @@ INSERT INTO `feedback` (`no_of_rate`, `user_type`, `comments`, `recommend`, `id`
 (4, 'student', 'Good.', 'sure', 1, '2015-07-03 06:52:03'),
 (1, 'student', '', 'forget it', 2, '2015-07-03 08:37:20'),
 (5, 'student', '', 'sure', 3, '2015-07-03 08:37:41'),
-(3, 'student', 'ThisisAshimRegmitesting', 'sure', 4, '2015-07-03 09:48:49'),
 (1, 'student', '', 'forget it', 5, '2015-07-04 05:29:19'),
 (4, 'advertiser', 'ithinkyoushouldletsearchthroughnameofhosteltoo.Imeanifsomeonerecommendmesomehostelandidontknowtheplacewhereitis.Itwillbehelpfultofindoutthroughyoursite.Trymakingthisserviceasgoodaspossible.Thisisawesome.Thanks', 'sure', 6, '2015-07-04 17:22:12'),
 (5, 'student', '', 'sure', 7, '2015-07-04 22:17:36'),
-(3, 'student', 'Iloveuashim.', 'sure', 8, '2015-07-04 23:34:36'),
 (5, 'student', 'Test', 'sure', 9, '2015-07-05 04:18:59'),
 (5, 'student', '?????????', 'sure', 10, '2015-07-05 11:31:39'),
 (5, 'hostel', 'test', 'forget it', 12, '2015-07-05 20:45:19'),
@@ -87,7 +87,59 @@ INSERT INTO `feedback` (`no_of_rate`, `user_type`, `comments`, `recommend`, `id`
 (3, 'student', '', 'sure', 21, '2015-07-09 20:49:58'),
 (3, 'student', '', 'sure', 22, '2015-07-10 01:23:52'),
 (3, 'student', '', 'sure', 23, '2015-07-11 09:12:39'),
-(3, 'student', '', 'sure', 24, '2015-07-11 09:12:47');
+(3, 'student', '', 'sure', 24, '2015-07-11 09:12:47'),
+(3, 'student', '', 'sure', 25, '2015-07-17 06:36:38'),
+(3, 'advertiser', 'ithinksearchoptionnotyetoptimized!pleasetakecareofitYourwellwisher', 'sure', 26, '2015-07-17 07:26:09'),
+(1, 'student', '', 'sure', 27, '2015-07-17 07:34:39'),
+(3, 'student', '', 'sure', 28, '2015-07-18 00:37:04'),
+(3, 'student', '', 'sure', 29, '2015-07-18 00:37:07'),
+(3, 'student', '', 'sure', 30, '2015-07-22 14:36:16'),
+(5, 'student', '', 'sure', 31, '2015-07-22 14:39:26'),
+(3, 'student', 'gooddesign', 'sure', 32, '2015-07-28 11:45:10'),
+(4, 'student', 'FUCK', 'sure', 34, '2015-07-29 06:46:08'),
+(3, 'hostel', '', 'sure', 35, '2015-07-30 23:38:04'),
+(2, 'student', 'What if I know the name of a hostel and want to search with its name??I want to find Everest boys hostel but I see no option for searching based on name. Well,I know its located in baneshowr. But the hostel names are nt organized on alphabetical order.. that makes it really hard to find out. Ok,I might be new to ktm and searching for hostel.I find it through your site.But I shouldnt be lamenting fewweeks later for the choice I made through your site.So it would be really helpful If I could sort hostel based on userratings and also could read user reviews too..How about including editors review too..As hostel owner might encourage all students to write positive review despite of poorhostel quality.But you guys siteowner will come up with genuine review based on hostel survey.As being consumer of your site you really want each person to end up in good hostel and recommend your sites to other as well. Isnt it?Anyway I give you guys thumps Up for this!!', 'sure', 36, '2015-08-16 09:02:32'),
+(5, 'hostel', 'SirIneedyourEmailAddress,thatIcansendyousomepicturesofhostelandevents.', 'sure', 37, '2015-08-18 06:27:48'),
+(5, 'student', 'None. Good Job Guys.', 'sure', 39, '2015-08-19 06:50:45'),
+(3, 'advertiser', '', 'may be', 40, '2015-08-25 10:36:39'),
+(0, 'student', '', 'sure', 41, '2015-08-25 10:37:27'),
+(3, 'student', '', 'sure', 42, '2015-09-01 22:25:10'),
+(5, 'hostel', '', 'sure', 43, '2015-09-03 21:42:39'),
+(5, 'student', '', 'sure', 44, '2015-09-08 22:32:59'),
+(1, 'student', 'hostel ko location and phone number details about hostel khi chaina. just name matra diyeara ka bhayo ta brother.. m searching hostel around jaulakhel. 9842411793', 'sure', 45, '2015-09-27 12:03:20'),
+(3, 'student', '', 'sure', 46, '2015-09-28 01:32:41'),
+(3, 'student', '', 'sure', 47, '2015-09-28 01:32:56'),
+(3, 'student', '', 'sure', 48, '2015-11-23 04:12:38'),
+(5, 'hostel', '', 'sure', 49, '2015-11-23 11:49:50'),
+(5, 'student', 'Keep Improving ', 'sure', 50, '2015-11-27 01:10:37'),
+(3, 'student', '', 'sure', 51, '2015-12-06 23:24:17'),
+(5, 'student', '', 'sure', 52, '2015-12-27 13:23:44'),
+(3, 'student', 'Motherfucker', 'forget it', 53, '2016-02-11 23:02:02'),
+(3, 'student', 'gf', 'sure', 54, '2016-02-12 01:42:27'),
+(1, 'student', 'Where on earth is phone number? Developer has done his part. But content writer sucks...', 'forget it', 55, '2016-03-07 00:05:30'),
+(1, 'student', 'test', 'sure', 56, '2016-03-11 02:34:32'),
+(5, 'student', '', 'sure', 57, '2016-04-07 03:54:02'),
+(3, 'student', '', 'sure', 58, '2016-04-07 04:52:45'),
+(3, 'student', '', 'sure', 59, '2016-04-07 04:52:58'),
+(3, 'student', '', 'sure', 60, '2016-04-07 04:53:06'),
+(3, 'student', '', 'sure', 61, '2016-04-07 04:53:13'),
+(3, 'student', '', 'sure', 62, '2016-04-13 22:39:34'),
+(3, 'student', '', 'sure', 63, '2016-04-15 11:44:29'),
+(1, 'student', '', 'sure', 64, '2016-04-19 03:39:15'),
+(3, 'student', '', 'sure', 65, '2016-04-22 07:14:58'),
+(3, 'student', '', 'may be', 66, '2016-04-30 21:09:27'),
+(5, 'student', '', 'sure', 67, '2016-05-19 01:51:20'),
+(5, 'student', '', 'sure', 68, '2016-05-19 04:59:26'),
+(3, 'student', '', 'sure', 69, '2016-05-21 07:51:17'),
+(3, 'student', '', 'sure', 70, '2016-05-21 07:51:18'),
+(3, 'student', '', 'sure', 71, '2016-05-21 07:51:18'),
+(3, 'student', '', 'sure', 72, '2016-05-21 07:51:18'),
+(3, 'student', '', 'sure', 73, '2016-05-21 07:51:18'),
+(3, 'student', '', 'sure', 74, '2016-05-21 07:51:18'),
+(3, 'student', '', 'sure', 75, '2016-05-21 07:51:18'),
+(3, 'student', '', 'sure', 76, '2016-05-21 07:51:19'),
+(3, 'student', '', 'sure', 77, '2016-05-21 07:51:19'),
+(5, 'student', '', 'sure', 78, '2016-05-21 07:51:57');
 
 -- --------------------------------------------------------
 
@@ -96,14 +148,15 @@ INSERT INTO `feedback` (`no_of_rate`, `user_type`, `comments`, `recommend`, `id`
 --
 
 CREATE TABLE IF NOT EXISTS `fee_structure` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `admission` int(11) NOT NULL,
   `security_deposit` int(11) NOT NULL,
   `1_bed` varchar(255) DEFAULT NULL,
   `2_bed` varchar(255) DEFAULT NULL,
   `3_bed` varchar(255) DEFAULT NULL,
-  `4_bed` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=237 DEFAULT CHARSET=latin1;
+  `4_bed` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1564 ;
 
 --
 -- Dumping data for table `fee_structure`
@@ -345,7 +398,51 @@ INSERT INTO `fee_structure` (`id`, `admission`, `security_deposit`, `1_bed`, `2_
 (233, 3000, 0, NULL, '8500', '8000', '8000'),
 (234, 3000, 0, NULL, '7500', '7000', '7000'),
 (235, 3000, 0, NULL, '8500', '8000', '8000'),
-(236, 3000, 5000, '15000', '8500', '8000', '8000');
+(236, 3000, 5000, '15000', '8500', '8000', '8000'),
+(237, 3200, 0, NULL, NULL, '7500', NULL),
+(238, 3000, 3000, NULL, '8500', '8000', '8000'),
+(239, 2000, 0, '8000', NULL, '7500', '7500'),
+(240, 3000, 0, NULL, '7000', '7000', '7000'),
+(241, 3000, 0, NULL, '7500', '7500', NULL),
+(242, 3000, 0, NULL, '7500', '7000', NULL),
+(243, 3000, 0, NULL, '7500', '7000', '7000'),
+(244, 3000, 0, NULL, '7500', '7500', '6500'),
+(245, 3000, 0, NULL, '7500', '7500', '6500'),
+(246, 3000, 0, '8000', '7500', '7000', '7000'),
+(247, 3000, 0, NULL, '9000', '7500', NULL),
+(248, 3000, 0, NULL, '7500', '7500', NULL),
+(249, 3000, 0, NULL, '7500', '7500', NULL),
+(250, 3000, 5000, '15000', '8500', '8000', '8000'),
+(251, 3000, 0, '10000', '8000', '7500', '7500'),
+(252, 0, 0, '', '', '', ''),
+(253, 3000, 0, '7500', '7300', '7300', ''),
+(254, 300, 0, '', '', '', ''),
+(255, 7000, 1000, '7000', '6500', '6000', '6000'),
+(256, 3000, 0, '11000', '8000', '7500', '7000'),
+(257, 3000, 0, '', '', '', ''),
+(258, 0, 0, '', '', '', ''),
+(259, 3000, 3000, '', '2', '3', '4'),
+(260, 2000, 0, '0', '8000', '7500', '7000'),
+(261, 3000, 2000, '10000', '8500', '8000', '8000'),
+(262, 2000, 0, NULL, '4', '6', NULL),
+(263, 3000, 0, NULL, '7,000', '6,500', '6,000'),
+(1535, 2000, 2000, '8000', '7500', '7000', '7000'),
+(1541, 3000, 0, '8000', '7500', '7500', '7500'),
+(1542, 2000, 1500, '8000', '7500', '7500', '7500'),
+(1543, 2000, 1000, '8000', '8500', '8000', '7500'),
+(1548, 3000, 2000, '8000', '8500', '8000', '7500'),
+(1549, 3000, 0, '', '', '8000', '7500'),
+(1550, 3000, 0, '9500', '9000', '8500', '8500'),
+(1552, 3000, 3000, '16000', '10000', '9000', '8000'),
+(1555, 1500, 1000, '', '8', '2', '2'),
+(1556, 10000, 2000, '05', '10', '5', '1'),
+(1557, 2500, 0, '', '11000', '8500', '8000'),
+(1558, 3000, 0, '15000', '9500', '9000', '8500'),
+(1559, 1000, 0, '', '9500', '7500', ''),
+(1560, 1000, 2500, '0', '2', '5', '5'),
+(1561, 3000, 0, '', '8000', '7500', '7000'),
+(1562, 2000, 2999, '', '', '7500', ''),
+(1563, 3000, 0, '9000', '8000', '7500', '7000');
 
 -- --------------------------------------------------------
 
@@ -354,146 +451,148 @@ INSERT INTO `fee_structure` (`id`, `admission`, `security_deposit`, `1_bed`, `2_
 --
 
 CREATE TABLE IF NOT EXISTS `hostel` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `gender` varchar(5) NOT NULL,
   `address` varchar(255) DEFAULT NULL,
   `estd_year` int(11) DEFAULT NULL,
   `fee_structure_id` int(11) DEFAULT NULL,
-  `capacity` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=237 DEFAULT CHARSET=latin1;
+  `capacity` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_fee_st_hostel` (`fee_structure_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1517 ;
 
 --
 -- Dumping data for table `hostel`
 --
 
 INSERT INTO `hostel` (`id`, `name`, `gender`, `address`, `estd_year`, `fee_structure_id`, `capacity`) VALUES
-(1, 'Sano Sansar Youth Girls Hostel', 'Girls', 'Old Baneshwor, Rohini Marg', 2071, 1, 35),
+(1, 'Sano Sansar Youth Girls Hostel', 'Girls', 'Prayag Marg, Gaushala', 2071, 1, 35),
 (2, 'Subhalaxmi Boys Hostel', 'Boys', 'New Plaza, Putalisadak', 2068, 2, 65),
-(3, 'Anne Girls Hostel', 'Girls', 'Old Baneshwor, Rohini Marg', 2067, 3, 18),
+(3, 'Anne Girls Hostel', 'Girls', 'Rohini Marg,Old Baneshwor', 2067, 3, 18),
 (4, 'Sumnima Girls Hostel', 'Girls', 'New Plaza, Putalisadak', NULL, 4, 40),
 (5, 'Shree Om Girls Hostel', 'Girls', 'New Plaza, Putalisadak', 2060, 5, 30),
-(6, 'Ekata Boys Hostel', 'Boys', 'Dillibazar, Ghatte Kulo', 2071, 6, 30),
-(7, 'Prasiddha Girls Hostel', 'Girls', 'New Baneshwor, White House', 2071, 7, 30),
-(8, 'Manakamana Girls Hostel', 'Girls', 'Mid-Baneshwor', 2064, 8, 35),
-(9, 'Miteri Girls Hostel', 'Girls', 'Mid-Baneshwor, Miteri Marg', 2065, 9, 90),
-(10, 'Krishna Boys Hostel', 'Boys', 'Mid-Baneshwor, Miteri Marg', 2068, 10, 32),
-(11, 'Phoenix Girls Hostel', 'Girls', 'Mid-Baneshwor', NULL, 11, 30),
-(12, 'Next to Home Girls Hostel', 'Girls', 'Mid-Baneshwor', 2069, 12, 35),
-(13, 'Himalayan Friendship Boys Hostel', 'Boys', 'Mid-Baneshwor', 2067, 13, 56),
-(14, 'OM Girls Hostel', 'Girls', 'Mid-Baneshwor', 2071, 14, 30),
-(15, 'Ganapati Boys Hostel', 'Boys', 'Ghatte Kulo, NawaDurga Mandir 6', 2071, 15, 30),
-(16, 'Sanctuary Girls Hostel', 'Girls', 'Dillibazar, Ghatte Kulo', 2071, 16, 25),
+(6, 'Ekata Boys Hostel', 'Boys', 'Ghatte Kulo, Dillibazar', 2071, 6, 30),
+(7, 'Prasiddha Girls Hostel', 'Girls', 'White House, New Baneshwor', 2071, 7, 30),
+(8, 'Manakamana Girls Hostel', 'Girls', 'Mid Baneshwor', 2064, 8, 35),
+(9, 'Miteri Girls Hostel', 'Girls', 'Miteri Marg, Mid Baneshwor', 2065, 9, 90),
+(10, 'Krishna Boys Hostel', 'Boys', 'Miteri Marg, Mid Baneshwor', 2068, 10, 32),
+(11, 'Phoenix Girls Hostel', 'Girls', 'Mid Baneshwor', NULL, 11, 30),
+(12, 'Next to Home Girls Hostel', 'Girls', 'Mid Baneshwor', 2069, 12, 35),
+(13, 'Himalayan Friendship Boys Hostel', 'Boys', 'Mid Baneshwor', 2067, 13, 56),
+(14, 'OM Girls Hostel', 'Girls', 'Mid Baneshwor', 2071, 14, 30),
+(15, 'Ganapati Boys Hostel', 'Boys', 'NawaDurga Mandir 6, Ghatte Kulo', 2071, 15, 30),
+(16, 'Sanctuary Girls Hostel', 'Girls', 'Ghatte Kulo, Dillibazar', 2071, 16, 25),
 (17, 'Vision Girls Hostel', 'Girls', 'Ghate Kullo', 2069, 17, 20),
-(18, 'Samsara Boys Hostel', 'Boys', 'Dillibazar 32, Kalikasthan', NULL, 18, 32),
+(18, 'Samsara Boys Hostel', 'Boys', 'Kalikasthan, Dillibazar 32', NULL, 18, 32),
 (19, 'Pancha Kumari Care Home', 'Girls', 'Kalikasthan', 2065, 19, 34),
-(20, 'Annapurna Boys Hostel', 'Boys', 'Dillibazar 32, Kalikasthan', 2062, 20, 17),
+(20, 'Annapurna Boys Hostel', 'Boys', 'Kalikasthan, Dillibazar 32', 2062, 20, 17),
 (21, 'Bihaan Boys Hostel', 'Boys', 'Ghatte Kulo', 2061, 21, 50),
-(22, 'Nawa Matrika Bhumi Girls Hostel', 'Girls', 'Kalikasthan, Dillibazar, Goswara Marga', NULL, 22, 60),
+(22, 'Nawa Matrika Bhumi Girls Hostel', 'Girls', 'Goswara Marga, Kalikasthan, Dillibazar', NULL, 22, 60),
 (23, 'Usha Girls Hostel', 'Girls', 'Ghatte Kulo', 2069, 23, 0),
 (24, 'Unique Girls Hostel', 'Girls', 'Ghatte Kulo', 2069, 24, 0),
 (25, 'Subha Laxmi Boys Hostel', 'Boys', 'Ghatte Kulo', 2069, 25, 30),
 (26, 'Kathmandu Deluxe Boys Hostel', 'Boys', 'Ghatte Kulo', 2070, 26, 60),
 (27, 'Balaji Boys Hostel', 'Boys', 'Ghatte Kulo', 2072, 27, 0),
 (28, 'Zenith Girls Hostel', 'Girls', 'Sankhamul, New Baneshwor', 2072, 28, 0),
-(29, 'Suhakanya Girls Hostel', 'Girls', 'Sankhamul, New Baneshwor', 2072, 29, 30),
+(29, 'Subhakanya Girls Hostel', 'Girls', 'Sankhamul, New Baneshwor', 2072, 29, 30),
 (30, 'Sumit Boys'' Hostel', 'Boys', 'Sankhamul, New Baneshwor', 2071, 30, 40),
 (31, 'P.G. Home Boys Hostel', 'Boys', 'Sankhamul, New Baneshwor', 2070, 31, 40),
 (32, 'Banglamukhi Boys Hostel', 'Boys', 'Sankhamul, New Baneshwor', 2069, 32, 30),
 (33, 'The Second Home Girls Hostel', 'Girls', 'Sankhamul, New Baneshwor', NULL, 33, 32),
-(34, 'Minerva Girls Hostel', 'Girls', 'New Baneshwor, BICC Hall', NULL, 34, 0),
-(35, 'Chahari Girls Hostel', 'Girls', 'New Baneshwor, Deurali Club', NULL, 35, 0),
+(34, 'Minerva Girls Hostel', 'Girls', 'BICC Hall, New Baneshwor', NULL, 34, 0),
+(35, 'Chahari Girls Hostel', 'Girls', 'Deurali Club, New Baneshwor', NULL, 35, 0),
 (36, 'Anmol  Girls Hostel', 'Girls', NULL, NULL, 36, 0),
 (37, 'Rupandehi Girls Hostel', 'Girls', NULL, NULL, 37, 0),
-(38, 'Monalisha Boys Hostel', 'Boys', 'Shantinagar, Thulo Kharibot', NULL, 38, 0),
-(39, 'Smaran Boys Hostel', 'Boys', 'Shantinagar, Thulo Kharibot', NULL, 39, 0),
-(40, 'Mum’s Home Boys Hostel', 'Boys', 'Shantinagar, Kareshwor', NULL, 40, 0),
-(41, 'Sweet Home Boys Hostel ', 'Boys', 'Shantinagar, Thulo Kharibot', NULL, 41, 0),
+(38, 'Monalisha Boys Hostel', 'Boys', 'Thulo Kharibot, Shantinagar, New Baneshwor', NULL, 38, 0),
+(39, 'Smaran Boys Hostel', 'Boys', 'Thulo Kharibot, Shantinagar, New Baneshwor', NULL, 39, 0),
+(40, 'Mum’s Home Boys Hostel', 'Boys', 'Kareshwor, Shantinagar, New Baneshwor', NULL, 40, 0),
+(41, 'Sweet Home Boys Hostel ', 'Boys', 'Thulo Kharibot, Shantinagar, New Baneshwor', NULL, 41, 0),
 (42, 'Facebook Boys Hostel', 'Boys', NULL, NULL, 42, 0),
-(43, 'Sister’s Home Girls Hostel', 'Girls', 'Shantinagar, Thulo Kharibot', NULL, 43, 0),
-(44, 'Destination Boys Hostel', 'Boys', 'New Baneshwor, BICC Hall', NULL, 44, 0),
+(43, 'Sister’s Home Girls Hostel', 'Girls', 'Thulo Kharibot, Shantinagar, New Baneshwor', NULL, 43, 0),
+(44, 'Destination Boys Hostel', 'Boys', 'BICC Hall,New Baneshwor', NULL, 44, 0),
 (45, 'Decent Girls Hostel', 'Girls', NULL, NULL, 45, 0),
-(46, 'Kathmandu Boys Hostel', 'Boys', 'New Baneshwor, BICC Hall', NULL, 46, 0),
+(46, 'Kathmandu Boys Hostel', 'Boys', 'BICC Hall, New Baneshwor', NULL, 46, 0),
 (47, 'D & D Girls Hostel', 'Girls', 'New Baneshwor', NULL, 47, 0),
-(48, 'Nawajyoti Girls Hostel', 'Girls', 'New Baneshwor, Sangam Chowk', NULL, 48, 0),
+(48, 'Nawajyoti Girls Hostel', 'Girls', 'Sangam Chowk, New Baneshwor', NULL, 48, 0),
 (49, 'Blue Bird Boys Hostel', 'Boys', 'Old Baneshwor', NULL, 49, 0),
 (50, 'Pancha kumari Girls Hostel', 'Girls', 'Old Baneshwor', NULL, 50, 0),
 (51, 'Subha Tara Girls Hostel', 'Girls', 'Old Baneshwor', NULL, 51, 0),
 (52, 'Om Boys Hostel', 'Boys', NULL, NULL, 52, 0),
 (53, 'Subidha Girls Hostel', 'Girls', 'Mid Baneshwor', NULL, 53, 0),
 (54, 'Mother Teresa Girls Hostel', 'Girls', NULL, NULL, 54, 0),
-(55, 'Shree Ganesh Boys Hostel', 'Boys', 'Old Baneshwor, Bhimsengola Chowk', NULL, 55, 0),
+(55, 'Shree Ganesh Boys Hostel', 'Boys', 'Bhimsengola Chowk, Old Baneshwor', NULL, 55, 0),
 (56, 'Heaven Boys Hostel', 'Boys', 'Old Baneshwor', NULL, 56, 0),
 (57, 'Moonlight Boys Hostel', 'Boys', 'Old Baneshwor', NULL, 57, 0),
 (58, 'Kanchan Girls Hostel', 'Girls', 'Old Baneshwor', NULL, 58, 0),
-(59, 'Subham Boys Hostel', 'Boys', 'New Baneshwor, Buddhanagar', NULL, 59, 0),
+(59, 'Subham Boys Hostel', 'Boys', 'Buddhanagar, New Baneshwor', NULL, 59, 0),
 (60, 'Rupandehi Boys Hostel', 'Boys', 'Mid Baneshwor', NULL, 60, 0),
 (61, 'Four Sister Girls Home', 'Girls', NULL, NULL, 61, 0),
 (62, 'Sairesh Girls Hostel', 'Girls', 'Mid Baneshwor', NULL, 62, 0),
-(63, 'Kanya Girls Hostel', 'Girls', NULL, NULL, 63, 0),
+(63, 'Kanya Girls Hostel', 'Girls', 'White House, Mid Baneshwor', NULL, 63, 0),
 (64, 'Oasis Girls Hostel', 'Girls', 'Mid Baneshwor', NULL, 64, 0),
 (65, 'Namaste Ladies Hostel', 'Girls', NULL, NULL, 65, 0),
-(66, 'Swastik Girls Hostel', 'Girls', 'Shantinagar, Katyani Chowk', NULL, 66, 0),
-(67, 'Aayush Boys Hostel', 'Boys', 'Shantinagar, Katyani Chowk', NULL, 67, 0),
+(66, 'Swastik Girls Hostel', 'Girls', 'Katyani Chowk, Shantinagar, New Baneshwor', NULL, 66, 0),
+(67, 'Aayush Boys Hostel', 'Boys', 'Katyani Chowk, Shantinagar, New Baneshwor', NULL, 67, 0),
 (68, 'New East Ideal Boys Hostel', 'Boys', 'Old Baneshwor', NULL, 68, 0),
-(69, 'Narayani Boys Hostel', 'Boys', 'Shantinagar, Katyani Chowk', NULL, 69, 0),
+(69, 'Narayani Boys Hostel', 'Boys', 'Katyani Chowk, Shantinagar, New Baneshwor', NULL, 69, 0),
 (70, 'New Boys Hostel', 'Boys', NULL, NULL, 70, 0),
-(71, 'The Queen Home Girls Hostel', 'Boys', 'Shantinagar, Katyani Chowk', NULL, 71, 0),
-(72, 'Red Rose Boys Hostel', 'Boys', 'Shantinagar, Kareshwor', NULL, 72, 0),
-(73, 'Vegas Boys Hostel', 'Boys', 'Shantinagar ', NULL, 73, 0),
+(71, 'The Queen Home Girls Hostel', 'Boys', 'Katyani Chowk, Shantinagar, New Baneshwor', NULL, 71, 0),
+(72, 'Red Rose Boys Hostel', 'Boys', 'Kareshwor, Shantinagar, New Baneshwor', NULL, 72, 0),
+(73, 'Vegas Boys Hostel', 'Boys', 'Shantinagar', NULL, 73, 0),
 (74, 'Happy Home Girls Hostel', 'Girls', 'New Baneshwor', NULL, 74, 0),
 (75, 'Grace Girls Hostel', 'Girls', 'New Baneshwor', NULL, 75, 0),
 (76, 'Shree Ganapati Boys Hostel', 'Boys', NULL, NULL, 76, 0),
 (77, 'Frenz Boys Hostel', 'Boys', 'New Baneshwor', NULL, 77, 0),
 (78, 'Lucky Boys Hostel', 'Boys', NULL, NULL, 78, 0),
-(79, 'Girls Garden Hostel', 'Girls', 'Shantinagar, Om Shanti Chowk', NULL, 79, 0),
-(80, 'Boys Garden Hostel', 'Boys', 'Shantinagar, Om Shanti Chowk', NULL, 80, 0),
-(81, 'Decent Boys Hostel', 'Boys', 'Shantinagar, Sano Kharibot', NULL, 81, 0),
-(82, 'GN Bajra Boys Hostel', 'Boys', 'Shantinagar ', NULL, 82, 0),
-(83, 'Nawa Swarnim Sansar Boys Hostel', 'Boys', 'Shantinagar ', NULL, 83, 0),
-(84, 'Decent Boys Hostel', 'Boys', 'Shantinagar, Om Shanti Chowk', NULL, 84, 0),
+(79, 'Girls Garden Hostel', 'Girls', 'Om Shanti Chowk, Shantinagar, New Baneshwor', NULL, 79, 0),
+(80, 'Boys Garden Hostel', 'Boys', 'Om Shanti Chowk, Shantinagar, New Baneshwor', NULL, 80, 0),
+(81, 'Decent Boys Hostel', 'Boys', 'Sano Kharibot, Shantinagar, New Baneshwor', NULL, 81, 0),
+(82, 'GN Bajra Boys Hostel', 'Boys', 'Shantinagar, New Baneshwor', NULL, 82, 0),
+(83, 'Nawa Swarnim Sansar Boys Hostel', 'Boys', 'Shantinagar, New Baneshwor', NULL, 83, 0),
+(84, 'Decent Boys Hostel', 'Boys', 'Om Shanti Chowk, Shantinagar, New Baneshwor', NULL, 84, 0),
 (85, 'Our Home Girls Hostel', 'Girls', NULL, NULL, 85, 0),
-(86, 'OM Kareshower Girls Hostel', 'Girls', 'Shantinagar, Nagendra Kancha Chowk', NULL, 86, 0),
-(87, 'N Y Girls Hostel', 'Girls', 'Shantinagar, Nagendra Kancha Chowk', NULL, 87, 0),
+(86, 'OM Kareshower Girls Hostel', 'Girls', 'Nagendra Kancha Chowk, Shantinagar, New Baneshwor', NULL, 86, 0),
+(87, 'N Y Girls Hostel', 'Girls', 'Nagendra Kancha Chowk, Shantinagar, New Baneshwor', NULL, 87, 0),
 (88, 'Nil Saraswati Girls Hostel', 'Girls', NULL, NULL, 88, 0),
-(89, 'Gurukul Boys Hostel', 'Boys', 'Shantinagar ', NULL, 89, 0),
-(90, 'Lumbini Boys Hostel', 'Boys', 'Mid Baneshwor, Milan Chowk', NULL, 90, 0),
-(91, 'Sakura Girls Hostel', 'Girls', 'Shantinagar ', NULL, 91, 0),
-(92, 'Om Janaki Boys Hostel', 'Boys', 'Shantinagar, Thulo Kharibot', NULL, 92, 0),
-(93, 'Sikxha Girls Hostel', 'Girls', 'Shantinagar, Thulo Kharibot', NULL, 93, 0),
+(89, 'Gurukul Boys Hostel', 'Boys', 'Shantinagar, New Baneshwor', NULL, 89, 0),
+(90, 'Lumbini Boys Hostel', 'Boys', 'Milan Chowk, Mid Baneshwor', NULL, 90, 0),
+(91, 'Sakura Girls Hostel', 'Girls', 'Shantinagar, New Baneshwor', NULL, 91, 0),
+(92, 'Om Janaki Boys Hostel', 'Boys', 'Thulo Kharibot, Shantinagar, New Baneshwor', NULL, 92, 0),
+(93, 'Sikxha Girls Hostel', 'Girls', 'Thulo Kharibot, Shantinagar, New Baneshwor', NULL, 93, 0),
 (94, 'Nobelty Boys Hostel', 'Boys', NULL, NULL, 94, 0),
 (95, 'Friendship Boys Hostel', 'Boys', NULL, NULL, 95, 0),
 (96, 'Indreni Girls Hostel', 'Girls', 'Mid Baneshwor', NULL, 96, 0),
 (97, 'Seven Hill Boys Hostel', 'Boys', NULL, NULL, 97, 0),
-(98, 'Bishal Boys Hostel', 'Boys', 'Tinkune, Gairigaun', NULL, 98, 0),
+(98, 'Bishal Boys Hostel', 'Boys', 'Gairigaun, Tinkune', NULL, 98, 0),
 (99, 'Tinkune Youth Boys Hostel', 'Boys', 'Tinkune', NULL, 99, 0),
 (100, 'Shubha Shree Chhatrabas Boys Hostel', 'Boys', 'Tinkune', NULL, 100, 0),
 (101, 'Bright Future Boys Hostel', 'Boys', 'Sinamangal', NULL, 101, 0),
-(102, 'Dream Boys Hostel', 'Boys', 'Tinkune, Gairigaun', NULL, 102, 0),
-(103, 'Shubha Shree Girls Hostel', 'Girls', 'Sinamangal, Bhimsengola Chowk', NULL, 103, 0),
+(102, 'Dream Boys Hostel', 'Boys', 'Gairigaun, Tinkune', NULL, 102, 0),
+(103, 'Shubha Shree Girls Hostel', 'Girls', 'Bhimsengola Chowk, Sinamangal', NULL, 103, 0),
 (104, 'Bisal Boys Hostel', 'Boys', 'Tinkune', NULL, 104, 0),
 (105, 'Modern Boys Hostel', 'Boys', 'Tinkune', NULL, 105, 0),
-(106, 'Madrid Home Boys Hostel', 'Boys', 'Shantinagar, Thulo Kharibot', NULL, 106, 0),
-(107, 'Sidda Baba Boys Hostel', 'Boys', 'Shantinagar, Thulo Kharibot', NULL, 107, 0),
-(108, 'Advance City Boys Hostel', 'Boys', 'Tinkune, Gairigaun', NULL, 108, 0),
-(109, 'Sangam Boys Hostel', 'Boys', 'New Baneshwor, Sangam Chowk', NULL, 109, 0),
-(110, 'Basera Girls Hostel', 'Girls', 'New Baneshwor, Thapagaun', NULL, 110, 0),
+(106, 'Madrid Home Boys Hostel', 'Boys', 'Thulo Kharibot, Shantinagar, New Baneshwor', NULL, 106, 0),
+(107, 'Sidda Baba Boys Hostel', 'Boys', 'Thulo Kharibot, Shantinagar, New Baneshwor', NULL, 107, 0),
+(108, 'Advance City Boys Hostel', 'Boys', 'Gairigaun, Tinkune', NULL, 108, 0),
+(109, 'Sangam Boys Hostel', 'Boys', 'Sangam Chowk, New Baneshwor', NULL, 109, 0),
+(110, 'Basera Girls Hostel', 'Girls', 'Thapagaun, New Baneshwor', NULL, 110, 0),
 (111, 'Panas Boys Hostel', 'Boys', 'Baneshwor Height', NULL, 111, 0),
 (112, 'Swarnim Sansar Girls Hostel', 'Girls', 'Baneshwor Height', NULL, 112, 0),
 (113, 'Jaya PanchaLaxmi  Boys Pvt. Ltd.', 'Boys', 'Baneshwor Height', NULL, 113, 0),
 (114, 'Shree Kunja Boys Hostel', 'Boys', 'Baneshwor Height', NULL, 114, 0),
-(115, 'Sunshine Boys Hostel', 'Boys', 'New Baneshwor, Bijuli Bajar', NULL, 115, 0),
-(116, 'Namuna Boys Hostel', 'Boys', 'New Baneshwor, Thapagaun', NULL, 116, 0),
+(115, 'Sunshine Boys Hostel', 'Boys', 'Bijuli Bajar, New Baneshwor', NULL, 115, 0),
+(116, 'Namuna Boys Hostel', 'Boys', 'Thapagaun, New Baneshwor', NULL, 116, 0),
 (117, 'Sovereign Boys Hostel', 'Boys', NULL, NULL, 117, 0),
 (118, 'Up Town Boys Hostel', 'Boys', NULL, NULL, 118, 0),
 (119, 'Raika Boys Hostel', 'Boys', 'Baneshwor Height', NULL, 119, 0),
 (120, 'Savya Girls Hostel', 'Girls', 'Baneshwor Height', NULL, 120, 0),
 (121, 'Pashupati Girls Pvt. Ltd.', 'Girls', 'Baneshwor Height', NULL, 121, 0),
 (122, 'Nawa Jiban Girls Hostel', 'Girls', 'Baneshwor Height', NULL, 122, 0),
-(123, 'New Hill Boys Hostel', 'Boys', 'New Baneshwor, Hanumansthan', NULL, 123, 0),
-(124, 'Indreni Boys Hostel', 'Boys', 'New Baneshwor, Okharbot Marga', NULL, 124, 0),
-(125, 'Kathmandu Standard Boys Hostel', 'Boys', 'New Baneshwor, Thapagaun', NULL, 125, 0),
-(126, ' U Shape Boys Hostel', 'Boys', 'Old Baneshwor, Battisputali', NULL, 126, 0),
+(123, 'New Hill Boys Hostel', 'Boys', 'Hanumansthan, New Baneshwor', NULL, 123, 0),
+(124, 'Indreni Boys Hostel', 'Boys', 'Okharbot Marga, New Baneshwor', NULL, 124, 0),
+(125, 'Kathmandu Standard Boys Hostel', 'Boys', 'Thapagaun, New Baneshwor', NULL, 125, 0),
+(126, ' U Shape Boys Hostel', 'Boys', 'Battisputali, Old Baneshwor', NULL, 126, 0),
 (127, 'Paradise Girls Hostel', 'Girls', 'Baneshwor Height', NULL, 127, 0),
 (128, 'Best Care Girls Hostel', 'Girls', 'Maharajgunj', NULL, 128, 0),
 (129, 'Ananda bhumi Girls Hostel', 'Girls', 'Chabahil', NULL, 129, 0),
@@ -530,10 +629,10 @@ INSERT INTO `hostel` (`id`, `name`, `gender`, `address`, `estd_year`, `fee_struc
 (160, 'Happy Home Girls Hostel', 'Girls', NULL, NULL, 160, 0),
 (161, 'Himali Girls Hostel', 'Girls', NULL, NULL, 161, 0),
 (162, 'Executive Girls Hostel', 'Girls', 'Jhamsikhel', NULL, 162, 0),
-(163, 'Darpan Boys Hostel', 'Boys', 'Anamnagar, Hanumansthan', NULL, 163, 0),
+(163, 'Darpan Boys Hostel', 'Boys', 'Hanumansthan, Anamnagar', NULL, 163, 0),
 (164, 'Kamkaji Mahila Aawas Hostel', 'Girls', 'Maitidevi', NULL, 164, 0),
 (165, 'Success Boys Hostel', 'Boys', 'Dillibazar', NULL, 165, 0),
-(166, 'Matribhumi Girls Hostel', 'Girls', 'Anamnagar, Kalikasthan', NULL, 166, 0),
+(166, 'Matribhumi Girls Hostel', 'Girls', 'Kalikasthan, Anamnagar', NULL, 166, 0),
 (167, 'Kumari Girls Hostel', 'Girls', 'Rato pul', NULL, 167, 0),
 (168, 'Daughter Next Girls Hostel', 'Girls', 'Dillibazar', NULL, 168, 0),
 (169, 'B n B Boys Hostel', 'Boys', 'Seto Pul', NULL, 169, 0),
@@ -544,29 +643,29 @@ INSERT INTO `hostel` (`id`, `name`, `gender`, `address`, `estd_year`, `fee_struc
 (174, 'Yeti Boys Hostel', 'Boys', 'Maitidevi', NULL, 174, 0),
 (175, 'Baba Chaitanya Boys Hostel', 'Boys', NULL, NULL, 175, 0),
 (176, 'RadhaKrishna Girls Hostel', 'Girls', 'Maitidevi', NULL, 176, 0),
-(177, 'BadiMallika Girls Hostel', 'Girls', 'Maitidevi, Ghatte Kulo', NULL, 177, 0),
+(177, 'BadiMallika Girls Hostel', 'Girls', 'Ghatte Kulo, Maitidevi', NULL, 177, 0),
 (178, 'Anzil Girls Hostel', 'Girls', 'Maitidevi', NULL, 178, 0),
-(179, 'Friends and Family Girls Hostel', 'Girls', 'Maitidevi, Ghatte Kulo', NULL, 179, 0),
+(179, 'Friends and Family Girls Hostel', 'Girls', 'Ghatte Kulo, Maitidevi', NULL, 179, 0),
 (180, 'Holygems Girls Hostel', 'Girls', NULL, NULL, 180, 0),
-(181, 'Sunrise Boys Hostel', 'Boys', 'Putalisadak, New Plaza', NULL, 181, 0),
+(181, 'Sunrise Boys Hostel', 'Boys', 'New Plaza, Putalisadak', NULL, 181, 0),
 (182, 'Zenith Girls Hostel', 'Girls', 'Dillibazar', NULL, 182, 0),
 (183, 'New Everest Girls Hostel', 'Girls', 'Dillibazar ', NULL, 183, 0),
 (184, 'Suryodaya Girls Hostel', 'Girls', 'Maitidevi', NULL, 184, 0),
 (185, 'Welcome Girls Hostel', 'Girls', 'Dillibazar', NULL, 185, 0),
-(186, 'Bihan Boys Hostel', 'Boys', 'Maitidevi, Ghatte Kulo', NULL, 186, 0),
-(187, 'Shanti Niketan Girls Hostel', 'Girls', 'Maitidevi, Ghatte Kulo', NULL, 187, 0),
-(188, 'Achievers Girls Hostel', 'Girls', 'Maitidevi, Ghatte Kulo', NULL, 188, 0),
-(189, 'Usha Girls Hostel', 'Girls', 'Maitidevi, Ghatte Kulo', NULL, 189, 0),
-(190, 'Diyalo Boys Hostel', 'Boys', 'Maitidevi, Ghatte Kulo', NULL, 190, 0),
+(186, 'Bihan Boys Hostel', 'Boys', 'Ghatte Kulo, Maitidevi', NULL, 186, 0),
+(187, 'Shanti Niketan Girls Hostel', 'Girls', 'Ghatte Kulo, Maitidevi', NULL, 187, 0),
+(188, 'Achievers Girls Hostel', 'Girls', 'Ghatte Kulo, Maitidevi', NULL, 188, 0),
+(189, 'Usha Girls Hostel', 'Girls', 'Ghatte Kulo, Maitidevi', NULL, 189, 0),
+(190, 'Diyalo Boys Hostel', 'Boys', 'Ghatte Kulo, Maitidevi', NULL, 190, 0),
 (191, 'Annapurna Boys Hostel', 'Boys', 'Dillibazar', NULL, 191, 0),
-(192, 'Lotus Girls Hostel', 'Girls', 'Maitidevi, Ghatte Kulo', NULL, 192, 0),
+(192, 'Lotus Girls Hostel', 'Girls', 'Ghatte Kulo, Maitidevi', NULL, 192, 0),
 (193, 'Peace Zone Boys Hostel', 'Boys', 'Dillibazar', NULL, 193, 0),
 (194, 'Diyalo Girls Hostel', 'Girls', 'Dillibazar', NULL, 194, 0),
 (195, 'Om Sai Boys Hostel', 'Boys', NULL, NULL, 195, 0),
 (196, 'Baba Girls Hostel', 'Girls', 'Anamnagar', NULL, 196, 0),
 (197, 'Bagalamukhi Saraswoti Girls Hostel', 'Girls', 'Kamalpokhari', NULL, 197, 0),
-(198, 'Elite Girls Hostel', 'Girls', 'Maitidevi, Ghatte Kulo', NULL, 198, 0),
-(199, 'New Annapurna Boys Hostel', 'Boys', 'Maitidevi, Ghatte Kulo', NULL, 199, 0),
+(198, 'Elite Girls Hostel', 'Girls', 'Ghatte Kulo, Maitidevi', NULL, 198, 0),
+(199, 'New Annapurna Boys Hostel', 'Boys', 'Ghatte Kulo, Maitidevi', NULL, 199, 0),
 (200, 'Mukti Nath Girls Hostel', 'Girls', 'Anamnagar', NULL, 200, 0),
 (201, 'Oasis Girls Hostel', 'Girls', 'Anamnagar', NULL, 201, 0),
 (202, 'Aashraya kuti Boys Hostel', 'Boys', 'Putalisadak, New Plaza', NULL, 202, 0),
@@ -576,34 +675,79 @@ INSERT INTO `hostel` (`id`, `name`, `gender`, `address`, `estd_year`, `fee_struc
 (206, 'Everest Girls Hostel', 'Boys', 'Bijulibazar', NULL, 206, 0),
 (207, 'New Siddhartha Boys Hostel', 'Boys', 'Thapagaun', NULL, 207, 0),
 (208, 'Star Lumbini Boys Hostel', 'Boys', 'Bijulibazar', NULL, 208, 0),
-(209, 'Suryakiran Boys Hostel', 'Boys', 'Babarmahal', NULL, 209, 0),
+(209, 'Surya Kiran Boys Hostel', 'Boys', 'Babarmahal', NULL, 209, 0),
 (210, 'Everest Boys Hostel', 'Boys', 'Bijulibazar', NULL, 210, 0),
 (211, 'Smarika Girls', 'Girls', 'Sankhamul', NULL, 211, 0),
-(212, 'Pretoria Boys Hostel', 'Boys', 'Buddhanagar', NULL, 212, 0),
-(213, 'Second Home Girls Hostel', 'Girls', 'Buddhanagar', NULL, 213, 0),
-(214, 'Indrawati Girls Hostel', 'Girls', 'Buddhanagar', NULL, 214, 0),
-(215, 'Aamarawati Girls Hostel', 'Girls', 'Buddhanagar', NULL, 215, 0),
-(216, 'Moonlight Boys Hostel', 'Boys', 'Buddhanagar', NULL, 216, 0),
-(217, 'Aaraksha Girls Hostel', 'Girls', 'Buddhanagar', NULL, 217, 0),
+(212, 'Pretoria Boys Hostel', 'Boys', 'Buddhanagar, New Baneshwor', NULL, 212, 0),
+(213, 'Second Home Girls Hostel', 'Girls', 'Buddhanagar, New Baneshwor', NULL, 213, 0),
+(214, 'Indrawati Girls Hostel', 'Girls', 'Buddhanagar, New Baneshwor', NULL, 214, 0),
+(215, 'Aamarawati Boys Hostel', 'Boys', 'Buddhanagar, New Baneshwor', NULL, 215, 0),
+(216, 'Moonlight Boys Hostel', 'Boys', 'Buddhanagar, New Baneshwor', NULL, 216, 0),
+(217, 'Aaraksha Girls Hostel', 'Girls', 'Buddhanagar, New Baneshwor', NULL, 217, 0),
 (218, 'Modern Girls Hostel', 'Girls', 'Minbhawan', NULL, 218, 0),
-(219, 'Aadarsa Boys Hostel', 'Boys', 'Buddhanagar', NULL, 219, 0),
-(220, 'Parbati Girls Hostel', 'Girls', 'Buddhanagar', NULL, 220, 0),
-(221, 'Gelos Boys Hostel', 'Boys', 'Buddhanagar', NULL, 221, 0),
-(222, 'Capital Boys Hostel', 'Boys', 'Buddhanagar', NULL, 222, 0),
-(223, 'National Girls Hostel', 'Girls', 'Buddhanagar', NULL, 223, 0),
+(219, 'Aadarsa Boys Hostel', 'Boys', 'Buddhanagar, New Baneshwor', NULL, 219, 0),
+(220, 'Parbati Girls Hostel', 'Girls', 'Buddhanagar, New Baneshwor', NULL, 220, 0),
+(221, 'Gelos Boys Hostel', 'Boys', 'Buddhanagar, New Baneshwor', NULL, 221, 0),
+(222, 'Capital Boys Hostel', 'Boys', 'Buddhanagar, New Baneshwor', NULL, 222, 0),
+(223, 'National Girls Hostel', 'Girls', 'Buddhanagar, New Baneshwor', NULL, 223, 0),
 (224, 'Paradise Girls Hostel', 'Girls', NULL, NULL, 224, 0),
-(225, 'Kusang Boys Hostel', 'Boys', 'Buddhanagar', NULL, 225, 0),
-(226, 'Unique Boys Hostel', 'Boys', 'Subidhanagar', NULL, 226, 0),
-(227, 'Modern Boys Hostel Pvt. Ltd.', 'Boys', 'Subidhanagar', NULL, 227, 0),
+(225, 'Kusang Boys Hostel', 'Boys', 'Buddhanagar, New Baneshwor', NULL, 225, 0),
+(226, 'Unique Boys Hostel', 'Boys', 'Subidhanagar, Tinkune', NULL, 226, 0),
+(227, 'Modern Boys Hostel Pvt. Ltd.', 'Boys', 'Subidhanagar, Tinkune', NULL, 227, 0),
 (228, 'Golden Boys Hostel', 'Boys', 'Koteshwor', NULL, 228, 0),
-(229, 'Subidha Chhatrabas Girls Hostel', 'Girls', 'Subidhanagar', NULL, 229, 0),
-(230, 'Mega Boys Hostel', 'Boys', 'Subidhanagar', NULL, 230, 0),
+(229, 'Subidha Chhatrabas Girls Hostel', 'Girls', 'Subidhanagar, Tinkune', NULL, 229, 0),
+(230, 'Mega Boys Hostel', 'Boys', 'Subidhanagar, Tinkune', NULL, 230, 0),
 (231, 'National Boys Hostel', 'Boys', 'Aloknagar', NULL, 231, 0),
 (232, 'Om ktm Boys Hostel', 'Boys', 'Sankhamul', NULL, 232, 0),
 (233, 'Ureka Boys Hostel', 'Boys', 'Aloknagar', NULL, 233, 0),
-(234, 'Prem Sai Girls Hostel', 'Girls', 'Buddhanagar', NULL, 234, 0),
-(235, 'Ma Boys Hostel', 'Boys', 'Sankhamul, Bigyan Marg', NULL, 235, 0),
-(236, 'City Stay Boys Hostel', 'boys', 'Samakhushi Chowk, Kathmandu', 2012, 236, 0);
+(234, 'Prem Sai Girls Hostel', 'Girls', 'Buddhanagar, New Baneshwor', NULL, 234, 0),
+(235, 'Ma Boys Hostel', 'Boys', 'Bigyan Marg, Sankhamul', NULL, 235, 0),
+(236, 'City Stay Boys Hostel', 'Boys', 'Samakhushi Chowk, Kathmandu', 2012, 236, 0),
+(238, 'Milan Boys Hostel', 'Boys', 'Lumbini Galli, Buddhanagar, New Baneshwor', 2071, 237, 30),
+(239, 'Buddha Boys Hostel', 'Boys', 'Buddhanagar, New Baneshwor', 2065, 238, 30),
+(240, 'Adarsha Boys Hostel', 'Boys', 'Simrik Marga, Buddhanagar', 2069, 239, 49),
+(242, 'Homely Girls Hostel', 'Girls', 'Sankhamul, Godhuli Galli', 2072, 241, 25),
+(243, 'National Girls Hostel', 'Girls', 'Buddhanagar, New Baneshwor', 2069, 242, 50),
+(244, 'Parbati Girls Hostel', 'Girls', 'Buddhanagar, New Baneshwor', 2069, 243, 35),
+(245, 'Namaste Girls Hostel', 'Girls', 'Buddhanagar, New Baneshwor', 2070, 244, 28),
+(246, 'Capital Boys Hostel', 'Boys', 'Buddhanagar, New Baneshwor', 2064, 245, 35),
+(247, 'Aamarawati Girls Hostel', 'Girls', 'Buddhanagar, New Baneshwor', 2059, 246, 38),
+(248, 'SK Hostel', 'Boys', 'Buddhanagar, New Baneshwor', 2015, 247, 35),
+(249, 'Indrawati Girls Hostel', 'Girls', 'Buddhanagar, New Baneshwor', 2069, 248, 40),
+(250, 'Swarnim Sansar Girls Hostel', 'Girls', 'Buddhanagar, New Baneshwor', 2069, 249, 60),
+(251, 'City Stay Boys Hostel', 'Boys', 'Samakhushi Chowk, Kathmandu ', 2012, 239, 0),
+(252, 'Peace Zone Boys Hostel  ', 'Boys', 'Shankhamul - 34 , New Baneshwor ,Kathmandu  ', 2070, 240, 0),
+(253, 'Annapurna Boys Hostel ', 'Boys', 'Kalikasthan ', 2064, 241, 0),
+(254, 'Aayush Boys Hostel ', 'Boys', 'Bhimsengola, Old Baneshwor ', 0, 242, 0),
+(255, 'Makalu Boys Hostel ', 'Boys', 'Sankhamul ', 2011, 243, 0),
+(256, 'kathmandu girls hostel ', 'Girls', 'Thames ', 2072, 244, 0),
+(257, 'Secure Home Girls Hostel ', 'Girls', 'Kist way, Kamal pokhari ', 2010, 245, 0),
+(258, 'Samsara Boys Hostel ', 'Boys', 'Kalikasthan-32,Dillibazar (opposite to platinum college) ', 2010, 246, 0),
+(259, 'Mount Dhaulagiri Hostel Pvt.,Ltd. ', 'Boys', 'Hattiban, Lalitpur ', 2014, 252, 0),
+(260, 'Maa Boys Hostel ', 'Boys', 'Sankhamul', 2012, 254, 0),
+(261, 'Subidha Girls Hostel ', 'Girls', 'Subidhanagar,Tinkune', 2066, 255, 0),
+(262, 'Surya Kiran Boys Hostel ', 'Boys', 'Rudramati Marg, Babarmahal, Kathmandu ', 2014, 258, 0),
+(263, 'Swarnim & Shreejan Girls Hostel ', 'Girls', 'Om Karyashwor Marga, Shantinagar, Kathmandu ', 2067, 259, 0),
+(264, 'Kanya Chhatrabas (Girls Hostel)', 'Girls', ' White House College, Mid Baneshwor', 2060, 263, 70),
+(1487, 'Indreni girls hostel ', 'Girls', 'Mid Baneshwor, Kathmandu, Nepal  ', 0, NULL, 0),
+(1488, 'Palpasa Girls Hostel ', 'Girls', 'New Plaza Putali Sadak ', 2015, 1535, 0),
+(1494, 'Dibya Durga Boys Hostel ', 'Boys', 'Dillibazar ', 2071, 1541, 0),
+(1495, 'Hamro Hostel ', 'Girls', 'Kupondole ', 2013, 1542, 0),
+(1496, 'Samyak Griha ', 'Boys', 'Bhakti Thapa Sadak, New Baneshwor ', 2070, 1543, 0),
+(1498, 'Mai ilam girls hostel ', 'Girls', 'basundhara  ', 2012, NULL, 0),
+(1501, 'Prem Sai Girls Hostel Block 2 ', 'Girls', 'Buddhanagar(Near KMC School) ', 2013, 1548, 0),
+(1502, 'New Vision Girl Hostel  ', 'Girls', 'Kalikasthan 32, Dillibazar  ', 2013, 1549, 0),
+(1503, 'MP Royal Rupandehi Boys Hostel  ', 'Boys', 'Okharbot Marga,Thapagaun,New Baneshwor  ', 2015, 1550, 0),
+(1505, 'gautambuddha boys hostel  ', '	boys', 'sanepa lalitpur  ', 0, 1552, 0),
+(1508, 'Dream Home boys hostel   ', '	boys', 'katyani chowk ,Baneshwor  ', 2071, 1555, 0),
+(1509, 'Nepal Boys Hostel  ', '	boys', 'nakhipot, lalitpur  ', 2070, 1556, 0),
+(1510, 'HAMRO BOYS HOSTEL   ', '	boys', 'Sankhamul-34 , Yatpaumarg  ', 2071, 1557, 0),
+(1511, 'Saathi Ko Ghar  Boys Hostel  ', '	boys', 'Thapagaun,Bijulibazaar  ', 2069, 1558, 0),
+(1512, 'Swastik boys hostel  ', '	boys', 'aloknagar (near v.s niketan school)  ', 2059, 1559, 0),
+(1513, 'City Boys Hostel  ', '	boys', 'Kumaripati. Lalitpur  ', 2073, 1560, 0),
+(1514, 'Mega Boys Hostel  ', '	boys', 'Panchakumari , New Baneshwor  ', 2072, 1561, 0),
+(1515, 'HEAVEN BOYS HOSTEL  ', '	boys', 'Old Baneshwor(Sinamangal Road) inside of Loyola School  ', 2014, 1562, 0),
+(1516, 'Om shanti boys hostel  ', '	boys', 'Tinkune,subidhanagar35,ktm  ', 2068, 1563, 0);
 
 -- --------------------------------------------------------
 
@@ -612,10 +756,13 @@ INSERT INTO `hostel` (`id`, `name`, `gender`, `address`, `estd_year`, `fee_struc
 --
 
 CREATE TABLE IF NOT EXISTS `hostel_facility` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `hostel_id` int(11) NOT NULL,
-  `facility_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=latin1;
+  `facility_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_host_facility` (`hostel_id`),
+  KEY `fk_facility_host` (`facility_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=288 ;
 
 --
 -- Dumping data for table `hostel_facility`
@@ -726,7 +873,161 @@ INSERT INTO `hostel_facility` (`id`, `hostel_id`, `facility_id`) VALUES
 (102, 236, 3),
 (103, 236, 4),
 (104, 236, 6),
-(105, 236, 7);
+(105, 236, 7),
+(118, 67, 3),
+(119, 67, 6),
+(120, 67, 7),
+(121, 238, 6),
+(122, 238, 4),
+(123, 239, 6),
+(124, 239, 7),
+(125, 239, 3),
+(126, 239, 4),
+(127, 240, 6),
+(128, 240, 7),
+(129, 240, 3),
+(130, 240, 4),
+(135, 242, 6),
+(136, 242, 7),
+(137, 242, 4),
+(138, 243, 6),
+(139, 243, 7),
+(140, 243, 3),
+(141, 243, 4),
+(142, 244, 6),
+(143, 244, 7),
+(144, 244, 3),
+(145, 244, 4),
+(146, 245, 6),
+(147, 245, 7),
+(148, 245, 3),
+(149, 245, 4),
+(150, 246, 6),
+(151, 246, 7),
+(152, 246, 3),
+(153, 246, 4),
+(154, 247, 6),
+(155, 247, 7),
+(156, 247, 3),
+(157, 247, 4),
+(158, 248, 6),
+(159, 248, 7),
+(160, 248, 3),
+(161, 248, 4),
+(162, 249, 6),
+(163, 249, 7),
+(164, 249, 3),
+(165, 249, 4),
+(166, 250, 6),
+(167, 250, 7),
+(168, 250, 3),
+(169, 250, 4),
+(170, 251, 3),
+(171, 251, 4),
+(172, 251, 6),
+(173, 251, 7),
+(174, 252, 3),
+(175, 252, 4),
+(176, 252, 6),
+(177, 252, 7),
+(178, 253, 3),
+(179, 253, 6),
+(180, 253, 7),
+(181, 254, 3),
+(182, 254, 4),
+(183, 254, 6),
+(184, 254, 7),
+(185, 255, 3),
+(186, 255, 4),
+(187, 255, 6),
+(188, 255, 7),
+(189, 257, 4),
+(190, 257, 6),
+(191, 258, 6),
+(192, 258, 7),
+(193, 251, 3),
+(194, 259, 4),
+(195, 259, 6),
+(196, 259, 7),
+(197, 260, 3),
+(198, 260, 6),
+(199, 261, 3),
+(200, 261, 4),
+(201, 261, 6),
+(202, 261, 7),
+(203, 262, 3),
+(204, 262, 4),
+(205, 262, 6),
+(206, 262, 7),
+(207, 263, 3),
+(208, 263, 4),
+(209, 263, 6),
+(210, 263, 7),
+(211, 264, 3),
+(212, 264, 4),
+(213, 264, 6),
+(214, 264, 7),
+(215, 209, 3),
+(216, 209, 4),
+(217, 209, 6),
+(218, 209, 7),
+(219, 1487, 3),
+(220, 1487, 4),
+(221, 1487, 6),
+(222, 1487, 7),
+(223, 1494, 4),
+(224, 1494, 6),
+(225, 1495, 3),
+(226, 1495, 7),
+(227, 1496, 3),
+(228, 1496, 4),
+(229, 1496, 6),
+(230, 1496, 7),
+(231, 1501, 3),
+(232, 1501, 4),
+(233, 1501, 6),
+(234, 1501, 7),
+(235, 1502, 3),
+(236, 1502, 4),
+(237, 1502, 6),
+(238, 1502, 7),
+(239, 1503, 3),
+(242, 1503, 4),
+(244, 1503, 6),
+(246, 1503, 7),
+(247, 1505, 3),
+(248, 1505, 4),
+(249, 1505, 6),
+(250, 1505, 7),
+(259, 1508, 3),
+(260, 1508, 4),
+(261, 1508, 6),
+(262, 1508, 7),
+(263, 1509, 3),
+(264, 1509, 4),
+(265, 1509, 6),
+(266, 1510, 3),
+(267, 1510, 4),
+(268, 1510, 6),
+(269, 1510, 7),
+(270, 1511, 3),
+(271, 1511, 4),
+(272, 1511, 6),
+(273, 1511, 7),
+(274, 1512, 3),
+(275, 1512, 4),
+(276, 1512, 6),
+(277, 1512, 7),
+(278, 1513, 3),
+(279, 1513, 6),
+(280, 1513, 7),
+(281, 1514, 3),
+(282, 1514, 4),
+(283, 1514, 6),
+(284, 1514, 7),
+(285, 1516, 3),
+(286, 1516, 4),
+(287, 1516, 6);
 
 -- --------------------------------------------------------
 
@@ -735,10 +1036,13 @@ INSERT INTO `hostel_facility` (`id`, `hostel_id`, `facility_id`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `hostel_photo` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `hostel_id` int(11) NOT NULL,
-  `photo_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=96 DEFAULT CHARSET=latin1;
+  `photo_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_host_photo` (`hostel_id`),
+  KEY `fk_photo_host` (`photo_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=100 ;
 
 --
 -- Dumping data for table `hostel_photo`
@@ -806,7 +1110,73 @@ INSERT INTO `hostel_photo` (`id`, `hostel_id`, `photo_id`) VALUES
 (89, 29, 89),
 (90, 30, 90),
 (91, 31, 91),
-(95, 33, 95);
+(95, 33, 95),
+(96, 264, 119),
+(97, 264, 120),
+(99, 264, 122);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hostel_position`
+--
+
+CREATE TABLE IF NOT EXISTS `hostel_position` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `latitude` double NOT NULL,
+  `lognitude` double NOT NULL,
+  `hostel_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `hostel_id` (`hostel_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+
+--
+-- Dumping data for table `hostel_position`
+--
+
+INSERT INTO `hostel_position` (`id`, `latitude`, `lognitude`, `hostel_id`) VALUES
+(1, 27.702344, 85.324236, 4),
+(2, 27.7023427, 85.3210372, 181),
+(3, 27.7017454, 85.3228218, 202),
+(4, 27.7017502, 85.3228218, 208),
+(5, 27.690591, 85.3281037, 206),
+(6, 27.691048, 85.3313357, 116),
+(7, 27.689278, 85.3044982, 149),
+(8, 27.705093, 85.3240407, 194),
+(9, 27.701883, 85.3273757, 6),
+(10, 27.692317, 85.3285837, 210),
+(11, 27.698893, 85.3346316, 96),
+(12, 27.685734, 85.3201102, 243),
+(13, 27.6930221, 85.3282934, 34),
+(14, 27.68686, 85.3244052, 234),
+(15, 27.739204, 85.3133583, 130);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `inquiries`
+--
+
+CREATE TABLE IF NOT EXISTS `inquiries` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `phone` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `hostel_name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `hostel_id` int(11) NOT NULL,
+  `bed_preference` varchar(6) COLLATE utf8_unicode_ci NOT NULL,
+  `message` text COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_hostel_inquiry` (`hostel_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `inquiries`
+--
+
+INSERT INTO `inquiries` (`id`, `name`, `email`, `phone`, `hostel_name`, `hostel_id`, `bed_preference`, `message`) VALUES
+(3, 'choedol', 'bodgyalo_2009@yahoo.com', '9803097669', 'Sumnima Girls Hostel', 4, '1 Bed', 'what about the food?  do we have to pay monthly ?'),
+(6, 'Suvin Gurung', 'grg-ken@hotmail.com', '9816156996', 'Annapurna Boys Hostel', 191, '2 Bed', 'I would like to visit and check the hostel.  Can you lay me tge exact location and phone number \n');
 
 -- --------------------------------------------------------
 
@@ -815,10 +1185,13 @@ INSERT INTO `hostel_photo` (`id`, `hostel_id`, `photo_id`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `main_photo` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `hostel_id` int(11) DEFAULT NULL,
-  `photo_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
+  `photo_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_main_host` (`hostel_id`),
+  KEY `fk_main_photo` (`photo_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=49 ;
 
 --
 -- Dumping data for table `main_photo`
@@ -858,7 +1231,20 @@ INSERT INTO `main_photo` (`id`, `hostel_id`, `photo_id`) VALUES
 (31, 30, 90),
 (32, 29, 88),
 (33, 28, 86),
-(34, 234, 96);
+(34, 234, 96),
+(35, 67, 97),
+(36, 238, 98),
+(37, 239, 99),
+(38, 240, 100),
+(40, 243, 102),
+(41, 244, 103),
+(42, 246, 104),
+(43, 247, 105),
+(44, 248, 106),
+(45, 250, 107),
+(46, 242, 104),
+(47, 264, 121),
+(48, 209, 118);
 
 -- --------------------------------------------------------
 
@@ -867,11 +1253,13 @@ INSERT INTO `main_photo` (`id`, `hostel_id`, `photo_id`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `owner` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `hostel_id` int(11) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
-  `contact` varchar(40) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=237 DEFAULT CHARSET=latin1;
+  `contact` varchar(40) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_owner_hostel` (`hostel_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=286 ;
 
 --
 -- Dumping data for table `owner`
@@ -944,7 +1332,7 @@ INSERT INTO `owner` (`id`, `hostel_id`, `name`, `contact`) VALUES
 (64, 64, 'Pranita Shrestha', '9808366853'),
 (65, 65, 'Lina Gurung', '9851138188'),
 (66, 66, 'Binita, Kalpana', '9841488212'),
-(67, 67, 'Dinesh Kumar Dev', '9843377093'),
+(67, 67, 'Dinesh Kumar Deo', '9843377093, 01-4470661'),
 (68, 68, 'Pramod Hamal', '9849226618'),
 (69, 69, 'Rachana Dotel', '9841967838'),
 (70, 70, 'Jayanti Raj Bhandari', '9849193377'),
@@ -1113,7 +1501,42 @@ INSERT INTO `owner` (`id`, `hostel_id`, `name`, `contact`) VALUES
 (233, 233, 'Sanjeev Shah', '9845495290'),
 (234, 234, 'Pramila Rijal (Sangroula)', '9841335653'),
 (235, 235, 'Tulsi Bahadur Awale', '9841214829'),
-(236, 236, 'Bhim Bhandari', '9851190252');
+(236, 236, 'Bhim Bhandari', '9851190252'),
+(237, 239, ' Bhim Bhandari ', '9851190252'),
+(238, 240, ' Mrs.Mandira Khadgi  ', '9841455890'),
+(250, 251, ' Bhim Bhandari ', '9851190252'),
+(251, 252, ' Mrs.Mandira Khadgi  ', '9841455890'),
+(252, 253, ' Narayan khadka ', '9851115818'),
+(253, 254, ' Dinesh Kumar Deo ', '01-4470661 '),
+(254, 255, ' Tanka Nepaune ', '9841387582'),
+(255, 256, ' ram shah  ', '9807865432'),
+(256, 257, ' Ashok Khadka ', '9816190677'),
+(257, 258, ' Kumar Adhikari ', '9851083457'),
+(258, 259, ' Ram Karki ', '9851019213/980125697'),
+(259, 260, ' Tulsi Bahadur Awale ', '9841214829'),
+(260, 261, ' Bishnu Devi shrestha ', '9849155445'),
+(261, 262, ' Ishwar Lamsal ', '+977-9851179160, 984'),
+(262, 263, ' Kalpana Shahi Singh ', '97714108635'),
+(263, 264, 'Merohostel', '9841348322, 9843116966'),
+(264, 1487, ' Kamala ', '9843215871'),
+(265, 1488, ' Pabitra Sakya ', '01 4011205 '),
+(266, 1494, ' Sapan  Ghimire ', '9851044207'),
+(267, 1495, ' Anil Shah ', '9803214560'),
+(268, 1496, ' Ganesh Khanal ', '9841401780'),
+(269, 1498, ' ilam ', ' '),
+(270, 1501, ' Pramila Rijal ', '9841335653'),
+(271, 1502, '  Naju Shrestha  ', '9845037636  '),
+(272, 1503, '  Maheswari Gautam  ', '9860007775,980694165 '),
+(274, 1505, '  sudip nepal  ', '9841370254  '),
+(277, 1508, '  Indra hamal   ', '9858055580  '),
+(278, 1509, '  Abhishek Bantawa  ', '01-4224189  '),
+(279, 1510, '  Juna Upreti  ', '9811242944  '),
+(280, 1511, '  Uddhab Sharma  ', '9851214169  '),
+(281, 1512, '  sita adhikari  ', '9813382931  '),
+(282, 1513, '  Chitra bd. Shrestha  ', '9803001021  '),
+(283, 1514, '  Dabal bahadur Khadka  ', '9843574005  '),
+(284, 1515, '  ANIL GHARTI  ', '9847179775,,98447844 '),
+(285, 1516, '    ', '9818152403  ');
 
 -- --------------------------------------------------------
 
@@ -1122,9 +1545,10 @@ INSERT INTO `owner` (`id`, `hostel_id`, `name`, `contact`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `photo` (
-  `id` int(11) NOT NULL,
-  `url` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=97 DEFAULT CHARSET=latin1;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `url` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=124 ;
 
 --
 -- Dumping data for table `photo`
@@ -1225,7 +1649,63 @@ INSERT INTO `photo` (`id`, `url`) VALUES
 (93, 'https://lh3.googleusercontent.com/-CtDaypoZt8k/VYk9B7xCe8I/AAAAAAAAAak/qD1-L30d-_w/s640/IMG_7060.JPG'),
 (94, 'https://lh3.googleusercontent.com/-nm7vTc_xIa4/VYk9Oo8j98I/AAAAAAAAAbA/Af_99a7oobs/s640/IMG_7062.JPG'),
 (95, 'https://lh3.googleusercontent.com/-F0QoyuoDG3g/VYk9Ou6DoSI/AAAAAAAAAa8/NfpumKD9Vuo/s640/IMG_7063.JPG'),
-(96, 'https://lh3.googleusercontent.com/-Nr5kUx_nUi4/VaJsIxJJAcI/AAAAAAAAAeA/7U8JDcxv4bo/s512-Ic42/11714441_10204464311263273_1864390858_n.jpg');
+(96, 'https://lh3.googleusercontent.com/-Nr5kUx_nUi4/VaJsIxJJAcI/AAAAAAAAAeA/7U8JDcxv4bo/s512-Ic42/11714441_10204464311263273_1864390858_n.jpg'),
+(97, 'https://lh3.googleusercontent.com/-VXhWslwawLk/VbBiWGPSnzI/AAAAAAAAAew/Lsz0sG5CFrM/s512-Ic42/1.PNG'),
+(98, 'https://lh3.googleusercontent.com/-yqrA5jLcnS4/Vc1XrGOJTUI/AAAAAAAAAh8/TjNGFvXbfvI/s512-Ic42/20150701_120530.jpg'),
+(99, 'https://lh3.googleusercontent.com/-Axbnv44yEPY/Vc1X1D2ld7I/AAAAAAAAAiU/CzGlyT5GTW8/s800-Ic42/20150701_122226.jpg'),
+(100, 'https://lh3.googleusercontent.com/-0k5iLNBsRVM/Vc1Yu0QtyJI/AAAAAAAAAjc/pwughc1CIag/s800-Ic42/20150701_123828.jpg'),
+(101, 'https://lh3.googleusercontent.com/-_jkENFBOvao/Vc1V5iQ-ByI/AAAAAAAAAfw/gwpNXv8dNeM/s512-Ic42/11714441_10204464311263273_1864390858_n.jpg'),
+(102, 'https://lh3.googleusercontent.com/-pAUgVR3bSvA/Vc1VozhvdrI/AAAAAAAAAfc/40ZjdlaPUj4/s640-Ic42/11696784_10204464312463303_371990363_n.jpg'),
+(103, 'https://lh3.googleusercontent.com/-QffNDkcABKw/Vc1WzeGvwgI/AAAAAAAAAg0/d2uHRqIx5dk/s512-Ic42/11716066_10204464307463178_1635458080_n.jpg'),
+(104, 'https://lh3.googleusercontent.com/-no2dstabvdc/Vc1Woz-3XLI/AAAAAAAAAgc/RauzETT5URk/s512-Ic42/11720522_10204464310023242_1790925100_n.jpg'),
+(105, 'https://lh3.googleusercontent.com/-APEHRalYzdk/Vc1XJgAhs2I/AAAAAAAAAhk/ifjZun1s-ow/s512-Ic42/11721137_10204472945479123_1689958622_n.jpg'),
+(106, 'https://lh3.googleusercontent.com/-GvSE_JjX59I/Vc1W_tRW7lI/AAAAAAAAAhI/im_cmxnmk-Q/s512-Ic42/11715850_10204464307343175_1215462110_n.jpg'),
+(107, 'https://lh3.googleusercontent.com/-b-ypn0NidJk/Vc1WRV8-9bI/AAAAAAAAAgE/vqMv2jJVAqo/s512-Ic42/11713530_10204464310783261_1110608099_n.jpg'),
+(108, 'https://lh3.googleusercontent.com/-yqrA5jLcnS4/Vc1XrGOJTUI/AAAAAAAAAh8/TjNGFvXbfvI/s512-Ic42/20150701_120530.jpg'),
+(109, 'https://lh3.googleusercontent.com/-Axbnv44yEPY/Vc1X1D2ld7I/AAAAAAAAAiU/CzGlyT5GTW8/s800-Ic42/20150701_122226.jpg'),
+(110, 'https://lh3.googleusercontent.com/-0k5iLNBsRVM/Vc1Yu0QtyJI/AAAAAAAAAjc/pwughc1CIag/s800-Ic42/20150701_123828.jpg'),
+(111, 'https://lh3.googleusercontent.com/-_jkENFBOvao/Vc1V5iQ-ByI/AAAAAAAAAfw/gwpNXv8dNeM/s512-Ic42/11714441_10204464311263273_1864390858_n.jpg'),
+(112, 'https://lh3.googleusercontent.com/-pAUgVR3bSvA/Vc1VozhvdrI/AAAAAAAAAfc/40ZjdlaPUj4/s640-Ic42/11696784_10204464312463303_371990363_n.jpg'),
+(113, 'https://lh3.googleusercontent.com/-QffNDkcABKw/Vc1WzeGvwgI/AAAAAAAAAg0/d2uHRqIx5dk/s512-Ic42/11716066_10204464307463178_1635458080_n.jpg'),
+(114, 'https://lh3.googleusercontent.com/-no2dstabvdc/Vc1Woz-3XLI/AAAAAAAAAgc/RauzETT5URk/s512-Ic42/11720522_10204464310023242_1790925100_n.jpg'),
+(115, 'https://lh3.googleusercontent.com/-APEHRalYzdk/Vc1XJgAhs2I/AAAAAAAAAhk/ifjZun1s-ow/s512-Ic42/11721137_10204472945479123_1689958622_n.jpg'),
+(116, 'https://lh3.googleusercontent.com/-GvSE_JjX59I/Vc1W_tRW7lI/AAAAAAAAAhI/im_cmxnmk-Q/s512-Ic42/11715850_10204464307343175_1215462110_n.jpg'),
+(117, 'https://lh3.googleusercontent.com/-b-ypn0NidJk/Vc1WRV8-9bI/AAAAAAAAAgE/vqMv2jJVAqo/s512-Ic42/11713530_10204464310783261_1110608099_n.jpg'),
+(118, 'https://lh3.googleusercontent.com/-ilqg-_xrt8E/Vd348Mt973I/AAAAAAAAAmQ/dhk3J1kV35g/s512-Ic42/%2525231.jpg'),
+(119, 'https://lh3.googleusercontent.com/-HGnP8Bzz4eQ/Vd5mbAlNwAI/AAAAAAAAAng/42GX0BE98rY/s640-Ic42/DSCF8765.JPG'),
+(120, 'https://lh3.googleusercontent.com/-WnK_dIk2Q7c/Vd5mb1uJ-xI/AAAAAAAAAnw/7N3RqjRYVgI/s640-Ic42/DSCF8769.JPG'),
+(121, 'https://lh3.googleusercontent.com/-7Jqf0u1YC24/Vd5mbxo-MpI/AAAAAAAAAn0/VcuxMc0qnMQ/s640-Ic42/DSCF8775.JPG'),
+(122, 'https://lh3.googleusercontent.com/-Q8ByaTxIgtQ/Vd5mcFXtDaI/AAAAAAAAAn4/sYEOuIC2dq0/s640-Ic42/DSCF8777.JPG'),
+(123, 'https://lh3.googleusercontent.com/-ppr_bmzimXE/Vd5mbOTCVSI/AAAAAAAAAns/Pg5bJY_vRSM/s640-Ic42/DSCF8753.JPG');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `recommendation`
+--
+
+CREATE TABLE IF NOT EXISTS `recommendation` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(35) COLLATE utf8_unicode_ci NOT NULL,
+  `contactNumber` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `emailAddress` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `Gender` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `Location` varchar(35) COLLATE utf8_unicode_ci NOT NULL,
+  `Course` varchar(35) COLLATE utf8_unicode_ci NOT NULL,
+  `Duration` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `roomType` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `receivedDate` date NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=12 ;
+
+--
+-- Dumping data for table `recommendation`
+--
+
+INSERT INTO `recommendation` (`Id`, `Name`, `contactNumber`, `emailAddress`, `Gender`, `Location`, `Course`, `Duration`, `roomType`, `receivedDate`) VALUES
+(9, 'Darbin Ghimire', '9844674313', 'darbinkaaji123@gmail.com', 'boys', 'delhibazar(kalikasthan)or gyaneshor', 'Software Enginering(IT)', '8 Months', '2 Bed', '2015-08-26'),
+(7, 'John Lee', ' 977 981-039-1279', 'john10235@gmail.com', 'boys', 'Near Mahendra Police Club', 'Public Health', '8 Months', '1 Bed', '2015-08-25'),
+(10, ' Darbin Ghimire', ' 9844674313', ' ', ' ', 'delhibazar(kalikasthan)or gyaneshor', 'Software Enginering(IT)', '8 Months', '3 Bed', '2015-08-26');
 
 -- --------------------------------------------------------
 
@@ -1241,20 +1721,96 @@ CREATE TABLE IF NOT EXISTS `review` (
   `display` int(11) DEFAULT NULL,
   `hostel_id` int(11) NOT NULL,
   `date` datetime DEFAULT NULL,
-  `id` int(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=112 ;
 
 --
 -- Dumping data for table `review`
 --
 
 INSERT INTO `review` (`review`, `first_name`, `last_name`, `email`, `display`, `hostel_id`, `date`, `id`) VALUES
-('njsbd', 'x', 'y', 'x@y.com', 0, 30, '2015-07-03 22:13:13', 15),
+('I want to see room pictures', 'Ranjan', 'Upreti', 'Ranjan.upreti001@gmail.com', 0, 39, '2016-05-02 05:24:48', 68),
 ('One of the best hostel in babarmahal, Baneshwor.\nhttps://www.facebook.com/suryakiranboyshostel', 'Bikash', 'pandey', 'bikash@gmail.com', 1, 209, '2015-07-05 00:03:38', 16),
-('asdfasdfsad', 'adefgad', 'asdfasf', 'asdfswd@asdf.com', 0, 13, '2015-07-06 23:03:53', 20),
-('dsfg', 'dsfg', 'gsd', 'dsg@sdfg.sf', 0, 103, '2015-07-06 23:06:14', 21),
+('', 'Subash', 'Gurung', 'Subash.gurung8@gmail.com', 0, 6, '2016-05-01 12:46:08', 67),
 ('Free  WiFi \nHot Water\nPeace environment\nLocker\nHigenic food\n', 'Ramkrishna', 'Adhikari', 'ramkrishnaadhikari065@Gmail.com', 1, 25, '2015-07-05 11:18:13', 18),
-('ssssssssssssssssssssss', 'bijay', 'chhetri', 'bijay0710@gmail.com', 0, 219, '2015-07-08 23:45:58', 22);
+('    ', 'asdfsdf', 'sdfasdf', 'sdfsdaf@gmail.com', 0, 26, '2016-04-29 20:43:57', 66),
+('I have stayed here during my coaching at PEA and 1st year at Deerwalk Institute of Technology and I think this is the best hostel to stay if you are looking for a quiet place.', 'Ashim', 'Regmi', 'aregmee@gmail.com', 1, 67, '2015-07-22 22:46:19', 23),
+('Perfect hostel in kathmandu with all the required facilities n educational and friendly environment. ', 'Cecer', 'GC', 'Smartbinay32@gmail.com', 1, 236, '2015-07-24 21:54:00', 24),
+('Perfect hostel in kathmandu with all the required facilities n educational and friendly environment. ', 'Cecer', 'GC', 'Smartbinay32@gmail.com', 0, 236, '2015-07-24 21:54:21', 25),
+('Some of my friends have been living in this hostel for quite a while.  According to them, this hostel is awesome.', 'Abhishek', 'Gupta', 'abhishek.gupta@deerwalk.edu.np', 1, 67, '2015-07-30 04:59:48', 26),
+('Direction', 'Diya', 'Thapa', 'Toppersviews@gmail.com', 0, 129, '2015-07-31 22:45:13', 27),
+('Direction', 'Diya', 'Thapa', 'Toppersviews@gmail.com', 1, 129, '2015-07-31 22:45:14', 28),
+('Location', 'asmita', 'baral', 'asmi_baral52@yahoo.com', 1, 133, '2015-08-08 08:02:27', 29),
+('hey we(me n my frn) are seeking for a good hostel. what would be the cost per person if we share a room with two beds?', 'nima', 'ghimire', 'nima.ghimire@hotmail.com', 1, 194, '2015-08-12 11:53:54', 30),
+('hlw\ncan u plz tel me whre is the exact location of this hostel..can i get single beded room n hw mch is the price\nthank u', 'Sanyogita', 'Pahari', 'paharisanyogita20jan@gmail.com', 1, 9, '2015-08-24 09:56:59', 31),
+('hlw,\ncan u plz tell where is the exact location of this hostel..can i get single beded room..hw mch is the price\nthank u', 'Sanyogita', 'Pahari', 'paharisanyogita20jan@gmail.com', 1, 12, '2015-08-24 10:00:43', 32),
+('let me know your number so that i can visit ur place', 'roshan', 'mishra', 'justroshan@gmail.com', 1, 30, '2015-08-24 12:20:33', 33),
+('', 'shankar', '', 'spdl5ster@gmail.com', 0, 222, '2016-01-22 02:34:17', 49),
+('', 'shankar', 'paudel', 'spdl5ster@gmail.com', 0, 240, '2016-01-22 02:37:06', 50),
+('sir there is no contact number here how we contact the hostel direct..????', 'yashoda', 'chhetri', 'yashodachhetri24@yahoo.com', 0, 115, '2016-02-07 01:09:30', 51),
+('', 'arpana', 'adhikari', 'amiable.arpu@gmail.com', 0, 8, '2016-01-18 18:59:51', 47),
+('phn no. pls', 'roshan', 'mishra', 'justroshan@gmail.com', 1, 108, '2015-08-24 12:30:01', 41),
+('', 'Sreya', 'Stha', 'Imfashionista11@gmail.com', 0, 140, '2015-12-08 09:41:59', 45),
+('yeah this hostel is good enough.Perhaps better than any other hostel i had visited. I stayed there for 3 months during BE preparation.If u are searching for a hostel,then this one is good enough', 'Mohan', 'Banjade', 'dangali.thito22@gmail.com', 1, 67, '2015-08-26 02:57:51', 44),
+('', 'shankar', '', 'spdl5ster@gmail.com', 0, 238, '2016-01-22 02:32:35', 48),
+('..', 'Bikram', 'Gurung', 'lucky.bikram143@gmail.com', 0, 8, '2016-03-04 04:22:52', 52),
+('interested', 'jitendra', 'yadav', 'info@activelinknepal.com', 1, 181, '2016-03-09 23:35:26', 53),
+('We are 2 brothers want to stay hostel he will study Hotel managment ', 'Sumit', 'Sharma', 'Sumitlove1@yahoo.com', 1, 203, '2016-03-10 09:08:06', 54),
+('plz conact me I need attached 2seater....soon..9842526325', 'nikesh', 'yadav', 'nikesh.yadav100@gmail.com', 1, 26, '2016-03-21 09:32:59', 55),
+('i want a single bed room plz manage it fr me ill stay fr 2.5 yrs in ht Hstl so plz if u can manage nd rply me soon ', 'Anup', 'Tiwari', 'panchoofly@gmail.com', 1, 67, '2016-03-27 20:48:47', 56),
+('I would like to know about hamro hostel and want to know the exact location. I would like to know if you have any rooms with two beds.', 'Rubita', 'Thapa', 'c.rubby246@yahoo.com', 1, 1495, '2016-04-02 06:47:14', 57),
+('I want to know about hostel', 'Aliza', 'Oli', 'Alzaoli516@gmail.com', 1, 128, '2016-04-10 02:41:16', 58),
+('very poor facilities. non co-operative behaviour from cooking staffs. no electricity in case of loadshading. mama chai thik xan. arko warden chai khasai ramro xainan. ', 'anonymous', 'anonymous', 'samgamwysee@gmail.com', 1, 248, '2016-04-10 05:42:30', 59),
+('Two bed room', 'sanjeev', 'sah', 'shaharjun227@gmail.com', 1, 203, '2016-04-15 03:43:53', 60),
+('hostel ta thikai ho, dherai camera/mic chaina raicha bolna lai', 'rishi', 'dhamala', 'd_rishi@gmail.com', 1, 145, '2016-04-16 11:27:02', 61),
+('', 'samit', 'tiwari', 'samittiwari107@gmail.com', 0, 240, '2016-04-21 04:27:16', 62),
+('we 3 friends are planning to study in NAME and looking for hostel.is there availability of all necessary bed materials like balnket and bed sheets ......ar we are supposed to bring them with us?', 'prabesh', 'chhetri', 'prabeshkshetri122@gmail.com', 1, 181, '2016-04-24 11:59:43', 63),
+('I need single beded room .....\r\n', 'Manish', 'Mahaseth', 'mahaseth16@gmail.com', 1, 31, '2016-04-27 23:53:50', 64),
+('hello. sir plz send me ur no..so i can contact u..', 'Nishant', 'Neupane', 'nissaneupane@gmail.com', 1, 26, '2016-04-29 10:56:58', 65),
+('want single room', 'anish', 'gupta', 'anishgupta900@yahoo.com', 0, 2, '2016-05-02 23:26:03', 69),
+('Provide your contact number', 'Susmita', 'Thapa', 'Basnetsandip3@gmail.com', 0, 194, '2016-05-08 00:06:08', 70),
+('Provide your contact number', 'Susmita', 'Thapa', 'Basnetsandip3@gmail.com', 0, 5, '2016-05-08 00:09:06', 71),
+('I want Girls hostel at Putalsisadak area so  Plz  give your full contact address with telephone no and cell no,  plz reply as my mail add \r\n', 'bishow', 'shrestha', 'bishowshrestha01@gmail.com', 0, 4, '2016-05-08 02:00:56', 72),
+('can i get information about hostel?? ', 'pranisha', 'shrestha', 'pranisha.shrestha3@gmail.com', 0, 4, '2016-05-10 03:02:07', 73),
+('', 'Mandira', 'Baniya', 'manvibaniya123@gmail. com', 0, 53, '2016-05-10 10:48:48', 74),
+('', 'Christina', 'shah', 'schristina861@gmail.com', 0, 29, '2016-05-11 09:56:01', 75),
+('', 'sachin', 'tiwari', 'st8626111@gmail.com', 0, 2, '2016-05-11 11:24:21', 76),
+('I want to have a 2 bed room and Do you provide us fooding as well? Is it 8500 for one person or for both', 'Sawan', 'Chaudhary', 'Sawanchaudhary05@gmail.com', 0, 2, '2016-05-13 21:36:47', 77),
+('', 'rajesh', 'baral', 'baralrajesh.raj@gmail.com', 0, 240, '2016-05-14 01:37:32', 78),
+('For study and visit', 'Nabin', 'Khadka', 'Nabnkdka1111@gmail.com', 0, 10, '2016-05-14 05:46:36', 79),
+('Plz say me the exact location .n phone num', 'Nabin', 'Khadka', 'Nabnkdka1111@gmail.com', 0, 225, '2016-05-14 11:13:29', 80),
+('Plz sir contact@ 9865100988 i want a 2 seater room', 'Sawan', 'Chaudhary', 'Sawanchaudhary05@gmail.com', 0, 26, '2016-05-14 11:25:35', 81),
+('we are in group of 4 boys \r\ncan we get more information of this hostel\r\n2 of them will come on 7th of jestha and 2 will on 10th of jestha \r\n', 'saurav', 'patel', 'sauravpatel608@gmail.com', 0, 203, '2016-05-14 21:38:02', 82),
+('we need 2 rooms for 4 students,,,,', 'omkar', 'bista', 'bistaomkarprashad@gmail.com', 0, 116, '2016-05-15 00:57:03', 83),
+('i need a single room', 'nisen', 'shrestha', 'nisenshrestha@yahoo.com', 0, 31, '2016-05-15 06:18:26', 84),
+('dede', 'aman', 'woli', 'amanwoli5@gmail.com', 0, 2, '2016-05-15 09:04:08', 85),
+('i need 3bed hostel room\r\n', 'ishwor', 'lamichhane', 'ishworlc666@gmail.com', 0, 44, '2016-05-16 22:35:22', 86),
+('3 beds per room ', 'Bidya', 'Bhattarai', 'sbhattarai357@gmail.com', 0, 166, '2016-05-17 02:25:15', 87),
+('', 'Rabin', 'Yadav', 'rabinyadav2072@gmail.com', 0, 149, '2016-05-17 22:28:28', 88),
+('i need aingle bedded', 'Rabin', 'Yadav', 'rabinyadav2072@gmail.com', 0, 1495, '2016-05-17 22:29:42', 89),
+('i need single bedded', 'Rabin', 'Yadav', 'rabinyadav2072@gmail.com', 0, 1495, '2016-05-17 22:29:56', 90),
+('Kindly inform me if there is bed available. (/9802723720)', 'himani', 'singh', 'deva.sin.in@gmail.com', 0, 171, '2016-05-17 22:34:16', 91),
+('kindly provide us the telephone number\r\n', 'himanee', 'singh', 'biva.singhh@gmail.com', 0, 205, '2016-05-17 22:58:08', 92),
+('please tell me your telephone number if bed is available', 'himanee', 'singh', 'biva.singhh@gmail.com', 0, 23, '2016-05-17 22:59:14', 93),
+('please tell me your telephone number if bed is available', 'himanee', 'singh', 'biva.singhh@gmail.com', 0, 192, '2016-05-17 23:00:27', 94),
+('please tell me your telephone number if bed is available', 'himanee', 'singh', 'biva.singhh@gmail.com', 0, 198, '2016-05-17 23:01:41', 95),
+('please tell me your telephone number if bed is available', 'himanee', 'singh', 'biva.singhh@gmail.com', 0, 204, '2016-05-17 23:03:40', 96),
+('please tell me your telephone number if bed is available', 'himanee', 'singh', 'biva.singhh @gmail.com', 0, 177, '2016-05-17 23:05:09', 97),
+('Can you please provide me the contact number? I would like to visit.  ', 'Renuka', 'Shrestha', 'shrestharenuka080@gmail.com', 0, 4, '2016-05-18 11:23:08', 98),
+('.', 'Jiban', 'Khanal', 'Sisirkhanal20@gmail.com', 0, 67, '2016-05-19 04:08:33', 99),
+('i need a room for doing SAT and TOEFL ... Can i get a room', 'Naveen', 'Bhattarai', 'nabsbro@gmail.com', 0, 2, '2016-05-19 08:28:21', 100),
+('à¤® à¤à¤‰à¤Ÿà¤¾ à¤¸à¤«à¥à¤Ÿà¤µà¥‡à¤¯à¤° à¤‡à¤¨à¥à¤œà¥€à¤¨à¤¿à¤¯à¤° à¤¹à¥à¤, à¤¸à¤¾à¤¥à¥ˆ à¤Ÿà¥‡à¤²à¤¿à¤­à¤¿à¤œà¤¨ à¤‡à¤¨à¥à¤œà¥€à¤¨à¤¿à¤¯à¤° à¤ªà¤¨à¤¿ à¤¯à¤¸à¤•à¤¾ à¤¸à¤¾à¤¥à¥ˆ à¤® 2/4 à¤µà¤Ÿà¤¾ à¤¬à¥‡à¤­ à¤¸à¤¾à¤‡à¤Ÿà¤¹à¤°à¥ à¤šà¤²à¤¾à¤‰à¤›à¥ à¤ª', 'krishna', 'pandey', 'dearkashyapp@gmail.com', 0, 2, '2016-05-20 01:30:37', 101),
+('', 'Prashant', 'Suman', 'suman_p333@hotmail.com', 0, 13, '2016-05-23 12:05:39', 102),
+('', 'Prashant', 'suman', 'suman_p333@hotmail.com', 0, 6, '2016-05-23 12:09:34', 103),
+('I need hostel for three months for a boy in putalisadak area. Do you have vacant room? Plz let me know in my e-mail address or in 9851163878.', 'Tika Ram', 'Pangeni', 'tika.pangeni@gmail.com', 0, 2, '2016-05-24 04:25:29', 104),
+('more pictures bout hostel?', 'Nita', 'Gurung', 'diyagurung2@gmail.com', 0, 264, '2016-05-25 05:51:39', 105),
+('please tell if there is any room for two sitter students.', 'Sushila', 'Khanal', 'khanalsushila8899@gmail.com', 0, 33, '2016-05-25 07:47:40', 106),
+('please tell if there is any room for two sitter students.', 'Sushila', 'Khanal', 'khanalsushila8899@gmail.com', 0, 33, '2016-05-25 07:49:32', 107),
+('', 'Ronis', 'Nepal', 'devil.ronishnepal@gmail.com', 0, 31, '2016-05-26 01:19:54', 108),
+('we are 3 student needed hostel plzz reply before 4 pm', 'Sahil', 'Singh', 'sahilsingh2071@gmail.com', 0, 10, '2016-05-29 00:32:55', 109),
+('sir please send me ur no i need a hostel now ', 'faizan', 'ansari', 'faizanahmad364@gmail.com', 0, 26, '2016-05-29 07:09:06', 110),
+('may i have ur  cell number plz , ', 'Saket', 'Adhikary', 'princesaket100@gmail.com', 0, 259, '2016-05-29 22:24:48', 111);
 
 -- --------------------------------------------------------
 
@@ -1263,21 +1819,37 @@ INSERT INTO `review` (`review`, `first_name`, `last_name`, `email`, `display`, `
 --
 
 CREATE TABLE IF NOT EXISTS `temp_fee_structure` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `admission` int(11) DEFAULT NULL,
   `security_deposit` int(11) DEFAULT NULL,
   `1_bed` varchar(255) DEFAULT NULL,
   `2_bed` varchar(255) DEFAULT NULL,
   `3_bed` varchar(255) DEFAULT NULL,
-  `4_bed` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=241 DEFAULT CHARSET=latin1;
+  `4_bed` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1578 ;
 
 --
 -- Dumping data for table `temp_fee_structure`
 --
 
 INSERT INTO `temp_fee_structure` (`id`, `admission`, `security_deposit`, `1_bed`, `2_bed`, `3_bed`, `4_bed`) VALUES
-(239, 3000, 5000, '15000', '8500', '8000', '8000');
+(1551, 3000, 0, '9500', '9000', '8500', '8500'),
+(1553, 2000, 0, '13000', '8500', '8000', '7500'),
+(1557, 3000, 3000, '16000', '10000', '9000', '8000'),
+(1559, 1500, 1000, '', '8', '2', '2'),
+(1561, 8500, 1000, '', '5', '', '2'),
+(1562, 8500, 1000, '', '5', '', '1'),
+(1564, 10000, 2000, '05', '10', '5', '1'),
+(1567, 3000, 0, '15000', '9500', '9000', '8500'),
+(1569, 2500, 0, '', '11000', '8500', '8000'),
+(1571, 1000, 2500, '0', '2', '5', '5'),
+(1572, 1000, 0, '', '9500', '7500', ''),
+(1573, 3000, 0, '', '8000', '7500', '7000'),
+(1574, 2000, 2999, '', '', '7500', ''),
+(1575, 3000, 0, '9000', '8000', '7500', '7000'),
+(1576, 0, 0, '', '', '', ''),
+(1577, 2000, 3000, '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -1286,21 +1858,36 @@ INSERT INTO `temp_fee_structure` (`id`, `admission`, `security_deposit`, `1_bed`
 --
 
 CREATE TABLE IF NOT EXISTS `temp_hostel` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `gender` varchar(5) NOT NULL,
   `address` varchar(255) DEFAULT NULL,
   `estd_year` int(11) DEFAULT NULL,
   `fee_structure_id` int(11) DEFAULT NULL,
-  `capacity` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=241 DEFAULT CHARSET=latin1;
+  `capacity` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_temp_fee_st_hostel` (`fee_structure_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1529 ;
 
 --
 -- Dumping data for table `temp_hostel`
 --
 
 INSERT INTO `temp_hostel` (`id`, `name`, `gender`, `address`, `estd_year`, `fee_structure_id`, `capacity`) VALUES
-(239, 'City Stay Boys Hostel', '	boys', 'Samakhushi Chowk, Kathmandu ', 2012, 239, 0);
+(1504, 'MP Royal Rupandehi Boys Hostel ', '	boys', 'Okharbot Marga,Thapagaun,New Baneshwor ', 2015, 1551, 0),
+(1506, 'Om Kathmandu boys hostel ', '	boys', 'Sankhamul ', 2066, 1553, 0),
+(1510, 'gautambuddha boys hostel ', '	boys', 'sanepa lalitpur ', 2072, 1557, 0),
+(1512, 'Dream Home boys hostel  ', '	boys', 'katyani chowk ,Baneshwor ', 2071, 1559, 0),
+(1515, 'Nepal Boys Hostel ', '	boys', 'nakhipot, lalitpur ', 2070, 1564, 0),
+(1518, 'Saathi Ko Ghar  Boys Hostel ', '	boys', 'Thapagaun,Bijulibazaar ', 2069, 1567, 0),
+(1520, 'HAMRO BOYS HOSTEL  ', '	boys', 'Sankhamul-34 , Yatpaumarg ', 2071, 1569, 0),
+(1522, 'City Boys Hostel ', '	boys', 'Kumaripati. Lalitpur ', 2073, 1571, 0),
+(1523, 'Swastik boys hostel ', '	boys', 'aloknagar (near v.s niketan school) ', 2059, 1572, 0),
+(1524, 'Mega Boys Hostel ', '	boys', 'Panchakumari , New Baneshwor ', 2072, 1573, 0),
+(1525, 'HEAVEN BOYS HOSTEL ', '	boys', 'Old Baneshwor(Sinamangal Road) inside of Loyola School ', 2014, 1574, 0),
+(1526, 'Om shanti boys hostel ', '	boys', 'Tinkune,subidhanagar35,ktm ', 2068, 1575, 0),
+(1527, 'sasas ', '	boys', 'sasaa ', 0, 1576, 0),
+(1528, 'Youth Boys Hostel   ', '	boys', 'Thasikhel, Lalitpur (inside ringroad) ', 2072, 1577, 0);
 
 -- --------------------------------------------------------
 
@@ -1309,20 +1896,87 @@ INSERT INTO `temp_hostel` (`id`, `name`, `gender`, `address`, `estd_year`, `fee_
 --
 
 CREATE TABLE IF NOT EXISTS `temp_hostel_facility` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `hostel_id` int(11) NOT NULL,
-  `facility_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=116 DEFAULT CHARSET=latin1;
+  `facility_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_temp_host_facility` (`hostel_id`),
+  KEY `fk_temp_facility_host` (`facility_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=100 ;
 
 --
 -- Dumping data for table `temp_hostel_facility`
 --
 
 INSERT INTO `temp_hostel_facility` (`id`, `hostel_id`, `facility_id`) VALUES
-(104, 239, 3),
-(105, 239, 4),
-(107, 239, 6),
-(108, 239, 7);
+(31, 1504, 3),
+(32, 1504, 4),
+(33, 1504, 6),
+(34, 1504, 7),
+(38, 1506, 3),
+(39, 1506, 4),
+(40, 1506, 6),
+(53, 1512, 3),
+(54, 1512, 4),
+(55, 1512, 6),
+(56, 1512, 7),
+(66, 1515, 3),
+(67, 1515, 4),
+(68, 1515, 6),
+(76, 1518, 3),
+(77, 1518, 4),
+(78, 1518, 6),
+(79, 1518, 7),
+(80, 1520, 3),
+(81, 1520, 4),
+(82, 1520, 6),
+(83, 1520, 7),
+(84, 1522, 3),
+(85, 1522, 6),
+(86, 1522, 7),
+(87, 1523, 3),
+(88, 1523, 4),
+(89, 1523, 6),
+(90, 1523, 7),
+(91, 1524, 3),
+(92, 1524, 4),
+(93, 1524, 6),
+(94, 1524, 7),
+(95, 1526, 3),
+(96, 1526, 4),
+(97, 1526, 6),
+(98, 1528, 6),
+(99, 1528, 7);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `temp_info`
+--
+
+CREATE TABLE IF NOT EXISTS `temp_info` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `tempH_id` int(11) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=14 ;
+
+--
+-- Dumping data for table `temp_info`
+--
+
+INSERT INTO `temp_info` (`Id`, `tempH_id`) VALUES
+(2, 1510),
+(3, 1506),
+(4, 1504),
+(5, 1512),
+(6, 1515),
+(7, 1520),
+(8, 1518),
+(9, 1523),
+(10, 1522),
+(11, 1524),
+(12, 1525),
+(13, 1526);
 
 -- --------------------------------------------------------
 
@@ -1331,193 +1985,34 @@ INSERT INTO `temp_hostel_facility` (`id`, `hostel_id`, `facility_id`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `temp_owner` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `hostel_id` int(11) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
-  `contact` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=241 DEFAULT CHARSET=latin1;
+  `contact` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_temp_owner_hostel` (`hostel_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=45 ;
 
 --
 -- Dumping data for table `temp_owner`
 --
 
 INSERT INTO `temp_owner` (`id`, `hostel_id`, `name`, `contact`) VALUES
-(239, 239, ' Bhim Bhandari ', '9851190252');
+(18, 1504, ' Maheswari Gautam ', '9860007775,980694165'),
+(20, 1506, ' Ashish ', '9841818924 '),
+(24, 1510, ' sudip nepal ', '9841370254 '),
+(26, 1512, ' Indra hamal  ', '9858055580 '),
+(31, 1515, ' Abhishek Bantawa ', '01-4224189 '),
+(34, 1518, ' Uddhab Sharma ', '9851214169 '),
+(36, 1520, ' Juna Upreti ', '9811242944 '),
+(38, 1522, ' Chitra bd. Shrestha ', '9803001021 '),
+(39, 1523, ' sita adhikari ', '9813382931 '),
+(40, 1524, ' Dabal bahadur Khadka ', '9843574005 '),
+(41, 1525, ' ANIL GHARTI ', '9847179775,,98447844'),
+(42, 1526, '  ', '9818152403 '),
+(43, 1527, '  ', 'sasa '),
+(44, 1528, ' Banita Thapa ', '9860831252 ');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `facility`
---
-ALTER TABLE `facility`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `feedback`
---
-ALTER TABLE `feedback`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `fee_structure`
---
-ALTER TABLE `fee_structure`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `hostel`
---
-ALTER TABLE `hostel`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_fee_st_hostel` (`fee_structure_id`);
-
---
--- Indexes for table `hostel_facility`
---
-ALTER TABLE `hostel_facility`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_host_facility` (`hostel_id`),
-  ADD KEY `fk_facility_host` (`facility_id`);
-
---
--- Indexes for table `hostel_photo`
---
-ALTER TABLE `hostel_photo`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_host_photo` (`hostel_id`),
-  ADD KEY `fk_photo_host` (`photo_id`);
-
---
--- Indexes for table `main_photo`
---
-ALTER TABLE `main_photo`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_main_host` (`hostel_id`),
-  ADD KEY `fk_main_photo` (`photo_id`);
-
---
--- Indexes for table `owner`
---
-ALTER TABLE `owner`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_owner_hostel` (`hostel_id`);
-
---
--- Indexes for table `photo`
---
-ALTER TABLE `photo`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `review`
---
-ALTER TABLE `review`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `temp_fee_structure`
---
-ALTER TABLE `temp_fee_structure`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `temp_hostel`
---
-ALTER TABLE `temp_hostel`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_temp_fee_st_hostel` (`fee_structure_id`);
-
---
--- Indexes for table `temp_hostel_facility`
---
-ALTER TABLE `temp_hostel_facility`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_temp_host_facility` (`hostel_id`),
-  ADD KEY `fk_temp_facility_host` (`facility_id`);
-
---
--- Indexes for table `temp_owner`
---
-ALTER TABLE `temp_owner`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_temp_owner_hostel` (`hostel_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `facility`
---
-ALTER TABLE `facility`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
---
--- AUTO_INCREMENT for table `feedback`
---
-ALTER TABLE `feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
---
--- AUTO_INCREMENT for table `fee_structure`
---
-ALTER TABLE `fee_structure`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=237;
---
--- AUTO_INCREMENT for table `hostel`
---
-ALTER TABLE `hostel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=237;
---
--- AUTO_INCREMENT for table `hostel_facility`
---
-ALTER TABLE `hostel_facility`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=106;
---
--- AUTO_INCREMENT for table `hostel_photo`
---
-ALTER TABLE `hostel_photo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=96;
---
--- AUTO_INCREMENT for table `main_photo`
---
-ALTER TABLE `main_photo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=35;
---
--- AUTO_INCREMENT for table `owner`
---
-ALTER TABLE `owner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=237;
---
--- AUTO_INCREMENT for table `photo`
---
-ALTER TABLE `photo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=97;
---
--- AUTO_INCREMENT for table `review`
---
-ALTER TABLE `review`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;
---
--- AUTO_INCREMENT for table `temp_fee_structure`
---
-ALTER TABLE `temp_fee_structure`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=241;
---
--- AUTO_INCREMENT for table `temp_hostel`
---
-ALTER TABLE `temp_hostel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=241;
---
--- AUTO_INCREMENT for table `temp_hostel_facility`
---
-ALTER TABLE `temp_hostel_facility`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=116;
---
--- AUTO_INCREMENT for table `temp_owner`
---
-ALTER TABLE `temp_owner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=241;
 --
 -- Constraints for dumped tables
 --
@@ -1541,6 +2036,12 @@ ALTER TABLE `hostel_facility`
 ALTER TABLE `hostel_photo`
   ADD CONSTRAINT `fk_host_photo` FOREIGN KEY (`hostel_id`) REFERENCES `hostel` (`id`),
   ADD CONSTRAINT `fk_photo_host` FOREIGN KEY (`photo_id`) REFERENCES `photo` (`id`);
+
+--
+-- Constraints for table `hostel_position`
+--
+ALTER TABLE `hostel_position`
+  ADD CONSTRAINT `hostel_position_ibfk_1` FOREIGN KEY (`hostel_id`) REFERENCES `hostel` (`id`);
 
 --
 -- Constraints for table `main_photo`

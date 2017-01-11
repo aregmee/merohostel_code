@@ -10,3 +10,10 @@ $('.ui.radio.checkbox')
 $('.ui.checkbox')
 .checkbox()
 ;
+$(document).ready(function() {
+    $('#Carousel').carousel({
+        interval: 5000
+    })
+});
+
+

@@ -144,7 +144,7 @@ div#mainTitle {
 	padding-bottom: 20px;
 }
 #mainSection {
-	background: #f7f3eb;
+	background: #f8f0e5;
 	padding-top: 10px;
 }
 #featuredHostel {
@@ -154,6 +154,9 @@ div#mainTitle {
 .subSection {
 	padding: 10px 0px 20px 0px;
 	color: #676056;
+}
+.subSection p {
+	padding-top: 10px;
 }
 .whyUsSection {
 	padding: 10px 0px 20px 0px;
@@ -521,4 +524,70 @@ div#radioGap div {
 	display: block;
 	margin: auto;
 	width: 550px;
+}
+/*------------------------------
+Carousel
+-------------------------------
+*/
+div#homeCarousel {
+	background: #faf8f3;
+	padding: 25px 0px 20px 0px;
+}
+.carousel {
+	margin-bottom: 0;
+	padding: 0 40px 0px 40px;
+}
+/* The controlsy */
+.carousel-control {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	font-size: 20px;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+	filter: alpha(opacity=50);
+}
+.carousel-control {
+	left: -12px;
+	height: 40px;
+	margin-top: 90px;
+}
+.carousel-control.right {
+	right: -12px;
+}
+a.left.carousel-control {
+	background: none;
+	text-align: left;
+	font-size: 45px;
+}
+a.right.carousel-control {
+	background: none;
+	text-align: right;
+	font-size: 45px;
+}
+/* The indicators */
+.carousel-indicators {
+	right: 50%;
+	top: auto;
+	bottom: -10px;
+	margin-right: -19px;
+}
+/* The colour of the indicators */
+.carousel-indicators li {
+	background: #cecece;
+}
+.carousel-indicators .active {
+	background: #428bca;
+}
+.car_hostel_name {
+	padding: 9px 0px 2px;
+	margin: 0;
+	font-size: 16px;
+	font-weight: bold;
+}
+.car_hostel_address {
+	color: #7d7d7d;
+}
+.mx_wi_100{
+	max-width:100%;
 }

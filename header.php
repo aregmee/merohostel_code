@@ -45,8 +45,14 @@
                                 // iterate through the pool of strings and for any string that
                                 // contains the substring `q`, add it to the `matches` array
                                 $.each(strs, function(i, str) {
+                                    if(str.indexOf(',') != -1) {
+                                        str = str.split(',')[1];
+                                    }
+                                    str = str.trim();
                                     if (substrRegex.test(str)) {
-                                        matches.push(str);
+                                        if($.inArray(str, matches) === -1) {
+                                            matches.push(str);
+                                        }
                                     }
                                 });
 
